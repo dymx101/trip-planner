@@ -1056,7 +1056,8 @@
   <div class="container">
 
     <div class="nav-tabs">
-      <button class="nav-tab active" onclick="switchTab('itinerary')">📅 每日完整日程 (Day 1-15)</button>
+      <button class="nav-tab active" onclick="switchTab('overview')">🗺️ 15天总览大图 (地图+时间)</button>
+      <button class="nav-tab" onclick="switchTab('itinerary')">📅 每日完整日程 (Day 1-15)</button>
       <button class="nav-tab" onclick="switchTab('hotels')">🏨 精选住宿酒店推荐</button>
       <button class="nav-tab" onclick="switchTab('stations')">🚉 车站位置与接驳表</button>
       <button class="nav-tab" onclick="switchTab('cafes')">☕ 精选办公咖啡馆</button>
@@ -1082,8 +1083,339 @@
       </div>
     </div>
 
+    <!-- TAB 0: 15天总览大图与全景时间轴 -->
+    <div id="tab-overview" class="tab-panel active">
+      <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:16px 20px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+        <div>
+          <span style="font-size:1.15rem; font-weight:800; color:#1e40af;">🗺️ 15天全程地点与时间示意总览大图</span>
+          <p style="margin:4px 0 0; font-size:0.88rem; color:#2563eb;">自南向北穿越 5 国，3,600 公里无缝陆路联运。覆盖每个城市的抵达/启程时间节点、大交通工具、住宿与 Workcation 办公安排。</p>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <div style="display:inline-flex; background:#dbeafe; padding:3px; border-radius:8px;">
+            <button id="btn-ov-map" onclick="toggleOverviewMode('map')" style="padding:6px 14px; border:none; border-radius:6px; background:#0284c7; color:white; font-size:0.85rem; font-weight:700; cursor:pointer; transition:all 0.2s;">🗺️ 路线示意大图</button>
+            <button id="btn-ov-table" onclick="toggleOverviewMode('table')" style="padding:6px 14px; border:none; border-radius:6px; background:transparent; color:#1e40af; font-size:0.85rem; font-weight:700; cursor:pointer; transition:all 0.2s;">⏱️ 15天时间表</button>
+          </div>
+          <button onclick="downloadOverviewPoster()" style="padding:7px 16px; background:#10b981; color:white; border:none; border-radius:8px; font-size:0.88rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 8px rgba(16,185,129,0.3); transition:all 0.2s;">
+            📥 保存高清长图 (PNG)
+          </button>
+        </div>
+      </div>
+
+      <!-- Mode 1: SVG Map Poster -->
+      <div id="overview-map-container" style="background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:20px; box-shadow:var(--shadow); overflow-x:auto;">
+        <svg id="overview-poster-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1220" style="width:100%; min-width:760px; height:auto; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+          <defs>
+            <linearGradient id="mainRouteGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0284c7"/>
+              <stop offset="20%" stop-color="#0d9488"/>
+              <stop offset="40%" stop-color="#eab308"/>
+              <stop offset="60%" stop-color="#f97316"/>
+              <stop offset="80%" stop-color="#8b5cf6"/>
+              <stop offset="100%" stop-color="#dc2626"/>
+            </linearGradient>
+            <filter id="posterShadow" x="-5%" y="-5%" width="110%" height="110%">
+              <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.08"/>
+            </filter>
+          </defs>
+
+          <!-- Outer Container -->
+          <rect x="0" y="0" width="900" height="1220" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+          
+          <!-- Poster Header -->
+          <rect x="0" y="0" width="900" height="104" rx="16" fill="#0f172a"/>
+          <text x="40" y="42" fill="#38bdf8" font-size="13" font-weight="800" letter-spacing="1.5">OVERLAND WORKCATION 2026 · 15 DAYS EXPEDITION</text>
+          <text x="40" y="78" fill="#ffffff" font-size="24" font-weight="800">新加坡 ➔ 中国大理 · 跨国全程地点与时间示意大图</text>
+          <text x="860" y="62" text-anchor="end" fill="#94a3b8" font-size="13">2026.12.11 - 12.25 · 全程 3,600km · 穿越 5 国</text>
+
+          <!-- Legend Bar -->
+          <rect x="30" y="118" width="840" height="42" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+          <circle cx="55" cy="139" r="6" fill="#0284c7"/>
+          <text x="68" y="143" fill="#334155" font-size="12" font-weight="600">陆路大巴</text>
+          <circle cx="160" cy="139" r="6" fill="#f59e0b"/>
+          <text x="173" y="143" fill="#334155" font-size="12" font-weight="600">卧铺列车</text>
+          <circle cx="265" cy="139" r="6" fill="#10b981"/>
+          <text x="278" y="143" fill="#334155" font-size="12" font-weight="600">动车高铁</text>
+          <circle cx="375" cy="139" r="6" fill="#8b5cf6"/>
+          <text x="388" y="143" fill="#334155" font-size="12" font-weight="600">前置航班</text>
+          
+          <rect x="480" y="128" width="70" height="22" rx="4" fill="#dbeafe"/>
+          <text x="515" y="143" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="700">💻 远程办公</text>
+          <rect x="560" y="128" width="70" height="22" rx="4" fill="#fef3c7"/>
+          <text x="595" y="143" text-anchor="middle" fill="#92400e" font-size="11" font-weight="700">🌴 古城漫游</text>
+          <rect x="640" y="128" width="70" height="22" rx="4" fill="#f1f5f9"/>
+          <text x="675" y="143" text-anchor="middle" fill="#475569" font-size="11" font-weight="700">🛌 夜间通勤</text>
+          <text x="850" y="143" text-anchor="end" fill="#64748b" font-size="12" font-weight="600">不走回头路 · 晚间通勤白天办公</text>
+
+          <!-- Connecting Track Line -->
+          <path d="M 105 185 L 105 225" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="6,4" fill="none"/>
+          <path d="M 105 255 L 105 380 L 105 505 L 105 630 L 105 755 L 105 880 L 105 1005 L 105 1130" 
+                stroke="url(#mainRouteGrad)" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+          <!-- 0: 前置航班 -->
+          <g transform="translate(0, 170)">
+            <circle cx="105" cy="20" r="11" fill="#8b5cf6" stroke="#ffffff" stroke-width="3"/>
+            <text x="105" y="24" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">✈️</text>
+            <rect x="135" y="2" width="735" height="40" rx="8" fill="#f5f3ff" stroke="#ddd6fe" filter="url(#posterShadow)"/>
+            <text x="150" y="20" fill="#6d28d9" font-size="12" font-weight="bold">【前置抵新】妻子航班：武汉天河 (WUH) ➔ 新加坡樟宜 (SIN)</text>
+            <text x="150" y="34" fill="#5b21b6" font-size="11">⏰ 时间：12/11 (周五) 00:15 起飞 ➔ 05:25 抵樟宜机场 · 白天补觉休整，等待傍晚先生下班汇合启程</text>
+          </g>
+
+          <!-- 1: 新加坡 -->
+          <g transform="translate(0, 240)">
+            <circle cx="105" cy="20" r="15" fill="#0284c7" stroke="#ffffff" stroke-width="4" filter="url(#posterShadow)"/>
+            <text x="105" y="25" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">1</text>
+            
+            <rect x="135" y="-6" width="735" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#posterShadow)"/>
+            <text x="155" y="19" fill="#0284c7" font-size="15" font-weight="800">🇸🇬 新加坡 (Singapore) · 启程站</text>
+            <rect x="395" y="6" width="95" height="20" rx="4" fill="#e0f2fe"/>
+            <text x="442" y="20" text-anchor="middle" fill="#0369a1" font-size="11" font-weight="bold">Day 1 · 12/11 周五</text>
+            
+            <text x="155" y="42" fill="#1e293b" font-size="12" font-weight="600">📍 时间节点：18:00 夫妻下班汇合 ➔ 18:30 兀兰关卡出境通关 ➔ 19:30 新山拉庆车站发车</text>
+            <text x="155" y="60" fill="#64748b" font-size="11">🚌 大巴交通：新山拉庆 ➔ 马六甲中央车站 (2.5h，约220km) · 票价约 ¥35-50/人 · 宿马六甲品质酒店</text>
+          </g>
+
+          <!-- 2: 马六甲 -->
+          <g transform="translate(0, 365)">
+            <circle cx="105" cy="20" r="15" fill="#0d9488" stroke="#ffffff" stroke-width="4" filter="url(#posterShadow)"/>
+            <text x="105" y="25" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">2</text>
+            
+            <rect x="135" y="-6" width="735" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#posterShadow)"/>
+            <text x="155" y="19" fill="#0d9488" font-size="15" font-weight="800">🇲🇾 马六甲 (Melaka) · 古城漫游与鸡场街夜市</text>
+            <rect x="455" y="6" width="115" height="20" rx="4" fill="#ccfbf1"/>
+            <text x="512" y="20" text-anchor="middle" fill="#0f766e" font-size="11" font-weight="bold">Day 1–2 · 12/11-12</text>
+            
+            <text x="155" y="42" fill="#1e293b" font-size="12" font-weight="600">📍 时间节点：12/11 22:00 入住古城夜市 ➔ 12/12 周六全天古城漫游 ➔ 21:30 跨国夜巴发车</text>
+            <text x="155" y="60" fill="#64748b" font-size="11">🚌 跨境夜巴：马六甲 ➔ 泰国合艾直达特快 (9.5h，620km，直通避开吉隆坡) · 票价约 ¥140-180/人 · 宿豪华夜车</text>
+          </g>
+
+          <!-- 3: 泰国合艾 -->
+          <g transform="translate(0, 490)">
+            <circle cx="105" cy="20" r="15" fill="#eab308" stroke="#ffffff" stroke-width="4" filter="url(#posterShadow)"/>
+            <text x="105" y="25" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">3</text>
+            
+            <rect x="135" y="-6" width="735" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#posterShadow)"/>
+            <text x="155" y="19" fill="#b45309" font-size="15" font-weight="800">🇹🇭 泰国 · 合艾 (Hat Yai) · 泰南早茶小憩</text>
+            <rect x="460" y="6" width="95" height="20" rx="4" fill="#fef9c3"/>
+            <text x="507" y="20" text-anchor="middle" fill="#854d0e" font-size="11" font-weight="bold">Day 3 · 12/13 周日</text>
+            
+            <text x="155" y="42" fill="#1e293b" font-size="12" font-weight="600">📍 时间节点：07:00 抵达合艾通关 ➔ 08:30 肉骨茶早茶+Bussaba咖啡馆休整 ➔ 15:45 火车站发车</text>
+            <text x="155" y="60" fill="#64748b" font-size="11">🚆 特快卧铺：泰铁32次特快CNR新型卧铺 (18.5h，945km，最抢手泰铁夜车) · 票价约 ¥200-260/人 · 宿泰铁卧铺</text>
+          </g>
+
+          <!-- 4: 泰国曼谷 -->
+          <g transform="translate(0, 615)">
+            <circle cx="105" cy="20" r="15" fill="#f97316" stroke="#ffffff" stroke-width="4" filter="url(#posterShadow)"/>
+            <text x="105" y="25" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">4</text>
+            
+            <rect x="135" y="-6" width="735" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#posterShadow)"/>
+            <text x="155" y="19" fill="#ea580c" font-size="15" font-weight="800">🇹🇭 泰国 · 曼谷 (Bangkok) · 大都市 Workcation</text>
+            <rect x="480" y="6" width="115" height="20" rx="4" fill="#ffedd5"/>
+            <text x="537" y="20" text-anchor="middle" fill="#9a3412" font-size="11" font-weight="bold">Day 4–5 · 12/14-15</text>
+            
+            <text x="155" y="42" fill="#1e293b" font-size="12" font-weight="600">📍 时间节点：12/14 10:30 抵曼谷中央站 ➔ 周一/周二连续两日全天高效远程办公 ➔ 12/15 21:25 发车</text>
+            <text x="155" y="60" fill="#64748b" font-size="11">🚆 跨国卧铺：曼谷 ➔ 老挝万象直通卧铺列车 (11.5h，650km，免换乘直抵万象) · 票价约 ¥180-230/人 · 宿卧铺</text>
+          </g>
+
+          <!-- 5: 老挝万象 -->
+          <g transform="translate(0, 740)">
+            <circle cx="105" cy="20" r="15" fill="#6366f1" stroke="#ffffff" stroke-width="4" filter="url(#posterShadow)"/>
+            <text x="105" y="25" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">5</text>
+            
+            <rect x="135" y="-6" width="735" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#posterShadow)"/>
+            <text x="155" y="19" fill="#4f46e5" font-size="15" font-weight="800">🇱🇦 老挝 · 万象 (Vientiane) · 湄公河畔办公与晚霞</text>
+            <rect x="515" y="6" width="115" height="20" rx="4" fill="#e0e7ff"/>
+            <text x="572" y="20" text-anchor="middle" fill="#3730a3" font-size="11" font-weight="bold">Day 6–7 · 12/16-17</text>
+            
+            <text x="155" y="42" fill="#1e293b" font-size="12" font-weight="600">📍 时间节点：12/16 09:05 直通万象通关 ➔ 周三全天及周四上午远程办公+湄公河日落 ➔ 12/17 15:05 发车</text>
+            <text x="155" y="60" fill="#64748b" font-size="11">🚄 中老动车：万象 ➔ 琅勃拉邦“澜沧号”动车组 (2h，240km) · 票价约 ¥80-110/人 · 宿舒适酒店</text>
+          </g>
+
+          <!-- 6: 琅勃拉邦 -->
+          <g transform="translate(0, 865)">
+            <circle cx="105" cy="20" r="15" fill="#8b5cf6" stroke="#ffffff" stroke-width="4" filter="url(#posterShadow)"/>
+            <text x="105" y="25" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">6</text>
+            
+            <rect x="135" y="-6" width="735" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#posterShadow)"/>
+            <text x="155" y="19" fill="#7c3aed" font-size="15" font-weight="800">🇱🇦 老挝 · 琅勃拉邦 (Luang Prabang) · 慢调世界遗产</text>
+            <rect x="535" y="6" width="125" height="20" rx="4" fill="#ede9fe"/>
+            <text x="597" y="20" text-anchor="middle" fill="#5b21b6" font-size="11" font-weight="bold">Day 7–10 · 12/17-20</text>
+            
+            <text x="155" y="42" fill="#1e293b" font-size="12" font-weight="600">📍 时间节点：12/17 17:10 抵达 ➔ 12/18 周五全天工作 ➔ 周末清晨布施+光西瀑布+落日游船 ➔ 12/20 14:30 启程</text>
+            <text x="155" y="60" fill="#64748b" font-size="11">🚄 国际动车：中老铁路 D888 次跨境列车 (5h，磨憨口岸通关，12306直接购票) · 票价约 ¥130-170/人 · 宿花园度假村</text>
+          </g>
+
+          <!-- 7: 西双版纳 -->
+          <g transform="translate(0, 990)">
+            <circle cx="105" cy="20" r="15" fill="#ec4899" stroke="#ffffff" stroke-width="4" filter="url(#posterShadow)"/>
+            <text x="105" y="25" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">7</text>
+            
+            <rect x="135" y="-6" width="735" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#posterShadow)"/>
+            <text x="155" y="19" fill="#db2777" font-size="15" font-weight="800">🇨🇳 中国 · 西双版纳 (Xishuangbanna) · 热带傣乡</text>
+            <rect x="515" y="6" width="125" height="20" rx="4" fill="#fce7f3"/>
+            <text x="577" y="20" text-anchor="middle" fill="#9d174d" font-size="11" font-weight="bold">Day 10–13 · 12/20-23</text>
+            
+            <text x="155" y="42" fill="#1e293b" font-size="12" font-weight="600">📍 时间节点：12/20 19:30 抵版纳入住告庄 ➔ 周一/周二连续两日全天专注远程办公+星光夜市 ➔ 12/23 09:40 发车</text>
+            <text x="155" y="60" fill="#64748b" font-size="11">🚄 省内动车：云南省内直达动车/高铁 (6h，780km，直通大理) · 票价约 ¥150-210/人 · 宿告庄江景客栈</text>
+          </g>
+
+          <!-- 8: 云南大理 -->
+          <g transform="translate(0, 1115)">
+            <circle cx="105" cy="20" r="16" fill="#dc2626" stroke="#ffffff" stroke-width="4" filter="url(#posterShadow)"/>
+            <text x="105" y="25" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">🏁</text>
+            
+            <rect x="135" y="-6" width="735" height="80" rx="10" fill="#fff1f2" stroke="#fda4af" filter="url(#posterShadow)"/>
+            <text x="155" y="19" fill="#e11d48" font-size="15" font-weight="800">🇨🇳 中国 · 云南大理 (Dali) · 终点胜地 · 苍山洱海慢生活</text>
+            <rect x="555" y="6" width="125" height="20" rx="4" fill="#ffe4e6"/>
+            <text x="617" y="20" text-anchor="middle" fill="#be123c" font-size="11" font-weight="bold">Day 13–15 · 12/23-25</text>
+            
+            <text x="155" y="42" fill="#1e293b" font-size="12" font-weight="600">📍 时间节点：12/23 15:35 抵大理入住洱海廊道客栈 ➔ 12/24 平安夜海景办公 ➔ 12/25 圣诞喜洲骑行收官</text>
+            <text x="155" y="60" fill="#9f1239" font-size="11" font-weight="bold">🎉 旅途圆满收官：全程 3,600 公里陆路跨国不走回头路，两人核心大交通仅约 ¥2,100，9晚住宿约 ¥4,300！</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Mode 2: 15-Day Chronological Matrix Table -->
+      <div id="overview-table-container" style="display:none; background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow); overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.86rem; min-width:700px;">
+          <thead>
+            <tr style="background:#f8fafc; border-bottom:2px solid #e2e8f0; color:#334155; text-align:left;">
+              <th style="padding:10px 12px;">天数 / 日期</th>
+              <th style="padding:10px 12px;">所在城市 / 节点</th>
+              <th style="padding:10px 12px;">白天上午 (09:00 - 12:00)</th>
+              <th style="padding:10px 12px;">白天下午 (13:00 - 18:00)</th>
+              <th style="padding:10px 12px;">傍晚与夜间 (18:00 - 24:00)</th>
+              <th style="padding:10px 12px; text-align:center;">当晚住宿</th>
+            </tr>
+          </thead>
+          <tbody style="color:#475569;">
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D1 · 12/11 (五)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">新加坡 ➔ 马六甲</td>
+              <td style="padding:10px 12px;">05:25 妻子抵樟宜，补觉休整</td>
+              <td style="padding:10px 12px;">先生日间办公 / 妻子休整</td>
+              <td style="padding:10px 12px;">18:00汇合 ➔ 19:30拉庆大巴 ➔ 22:00抵马六甲</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">马六甲酒店</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D2 · 12/12 (六)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">马六甲 ➔ 车上</td>
+              <td style="padding:10px 12px;">荷兰红屋、圣保罗山古城漫游</td>
+              <td style="padding:10px 12px;">鸡场街 The Daily Fix 咖啡小憩</td>
+              <td style="padding:10px 12px;">21:30 乘跨国夜巴发车前往泰国合艾</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">豪华夜巴</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D3 · 12/13 (日)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">泰国合艾 ➔ 车上</td>
+              <td style="padding:10px 12px;">07:00抵合艾通关，肉骨茶早茶</td>
+              <td style="padding:10px 12px;">Bussaba 咖啡馆休整，15:00进站</td>
+              <td style="padding:10px 12px;">15:45 乘泰铁32次特快CNR卧铺启程</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">泰铁CNR卧铺</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D4 · 12/14 (一)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">曼谷 (首日工作)</td>
+              <td style="padding:10px 12px;">10:30抵曼谷中央站，打车入住酒店</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 曼谷远程工作 (Factory Coffee / 酒店)</td>
+              <td style="padding:10px 12px;">湄南河夜景 / 乔德夜市特色晚餐</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">曼谷酒店</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D5 · 12/15 (二)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">曼谷 ➔ 车上</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 曼谷全天远程工作 (酒店书桌)</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 专注完成工作，17:30 整理退房</td>
+              <td style="padding:10px 12px;">海鲜晚餐 ➔ 21:25 乘跨国夜卧赴万象</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">跨国卧铺列车</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D6 · 12/16 (三)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">老挝万象</td>
+              <td style="padding:10px 12px;">09:05直通万象通关，入宜必思南普酒店</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 万象远程工作 (Naked Espresso 咖啡)</td>
+              <td style="padding:10px 12px;">湄公河畔日落市集、老挝特色烤鱼</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">万象酒店</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D7 · 12/17 (四)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">万象 ➔ 琅勃拉邦</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 上午远程工作 / 万象凯旋门打卡</td>
+              <td style="padding:10px 12px;">14:00前往万象站 ➔ 15:05乘中老铁路动车</td>
+              <td style="padding:10px 12px;">17:10抵琅勃拉邦，入住度假村逛古城夜市</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">琅勃拉邦度假村</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D8 · 12/18 (五)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">琅勃拉邦 (工作日)</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 Saffron Coffee 湄公河景办公</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 酒店静音书桌全天远程工作</td>
+              <td style="padding:10px 12px;">湄公河日落游船巡游、法式红酒晚餐</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">琅勃拉邦度假村</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D9 · 12/19 (六)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">琅勃拉邦 (周末游)</td>
+              <td style="padding:10px 12px;">光西瀑布碧绿钙化池与黑熊保护区</td>
+              <td style="padding:10px 12px;">香通寺、大皇宫博物馆历史漫游</td>
+              <td style="padding:10px 12px;">普西山看落日、老挝传统火锅 Sindad</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">琅勃拉邦度假村</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D10 · 12/20 (日)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">琅勃拉邦 ➔ 版纳</td>
+              <td style="padding:10px 12px;">05:45清晨布施，咖啡馆慢早餐</td>
+              <td style="padding:10px 12px;">13:30到火车站 ➔ 14:30乘D888次跨国动车</td>
+              <td style="padding:10px 12px;">19:30抵西双版纳，入住告庄逛星光夜市</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">版纳告庄客栈</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D11 · 12/21 (一)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">西双版纳 (工作日)</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 版纳全天远程办公 (南药咖啡馆)</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 专注工作处理，千兆高速网络</td>
+              <td style="padding:10px 12px;">告庄大金塔江畔漫步、傣味特色孔雀宴</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">版纳告庄客栈</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D12 · 12/22 (二)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">西双版纳 (工作日)</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 客栈江景露台远程办公</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 完成年前核心工作交代与汇报</td>
+              <td style="padding:10px 12px;">傣味手抓饭、澜沧江热带夜市、打包行李</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">版纳告庄客栈</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D13 · 12/23 (三)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">西双版纳 ➔ 大理</td>
+              <td style="padding:10px 12px;">09:40 乘省内直达动车启程赴大理</td>
+              <td style="padding:10px 12px;">车上欣赏云南高原喀斯特与红土风光</td>
+              <td style="padding:10px 12px;">15:35抵大理 ➔ 专车入住洱海廊道客栈看夕阳</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">大理洱海客栈</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D14 · 12/24 (四)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">大理 (平安夜)</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 洱海客栈观海露台轻松远程办公</td>
+              <td style="padding:10px 12px; background:#f0f9ff; color:#0369a1; font-weight:600;">💻 慢节奏收尾工作，面朝苍山洱海</td>
+              <td style="padding:10px 12px;">大理古城人民路民谣酒馆度过浪漫平安夜</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">大理洱海客栈</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9;">
+              <td style="padding:10px 12px; font-weight:700; color:#0284c7;">D15 · 12/25 (五)</td>
+              <td style="padding:10px 12px; font-weight:600; color:#0f172a;">大理 (圣诞收官)</td>
+              <td style="padding:10px 12px;">洱海生态廊道双人漫步骑行、吹海风</td>
+              <td style="padding:10px 12px;">喜洲古镇稻田扎染体验、喜洲粑粑</td>
+              <td style="padding:10px 12px;">白族石板烧晚餐，15天跨国壮举圆满落幕</td>
+              <td style="padding:10px 12px; text-align:center;"><span style="background:#f3e8ff; color:#6b21a8; padding:3px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">大理/返程</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <canvas id="export-overview-canvas" style="display:none;"></canvas>
+    </div>
+
     <!-- TAB 1: 每日详细日程 -->
-    <div id="tab-itinerary" class="tab-panel active">
+    <div id="tab-itinerary" class="tab-panel">
 
       <!-- Day 1 -->
       <div class="day-card">
@@ -2686,6 +3018,59 @@
 
       document.getElementById('tab-' + tabId).classList.add('active');
       event.currentTarget.classList.add('active');
+    }
+
+    function toggleOverviewMode(mode) {
+      const mapContainer = document.getElementById('overview-map-container');
+      const tableContainer = document.getElementById('overview-table-container');
+      const btnMap = document.getElementById('btn-ov-map');
+      const btnTable = document.getElementById('btn-ov-table');
+      
+      if (mode === 'map') {
+        mapContainer.style.display = 'block';
+        tableContainer.style.display = 'none';
+        btnMap.style.background = '#0284c7';
+        btnMap.style.color = '#ffffff';
+        btnTable.style.background = 'transparent';
+        btnTable.style.color = '#1e40af';
+      } else {
+        mapContainer.style.display = 'none';
+        tableContainer.style.display = 'block';
+        btnTable.style.background = '#0284c7';
+        btnTable.style.color = '#ffffff';
+        btnMap.style.background = 'transparent';
+        btnMap.style.color = '#1e40af';
+      }
+    }
+
+    function downloadOverviewPoster() {
+      const svg = document.getElementById('overview-poster-svg');
+      if (!svg) return;
+      const svgData = new XMLSerializer().serializeToString(svg);
+      const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+      const DOMURL = window.URL || window.webkitURL || window;
+      const url = DOMURL.createObjectURL(svgBlob);
+      
+      const img = new Image();
+      img.onload = function() {
+        const canvas = document.getElementById('export-overview-canvas');
+        canvas.width = 1800; // 2x high-res
+        canvas.height = 2440;
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        DOMURL.revokeObjectURL(url);
+        
+        const pngUrl = canvas.toDataURL('image/png');
+        const downloadLink = document.createElement('a');
+        downloadLink.href = pngUrl;
+        downloadLink.download = '新加坡至云南大理15天行程时间总览大图.png';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      };
+      img.src = url;
     }
   
     // ==========================================
