@@ -1087,22 +1087,43 @@
     <div id="tab-overview" class="tab-panel active">
       <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:16px 20px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
         <div>
-          <span style="font-size:1.15rem; font-weight:800; color:#1e40af;">🗺️ 15天全程地点与时间示意总览大图</span>
-          <p style="margin:4px 0 0; font-size:0.88rem; color:#2563eb;">自南向北穿越 5 国，3,600 公里无缝陆路联运。覆盖每个城市的抵达/启程时间节点、大交通工具、住宿与 Workcation 办公安排。</p>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.15rem; font-weight:800; color:#1e40af;">🗺️ 谷歌地图 15天全景路线标注与时刻总览</span>
+            <span style="font-size:0.75rem; background:#2563eb; color:white; font-weight:700; padding:2px 8px; border-radius:10px;">Google Maps 实景底图</span>
+          </div>
+          <p style="margin:4px 0 0; font-size:0.88rem; color:#2563eb;">全程穿越 5 国 3,600 公里，在 Google Maps 实景底图上精确标定 8 个陆路中继站与武汉直飞航线。点击图钉查看每日抵达/启程时间节点，一键启动导航！</p>
         </div>
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
           <div style="display:inline-flex; background:#dbeafe; padding:3px; border-radius:8px;">
-            <button id="btn-ov-map" onclick="toggleOverviewMode('map')" style="padding:6px 14px; border:none; border-radius:6px; background:#0284c7; color:white; font-size:0.85rem; font-weight:700; cursor:pointer; transition:all 0.2s;">🗺️ 路线示意大图</button>
+            <button id="btn-ov-gmap" onclick="toggleOverviewMode('gmap')" style="padding:6px 14px; border:none; border-radius:6px; background:#0284c7; color:white; font-size:0.85rem; font-weight:700; cursor:pointer; transition:all 0.2s;">🗺️ 谷歌实景地图</button>
+            <button id="btn-ov-poster" onclick="toggleOverviewMode('poster')" style="padding:6px 14px; border:none; border-radius:6px; background:transparent; color:#1e40af; font-size:0.85rem; font-weight:700; cursor:pointer; transition:all 0.2s;">🎨 矢量示意大图</button>
             <button id="btn-ov-table" onclick="toggleOverviewMode('table')" style="padding:6px 14px; border:none; border-radius:6px; background:transparent; color:#1e40af; font-size:0.85rem; font-weight:700; cursor:pointer; transition:all 0.2s;">⏱️ 15天时间表</button>
           </div>
-          <button onclick="downloadOverviewPoster()" style="padding:7px 16px; background:#10b981; color:white; border:none; border-radius:8px; font-size:0.88rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 8px rgba(16,185,129,0.3); transition:all 0.2s;">
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Singapore&destination=Dali%2C%20Yunnan%2C%20China&waypoints=Melaka%2C%20Malaysia%7CHat%20Yai%2C%20Thailand%7CBangkok%2C%20Thailand%7CVientiane%2C%20Laos%7CLuang%20Prabang%2C%20Laos%7CXishuangbanna%2C%20Yunnan%2C%20China" target="_blank" rel="noopener noreferrer" style="padding:7px 14px; background:#4285f4; color:white; border-radius:8px; font-size:0.85rem; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 8px rgba(66,133,244,0.3); transition:all 0.2s;">
+            🌐 在 Google Maps 打开全路线 ↗
+          </a>
+          <button onclick="downloadOverviewPoster()" style="padding:7px 14px; background:#10b981; color:white; border:none; border-radius:8px; font-size:0.85rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 8px rgba(16,185,129,0.3); transition:all 0.2s;">
             📥 保存高清长图 (PNG)
           </button>
         </div>
       </div>
 
+      <!-- Mode 0: Google Maps Interactive Container -->
+      <div id="overview-gmap-container" style="background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:20px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+          <div style="font-size:0.9rem; font-weight:700; color:#0f172a; display:flex; align-items:center; gap:8px;">
+            <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#10b981;"></span>
+            <span>Google Maps 实时交互底图 · 包含 8 大中继站、武汉直飞航线与 3,600 公里陆路轨迹</span>
+          </div>
+          <div style="font-size:0.8rem; color:#64748b;">
+            💡 滚轮/双指缩放地图 · 右上角可切换<strong>街道图/卫星实景</strong> · 点击图钉查看时刻并启动导航
+          </div>
+        </div>
+        <div id="overview-google-map" style="width:100%; height:620px; border-radius:12px; border:1px solid #cbd5e1; z-index:1;"></div>
+      </div>
+
       <!-- Mode 1: SVG Map Poster -->
-      <div id="overview-map-container" style="background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:20px; box-shadow:var(--shadow); overflow-x:auto;">
+      <div id="overview-map-container" style="display:none; background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:20px; box-shadow:var(--shadow); overflow-x:auto;">
         <svg id="overview-poster-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1220" style="width:100%; min-width:760px; height:auto; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
           <defs>
             <linearGradient id="mainRouteGrad" x1="0" y1="0" x2="0" y2="1">
@@ -3018,28 +3039,269 @@
 
       document.getElementById('tab-' + tabId).classList.add('active');
       event.currentTarget.classList.add('active');
+      if (tabId === 'overview') {
+        setTimeout(() => {
+          if (overviewMapInstance) overviewMapInstance.invalidateSize();
+          else initOverviewGoogleMap();
+        }, 150);
+      }
+    }
+
+    // ==========================================
+    // 谷歌地图交互图层与路线数据
+    // ==========================================
+    const OVERVIEW_WAYPOINTS = [
+      {
+        id: 0,
+        title: "✈️ 武汉天河国际机场 (WUH)",
+        city: "中国 · 武汉",
+        coords: [30.7766, 114.2081],
+        days: "Day 1 (前置航班)",
+        time: "12/11 00:15 起飞 ➔ 05:25 抵新加坡樟宜",
+        badge: "✈️ 妻子前置航班",
+        desc: "妻子搭乘直飞红眼航班直奔新加坡，清晨抵达樟宜机场，白天入住酒店补觉休整，等待傍晚先生下班汇合启程。",
+        gmap: "https://www.google.com/maps/search/?api=1&query=Wuhan+Tianhe+International+Airport"
+      },
+      {
+        id: 1,
+        title: "🇸🇬 1. 新加坡 (Singapore) · 启程站",
+        city: "新加坡",
+        coords: [1.3521, 103.8198],
+        days: "Day 1 · 12/11 (周五)",
+        time: "18:00 夫妻下班汇合 ➔ 18:30 兀兰关卡 ➔ 19:30 新山拉庆大巴",
+        badge: "启程站",
+        desc: "周五傍晚正式启程！经兀兰长堤跨国口岸进入马来西亚新山，乘 19:30 豪华大巴直奔马六甲古城。",
+        stay: "马六甲惠胜酒店 / 宜必思",
+        transit: "🚌 19:30 新山拉庆 ➔ 马六甲中央车站 (2.5h，约220km)",
+        gmap: "https://www.google.com/maps/search/?api=1&query=Woodlands+Checkpoint+Singapore"
+      },
+      {
+        id: 2,
+        title: "🇲🇾 2. 马六甲 (Melaka) · 古城夜市",
+        city: "马来西亚 · 马六甲",
+        coords: [2.2198, 102.2494],
+        days: "Day 1–2 · 12/11-12",
+        time: "12/11 22:00 入住古城 ➔ 12/12 21:30 跨国夜巴发车",
+        badge: "古城夜市",
+        desc: "漫步鸡场街周末大夜市、荷兰红屋与圣保罗山；品尝地道娘惹美食，在 The Daily Fix 天井咖啡馆小憩。",
+        stay: "惠胜酒店 (Hatten Hotel Melaka)",
+        transit: "🚌 21:30 乘跨国夜班豪华大巴赴泰国合艾 (直达避开吉隆坡，9.5h)",
+        gmap: "https://www.google.com/maps/search/?api=1&query=Melaka+Sentral"
+      },
+      {
+        id: 3,
+        title: "🇹🇭 3. 泰国 · 合艾 (Hat Yai)",
+        city: "泰国 · 合艾",
+        coords: [7.0037, 100.4682],
+        days: "Day 3 · 12/13 (周日)",
+        time: "07:00 抵合艾通关 ➔ 08:30 早茶小憩 ➔ 15:45 火车站发车",
+        badge: "泰南门户",
+        desc: "黑木山/昔罗口岸通关入境泰国，享用肉骨茶早茶与 Bussaba 咖啡馆休整充电，下午登上泰铁最豪华特快列车。",
+        stay: "泰铁32次特快CNR卧铺 (宿车上)",
+        transit: "🚆 15:45 泰铁32次卧铺赴曼谷 (18.5h，最抢手泰铁夜车)",
+        gmap: "https://www.google.com/maps/search/?api=1&query=Hat+Yai+Junction+Railway+Station"
+      },
+      {
+        id: 4,
+        title: "🇹🇭 4. 泰国 · 曼谷 (Bangkok)",
+        city: "泰国 · 曼谷",
+        coords: [13.8037, 100.5408],
+        days: "Day 4–5 · 12/14-15",
+        time: "12/14 10:30 抵曼谷中央站 ➔ 周一/周二连续两日全天办公 ➔ 12/15 21:25 启程",
+        badge: "大都市 Workcation",
+        desc: "连续 2 天全天高效远程办公（素坤逸/沙吞高性价比商务酒店+Factory Coffee），傍晚游览湄南河夜景与乔德夜市。",
+        stay: "曼谷沙吞智选假日酒店 / 雅乐轩",
+        transit: "🚆 12/15 21:25 跨国直通列车赴老挝万象 (免换大巴直达坎萨瓦站)",
+        gmap: "https://www.google.com/maps/search/?api=1&query=Krung+Thep+Aphiwat+Central+Terminal"
+      },
+      {
+        id: 5,
+        title: "🇱🇦 5. 老挝 · 万象 (Vientiane)",
+        city: "老挝 · 万象",
+        coords: [17.9757, 102.6331],
+        days: "Day 6–7 · 12/16-17",
+        time: "12/16 09:05 直通万象通关 ➔ 周三全天及周四上午远程办公 ➔ 12/17 15:05 发车",
+        badge: "湄公河慢生活",
+        desc: "直通万象坎萨瓦站落地签通关；入住宜必思南普酒店，日间在 Naked Espresso 办公，傍晚在湄公河畔欣赏火红晚霞与烤鱼市集。",
+        stay: "宜必思万象南普酒店 (Ibis Vientiane)",
+        transit: "🚄 12/17 15:05 中老铁路“澜沧号”动车赴琅勃拉邦 (2h，240km)",
+        gmap: "https://www.google.com/maps/search/?api=1&query=Vientiane+Khamsavath+Station"
+      },
+      {
+        id: 6,
+        title: "🇱🇦 6. 老挝 · 琅勃拉邦 (Luang Prabang)",
+        city: "老挝 · 琅勃拉邦",
+        coords: [19.8893, 102.1347],
+        days: "Day 7–10 · 12/17-20",
+        time: "12/17 17:10 抵达 ➔ 周五全天工作 ➔ 周末布施/光西瀑布 ➔ 12/20 14:30 启程",
+        badge: "世界文化遗产",
+        desc: "慢调度假村静音办公（Saffron Coffee 湄公河景）；体验清晨千年布施仪式、光西瀑布碧绿钙化池与落日游船巡游。",
+        stay: "梦之精品度假村 / 湄公河日落洋房",
+        transit: "🚄 12/20 14:30 中老铁路 D888 次国际列车回国 (磨憨口岸通关，12306直购)",
+        gmap: "https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Railway+Station"
+      },
+      {
+        id: 7,
+        title: "🇨🇳 7. 中国 · 西双版纳 (Xishuangbanna)",
+        city: "中国 · 云南西双版纳",
+        coords: [22.0084, 100.7972],
+        days: "Day 10–13 · 12/20-23",
+        time: "12/20 19:30 抵版纳入住告庄 ➔ 周一/周二连续两日全天工作 ➔ 12/23 09:40 发车",
+        badge: "热带雨林办公",
+        desc: "入住告庄西双景特色江景客栈，全天专注远程办公处理年前核心任务，夜晚漫游星光夜市、品尝傣味手抓饭与热带水果。",
+        stay: "西双版纳漫悦江景客栈 / 景兰",
+        transit: "🚄 12/23 09:40 云南省内直达高铁直通大理 (6h，780km)",
+        gmap: "https://www.google.com/maps/search/?api=1&query=Xishuangbanna+Railway+Station"
+      },
+      {
+        id: 8,
+        title: "🇨🇳 8. 中国 · 云南大理 (Dali) · 终点胜地",
+        city: "中国 · 云南大理",
+        coords: [25.5927, 100.2285],
+        days: "Day 13–15 · 12/23-25",
+        time: "12/23 15:35 抵大理 ➔ 12/24 平安夜海景办公 ➔ 12/25 圣诞喜洲骑行收官",
+        badge: "终点站 · 苍山洱海",
+        desc: "入住洱海生态廊道客栈，面朝苍山洱海观海露台轻松办公；漫步大理古城人民路度过浪漫平安夜，圣诞节在喜洲古镇骑行收官！",
+        stay: "大理浅山伴海客栈 / 慢屋极目",
+        transit: "🏁 旅途圆满收官 · 3,600公里跨越5国壮举完成！",
+        gmap: "https://www.google.com/maps/search/?api=1&query=Dali+Railway+Station"
+      }
+    ];
+
+    let overviewMapInstance = null;
+    let googleRoadmapLayer = null;
+    let googleSatelliteLayer = null;
+
+    function initOverviewGoogleMap() {
+      const container = document.getElementById('overview-google-map');
+      if (!container || overviewMapInstance) return;
+
+      overviewMapInstance = L.map('overview-google-map', {
+        zoomControl: true,
+        scrollWheelZoom: true
+      }).setView([14.5, 102.5], 5);
+
+      // Google Maps Roadmap Tiles
+      googleRoadmapLayer = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        attribution: 'Map data &copy; <a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a>'
+      }).addTo(overviewMapInstance);
+
+      // Google Maps Satellite / Hybrid Tiles
+      googleSatelliteLayer = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        attribution: 'Imagery &copy; <a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps Satellite</a>'
+      });
+
+      // Layer Control in Top Right
+      const baseLayers = {
+        "🗺️ Google Maps 街道": googleRoadmapLayer,
+        "🛰️ Google Maps 卫星": googleSatelliteLayer
+      };
+      L.control.layers(baseLayers, null, { position: 'topright' }).addTo(overviewMapInstance);
+
+      // Draw overland route polyline
+      const overlandCoords = OVERVIEW_WAYPOINTS.filter(w => w.id > 0).map(w => w.coords);
+      L.polyline(overlandCoords, {
+        color: '#0284c7',
+        weight: 5,
+        opacity: 0.9,
+        lineJoin: 'round'
+      }).addTo(overviewMapInstance);
+
+      // Draw dashed flight path from Wuhan to Singapore
+      const flightCoords = [OVERVIEW_WAYPOINTS[0].coords, OVERVIEW_WAYPOINTS[1].coords];
+      L.polyline(flightCoords, {
+        color: '#8b5cf6',
+        weight: 3,
+        opacity: 0.8,
+        dashArray: '8, 8'
+      }).addTo(overviewMapInstance);
+
+      // Add custom numbered pins
+      OVERVIEW_WAYPOINTS.forEach(wp => {
+        const isFlight = wp.id === 0;
+        const isDest = wp.id === 8;
+        const bgColor = isFlight ? '#8b5cf6' : (isDest ? '#dc2626' : '#0284c7');
+        const label = isFlight ? '✈️' : (isDest ? '🏁' : wp.id);
+
+        const customIcon = L.divIcon({
+          className: 'custom-map-pin',
+          html: `<div style="background:${bgColor}; color:white; width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px; border:3px solid white; box-shadow:0 3px 10px rgba(0,0,0,0.35); text-align:center; cursor:pointer;">${label}</div>`,
+          iconSize: [34, 34],
+          iconAnchor: [17, 17],
+          popupAnchor: [0, -18]
+        });
+
+        const marker = L.marker(wp.coords, { icon: customIcon }).addTo(overviewMapInstance);
+
+        const popupHtml = `
+          <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; min-width:240px; padding:4px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+              <span style="font-size:0.75rem; font-weight:700; color:${bgColor};">${wp.days}</span>
+              <span style="font-size:0.72rem; background:#f1f5f9; padding:2px 6px; border-radius:4px; color:#475569;">${wp.city}</span>
+            </div>
+            <div style="font-size:1.02rem; font-weight:800; color:#0f172a; margin-bottom:6px;">${wp.title}</div>
+            <div style="font-size:0.78rem; color:#1e293b; margin-bottom:8px; background:#f8fafc; padding:6px 8px; border-radius:6px; border:1px solid #e2e8f0; line-height:1.4;">
+              <strong>⏰ 时刻：</strong>${wp.time}
+            </div>
+            <p style="font-size:0.8rem; color:#334155; margin:0 0 8px; line-height:1.4;">${wp.desc}</p>
+            ${wp.stay ? `<div style="font-size:0.76rem; color:#059669; font-weight:600; margin-bottom:6px;">🏨 推荐住宿：${wp.stay}</div>` : ''}
+            ${wp.transit ? `<div style="font-size:0.76rem; color:#d97706; font-weight:600; margin-bottom:8px;">${wp.transit}</div>` : ''}
+            <a href="${wp.gmap}" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; padding:6px 12px; background:#2563eb; color:white; border-radius:6px; text-decoration:none; font-size:0.75rem; font-weight:700; box-shadow:0 2px 6px rgba(37,99,235,0.3);">📍 在 Google Maps 中打开 ↗</a>
+          </div>
+        `;
+
+        marker.bindPopup(popupHtml);
+      });
+
+      // Fit bounds
+      const allCoords = OVERVIEW_WAYPOINTS.map(w => w.coords);
+      overviewMapInstance.fitBounds(L.latLngBounds(allCoords).pad(0.08));
     }
 
     function toggleOverviewMode(mode) {
-      const mapContainer = document.getElementById('overview-map-container');
+      const gmapContainer = document.getElementById('overview-gmap-container');
+      const posterContainer = document.getElementById('overview-map-container');
       const tableContainer = document.getElementById('overview-table-container');
-      const btnMap = document.getElementById('btn-ov-map');
+      const btnGmap = document.getElementById('btn-ov-gmap');
+      const btnPoster = document.getElementById('btn-ov-poster');
       const btnTable = document.getElementById('btn-ov-table');
       
-      if (mode === 'map') {
-        mapContainer.style.display = 'block';
+      if (mode === 'gmap') {
+        gmapContainer.style.display = 'block';
+        posterContainer.style.display = 'none';
         tableContainer.style.display = 'none';
-        btnMap.style.background = '#0284c7';
-        btnMap.style.color = '#ffffff';
+        btnGmap.style.background = '#0284c7';
+        btnGmap.style.color = '#ffffff';
+        btnPoster.style.background = 'transparent';
+        btnPoster.style.color = '#1e40af';
+        btnTable.style.background = 'transparent';
+        btnTable.style.color = '#1e40af';
+        setTimeout(() => {
+          if (overviewMapInstance) overviewMapInstance.invalidateSize();
+          else initOverviewGoogleMap();
+        }, 100);
+      } else if (mode === 'poster') {
+        gmapContainer.style.display = 'none';
+        posterContainer.style.display = 'block';
+        tableContainer.style.display = 'none';
+        btnPoster.style.background = '#0284c7';
+        btnPoster.style.color = '#ffffff';
+        btnGmap.style.background = 'transparent';
+        btnGmap.style.color = '#1e40af';
         btnTable.style.background = 'transparent';
         btnTable.style.color = '#1e40af';
       } else {
-        mapContainer.style.display = 'none';
+        gmapContainer.style.display = 'none';
+        posterContainer.style.display = 'none';
         tableContainer.style.display = 'block';
         btnTable.style.background = '#0284c7';
         btnTable.style.color = '#ffffff';
-        btnMap.style.background = 'transparent';
-        btnMap.style.color = '#1e40af';
+        btnGmap.style.background = 'transparent';
+        btnGmap.style.color = '#1e40af';
+        btnPoster.style.background = 'transparent';
+        btnPoster.style.color = '#1e40af';
       }
     }
 
@@ -3194,6 +3456,10 @@
       }
     });
 
-  </script>
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => initOverviewGoogleMap(), 300);
+    });
+</script>
 </body>
 </html>
