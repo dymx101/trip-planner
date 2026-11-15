@@ -24,7 +24,9 @@
           "🛍️ 直通商圈超市"
         ],
         "workcation": "客房配备独立实木写字台与万国插座，实测 100Mbps 稳定网络，视频会议流畅无卡顿。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Hatten+Hotel+Melaka"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Hatten+Hotel+Melaka",
+        "agoda_url": "https://www.agoda.com/search?text=Hatten%20Hotel%20Melaka",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E6%83%A0%E8%83%9C%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-melaka-ibis",
@@ -46,7 +48,9 @@
           "💰 300元档超值"
         ],
         "workcation": "房间配有专用办公转角台与多孔 USB 接口，大堂休息区提供长条共享工作桌与插座。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Ibis+Melaka"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Ibis+Melaka",
+        "agoda_url": "https://www.agoda.com/search?text=Ibis%20Melaka",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-melaka-rosa",
@@ -68,7 +72,9 @@
           "🤫 静音隔音极佳"
         ],
         "workcation": "每间房设有独立定制原木书桌，客房中央天井咖啡馆办公氛围极佳，适合深度写作与编程。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Rosa+Malacca"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Rosa+Malacca",
+        "agoda_url": "https://www.agoda.com/search?text=Rosa%20Malacca",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E7%BD%97%E8%8E%8E%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-melaka-pines",
@@ -90,7 +96,9 @@
           "🏊 咸水观景泳池"
         ],
         "workcation": "超长写字台搭配护眼台灯，室内空间开阔不压抑，适合长时间办公。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Pines+Melaka"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Pines+Melaka",
+        "agoda_url": "https://www.agoda.com/search?text=The%20Pines%20Melaka",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E6%9D%BE%E8%88%B9%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-melaka-babahouse",
@@ -112,7 +120,9 @@
           "🌿 浓郁南洋风韵"
         ],
         "workcation": "客房内配有复古木质办公桌与现代高速 Wi-Fi，在南洋历史宅院中体验数字游民生活。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Baba+House+Melaka"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Baba+House+Melaka",
+        "agoda_url": "https://www.agoda.com/search?text=The%20Baba%20House%20Melaka",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E5%B3%87%E5%B3%87%E5%A4%A7%E5%8E%A6%E9%85%92%E5%BA%97"
       }
     ]
   },
@@ -141,7 +151,9 @@
           "💼 专业商务中心"
         ],
         "workcation": "配有标准商务写字桌与人体工学椅，大堂提供安静的商务洽谈办公区。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Centara+Hotel+Hat+Yai"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Centara+Hotel+Hat+Yai",
+        "agoda_url": "https://www.agoda.com/search?text=Centara%20Hotel%20Hat%20Yai",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E7%9B%9B%E6%B3%B0%E4%B9%90%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-hatyai-monotel",
@@ -163,7 +175,9 @@
           "💰 300元高颜值"
         ],
         "workcation": "客房配备专属木质电脑桌，插座布局科学，网速实测 80Mbps+。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Monotel+Hat+Yai"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Monotel+Hat+Yai",
+        "agoda_url": "https://www.agoda.com/search?text=Monotel%20Hat%20Yai",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E8%8E%AB%E8%AF%BA%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-hatyai-redplanet",
@@ -185,7 +199,9 @@
           "💰 200元档超值"
         ],
         "workcation": "大堂配有专门的 Apple iMac 电脑工作台，客房内带壁挂折叠桌。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Red+Planet+Hat+Yai"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Red+Planet+Hat+Yai",
+        "agoda_url": "https://www.agoda.com/search?text=Red%20Planet%20Hat%20Yai",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E7%BA%A2%E6%98%9F%E7%90%83%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-hatyai-newseason",
@@ -207,7 +223,9 @@
           "🚶 步行至夜市"
         ],
         "workcation": "客房配备稳固厚实木桌，网络稳定，适合白天静心完成紧急工作。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=New+Season+Square+Hotel+Hat+Yai"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=New+Season+Square+Hotel+Hat+Yai",
+        "agoda_url": "https://www.agoda.com/search?text=New%20Season%20Square%20Hotel",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E6%96%B0%E5%AD%A3%E6%96%B9%E8%88%9F%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-hatyai-habita",
@@ -229,7 +247,9 @@
           "💻 绝佳办公氛围"
         ],
         "workcation": "酒店一楼咖啡厅设有多处配有电源插座的实木长桌，被称为合艾最适合带电脑办公的住宿地。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Habita+Hatyai"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Habita+Hatyai",
+        "agoda_url": "https://www.agoda.com/search?text=The%20Habita%20Hatyai",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E5%93%88%E6%AF%94%E5%A1%94%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
       }
     ]
   },
@@ -258,7 +278,9 @@
           "💼 人体工学转椅"
         ],
         "workcation": "客房配备专业办公桌、多国通用转换插座与静音空调，极适合全天专注远程工作。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+Bangkok+Sathorn"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+Bangkok+Sathorn",
+        "agoda_url": "https://www.agoda.com/search?text=Holiday%20Inn%20Express%20Sathorn",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E6%B2%99%E5%90%9E%E6%99%BA%E9%80%89%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-bkk-aloft",
@@ -280,7 +302,9 @@
           "🛏️ 万豪标准床品"
         ],
         "workcation": "提供即插即用工作台（Plug & Play），客房与大堂公共空间充满活力，适合创意与代码工作。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Aloft+Bangkok+Sukhumvit+11"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Aloft+Bangkok+Sukhumvit+11",
+        "agoda_url": "https://www.agoda.com/search?text=Aloft%20Bangkok%20Sukhumvit%2011",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E7%B4%A0%E5%9D%A4%E9%80%B8%2011%20%E5%B7%B7%E9%9B%85%E4%B9%90%E8%BD%A9%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-bkk-ibisstyles",
@@ -302,7 +326,9 @@
           "💰 300元档超值"
         ],
         "workcation": "客房设计科学紧凑，办公桌旁配备多个电源接口，无线网络测速超 100Mbps。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Ibis+Styles+Bangkok+Sukhumvit+50"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Ibis+Styles+Bangkok+Sukhumvit+50",
+        "agoda_url": "https://www.agoda.com/search?text=Ibis%20Styles%20Sukhumvit%2050",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E7%B4%A0%E5%9D%A4%E9%80%B8%2050%20%E5%B7%B7%E5%AE%9C%E5%BF%85%E6%80%9D%E5%B0%9A%E5%93%81%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-bkk-quarterari",
@@ -324,7 +350,9 @@
           "🏙️ 绝美城市全景"
         ],
         "workcation": "客房配备落地玻璃景观办公桌，下楼即是咖啡馆与特色餐厅，换乘火车极其从容。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Quarter+Ari+by+UHG"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Quarter+Ari+by+UHG",
+        "agoda_url": "https://www.agoda.com/search?text=The%20Quarter%20Ari%20by%20UHG",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E9%98%BF%E9%87%8C%E5%A4%B8%E7%89%B9%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-bkk-chatrium",
@@ -346,7 +374,9 @@
           "🧘 极高静音私密"
         ],
         "workcation": "配有独立客厅大餐桌与书桌，阳台微风习习，两人同时办公互不干扰。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Chatrium+Residence+Sathon+Bangkok"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Chatrium+Residence+Sathon+Bangkok",
+        "agoda_url": "https://www.agoda.com/search?text=Chatrium%20Residence%20Sathon",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E6%B2%99%E5%90%9E%E5%AF%9F%E6%AE%BF%E9%85%92%E5%BA%97"
       }
     ]
   },
@@ -375,7 +405,9 @@
           "⚡ 全天极速无线网"
         ],
         "workcation": "客房配备标准工作台与护眼阅读灯，大堂咖啡区宽敞明亮，适合全天高效协作。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Ibis+Vientiane+Nam+Phu"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Ibis+Vientiane+Nam+Phu",
+        "agoda_url": "https://www.agoda.com/search?text=Ibis%20Vientiane%20Nam%20Phu",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%AE%9C%E5%BF%85%E6%80%9D%E4%B8%87%E8%B1%A1%E5%8D%97%E6%99%AE%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-vte-salana",
@@ -397,7 +429,9 @@
           "🧘 禅意静心环境"
         ],
         "workcation": "客房配有实木质感大写字台，顶楼 Living Room 书吧拥有极佳视野与安静办公桌。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Salana+Boutique+Hotel+Vientiane"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Salana+Boutique+Hotel+Vientiane",
+        "agoda_url": "https://www.agoda.com/search?text=Salana%20Boutique%20Hotel",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%E8%90%A8%E6%8B%89%E9%82%A3%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-vte-spark",
@@ -419,7 +453,9 @@
           "🅿️ 便捷接送车服务"
         ],
         "workcation": "客房内配有现代极简长书桌，采光充足，办公环境极其安静放松。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=S+Park+Design+Hotel+Vientiane"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=S+Park+Design+Hotel+Vientiane",
+        "agoda_url": "https://www.agoda.com/search?text=S%20Park%20Design%20Hotel",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%20S%20%E5%85%AC%E5%9B%AD%E8%AE%BE%E8%AE%A1%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-vte-namphu",
@@ -441,7 +477,9 @@
           "📍 出门即餐饮街"
         ],
         "workcation": "庭院周边设有多张遮阳木桌，客房内带独立书桌，网络稳定通畅。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Namphu+Boutique+Hotel+Vientiane"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Namphu+Boutique+Hotel+Vientiane",
+        "agoda_url": "https://www.agoda.com/search?text=Namphu%20Boutique%20Hotel",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%E5%8D%97%E6%99%AE%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-vte-latsavong",
@@ -463,7 +501,9 @@
           "🚆 方便接驳火车站"
         ],
         "workcation": "行政级商务写字台与静音办公环境，是处理严谨商务与视频汇报的首选。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Latsavong+Plaza+Vientiane"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Latsavong+Plaza+Vientiane",
+        "agoda_url": "https://www.agoda.com/search?text=Wanda%20Vista%20/%20Latsavong%20Plaza",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%E6%8B%89%E8%90%A8%E7%BF%81%E6%97%BA%E8%BE%BE%E9%85%92%E5%BA%97"
       }
     ]
   },
@@ -492,7 +532,9 @@
           "🤫 极致鸟语花香"
         ],
         "workcation": "客房配备独立实木大书桌与舒适阳台长椅，鸟语花香，网速稳定，是深度专注办公的最佳场所。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Dream+Boutique+Resort+Luang+Prabang"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Dream+Boutique+Resort+Luang+Prabang",
+        "agoda_url": "https://www.agoda.com/search?text=The%20Dream%20Boutique%20Resort",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6%E6%A2%A6%E4%B9%8B%E7%B2%BE%E5%93%81%E5%BA%A6%E5%81%87%E6%9D%91"
       },
       {
         "id": "hotel-lpq-mekongsunset",
@@ -514,7 +556,9 @@
           "💰 400元档超值"
         ],
         "workcation": "阳台观景木桌配备插座，傍晚一边喝老挝咖啡看落日一边收尾工作，浪漫惬意。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Mekong+Sunset+View+Hotel+Luang+Prabang"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Mekong+Sunset+View+Hotel+Luang+Prabang",
+        "agoda_url": "https://www.agoda.com/search?text=Mekong%20Sunset%20View%20Hotel",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E6%B9%84%E5%85%AC%E6%B2%B3%E6%97%A5%E8%90%BD%E6%99%AF%E8%A7%82%E6%B4%8B%E6%A5%BC%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-lpq-villasanti",
@@ -536,7 +580,9 @@
           "🍵 皇家法式庭院"
         ],
         "workcation": "古色古香的柚木书桌与安静的庭院环境，客房宽敞，隔音上乘。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Villa+Santi+Hotel+Luang+Prabang"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Villa+Santi+Hotel+Luang+Prabang",
+        "agoda_url": "https://www.agoda.com/search?text=Villa%20Santi%20Hotel",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%89%E8%92%82%E5%88%AB%E5%A2%85%E5%BA%A6%E5%81%87%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-lpq-chitdara",
@@ -558,7 +604,9 @@
           "💰 实惠口碑好评"
         ],
         "workcation": "一楼庭院配有多张遮阳办公桌椅，房间采光通风良好，Wi-Fi 全面覆盖。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Villa+Chitdara+Luang+Prabang"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Villa+Chitdara+Luang+Prabang",
+        "agoda_url": "https://www.agoda.com/search?text=Villa%20Chitdara",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A5%87%E8%BE%BE%E6%8B%89%E4%BC%A0%E7%BB%9F%E5%AE%A2%E6%A0%88"
       },
       {
         "id": "hotel-lpq-namkhan",
@@ -580,7 +628,9 @@
           "🤝 中英文贴心服务"
         ],
         "workcation": "亲水露台设有开阔桌椅，凉风习习，听着轻柔水声办公格外解压。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=Riverside+Guesthouse+Luang+Prabang"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Riverside+Guesthouse+Luang+Prabang",
+        "agoda_url": "https://www.agoda.com/search?text=Riverside%20Guesthouse%20Luang%20Prabang",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%8D%97%E5%BA%B7%E6%B2%B3%E6%BB%A8%E7%B2%BE%E5%93%81%E5%AE%A2%E6%A0%88"
       }
     ]
   },
@@ -609,7 +659,9 @@
           "🌴 原生态热带美宿"
         ],
         "workcation": "千兆光纤独享网络（实测 300Mbps+），加厚实木茶台兼书桌，配舒适靠椅与多孔快充插座。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨",
+        "agoda_url": "https://www.agoda.com/search?text=%E6%98%9F%E5%85%89%E5%A4%9C%E5%B8%82%E5%BA%97",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%91%8A%E5%BA%84%E8%A5%BF%E5%8F%8C%E6%99%AF%E6%BC%AB%E6%82%A6%E6%B1%9F%E6%99%AF%E5%AE%A2%E6%A0%88"
       },
       {
         "id": "hotel-banna-jinglan",
@@ -631,7 +683,9 @@
           "💼 五星级商务配套"
         ],
         "workcation": "客房配备大型标准化写字台与静音办公环境，适合重要远程商务联络与汇报。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=告庄景兰大酒店"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=告庄景兰大酒店",
+        "agoda_url": "https://www.agoda.com/search?text=Jinglan%20Hotel",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%91%8A%E5%BA%84%E6%99%AF%E5%85%B0%E5%A4%A7%E9%85%92%E5%BA%97"
       },
       {
         "id": "hotel-banna-nanni",
@@ -653,7 +707,9 @@
           "📸 顶级出片打卡点"
         ],
         "workcation": "客房落地窗前配有大理石长工作台，泡上一杯普洱茶边看江景边码字，惬意舒适。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景景真寨"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景景真寨",
+        "agoda_url": "https://www.agoda.com/search?text=%E5%91%8A%E5%BA%84%E5%BA%97",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%96%83%E5%91%A2%E6%B8%A9%E6%B3%89%E6%B1%9F%E6%99%AF%E5%BA%A6%E5%81%87%E7%BE%8E%E5%AE%BF"
       },
       {
         "id": "hotel-banna-putai",
@@ -675,7 +731,9 @@
           "💰 300元档超值"
         ],
         "workcation": "客房配备舒适实木办公桌椅与独立高速光纤路由器，延迟极低，办公顺畅。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景景亮寨"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景景亮寨",
+        "agoda_url": "https://www.agoda.com/search?text=%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%92%9E%E6%B3%B0%E6%B1%9F%E6%99%AF%E5%BA%A6%E5%81%87%E5%AE%A2%E6%A0%88",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%92%9E%E6%B3%B0%E6%B1%9F%E6%99%AF%E5%BA%A6%E5%81%87%E5%AE%A2%E6%A0%88"
       },
       {
         "id": "hotel-banna-yueman",
@@ -697,7 +755,9 @@
           "🛵 方便租借小电驴"
         ],
         "workcation": "长条型实木写字台与人体工学转椅，网速稳定快速，性价比在版纳首屈一指。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=景洪宣慰大道"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=景洪宣慰大道",
+        "agoda_url": "https://www.agoda.com/search?text=%E5%B8%82%E5%8C%BA%E6%B0%B4%E6%9E%9C%E8%A1%97%E5%BA%97",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E6%99%AF%E6%B4%AA%E6%82%A6%E6%9B%BC%E6%99%BA%E9%80%89%E8%BD%BB%E5%A5%A2%E5%AE%A2%E6%A0%88"
       }
     ]
   },
@@ -726,7 +786,9 @@
           "🚲 免费骑行生态廊道"
         ],
         "workcation": "千兆独享光纤实测 400Mbps+，定制海景落地窗长木桌，配备护眼照明与人体工学坐垫。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道",
+        "agoda_url": "https://www.agoda.com/search?text=%E7%A3%BB%E6%BA%AA%20S%20%E5%BC%AF%E5%BA%97",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E6%B4%B1%E6%B5%B7%E7%94%9F%E6%80%81%E5%BB%8A%E9%81%93%C2%B7%E6%B5%85%E5%B1%B1%E4%BC%B4%E6%B5%B7%E5%AE%A2%E6%A0%88"
       },
       {
         "id": "hotel-dali-manwu",
@@ -748,7 +810,9 @@
           "🌅 苍山晚霞最佳观景点"
         ],
         "workcation": "客房配有定制胡桃木大办公桌，公区拥有充足自然采光的阅读办公长台，灵感充沛。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=大理慢屋极目海景度假客栈"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理慢屋极目海景度假客栈",
+        "agoda_url": "https://www.agoda.com/search?text=%E7%89%B9%E6%83%A0%E8%A7%82%E6%B5%B7%E6%88%BF",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E6%85%A2%E5%B1%8B%C2%B7%E6%9E%81%E7%9B%AE%E6%B5%B7%E6%99%AF%E5%BA%A6%E5%81%87%E5%AE%A2%E6%A0%88"
       },
       {
         "id": "hotel-dali-qichi",
@@ -770,7 +834,9 @@
           "🤫 避开人流静谧安详"
         ],
         "workcation": "客房配有白族手工实木桌椅，院内茶室备有全套茶具与高速 Wi-Fi，体验在地隐居办公。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=大理古城文献路"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理古城文献路",
+        "agoda_url": "https://www.agoda.com/search?text=%E5%8D%97%E9%97%A8%E6%96%87%E7%8C%AE%E6%A5%BC%E5%BA%97",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E5%8F%A4%E5%9F%8E%E6%A0%96%E8%BF%9F%E7%B2%BE%E5%93%81%E5%AE%A2%E6%A0%88"
       },
       {
         "id": "hotel-dali-xixiang",
@@ -792,7 +858,9 @@
           "💰 300元档一线海景"
         ],
         "workcation": "亲水观景木桌配备充足插座，水草丰美、浪声轻缓，办公治愈感拉满。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=大理才村码头"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理才村码头",
+        "agoda_url": "https://www.agoda.com/search?text=%E5%A4%A7%E7%90%86%E6%89%8D%E6%9D%91%E7%A0%81%E5%A4%B4%E5%A4%95%E6%83%B3%E6%B5%B7%E6%99%AF%E5%AE%A2%E6%A0%88",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E6%89%8D%E6%9D%91%E7%A0%81%E5%A4%B4%E5%A4%95%E6%83%B3%E6%B5%B7%E6%99%AF%E5%AE%A2%E6%A0%88"
       },
       {
         "id": "hotel-dali-wusuowei",
@@ -814,7 +882,9 @@
           "💰 超高性价比海景"
         ],
         "workcation": "露台实木长桌搭配暖阳与海风，办公兼顾身心疗愈，极具性价比。",
-        "gmap": "https://www.google.com/maps/search/?api=1&query=大理双廊大建旁村"
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理双廊大建旁村",
+        "agoda_url": "https://www.agoda.com/search?text=%E7%BB%8F%E6%B5%8E%E8%A7%82%E6%B5%B7%E6%88%BF",
+        "ctrip_url": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E5%8F%8C%E5%BB%8A%E6%97%A0%E6%89%80%E4%B8%BA%E6%B5%B7%E6%99%AF%E5%AE%A2%E6%A0%88"
       }
     ]
   }

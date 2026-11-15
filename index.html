@@ -1363,6 +1363,69 @@
     }
 
 
+    
+    /* Direct Booking Buttons */
+    .hotel-action-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .hotel-booking-btns {
+      display: flex;
+      gap: 6px;
+      width: 100%;
+    }
+    .hotel-sub-btns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      width: 100%;
+    }
+    .btn-hotel-agoda {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      background: #7c3aed;
+      border: 1px solid #6d28d9;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+    .btn-hotel-agoda:hover {
+      background: #6d28d9;
+    }
+    .btn-hotel-ctrip {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      background: #2563eb;
+      border: 1px solid #1d4ed8;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+    .btn-hotel-ctrip:hover {
+      background: #1d4ed8;
+    }
+
     /* Hotel Grouping & Filter Styles */
     .hotel-city-nav {
       display: flex;
@@ -2806,16 +2869,16 @@
           <div style="display:flex; align-items:center; gap:10px;">
             <span style="font-size:1.4rem;">🏨</span>
             <div>
-              <div style="font-size:1.15rem; font-weight:800; color:#065f46;">全线 7 大站点 · 35 家精选住宿分类推荐</div>
-              <div style="font-size:0.85rem; color:#047857; margin-top:2px;">按城市地点聚合分组 · 每地严选 5 种不同住宿风格 · 黄金均价锁定在每晚 <strong>¥350 - ¥550</strong> 档位</div>
+              <div style="font-size:1.15rem; font-weight:800; color:#065f46;">全线 7 大站点 · 35 家精选住宿直达订票与分类推荐</div>
+              <div style="font-size:0.85rem; color:#047857; margin-top:2px;">按城市地点聚合分组 · 每地严选 5 种不同住宿风格 · <strong>已配备 Agoda (安可达) 与 携程 (Ctrip) 在线即时预订直达通道</strong></div>
             </div>
           </div>
           <div style="background:white; border:1px solid #10b981; padding:6px 14px; border-radius:20px; font-weight:700; color:#047857; font-size:0.85rem; display:flex; align-items:center; gap:6px;">
-            <span>✨ 9 晚住宿总预算仅约 ¥3,800 - ¥4,800</span>
+            <span>✨ 11 晚品质住宿总预算仅约 ¥4,200 - ¥5,300</span>
           </div>
         </div>
         <p style="margin:0; font-size:0.88rem; color:#334155; line-height:1.55;">
-          全行程覆盖 <strong>马六甲、泰国合艾、曼谷、老挝万象、琅勃拉邦、西双版纳、云南大理</strong> 7 大关键停靠点。针对数码游民与夫妻兼顾度假的需求，每个城市均提供 <strong>现代商务综合体、精品美学设计、观景露台泳池、夜市商圈步行、极致超值实惠</strong> 5 大类别，配备高速 Wi-Fi 与宽大书桌，点击卡片即可在 Google Maps 导航或查看高清实景。
+          全行程覆盖 <strong>马六甲、泰国合艾、曼谷、老挝万象、琅勃拉邦、西双版纳、云南大理</strong> 7 大关键停靠点。针对数码游民与夫妻兼顾度假的需求，每个城市均提供 <strong>现代商务综合体、精品美学设计、观景露台泳池、夜市商圈步行、极致超值实惠</strong> 5 大类别。每张卡片均提供 <strong>🏨 Agoda 预订</strong> 与 <strong>✈️ 携程 预订</strong> 直达按钮，点击即可查看实时房态、房型价格并即时确认！
         </p>
       </div>
 
@@ -2866,12 +2929,22 @@
                 <span class="cafe-badge">⚡ 极速 Wi-Fi</span><span class="cafe-badge">🖥️ 宽阔大书桌</span><span class="cafe-badge">🏊 无边际海景泳池</span><span class="cafe-badge">🛍️ 直通商圈超市</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Hatten+Hotel+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Hatten%20Hotel%20Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E6%83%A0%E8%83%9C%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Hatten+Hotel+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -2899,12 +2972,22 @@
                 <span class="cafe-badge">🌐 雅高品质保证</span><span class="cafe-badge">🚶 步行10分到红屋</span><span class="cafe-badge">📶 稳定高速网络</span><span class="cafe-badge">💰 300元档超值</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Ibis+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Ibis%20Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Ibis+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -2932,12 +3015,22 @@
                 <span class="cafe-badge">🌿 工业复古美学</span><span class="cafe-badge">📸 绝美天井采光</span><span class="cafe-badge">☕ 优质自营咖啡厅</span><span class="cafe-badge">🤫 静音隔音极佳</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Rosa+Malacca" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Rosa%20Malacca" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E7%BD%97%E8%8E%8E%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Rosa+Malacca" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -2965,12 +3058,22 @@
                 <span class="cafe-badge">📐 40平米大空间</span><span class="cafe-badge">🌊 俯瞰马六甲河</span><span class="cafe-badge">🍳 配备简易水槽</span><span class="cafe-badge">🏊 咸水观景泳池</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=The+Pines+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=The%20Pines%20Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E6%9D%BE%E8%88%B9%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=The+Pines+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -2998,12 +3101,22 @@
                 <span class="cafe-badge">🏛️ 百年娘惹宅邸</span><span class="cafe-badge">🚶 步入鸡场街夜市</span><span class="cafe-badge">🍵 传统天井茶吧</span><span class="cafe-badge">🌿 浓郁南洋风韵</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=The+Baba+House+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=The%20Baba%20House%20Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E5%B3%87%E5%B3%87%E5%A4%A7%E5%8E%A6%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=The+Baba+House+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3045,12 +3158,22 @@
                 <span class="cafe-badge">🛍️ 楼下即Central商场</span><span class="cafe-badge">🚆 步行5分到火车站</span><span class="cafe-badge">🏊 室外泳池</span><span class="cafe-badge">💼 专业商务中心</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Centara+Hotel+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Centara%20Hotel%20Hat%20Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E7%9B%9B%E6%B3%B0%E4%B9%90%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Centara+Hotel+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3078,12 +3201,22 @@
                 <span class="cafe-badge">✨ 极简美学设计</span><span class="cafe-badge">📶 极速光纤网络</span><span class="cafe-badge">☕ 楼下精品咖啡</span><span class="cafe-badge">💰 300元高颜值</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Monotel+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Monotel%20Hat%20Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E8%8E%AB%E8%AF%BA%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Monotel+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3111,12 +3244,22 @@
                 <span class="cafe-badge">🚆 距火车站仅400米</span><span class="cafe-badge">⚡ 苹果电脑工作站</span><span class="cafe-badge">🚿 强劲热水卫浴</span><span class="cafe-badge">💰 200元档超值</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Red+Planet+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Red%20Planet%20Hat%20Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E7%BA%A2%E6%98%9F%E7%90%83%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Red+Planet+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3144,12 +3287,22 @@
                 <span class="cafe-badge">🍲 紧挨金荣早茶街</span><span class="cafe-badge">🚪 隔音密封优良</span><span class="cafe-badge">🪑 宽敞独立桌椅</span><span class="cafe-badge">🚶 步行至夜市</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=New+Season+Square+Hotel+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=New%20Season%20Square%20Hotel" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E6%96%B0%E5%AD%A3%E6%96%B9%E8%88%9F%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=New+Season+Square+Hotel+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3177,12 +3330,22 @@
                 <span class="cafe-badge">📚 艺术书吧大堂</span><span class="cafe-badge">☕ 优质精品咖啡</span><span class="cafe-badge">🌿 静谧宜居街区</span><span class="cafe-badge">💻 绝佳办公氛围</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=The+Habita+Hatyai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=The%20Habita%20Hatyai" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E5%93%88%E6%AF%94%E5%A1%94%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=The+Habita+Hatyai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3224,12 +3387,22 @@
                 <span class="cafe-badge">🚆 步行2分到BTS轻轨</span><span class="cafe-badge">🍳 免费丰盛热早餐</span><span class="cafe-badge">⚡ 千兆级无线网络</span><span class="cafe-badge">💼 人体工学转椅</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+Bangkok+Sathorn" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Holiday%20Inn%20Express%20Sathorn" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E6%B2%99%E5%90%9E%E6%99%BA%E9%80%89%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+Bangkok+Sathorn" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3257,12 +3430,22 @@
                 <span class="cafe-badge">🏊 高空无边泳池</span><span class="cafe-badge">🍸 W XYZ潮牌酒吧</span><span class="cafe-badge">🏙️ 素坤逸核心地段</span><span class="cafe-badge">🛏️ 万豪标准床品</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Aloft+Bangkok+Sukhumvit+11" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Aloft%20Bangkok%20Sukhumvit%2011" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E7%B4%A0%E5%9D%A4%E9%80%B8%2011%20%E5%B7%B7%E9%9B%85%E4%B9%90%E8%BD%A9%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Aloft+Bangkok+Sukhumvit+11" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3290,12 +3473,22 @@
                 <span class="cafe-badge">🚐 免费BTS接驳车</span><span class="cafe-badge">🎨 活力艺术风格</span><span class="cafe-badge">☕ 24小时前台服务</span><span class="cafe-badge">💰 300元档超值</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Ibis+Styles+Bangkok+Sukhumvit+50" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Ibis%20Styles%20Sukhumvit%2050" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E7%B4%A0%E5%9D%A4%E9%80%B8%2050%20%E5%B7%B7%E5%AE%9C%E5%BF%85%E6%80%9D%E5%B0%9A%E5%93%81%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Ibis+Styles+Bangkok+Sukhumvit+50" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3323,12 +3516,22 @@
                 <span class="cafe-badge">🏊 33层天际泳池</span><span class="cafe-badge">☕ 周边满布独立咖啡</span><span class="cafe-badge">🚆 靠近阿皮瓦中央站</span><span class="cafe-badge">🏙️ 绝美城市全景</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=The+Quarter+Ari+by+UHG" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=The%20Quarter%20Ari%20by%20UHG" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E9%98%BF%E9%87%8C%E5%A4%B8%E7%89%B9%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=The+Quarter+Ari+by+UHG" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3356,12 +3559,22 @@
                 <span class="cafe-badge">📐 55平米超大套房</span><span class="cafe-badge">🌴 热带泻湖巨型泳池</span><span class="cafe-badge">🍳 独立厨房与阳台</span><span class="cafe-badge">🧘 极高静音私密</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Chatrium+Residence+Sathon+Bangkok" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Chatrium%20Residence%20Sathon" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E6%B2%99%E5%90%9E%E5%AF%9F%E6%AE%BF%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Chatrium+Residence+Sathon+Bangkok" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3403,12 +3616,22 @@
                 <span class="cafe-badge">🌐 雅高标准品质</span><span class="cafe-badge">📍 南普广场核心区</span><span class="cafe-badge">🚶 3分到湄公河夜市</span><span class="cafe-badge">⚡ 全天极速无线网</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Ibis+Vientiane+Nam+Phu" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Ibis%20Vientiane%20Nam%20Phu" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%AE%9C%E5%BF%85%E6%80%9D%E4%B8%87%E8%B1%A1%E5%8D%97%E6%99%AE%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Ibis+Vientiane+Nam+Phu" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3436,12 +3659,22 @@
                 <span class="cafe-badge">🪵 纯正老挝柚木</span><span class="cafe-badge">☕ 顶楼天空书吧</span><span class="cafe-badge">🥐 极佳口碑早餐</span><span class="cafe-badge">🧘 禅意静心环境</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Salana+Boutique+Hotel+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Salana%20Boutique%20Hotel" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%E8%90%A8%E6%8B%89%E9%82%A3%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Salana+Boutique+Hotel+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3469,12 +3702,22 @@
                 <span class="cafe-badge">🏊 优美中庭泳池</span><span class="cafe-badge">🎨 现代轻奢空间</span><span class="cafe-badge">🍻 精酿啤酒吧</span><span class="cafe-badge">🅿️ 便捷接送车服务</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=S+Park+Design+Hotel+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=S%20Park%20Design%20Hotel" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%20S%20%E5%85%AC%E5%9B%AD%E8%AE%BE%E8%AE%A1%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=S+Park+Design+Hotel+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3502,12 +3745,22 @@
                 <span class="cafe-badge">🏛️ 法式拱门回廊</span><span class="cafe-badge">🌿 绿意水池庭院</span><span class="cafe-badge">💰 300元档超值</span><span class="cafe-badge">📍 出门即餐饮街</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Namphu+Boutique+Hotel+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Namphu%20Boutique%20Hotel" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%E5%8D%97%E6%99%AE%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Namphu+Boutique+Hotel+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3535,12 +3788,22 @@
                 <span class="cafe-badge">🏙️ 万象高空新地标</span><span class="cafe-badge">⚡ 专线光纤网络</span><span class="cafe-badge">🏋️ 大型健身中心</span><span class="cafe-badge">🚆 方便接驳火车站</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Latsavong+Plaza+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Wanda%20Vista%20/%20Latsavong%20Plaza" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%E6%8B%89%E8%90%A8%E7%BF%81%E6%97%BA%E8%BE%BE%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Latsavong+Plaza+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3582,12 +3845,22 @@
                 <span class="cafe-badge">🌴 南康河畔花园</span><span class="cafe-badge">🏊 花园清凉泳池</span><span class="cafe-badge">🚲 免费自行车漫游</span><span class="cafe-badge">🤫 极致鸟语花香</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=The+Dream+Boutique+Resort+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=The%20Dream%20Boutique%20Resort" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6%E6%A2%A6%E4%B9%8B%E7%B2%BE%E5%93%81%E5%BA%A6%E5%81%87%E6%9D%91" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=The+Dream+Boutique+Resort+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3615,12 +3888,22 @@
                 <span class="cafe-badge">🌅 湄公河一线绝景</span><span class="cafe-badge">📍 紧邻香通寺</span><span class="cafe-badge">🥐 阳台观景早餐</span><span class="cafe-badge">💰 400元档超值</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Mekong+Sunset+View+Hotel+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Mekong%20Sunset%20View%20Hotel" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E6%B9%84%E5%85%AC%E6%B2%B3%E6%97%A5%E8%90%BD%E6%99%AF%E8%A7%82%E6%B4%8B%E6%A5%BC%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Mekong+Sunset+View+Hotel+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3648,12 +3931,22 @@
                 <span class="cafe-badge">👑 百年皇室故居</span><span class="cafe-badge">🪵 精湛老挝木雕</span><span class="cafe-badge">📍 位于洋人街核心</span><span class="cafe-badge">🍵 皇家法式庭院</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Villa+Santi+Hotel+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Villa%20Santi%20Hotel" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%89%E8%92%82%E5%88%AB%E5%A2%85%E5%BA%A6%E5%81%87%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Villa+Santi+Hotel+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3681,12 +3974,22 @@
                 <span class="cafe-badge">🧘 门前即清晨布施</span><span class="cafe-badge">🚶 2分到古城夜市</span><span class="cafe-badge">🌺 鸟语花香庭院</span><span class="cafe-badge">💰 实惠口碑好评</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Villa+Chitdara+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Villa%20Chitdara" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%A5%87%E8%BE%BE%E6%8B%89%E4%BC%A0%E7%BB%9F%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Villa+Chitdara+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3714,12 +4017,22 @@
                 <span class="cafe-badge">🌊 直面南康河竹桥</span><span class="cafe-badge">☕ 免费老挝黑咖啡</span><span class="cafe-badge">💰 200元档超值</span><span class="cafe-badge">🤝 中英文贴心服务</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=Riverside+Guesthouse+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Riverside%20Guesthouse%20Luang%20Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%8D%97%E5%BA%B7%E6%B2%B3%E6%BB%A8%E7%B2%BE%E5%93%81%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Riverside+Guesthouse+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3761,12 +4074,22 @@
                 <span class="cafe-badge">🚶 步行3分到星光夜市</span><span class="cafe-badge">⚡ 全屋独享千兆专线</span><span class="cafe-badge">🍵 独立功夫茶台</span><span class="cafe-badge">🌴 原生态热带美宿</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=%E6%98%9F%E5%85%89%E5%A4%9C%E5%B8%82%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%91%8A%E5%BA%84%E8%A5%BF%E5%8F%8C%E6%99%AF%E6%BC%AB%E6%82%A6%E6%B1%9F%E6%99%AF%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3794,12 +4117,22 @@
                 <span class="cafe-badge">🏛️ 告庄地标金顶大厦</span><span class="cafe-badge">🏊 观景天际泳池</span><span class="cafe-badge">🍽️ 丰富中西式自助早</span><span class="cafe-badge">💼 五星级商务配套</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=告庄景兰大酒店" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=Jinglan%20Hotel" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%91%8A%E5%BA%84%E6%99%AF%E5%85%B0%E5%A4%A7%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=告庄景兰大酒店" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3827,12 +4160,22 @@
                 <span class="cafe-badge">🏊 高空无边澜沧江泳池</span><span class="cafe-badge">♨️ 客房私人观景泡池</span><span class="cafe-badge">🌅 绝美热带日落</span><span class="cafe-badge">📸 顶级出片打卡点</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=告庄西双景景真寨" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=%E5%91%8A%E5%BA%84%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%96%83%E5%91%A2%E6%B8%A9%E6%B3%89%E6%B1%9F%E6%99%AF%E5%BA%A6%E5%81%87%E7%BE%8E%E5%AE%BF" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=告庄西双景景真寨" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3860,12 +4203,22 @@
                 <span class="cafe-badge">🤫 闹中取静绝佳隔音</span><span class="cafe-badge">🚶 5分到星光夜市</span><span class="cafe-badge">🎬 高清极米巨幕投影</span><span class="cafe-badge">💰 300元档超值</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=告庄西双景景亮寨" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%92%9E%E6%B3%B0%E6%B1%9F%E6%99%AF%E5%BA%A6%E5%81%87%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%92%9E%E6%B3%B0%E6%B1%9F%E6%99%AF%E5%BA%A6%E5%81%87%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=告庄西双景景亮寨" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3893,12 +4246,22 @@
                 <span class="cafe-badge">🥭 紧挨热带水果市场</span><span class="cafe-badge">💰 200元档无溢价</span><span class="cafe-badge">⚡ 极速双频Wi-Fi</span><span class="cafe-badge">🛵 方便租借小电驴</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=景洪宣慰大道" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=%E5%B8%82%E5%8C%BA%E6%B0%B4%E6%9E%9C%E8%A1%97%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E6%99%AF%E6%B4%AA%E6%82%A6%E6%9B%BC%E6%99%BA%E9%80%89%E8%BD%BB%E5%A5%A2%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=景洪宣慰大道" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3940,12 +4303,22 @@
                 <span class="cafe-badge">🌊 直面洱海碧波无遮挡</span><span class="cafe-badge">⚡ 千兆独享光纤专线</span><span class="cafe-badge">☀️ 冬日暖阳绝美光影</span><span class="cafe-badge">🚲 免费骑行生态廊道</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=%E7%A3%BB%E6%BA%AA%20S%20%E5%BC%AF%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E6%B4%B1%E6%B5%B7%E7%94%9F%E6%80%81%E5%BB%8A%E9%81%93%C2%B7%E6%B5%85%E5%B1%B1%E4%BC%B4%E6%B5%B7%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3973,12 +4346,22 @@
                 <span class="cafe-badge">🏆 国际建筑大奖力作</span><span class="cafe-badge">🌊 极简清水混凝土美学</span><span class="cafe-badge">📚 阳光水景书吧</span><span class="cafe-badge">🌅 苍山晚霞最佳观景点</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=大理慢屋极目海景度假客栈" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=%E7%89%B9%E6%83%A0%E8%A7%82%E6%B5%B7%E6%88%BF" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E6%85%A2%E5%B1%8B%C2%B7%E6%9E%81%E7%9B%AE%E6%B5%B7%E6%99%AF%E5%BA%A6%E5%81%87%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=大理慢屋极目海景度假客栈" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -4006,12 +4389,22 @@
                 <span class="cafe-badge">🏮 白族传统三坊一照壁</span><span class="cafe-badge">🚶 5分到大理古城南门</span><span class="cafe-badge">🍵 庭院古榕与功夫茶</span><span class="cafe-badge">🤫 避开人流静谧安详</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=大理古城文献路" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=%E5%8D%97%E9%97%A8%E6%96%87%E7%8C%AE%E6%A5%BC%E5%BA%97" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E5%8F%A4%E5%9F%8E%E6%A0%96%E8%BF%9F%E7%B2%BE%E5%93%81%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=大理古城文献路" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -4039,12 +4432,22 @@
                 <span class="cafe-badge">🌅 洱海第一缕日出</span><span class="cafe-badge">🌲 临近才村水上森林</span><span class="cafe-badge">🚲 租车骑行极方便</span><span class="cafe-badge">💰 300元档一线海景</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=大理才村码头" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=%E5%A4%A7%E7%90%86%E6%89%8D%E6%9D%91%E7%A0%81%E5%A4%B4%E5%A4%95%E6%83%B3%E6%B5%B7%E6%99%AF%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E6%89%8D%E6%9D%91%E7%A0%81%E5%A4%B4%E5%A4%95%E6%83%B3%E6%B5%B7%E6%99%AF%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=大理才村码头" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -4072,12 +4475,22 @@
                 <span class="cafe-badge">🏔️ 正对苍山十九峰</span><span class="cafe-badge">🎨 双廊艺术小镇</span><span class="cafe-badge">☀️ 晒太阳发呆胜地</span><span class="cafe-badge">💰 超高性价比海景</span>
               </div>
               <div class="hotel-action-footer">
-                <a href="https://www.google.com/maps/search/?api=1&query=大理双廊大建旁村" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
-                  📍 Google Maps ↗
-                </a>
-                <span class="btn-hotel-detail">
-                  🔍 房型与实景 ↗
-                </span>
+                <div class="hotel-booking-btns">
+                  <a href="https://www.agoda.com/search?text=%E7%BB%8F%E6%B5%8E%E8%A7%82%E6%B5%B7%E6%88%BF" target="_blank" rel="noopener noreferrer" class="btn-hotel-agoda" onclick="event.stopPropagation();" title="在 Agoda (安可达) 实时查房与预订">
+                    🏨 Agoda 预订 ↗
+                  </a>
+                  <a href="https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E5%8F%8C%E5%BB%8A%E6%97%A0%E6%89%80%E4%B8%BA%E6%B5%B7%E6%99%AF%E5%AE%A2%E6%A0%88" target="_blank" rel="noopener noreferrer" class="btn-hotel-ctrip" onclick="event.stopPropagation();" title="在 携程 实时查房与预订">
+                    ✈️ 携程 预订 ↗
+                  </a>
+                </div>
+                <div class="hotel-sub-btns">
+                  <a href="https://www.google.com/maps/search/?api=1&query=大理双廊大建旁村" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                    📍 地图导航 ↗
+                  </a>
+                  <span class="btn-hotel-detail">
+                    🔍 房型实景 ↗
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -5021,7 +5434,21 @@
               <span id="modal-address" class="address-text"></span>
               <button class="btn-copy-addr" onclick="copyModalAddress()">📋 复制地址</button>
             </div>
-            <div id="modal-map-view"></div>
+            <div id="modal-booking-box" style="margin-bottom:14px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:12px 16px;">
+            <div style="font-size:0.8rem; font-weight:800; color:#166534; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+              <span>🎫</span>
+              <span>在线直达订房渠道 (实时房态 · 即时确认)</span>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <a id="modal-agoda-link" href="#" target="_blank" rel="noopener noreferrer" style="flex:1; min-width:140px; text-align:center; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:#7c3aed; color:white; padding:8px 14px; border-radius:8px; text-decoration:none; font-size:0.82rem; font-weight:700;">
+                🏨 在 Agoda (安可达) 预订 ↗
+              </a>
+              <a id="modal-ctrip-link" href="#" target="_blank" rel="noopener noreferrer" style="flex:1; min-width:140px; text-align:center; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:#2563eb; color:white; padding:8px 14px; border-radius:8px; text-decoration:none; font-size:0.82rem; font-weight:700;">
+                ✈️ 在 携程 (Ctrip) 预订 ↗
+              </a>
+            </div>
+          </div>
+          <div id="modal-map-view"></div>
             <a id="modal-gmaps-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-gmaps">
               🗺️ 在 Google Maps 中打开精确定位 / 实时导航 ↗
             </a>
@@ -5865,13 +6292,15 @@
     ],
     "priceRange": "约 ¥420 - ¥520 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "千兆独享光纤实测 400Mbps+",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=%E7%A3%BB%E6%BA%AA%20S%20%E5%BC%AF%E5%BA%97",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E6%B4%B1%E6%B5%B7%E7%94%9F%E6%80%81%E5%BB%8A%E9%81%93%C2%B7%E6%B5%85%E5%B1%B1%E4%BC%B4%E6%B5%B7%E5%AE%A2%E6%A0%88"
   },
   "hotel-melaka-hatten": {
     "id": "hotel-melaka-hatten",
@@ -5894,13 +6323,15 @@
     ],
     "priceRange": "约 ¥420 - ¥520 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配备独立实木写字台与万国插座",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Hatten%20Hotel%20Melaka",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E6%83%A0%E8%83%9C%E9%85%92%E5%BA%97"
   },
   "hotel-melaka-ibis": {
     "id": "hotel-melaka-ibis",
@@ -5923,13 +6354,15 @@
     ],
     "priceRange": "约 ¥320 - ¥400 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "房间配有专用办公转角台与多孔 USB 接口",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Ibis%20Melaka",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97"
   },
   "hotel-melaka-rosa": {
     "id": "hotel-melaka-rosa",
@@ -5952,13 +6385,15 @@
     ],
     "priceRange": "约 ¥380 - ¥480 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "每间房设有独立定制原木书桌",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Rosa%20Malacca",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E7%BD%97%E8%8E%8E%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
   },
   "hotel-melaka-pines": {
     "id": "hotel-melaka-pines",
@@ -5981,13 +6416,15 @@
     ],
     "priceRange": "约 ¥390 - ¥490 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "超长写字台搭配护眼台灯",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=The%20Pines%20Melaka",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E6%9D%BE%E8%88%B9%E9%85%92%E5%BA%97"
   },
   "hotel-melaka-babahouse": {
     "id": "hotel-melaka-babahouse",
@@ -6010,13 +6447,15 @@
     ],
     "priceRange": "约 ¥450 - ¥550 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房内配有复古木质办公桌与现代高速 Wi-Fi",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=The%20Baba%20House%20Melaka",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E9%A9%AC%E5%85%AD%E7%94%B2%E5%B3%87%E5%B3%87%E5%A4%A7%E5%8E%A6%E9%85%92%E5%BA%97"
   },
   "hotel-hatyai-centara": {
     "id": "hotel-hatyai-centara",
@@ -6039,13 +6478,15 @@
     ],
     "priceRange": "约 ¥380 - ¥480 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "配有标准商务写字桌与人体工学椅",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Centara%20Hotel%20Hat%20Yai",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E7%9B%9B%E6%B3%B0%E4%B9%90%E9%85%92%E5%BA%97"
   },
   "hotel-hatyai-monotel": {
     "id": "hotel-hatyai-monotel",
@@ -6068,13 +6509,15 @@
     ],
     "priceRange": "约 ¥300 - ¥380 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配备专属木质电脑桌",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Monotel%20Hat%20Yai",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E8%8E%AB%E8%AF%BA%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
   },
   "hotel-hatyai-redplanet": {
     "id": "hotel-hatyai-redplanet",
@@ -6097,13 +6540,15 @@
     ],
     "priceRange": "约 ¥220 - ¥280 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "大堂配有专门的 Apple iMac 电脑工作台",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Red%20Planet%20Hat%20Yai",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E7%BA%A2%E6%98%9F%E7%90%83%E9%85%92%E5%BA%97"
   },
   "hotel-hatyai-newseason": {
     "id": "hotel-hatyai-newseason",
@@ -6126,13 +6571,15 @@
     ],
     "priceRange": "约 ¥350 - ¥450 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配备稳固厚实木桌",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=New%20Season%20Square%20Hotel",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E6%96%B0%E5%AD%A3%E6%96%B9%E8%88%9F%E9%85%92%E5%BA%97"
   },
   "hotel-hatyai-habita": {
     "id": "hotel-hatyai-habita",
@@ -6155,13 +6602,15 @@
     ],
     "priceRange": "约 ¥360 - ¥460 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "酒店一楼咖啡厅设有多处配有电源插座的实木长桌",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=The%20Habita%20Hatyai",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%90%88%E8%89%BE%E5%93%88%E6%AF%94%E5%A1%94%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
   },
   "hotel-bkk-holidayinn": {
     "id": "hotel-bkk-holidayinn",
@@ -6184,13 +6633,15 @@
     ],
     "priceRange": "约 ¥450 - ¥550 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配备专业办公桌、多国通用转换插座与静音空调",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Holiday%20Inn%20Express%20Sathorn",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E6%B2%99%E5%90%9E%E6%99%BA%E9%80%89%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97"
   },
   "hotel-bkk-aloft": {
     "id": "hotel-bkk-aloft",
@@ -6213,13 +6664,15 @@
     ],
     "priceRange": "约 ¥480 - ¥580 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "提供即插即用工作台（Plug & Play）",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Aloft%20Bangkok%20Sukhumvit%2011",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E7%B4%A0%E5%9D%A4%E9%80%B8%2011%20%E5%B7%B7%E9%9B%85%E4%B9%90%E8%BD%A9%E9%85%92%E5%BA%97"
   },
   "hotel-bkk-ibisstyles": {
     "id": "hotel-bkk-ibisstyles",
@@ -6242,13 +6695,15 @@
     ],
     "priceRange": "约 ¥320 - ¥400 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房设计科学紧凑",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Ibis%20Styles%20Sukhumvit%2050",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E7%B4%A0%E5%9D%A4%E9%80%B8%2050%20%E5%B7%B7%E5%AE%9C%E5%BF%85%E6%80%9D%E5%B0%9A%E5%93%81%E9%85%92%E5%BA%97"
   },
   "hotel-bkk-quarterari": {
     "id": "hotel-bkk-quarterari",
@@ -6271,13 +6726,15 @@
     ],
     "priceRange": "约 ¥460 - ¥560 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配备落地玻璃景观办公桌",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=The%20Quarter%20Ari%20by%20UHG",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E9%98%BF%E9%87%8C%E5%A4%B8%E7%89%B9%E9%85%92%E5%BA%97"
   },
   "hotel-bkk-chatrium": {
     "id": "hotel-bkk-chatrium",
@@ -6300,13 +6757,15 @@
     ],
     "priceRange": "约 ¥480 - ¥580 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "配有独立客厅大餐桌与书桌",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Chatrium%20Residence%20Sathon",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9B%BC%E8%B0%B7%E6%B2%99%E5%90%9E%E5%AF%9F%E6%AE%BF%E9%85%92%E5%BA%97"
   },
   "hotel-vte-ibis": {
     "id": "hotel-vte-ibis",
@@ -6329,13 +6788,15 @@
     ],
     "priceRange": "约 ¥380 - ¥460 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配备标准工作台与护眼阅读灯",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Ibis%20Vientiane%20Nam%20Phu",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%AE%9C%E5%BF%85%E6%80%9D%E4%B8%87%E8%B1%A1%E5%8D%97%E6%99%AE%E9%85%92%E5%BA%97"
   },
   "hotel-vte-salana": {
     "id": "hotel-vte-salana",
@@ -6358,13 +6819,15 @@
     ],
     "priceRange": "约 ¥460 - ¥560 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配有实木质感大写字台",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Salana%20Boutique%20Hotel",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%E8%90%A8%E6%8B%89%E9%82%A3%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
   },
   "hotel-vte-spark": {
     "id": "hotel-vte-spark",
@@ -6387,13 +6850,15 @@
     ],
     "priceRange": "约 ¥360 - ¥450 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房内配有现代极简长书桌",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=S%20Park%20Design%20Hotel",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%20S%20%E5%85%AC%E5%9B%AD%E8%AE%BE%E8%AE%A1%E9%85%92%E5%BA%97"
   },
   "hotel-vte-namphu": {
     "id": "hotel-vte-namphu",
@@ -6416,13 +6881,15 @@
     ],
     "priceRange": "约 ¥290 - ¥360 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "庭院周边设有多张遮阳木桌",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Namphu%20Boutique%20Hotel",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%E5%8D%97%E6%99%AE%E7%B2%BE%E5%93%81%E9%85%92%E5%BA%97"
   },
   "hotel-vte-latsavong": {
     "id": "hotel-vte-latsavong",
@@ -6445,13 +6912,15 @@
     ],
     "priceRange": "约 ¥480 - ¥580 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "行政级商务写字台与静音办公环境",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Wanda%20Vista%20/%20Latsavong%20Plaza",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E8%B1%A1%E6%8B%89%E8%90%A8%E7%BF%81%E6%97%BA%E8%BE%BE%E9%85%92%E5%BA%97"
   },
   "hotel-lpq-dream": {
     "id": "hotel-lpq-dream",
@@ -6474,13 +6943,15 @@
     ],
     "priceRange": "约 ¥420 - ¥520 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配备独立实木大书桌与舒适阳台长椅",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=The%20Dream%20Boutique%20Resort",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6%E6%A2%A6%E4%B9%8B%E7%B2%BE%E5%93%81%E5%BA%A6%E5%81%87%E6%9D%91"
   },
   "hotel-lpq-mekongsunset": {
     "id": "hotel-lpq-mekongsunset",
@@ -6503,13 +6974,15 @@
     ],
     "priceRange": "约 ¥380 - ¥480 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "阳台观景木桌配备插座",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Mekong%20Sunset%20View%20Hotel",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E6%B9%84%E5%85%AC%E6%B2%B3%E6%97%A5%E8%90%BD%E6%99%AF%E8%A7%82%E6%B4%8B%E6%A5%BC%E9%85%92%E5%BA%97"
   },
   "hotel-lpq-villasanti": {
     "id": "hotel-lpq-villasanti",
@@ -6532,13 +7005,15 @@
     ],
     "priceRange": "约 ¥460 - ¥560 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "古色古香的柚木书桌与安静的庭院环境",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Villa%20Santi%20Hotel",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%89%E8%92%82%E5%88%AB%E5%A2%85%E5%BA%A6%E5%81%87%E9%85%92%E5%BA%97"
   },
   "hotel-lpq-chitdara": {
     "id": "hotel-lpq-chitdara",
@@ -6561,13 +7036,15 @@
     ],
     "priceRange": "约 ¥350 - ¥440 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "一楼庭院配有多张遮阳办公桌椅",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Villa%20Chitdara",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A5%87%E8%BE%BE%E6%8B%89%E4%BC%A0%E7%BB%9F%E5%AE%A2%E6%A0%88"
   },
   "hotel-lpq-namkhan": {
     "id": "hotel-lpq-namkhan",
@@ -6590,13 +7067,15 @@
     ],
     "priceRange": "约 ¥260 - ¥350 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "亲水露台设有开阔桌椅",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Riverside%20Guesthouse%20Luang%20Prabang",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%8D%97%E5%BA%B7%E6%B2%B3%E6%BB%A8%E7%B2%BE%E5%93%81%E5%AE%A2%E6%A0%88"
   },
   "hotel-banna-mianyue": {
     "id": "hotel-banna-mianyue",
@@ -6619,13 +7098,15 @@
     ],
     "priceRange": "约 ¥380 - ¥480 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "千兆光纤独享网络（实测 300Mbps+）",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=%E6%98%9F%E5%85%89%E5%A4%9C%E5%B8%82%E5%BA%97",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%91%8A%E5%BA%84%E8%A5%BF%E5%8F%8C%E6%99%AF%E6%BC%AB%E6%82%A6%E6%B1%9F%E6%99%AF%E5%AE%A2%E6%A0%88"
   },
   "hotel-banna-jinglan": {
     "id": "hotel-banna-jinglan",
@@ -6648,13 +7129,15 @@
     ],
     "priceRange": "约 ¥480 - ¥580 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配备大型标准化写字台与静音办公环境",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=Jinglan%20Hotel",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%91%8A%E5%BA%84%E6%99%AF%E5%85%B0%E5%A4%A7%E9%85%92%E5%BA%97"
   },
   "hotel-banna-nanni": {
     "id": "hotel-banna-nanni",
@@ -6677,13 +7160,15 @@
     ],
     "priceRange": "约 ¥420 - ¥520 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房落地窗前配有大理石长工作台",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=%E5%91%8A%E5%BA%84%E5%BA%97",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%96%83%E5%91%A2%E6%B8%A9%E6%B3%89%E6%B1%9F%E6%99%AF%E5%BA%A6%E5%81%87%E7%BE%8E%E5%AE%BF"
   },
   "hotel-banna-putai": {
     "id": "hotel-banna-putai",
@@ -6706,13 +7191,15 @@
     ],
     "priceRange": "约 ¥350 - ¥440 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配备舒适实木办公桌椅与独立高速光纤路由器",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%92%9E%E6%B3%B0%E6%B1%9F%E6%99%AF%E5%BA%A6%E5%81%87%E5%AE%A2%E6%A0%88",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%92%9E%E6%B3%B0%E6%B1%9F%E6%99%AF%E5%BA%A6%E5%81%87%E5%AE%A2%E6%A0%88"
   },
   "hotel-banna-yueman": {
     "id": "hotel-banna-yueman",
@@ -6735,13 +7222,15 @@
     ],
     "priceRange": "约 ¥260 - ¥350 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "长条型实木写字台与人体工学转椅",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=%E5%B8%82%E5%8C%BA%E6%B0%B4%E6%9E%9C%E8%A1%97%E5%BA%97",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E6%99%AF%E6%B4%AA%E6%82%A6%E6%9B%BC%E6%99%BA%E9%80%89%E8%BD%BB%E5%A5%A2%E5%AE%A2%E6%A0%88"
   },
   "hotel-dali-manwu": {
     "id": "hotel-dali-manwu",
@@ -6764,13 +7253,15 @@
     ],
     "priceRange": "约 ¥480 - ¥580 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配有定制胡桃木大办公桌",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=%E7%89%B9%E6%83%A0%E8%A7%82%E6%B5%B7%E6%88%BF",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E6%85%A2%E5%B1%8B%C2%B7%E6%9E%81%E7%9B%AE%E6%B5%B7%E6%99%AF%E5%BA%A6%E5%81%87%E5%AE%A2%E6%A0%88"
   },
   "hotel-dali-qichi": {
     "id": "hotel-dali-qichi",
@@ -6793,13 +7284,15 @@
     ],
     "priceRange": "约 ¥360 - ¥460 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "客房配有白族手工实木桌椅",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=%E5%8D%97%E9%97%A8%E6%96%87%E7%8C%AE%E6%A5%BC%E5%BA%97",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E5%8F%A4%E5%9F%8E%E6%A0%96%E8%BF%9F%E7%B2%BE%E5%93%81%E5%AE%A2%E6%A0%88"
   },
   "hotel-dali-xixiang": {
     "id": "hotel-dali-xixiang",
@@ -6822,13 +7315,15 @@
     ],
     "priceRange": "约 ¥350 - ¥440 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "亲水观景木桌配备充足插座",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=%E5%A4%A7%E7%90%86%E6%89%8D%E6%9D%91%E7%A0%81%E5%A4%B4%E5%A4%95%E6%83%B3%E6%B5%B7%E6%99%AF%E5%AE%A2%E6%A0%88",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E6%89%8D%E6%9D%91%E7%A0%81%E5%A4%B4%E5%A4%95%E6%83%B3%E6%B5%B7%E6%99%AF%E5%AE%A2%E6%A0%88"
   },
   "hotel-dali-wusuowei": {
     "id": "hotel-dali-wusuowei",
@@ -6851,13 +7346,15 @@
     ],
     "priceRange": "约 ¥320 - ¥420 / 晚",
     "currencyNote": "标准双人/大床房预订指导价",
-    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "priceDetail": "支持 Agoda、携程、Booking 在线即时确认预订",
     "amenities": {
       "wifi": "露台实木长桌搭配暖阳与海风",
       "desk": "配备独立书桌与舒适座椅",
       "noise": "隔音良好，适合远程会议与专注办公",
       "power": "国际通用插座 / 充沛电源接口"
-    }
+    },
+    "agodaUrl": "https://www.agoda.com/search?text=%E7%BB%8F%E6%B5%8E%E8%A7%82%E6%B5%B7%E6%88%BF",
+    "ctripUrl": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%A7%E7%90%86%E5%8F%8C%E5%BB%8A%E6%97%A0%E6%89%80%E4%B8%BA%E6%B5%B7%E6%99%AF%E5%AE%A2%E6%A0%88"
   }
 };
     let leafletMapInstance = null;
