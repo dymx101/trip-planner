@@ -1596,6 +1596,7 @@
             <button id="btn-ov-gmap" onclick="toggleOverviewMode('gmap')" class="ov-mode-btn active">🗺️ 谷歌实景地图</button>
             <button id="btn-ov-poster" onclick="toggleOverviewMode('poster')" class="ov-mode-btn inactive">🎨 矢量示意大图</button>
             <button id="btn-ov-table" onclick="toggleOverviewMode('table')" class="ov-mode-btn inactive">⏱️ 15天时间表</button>
+            <button id="btn-ov-budget" onclick="toggleOverviewMode('budget')" class="ov-mode-btn inactive">💰 预算 Breakdown</button>
           </div>
           <div class="ov-action-buttons">
             <a href="https://www.google.com/maps/dir/?api=1&origin=Singapore&destination=Dali%2C%20Yunnan%2C%20China&waypoints=Melaka%2C%20Malaysia%7CHat%20Yai%2C%20Thailand%7CBangkok%2C%20Thailand%7CVientiane%2C%20Laos%7CLuang%20Prabang%2C%20Laos%7CXishuangbanna%2C%20Yunnan%2C%20China" target="_blank" rel="noopener noreferrer" class="ov-btn-gmap">
@@ -5286,11 +5287,13 @@
       const gmapContainer = document.getElementById('overview-gmap-container');
       const posterContainer = document.getElementById('overview-map-container');
       const tableContainer = document.getElementById('overview-table-container');
+      const budgetContainer = document.getElementById('overview-budget-container');
       const btnGmap = document.getElementById('btn-ov-gmap');
       const btnPoster = document.getElementById('btn-ov-poster');
       const btnTable = document.getElementById('btn-ov-table');
+      const btnBudget = document.getElementById('btn-ov-budget');
       
-      [btnGmap, btnPoster, btnTable].forEach(b => {
+      [btnGmap, btnPoster, btnTable, btnBudget].forEach(b => {
         if (b) {
           b.classList.remove('active');
           b.classList.add('inactive');
@@ -5301,6 +5304,7 @@
         gmapContainer.style.display = 'block';
         posterContainer.style.display = 'none';
         tableContainer.style.display = 'none';
+        if (budgetContainer) budgetContainer.style.display = 'none';
         btnGmap.classList.remove('inactive');
         btnGmap.classList.add('active');
         setTimeout(() => {
@@ -5311,6 +5315,7 @@
         gmapContainer.style.display = 'none';
         posterContainer.style.display = 'block';
         tableContainer.style.display = 'none';
+        if (budgetContainer) budgetContainer.style.display = 'none';
         btnPoster.classList.remove('inactive');
         btnPoster.classList.add('active');
       } else {
