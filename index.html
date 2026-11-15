@@ -1593,6 +1593,75 @@
       border-color: #059669;
     }
 
+  
+    /* Mobile Icon-Only Nav Tabs */
+    .nav-tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .nav-tab-icon {
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .nav-tab-text {
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .nav-tabs {
+        padding: 4px !important;
+        border-radius: 14px !important;
+        gap: 3px !important;
+        overflow-x: visible !important;
+        margin-bottom: 18px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+      }
+      .nav-tab {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 10px 0 !important;
+        border-radius: 10px !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      .nav-tab-icon {
+        font-size: 1.45rem !important; /* 手机端超大图标，点击极精准 */
+        margin: 0 !important;
+      }
+      .nav-tab-text {
+        display: none !important; /* 手机端完全隐藏文字，仅显示图标！ */
+      }
+      .nav-tab.active {
+        background: var(--primary) !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35) !important;
+        transform: scale(1.04);
+      }
+      
+      /* Mode Switcher on Mobile */
+      .ov-mode-switcher {
+        width: 100% !important;
+        display: flex !important;
+        gap: 4px !important;
+      }
+      .ov-mode-btn {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 8px 0 !important;
+        text-align: center !important;
+        justify-content: center !important;
+      }
+      .ov-mode-icon {
+        font-size: 1.25rem !important;
+      }
+      .ov-mode-text {
+        display: none !important; /* 手机端模式切换也只显示图标，彻底防止截断！ */
+      }
+    }
+
   </style>
   <!-- Leaflet Interactive Maps -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -1615,14 +1684,32 @@
 
   <div class="container">
 
-    <div class="nav-tabs">
-      <button class="nav-tab active" onclick="switchTab('overview')">🗺️ 15天总览大图 (地图+时间)</button>
-      <button class="nav-tab" onclick="switchTab('itinerary')">📅 每日完整日程 (Day 1-15)</button>
-      <button class="nav-tab" onclick="switchTab('hotels')">🏨 精选住宿酒店推荐</button>
-      <button class="nav-tab" onclick="switchTab('stations')">🚉 车站位置与接驳表</button>
-      <button class="nav-tab" onclick="switchTab('cafes')">☕ 精选办公咖啡馆</button>
-      <button class="nav-tab" onclick="switchTab('borders')">🛂 四国通关口岸指南</button>
-    </div>
+    <nav class="nav-tabs" aria-label="页面核心板块导航">
+      <button class="nav-tab active" onclick="switchTab('overview', this)" title="15天全景路线总览大图">
+        <span class="nav-tab-icon">🗺️</span>
+        <span class="nav-tab-text">总览大图</span>
+      </button>
+      <button class="nav-tab" onclick="switchTab('itinerary', this)" title="每日完整日程 (Day 1-15)">
+        <span class="nav-tab-icon">📅</span>
+        <span class="nav-tab-text">每日日程</span>
+      </button>
+      <button class="nav-tab" onclick="switchTab('hotels', this)" title="7大站点精选住宿 (35家)">
+        <span class="nav-tab-icon">🏨</span>
+        <span class="nav-tab-text">精选酒店</span>
+      </button>
+      <button class="nav-tab" onclick="switchTab('stations', this)" title="车站位置、接驳表与订票">
+        <span class="nav-tab-icon">🚉</span>
+        <span class="nav-tab-text">车站接驳</span>
+      </button>
+      <button class="nav-tab" onclick="switchTab('cafes', this)" title="精选远程办公咖啡馆">
+        <span class="nav-tab-icon">☕</span>
+        <span class="nav-tab-text">办公咖啡</span>
+      </button>
+      <button class="nav-tab" onclick="switchTab('borders', this)" title="四国跨境通关指南">
+        <span class="nav-tab-icon">🛂</span>
+        <span class="nav-tab-text">通关指南</span>
+      </button>
+    </nav>
 
     <div class="rule-banner">
       <div class="rule-item">
@@ -1656,10 +1743,18 @@
         </div>
         <div class="overview-header-actions">
           <div class="ov-mode-switcher">
-            <button id="btn-ov-gmap" onclick="toggleOverviewMode('gmap')" class="ov-mode-btn active">🗺️ 谷歌实景地图</button>
-            <button id="btn-ov-poster" onclick="toggleOverviewMode('poster')" class="ov-mode-btn inactive">🎨 矢量示意大图</button>
-            <button id="btn-ov-table" onclick="toggleOverviewMode('table')" class="ov-mode-btn inactive">⏱️ 15天时间表</button>
-            <button id="btn-ov-budget" onclick="toggleOverviewMode('budget')" class="ov-mode-btn inactive">💰 预算 Breakdown</button>
+            <button id="btn-ov-gmap" onclick="toggleOverviewMode('gmap')" class="ov-mode-btn active" title="谷歌实景地图">
+              <span class="ov-mode-icon">🗺️</span><span class="ov-mode-text"> 谷歌地图</span>
+            </button>
+            <button id="btn-ov-poster" onclick="toggleOverviewMode('poster')" class="ov-mode-btn inactive" title="矢量示意大图">
+              <span class="ov-mode-icon">🎨</span><span class="ov-mode-text"> 矢量大图</span>
+            </button>
+            <button id="btn-ov-table" onclick="toggleOverviewMode('table')" class="ov-mode-btn inactive" title="15天时间表">
+              <span class="ov-mode-icon">⏱️</span><span class="ov-mode-text"> 时间表</span>
+            </button>
+            <button id="btn-ov-budget" onclick="toggleOverviewMode('budget')" class="ov-mode-btn inactive" title="预算 Breakdown">
+              <span class="ov-mode-icon">💰</span><span class="ov-mode-text"> 预算明细</span>
+            </button>
           </div>
           <div class="ov-action-buttons">
             <a href="https://www.google.com/maps/dir/?api=1&origin=Singapore&destination=Dali%2C%20Yunnan%2C%20China&waypoints=Melaka%2C%20Malaysia%7CHat%20Yai%2C%20Thailand%7CBangkok%2C%20Thailand%7CVientiane%2C%20Laos%7CLuang%20Prabang%2C%20Laos%7CXishuangbanna%2C%20Yunnan%2C%20China" target="_blank" rel="noopener noreferrer" class="ov-btn-gmap">
