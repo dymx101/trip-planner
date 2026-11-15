@@ -475,6 +475,46 @@
       margin-bottom: 2px;
     }
     
+    
+    .booking-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .booking-link:hover {
+      background: #d1fae5;
+      color: #065f46;
+      text-decoration: underline;
+    }
+    .booking-status-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 700;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+    .booking-box-mobile {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
     .station-map-link {
       display: inline-flex;
       align-items: center;
@@ -1685,14 +1725,14 @@
       </div>
     </div>
 
-            <!-- TAB 3: 车站位置与接驳指南 -->
+                <!-- TAB 3: 车站位置与接驳指南 -->
     <div id="tab-stations" class="tab-panel">
       <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:14px 20px; margin-bottom:20px; font-size:0.92rem; color:#1e40af; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
         <div>
-          <span style="font-size:1.05rem; font-weight:700;">🚉 全线车站 Google Maps 定位与车票票价表</span>
-          <p style="margin:2px 0 0; font-size:0.85rem; color:#2563eb;">手机端已自动切换为<strong>纵向自适应卡片布局</strong>，无需左右滑动！全程 7 段陆路跨国长途交通票价仅 <strong>约 ¥920 - ¥1,180 / 人</strong>（夫妻双人约 <strong>¥1,850 - ¥2,360</strong>）。点击任意车站的蓝色按钮即可在 <strong>Google Maps</strong> 中打开精确定位与周边导航！</p>
+          <span style="font-size:1.05rem; font-weight:700;">🚉 全线车站 Google Maps 定位、票价与官方在线订票网址</span>
+          <p style="margin:2px 0 0; font-size:0.85rem; color:#2563eb;">全线 7 段陆路跨国大交通<strong>全部支持 100% 在线网上预订</strong>！移动端已适配<strong>纵向无滑动卡片</strong>，点击绿色按钮即可直达官方购票系统，点击蓝色按钮直达 Google Maps 导航！</p>
         </div>
-        <span style="font-weight:700; background:white; padding:6px 12px; border-radius:8px; border:1px solid #bfdbfe;">📱 完美自适应手机 🎫</span>
+        <span style="font-weight:700; background:white; padding:6px 12px; border-radius:8px; border:1px solid #bfdbfe;">🎫 支持在线订票 ↗</span>
       </div>
 
       <!-- 手机端纵向卡片布局 (屏幕宽度 <= 768px 自动显示，绝无左右滑动) -->
@@ -1731,6 +1771,16 @@
                 <div class="station-sub-loc">Singapore Changi Airport (SIN)</div>
                 <a href="https://www.google.com/maps/search/?api=1&query=Singapore+Changi+Airport" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
               </div>
+            </div>
+          </div>
+
+          <div class="booking-box-mobile">
+            <div style="font-size:0.8rem; font-weight:700; color:#166534; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+              <span>✅ 支持 100% 在线订票</span>
+              <span style="color:#059669; font-weight:normal; font-size:0.75rem;">放票：随时可订（提前1-3个月价格更优）</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;">
+              <a href="https://www.flyscoot.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 酷航官网 (FlyScoot) ↗</a><a href="https://flights.ctrip.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 携程机票预订 ↗</a>
             </div>
           </div>
 
@@ -1776,6 +1826,16 @@
             </div>
           </div>
 
+          <div class="booking-box-mobile">
+            <div style="font-size:0.8rem; font-weight:700; color:#166534; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+              <span>✅ 支持 100% 在线订票</span>
+              <span style="color:#059669; font-weight:normal; font-size:0.75rem;">放票：通常提前 30 天开放预订并可选座</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;">
+              <a href="https://www.easybook.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 Easybook 大马官网 ↗</a><a href="https://www.busonlineticket.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 BusOnlineTicket 官网 ↗</a>
+            </div>
+          </div>
+
           <div class="transit-notes-box">
             <div class="transit-notes-title">🛂 接驳与通关要点：</div>
             <p>周五18:00兀兰关卡出境新加坡 ➔ 穿梭大巴过柔佛海峡 ➔ 新山 CIQ 刷脸免签入境马来西亚 ➔ 打车 10 分钟到 Larkin 乘车。22:00 抵马六甲，打车 15 分钟到酒店。</p>
@@ -1815,6 +1875,16 @@
                 <div class="station-sub-loc">Thammanoonvithi Rd, Hat Yai, Songkhla</div>
                 <a href="https://www.google.com/maps/search/?api=1&query=Hat+Yai+Junction+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
               </div>
+            </div>
+          </div>
+
+          <div class="booking-box-mobile">
+            <div style="font-size:0.8rem; font-weight:700; color:#166534; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+              <span>✅ 支持 100% 在线订票</span>
+              <span style="color:#059669; font-weight:normal; font-size:0.75rem;">放票：通常提前 30 天开放预订</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;">
+              <a href="https://www.easybook.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 Easybook 跨境专区 ↗</a><a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 12Go Asia 跨国交通网 ↗</a>
             </div>
           </div>
 
@@ -1860,6 +1930,16 @@
             </div>
           </div>
 
+          <div class="booking-box-mobile">
+            <div style="font-size:0.8rem; font-weight:700; color:#166534; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+              <span>✅ 支持 100% 在线订票</span>
+              <span style="color:#059669; font-weight:normal; font-size:0.75rem;">放票：提前 30 天泰时间 08:30 放票 (卧铺抢手建议准点订)</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;">
+              <a href="https://www.dticket.railway.co.th/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 泰国国铁官方 D-Ticket ↗</a><a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 12Go 提前代订保证 ↗</a>
+            </div>
+          </div>
+
           <div class="transit-notes-box">
             <div class="transit-notes-title">🛂 接驳与通关要点：</div>
             <p>白天在合艾火车站旁的极速网络咖啡馆舒适办公；傍晚登乘新型 CNR 空调夜卧，清晨醒来看泰南田园，抵曼谷后乘 MRT 直达素坤逸/沙吞酒店。</p>
@@ -1899,6 +1979,16 @@
                 <div class="station-sub-loc">Vientiane Khamsavath Station, Saysettha</div>
                 <a href="https://www.google.com/maps/search/?api=1&query=Khamsavath+Railway+Station+Vientiane" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
               </div>
+            </div>
+          </div>
+
+          <div class="booking-box-mobile">
+            <div style="font-size:0.8rem; font-weight:700; color:#166534; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+              <span>✅ 支持 100% 在线订票</span>
+              <span style="color:#059669; font-weight:normal; font-size:0.75rem;">放票：提前 30 天开放预订</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;">
+              <a href="https://www.dticket.railway.co.th/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 泰铁官方 D-Ticket (搜Vientiane) ↗</a><a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 12Go 曼谷-老挝专线 ↗</a>
             </div>
           </div>
 
@@ -1944,9 +2034,19 @@
             </div>
           </div>
 
+          <div class="booking-box-mobile">
+            <div style="font-size:0.8rem; font-weight:700; color:#166534; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+              <span>✅ 支持 100% 在线订票</span>
+              <span style="color:#059669; font-weight:normal; font-size:0.75rem;">放票：提前 3 天放票 (或提前在 12Go 预约候补)</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;">
+              <a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">📱 官方「LCR Ticket」手机App</a><a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 12Go 老挝铁路提前代订 ↗</a><a href="https://www.baolau.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🌐 Baolau 东南亚铁路 ↗</a>
+            </div>
+          </div>
+
           <div class="transit-notes-box">
             <div class="transit-notes-title">🛂 接驳与通关要点：</div>
-            <p>万象市区打车 25 分钟抵车站；列车穿越老挝崇山峻岭，出站后在官方窗口乘正规小巴（3.5万基普，20分钟）直达古城酒店。</p>
+            <p>万象市区打车 25 分钟抵车站；推荐在手机下载官方「LCR Ticket」App（提前3天放票，支持微信/支付宝），或提前在 12Go 预约代订。</p>
           </div>
         </div>
         <div class="transit-card">
@@ -1986,9 +2086,19 @@
             </div>
           </div>
 
+          <div class="booking-box-mobile">
+            <div style="font-size:0.8rem; font-weight:700; color:#166534; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+              <span>✅ 支持 100% 在线订票 (12306 直购)</span>
+              <span style="color:#059669; font-weight:normal; font-size:0.75rem;">放票：提前 14-15 天早晨放票</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;">
+              <a href="https://www.12306.cn/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 中国铁路 12306 官网 ↗</a><a href="https://www.12306.cn/" target="_blank" rel="noopener noreferrer" class="booking-link">📱 铁路 12306 手机客户端</a>
+            </div>
+          </div>
+
           <div class="transit-notes-box">
             <div class="transit-notes-title">🛂 接驳与通关要点：</div>
-            <p>14:14 磨丁站下车办老挝出境 ➔ 经友谊隧道入磨憨口岸大厅刷中国护照秒通关 ➔ 15:47 抵达西双版纳站，全程行李随车无缝衔接！</p>
+            <p>14:14 磨丁站下车办老挝出境 ➔ 经友谊隧道入磨憨口岸大厅刷中国护照秒通关 ➔ 15:47 抵达西双版纳站，直接在 12306 搜琅勃拉邦至西双版纳购买 D888 跨境车票！</p>
           </div>
         </div>
         <div class="transit-card">
@@ -2028,9 +2138,19 @@
             </div>
           </div>
 
+          <div class="booking-box-mobile">
+            <div style="font-size:0.8rem; font-weight:700; color:#166534; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+              <span>✅ 支持 100% 在线订票 (12306 直购)</span>
+              <span style="color:#059669; font-weight:normal; font-size:0.75rem;">放票：提前 14 天早晨 08:00 放票</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;">
+              <a href="https://www.12306.cn/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 中国铁路 12306 官网 ↗</a><a href="https://www.12306.cn/" target="_blank" rel="noopener noreferrer" class="booking-link">📱 铁路 12306 手机客户端</a>
+            </div>
+          </div>
+
           <div class="transit-notes-box">
             <div class="transit-notes-title">🛂 接驳与通关要点：</div>
-            <p>出站口右侧直接乘坐“大理古城景区直通车”（5元，35分钟）或打车直达洱海生态廊道客栈，正式开启终点站 3 天苍山洱海慢生活。</p>
+            <p>出站口右侧直接乘坐“大理古城景区直通车”（5元，35分钟）或打车直达洱海生态廊道客栈，直接在 12306 客户端购票选座。</p>
           </div>
         </div>
       </div>
@@ -2044,108 +2164,134 @@
               <th>出发车站及位置 (带地图)</th>
               <th>到达车站及位置 (带地图)</th>
               <th>交通工具 / 车次时刻</th>
-              <th>💰 车票票价参考 (单人/双人)</th>
+              <th>💰 车票票价参考</th>
+              <th>🎫 在线订票渠道与官方网址</th>
               <th>接驳与通关注意事项</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>✈️ 武汉 ➔ 新加坡<br><span style="font-size:0.8rem; color:#ec4899; font-weight:normal;">(妻子前置航班)</span></strong></td>
+              <td><strong>✈️ 妻子前置航班<br><span style="font-size:1.02rem; color:#0f172a;">武汉 ➔ 新加坡直飞</span></strong></td>
               <td>
                 <span class="station-name">武汉天河国际机场 T3</span>
                 <span class="station-loc">Wuhan Tianhe International Airport (WUH)</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Wuhan+Tianhe+International+Airport+T3" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
               <td>
-                <span class="station-name">新加坡樟宜机场 T1/T2</span>
+                <span class="station-name">新加坡樟宜国际机场 T1/T2</span>
                 <span class="station-loc">Singapore Changi Airport (SIN)</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Singapore+Changi+Airport" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
-              <td>直飞航班 (酷航/东航)<br>00:15 起飞 ➔ 05:25 抵达</td>
+              <td>✈️ 酷航 / 东航直飞航班<br>⏱️ 00:15 起飞 ➔ 05:25 抵樟宜 (约 5.1h)</td>
               <td class="price-cell">
                 <span class="price-pill-main">约 ¥1,100 - ¥1,600 /人</span>
-                <span class="price-pill-sub">单程经济舱机票 (红眼直飞)</span>
+                <span class="price-pill-sub">单程红眼直飞机票 (经济舱)</span>
               </td>
-              <td>清晨抵达樟宜机场，接机后入住酒店补觉休整。傍晚先生下班后两人汇合出发。</td>
+              <td class="price-cell">
+                <span class="booking-status-tag">✅ 支持 100% 在线订票</span>
+                <span style="display:block; font-size:0.75rem; color:#059669; margin-bottom:4px;">随时可订（提前1-3个月价格更优）</span>
+                <a href="https://www.flyscoot.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 酷航官网 (FlyScoot) ↗</a><br><a href="https://flights.ctrip.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 携程机票预订 ↗</a>
+              </td>
+              <td style="font-size:0.86rem; color:#334155;">清晨抵达樟宜机场，接机后入住酒店补觉休整。傍晚先生下班后汇合，经兀兰关卡出发前往马来西亚。</td>
             </tr>
             <tr>
-              <td><strong>1. 新加坡 ➔ 马六甲</strong></td>
+              <td><strong>第一段 · 1<br><span style="font-size:1.02rem; color:#0f172a;">新加坡 ➔ 马六甲</span></strong></td>
               <td>
-                <span class="station-name">新山拉庆中央车站</span>
-                <span class="station-loc">Larkin Sentral, Jalan Garuda, Johor Bahru</span>
+                <span class="station-name">新山拉庆中央车站 (Larkin Sentral)</span>
+                <span class="station-loc">Jalan Garuda, Larkin, Johor Bahru</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Larkin+Sentral+Johor+Bahru" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
               <td>
-                <span class="station-name">马六甲仙特拉车站</span>
-                <span class="station-loc">Melaka Sentral, Jalan Peringgit, Melaka</span>
+                <span class="station-name">马六甲仙特拉车站 (Melaka Sentral)</span>
+                <span class="station-loc">Jalan Peringgit, Melaka</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Melaka+Sentral" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
-              <td>长途冷气巴士 (Causeway Link / KKKL)<br>车程约 2.5 小时 (19:30班次)</td>
+              <td>🚌 Causeway Link / KKKL 空调长途客车<br>⏱️ 19:30 发车 · 车程约 2.5 小时</td>
               <td class="price-cell">
                 <span class="price-pill-main">约 ¥35 - ¥50 /人</span>
                 <span class="price-pill-sub">双人约 ¥70 - ¥100 (约 22-32 MYR/人)</span>
               </td>
-              <td>12/11周五18:00兀兰出境 ➔ 新山 CIQ 入境 ➔ 站前打车 10 分钟到 Larkin 乘车。22:00抵马六甲，打车 15 分钟抵酒店。</td>
+              <td class="price-cell">
+                <span class="booking-status-tag">✅ 支持 100% 在线订票</span>
+                <span style="display:block; font-size:0.75rem; color:#059669; margin-bottom:4px;">通常提前 30 天开放预订并可选座</span>
+                <a href="https://www.easybook.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 Easybook 大马官网 ↗</a><br><a href="https://www.busonlineticket.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 BusOnlineTicket 官网 ↗</a>
+              </td>
+              <td style="font-size:0.86rem; color:#334155;">周五18:00兀兰关卡出境新加坡 ➔ 穿梭大巴过柔佛海峡 ➔ 新山 CIQ 刷脸免签入境马来西亚 ➔ 打车 10 分钟到 Larkin 乘车。22:00 抵马六甲，打车 15 分钟到酒店。</td>
             </tr>
             <tr>
-              <td><strong>2. 马六甲 ➔ 泰国合艾</strong></td>
+              <td><strong>第二段 · 2<br><span style="font-size:1.02rem; color:#0f172a;">马六甲 ➔ 泰国合艾 (直达不经吉隆坡)</span></strong></td>
               <td>
-                <span class="station-name">马六甲仙特拉长途车站</span>
+                <span class="station-name">马六甲仙特拉长途大巴总站</span>
                 <span class="station-loc">Melaka Sentral Bus Terminal 候车大厅</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Melaka+Sentral" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
               <td>
-                <span class="station-name">合艾火车站前</span>
-                <span class="station-loc">Hat Yai Junction Station, Thammanoonvithi Rd</span>
+                <span class="station-name">泰国合艾火车站前 (Hat Yai Junction)</span>
+                <span class="station-loc">Thammanoonvithi Rd, Hat Yai, Songkhla</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Hat+Yai+Junction+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
-              <td>跨国豪华 2+1 夜班宽体客车 (Suasana/Sri Maju)<br>20:30 发车，次日 08:30 抵</td>
+              <td>🚌 跨国豪华 2+1 宽体空调夜班大巴 (Suasana/Sri Maju)<br>⏱️ 20:30 发车 ➔ 次日 08:30 抵达合艾</td>
               <td class="price-cell">
                 <span class="price-pill-main">约 ¥150 - ¥190 /人</span>
                 <span class="price-pill-sub">双人约 ¥300 - ¥380 (约 95-120 MYR/人)</span>
               </td>
-              <td>走 E2 南北高速，<strong>完全不进吉隆坡市区</strong>！清晨在黑木山 (Bukit Kayu Hitam) 免签盖章入境泰国。</td>
+              <td class="price-cell">
+                <span class="booking-status-tag">✅ 支持 100% 在线订票</span>
+                <span style="display:block; font-size:0.75rem; color:#059669; margin-bottom:4px;">通常提前 30 天开放预订</span>
+                <a href="https://www.easybook.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 Easybook 跨境专区 ↗</a><br><a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 12Go Asia 跨国交通网 ↗</a>
+              </td>
+              <td style="font-size:0.86rem; color:#334155;">全程走 E2 南北高速，**完全不进吉隆坡市区**！早晨大巴停靠黑木山 (Bukit Kayu Hitam) 口岸办理马出境，免签盖章入境泰国，大巴接驳直抵合艾火车站前。</td>
             </tr>
             <tr>
-              <td><strong>3. 泰国合艾 ➔ 曼谷</strong></td>
+              <td><strong>第二段 · 3<br><span style="font-size:1.02rem; color:#0f172a;">泰国合艾 ➔ 曼谷</span></strong></td>
               <td>
-                <span class="station-name">合艾火车站</span>
-                <span class="station-loc">Hat Yai Junction Railway Station</span>
+                <span class="station-name">合艾火车站 (Hat Yai Junction)</span>
+                <span class="station-loc">Hat Yai Railway Station (站内设行李寄存)</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Hat+Yai+Junction+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
               <td>
-                <span class="station-name">曼谷阿皮瓦中央车站</span>
-                <span class="station-loc">Krung Thep Aphiwat Central Terminal, Chatuchak</span>
+                <span class="station-name">曼谷阿皮瓦中央车站 (Krung Thep Aphiwat)</span>
+                <span class="station-loc">Chatuchak, Bangkok (直通 MRT 蓝色线)</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Krung+Thep+Aphiwat+Central+Terminal" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
-              <td>泰铁 SRT 32 次特快 CNR 空调卧铺<br>17:45 发车，次日 10:30 抵达曼谷</td>
+              <td>🚆 泰铁 SRT 32 次特快 CNR 空调卧铺列车<br>⏱️ 17:45 发车 ➔ 次日 10:30 抵曼谷</td>
               <td class="price-cell">
                 <span class="price-pill-main">约 ¥220 - ¥270 /人</span>
-                <span class="price-pill-sub">双人卧铺约 ¥440 - ¥540 (约 1050-1250 THB)</span>
+                <span class="price-pill-sub">双人卧铺约 ¥440 - ¥540 (二等下铺约 1050-1250 THB)</span>
               </td>
-              <td>合艾火车站设行李寄存；白天在火车站周边极速网络咖啡办公，傍晚乘卧铺，次日直通曼谷 MRT 蓝色线。</td>
+              <td class="price-cell">
+                <span class="booking-status-tag">✅ 支持 100% 在线订票</span>
+                <span style="display:block; font-size:0.75rem; color:#059669; margin-bottom:4px;">提前 30 天泰时间 08:30 放票 (卧铺抢手建议准点订)</span>
+                <a href="https://www.dticket.railway.co.th/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 泰国国铁官方 D-Ticket ↗</a><br><a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 12Go 提前代订保证 ↗</a>
+              </td>
+              <td style="font-size:0.86rem; color:#334155;">白天在合艾火车站旁的极速网络咖啡馆舒适办公；傍晚登乘新型 CNR 空调夜卧，清晨醒来看泰南田园，抵曼谷后乘 MRT 直达素坤逸/沙吞酒店。</td>
             </tr>
             <tr>
-              <td><strong>4. 曼谷 ➔ 老挝万象</strong></td>
+              <td><strong>第三段 · 4<br><span style="font-size:1.02rem; color:#0f172a;">曼谷 ➔ 老挝万象 (直通国际列车)</span></strong></td>
               <td>
                 <span class="station-name">曼谷阿皮瓦中央车站</span>
-                <span class="station-loc">Krung Thep Aphiwat Central Terminal</span>
+                <span class="station-loc">Krung Thep Aphiwat Central Terminal, Bangkok</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Krung+Thep+Aphiwat+Central+Terminal" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
               <td>
-                <span class="station-name">老挝万象坎萨瓦站</span>
+                <span class="station-name">老挝万象坎萨瓦火车站</span>
                 <span class="station-loc">Vientiane Khamsavath Station, Saysettha</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Khamsavath+Railway+Station+Vientiane" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
-              <td>曼谷直达万象国际旅客列车 (133/147次)<br>21:25 发车，次日 09:05 直达老挝</td>
+              <td>🚆 直通国际旅客列车 133/147 次<br>⏱️ 21:25 发车 ➔ 次日 09:05 直抵老挝万象</td>
               <td class="price-cell">
                 <span class="price-pill-main">约 ¥180 - ¥230 /人</span>
-                <span class="price-pill-sub">双人空调卧铺约 ¥360 - ¥460 (约 850-1050 THB)</span>
+                <span class="price-pill-sub">双人空调软卧约 ¥360 - ¥460 (约 850-1050 THB/人)</span>
               </td>
-              <td>列车在泰国边境廊开站停靠办泰出境，跨过第一友谊大桥直入老挝坎萨瓦站办入境落地签，免拖行李换大巴！</td>
+              <td class="price-cell">
+                <span class="booking-status-tag">✅ 支持 100% 在线订票</span>
+                <span style="display:block; font-size:0.75rem; color:#059669; margin-bottom:4px;">提前 30 天开放预订</span>
+                <a href="https://www.dticket.railway.co.th/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 泰铁官方 D-Ticket (搜Vientiane) ↗</a><br><a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 12Go 曼谷-老挝专线 ↗</a>
+              </td>
+              <td style="font-size:0.86rem; color:#334155;">列车在泰边境廊开站停靠办泰出境，跨过第一友谊大桥直入老挝坎萨瓦站下车办落地签（带好40美元现金及白底证件照），免换大巴行李一站式直达！</td>
             </tr>
             <tr>
-              <td><strong>5. 万象 ➔ 琅勃拉邦</strong></td>
+              <td><strong>第三段 · 5<br><span style="font-size:1.02rem; color:#0f172a;">万象 ➔ 琅勃拉邦 (中老铁路澜沧号)</span></strong></td>
               <td>
                 <span class="station-name">中老铁路万象站</span>
                 <span class="station-loc">Vientiane Railway Station (市区以北14公里)</span>
@@ -2156,15 +2302,20 @@
                 <span class="station-loc">Luang Prabang Station (距古城11公里)</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
-              <td>中老铁路“澜沧号”动车 (C84/K12)<br>16:30 发车，车程仅 2 小时</td>
+              <td>🚄 中老铁路“澜沧号”CR200J 动车 (C84/K12)<br>⏱️ 16:30 发车 · 车程仅 2 小时</td>
               <td class="price-cell">
                 <span class="price-pill-main">约 ¥115 /人 (二等座)</span>
                 <span class="price-pill-sub">双人二等座约 ¥230 (一等座约 ¥170/人)</span>
               </td>
-              <td>市区打车 25 分钟抵车站；到达琅勃拉邦出站后乘坐官方正规小巴（3.5万基普，20分钟）直达古城酒店。</td>
+              <td class="price-cell">
+                <span class="booking-status-tag">✅ 支持 100% 在线订票</span>
+                <span style="display:block; font-size:0.75rem; color:#059669; margin-bottom:4px;">提前 3 天放票 (或提前在 12Go 预约候补)</span>
+                <a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">📱 官方「LCR Ticket」手机App</a><br><a href="https://12go.asia/" target="_blank" rel="noopener noreferrer" class="booking-link">🎫 12Go 老挝铁路提前代订 ↗</a><br><a href="https://www.baolau.com/" target="_blank" rel="noopener noreferrer" class="booking-link">🌐 Baolau 东南亚铁路 ↗</a>
+              </td>
+              <td style="font-size:0.86rem; color:#334155;">万象市区打车 25 分钟抵车站；推荐在手机下载官方「LCR Ticket」App（提前3天放票，支持微信/支付宝），或提前在 12Go 预约代订。</td>
             </tr>
             <tr>
-              <td><strong>6. 琅勃拉邦 ➔ 西双版纳</strong></td>
+              <td><strong>第四段 · 6<br><span style="font-size:1.02rem; color:#0f172a;">琅勃拉邦 ➔ 中国西双版纳 (跨境直达国际动车)</span></strong></td>
               <td>
                 <span class="station-name">中老铁路琅勃拉邦站</span>
                 <span class="station-loc">Luang Prabang Railway Station</span>
@@ -2175,15 +2326,20 @@
                 <span class="station-loc">景洪市嘎洒镇站前大道 (距告庄8公里)</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Xishuangbanna+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
-              <td><strong>中老铁路 D888 次直达国际旅客列车</strong><br>12:52 发车，15:47 直达西双版纳</td>
+              <td>🚄 中老铁路 D888 次直达国际旅客列车<br>⏱️ 12:52 发车 ➔ 15:47 直达版纳 (仅 3.5h)</td>
               <td class="price-cell">
                 <span class="price-pill-main">约 ¥198 /人 (二等座)</span>
                 <span class="price-pill-sub">双人二等座约 ¥396 (一等座约 ¥310/人)</span>
               </td>
-              <td>14:14 磨丁站办老挝出境 ➔ 经友谊隧道入磨憨口岸大厅刷中国护照秒通关 ➔ 15:47 抵达西双版纳，全程仅3.5小时！</td>
+              <td class="price-cell">
+                <span class="booking-status-tag">✅ 支持 100% 在线订票 (12306 直购)</span>
+                <span style="display:block; font-size:0.75rem; color:#059669; margin-bottom:4px;">提前 14-15 天早晨放票</span>
+                <a href="https://www.12306.cn/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 中国铁路 12306 官网 ↗</a><br><a href="https://www.12306.cn/" target="_blank" rel="noopener noreferrer" class="booking-link">📱 铁路 12306 手机客户端</a>
+              </td>
+              <td style="font-size:0.86rem; color:#334155;">14:14 磨丁站下车办老挝出境 ➔ 经友谊隧道入磨憨口岸大厅刷中国护照秒通关 ➔ 15:47 抵达西双版纳站，直接在 12306 搜琅勃拉邦至西双版纳购买 D888 跨境车票！</td>
             </tr>
             <tr>
-              <td><strong>7. 西双版纳 ➔ 云南大理</strong></td>
+              <td><strong>第五段 · 7<br><span style="font-size:1.02rem; color:#0f172a;">西双版纳 ➔ 云南大理 (终点直达高铁)</span></strong></td>
               <td>
                 <span class="station-name">西双版纳火车站</span>
                 <span class="station-loc">Xishuangbanna Railway Station</span>
@@ -2194,12 +2350,17 @@
                 <span class="station-loc">大理市下关镇云山路 (距古城17公里)</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Dali+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 Google Maps 定位 ↗</a>
               </td>
-              <td>云南省内直达动车 / 高铁<br>车程约 6 小时 (上午或中午发车)</td>
+              <td>🚄 云南省内直达高铁 / 动车<br>⏱️ 上午或中午发车 · 车程约 6 小时直达</td>
               <td class="price-cell">
                 <span class="price-pill-main">约 ¥245 - ¥280 /人</span>
                 <span class="price-pill-sub">双人二等座约 ¥490 - ¥560 (一等约 ¥390/人)</span>
               </td>
-              <td>出站口右侧直接乘坐“大理古城旅游景区直通车”（5元，35分钟）或打车直达大理古城南门或洱海生态廊道客栈。</td>
+              <td class="price-cell">
+                <span class="booking-status-tag">✅ 支持 100% 在线订票 (12306 直购)</span>
+                <span style="display:block; font-size:0.75rem; color:#059669; margin-bottom:4px;">提前 14 天早晨 08:00 放票</span>
+                <a href="https://www.12306.cn/" target="_blank" rel="noopener noreferrer" class="booking-link">🛒 中国铁路 12306 官网 ↗</a><br><a href="https://www.12306.cn/" target="_blank" rel="noopener noreferrer" class="booking-link">📱 铁路 12306 手机客户端</a>
+              </td>
+              <td style="font-size:0.86rem; color:#334155;">出站口右侧直接乘坐“大理古城景区直通车”（5元，35分钟）或打车直达洱海生态廊道客栈，直接在 12306 客户端购票选座。</td>
             </tr>
           </tbody>
         </table>
