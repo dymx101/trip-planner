@@ -2042,6 +2042,7 @@
       </div>
 
       <canvas id="export-overview-canvas" style="display:none;"></canvas>
+      </div>
     </div>
 
     <!-- TAB 1: 每日详细日程 -->
@@ -3638,7 +3639,7 @@
   </div>
 
   <script>
-    function switchTab(tabId) {
+    function switchTab(tabId, el) {
       document.querySelectorAll('.tab-panel').forEach(panel => {
         panel.classList.remove('active');
       });
@@ -3646,8 +3647,16 @@
         tab.classList.remove('active');
       });
 
-      document.getElementById('tab-' + tabId).classList.add('active');
-      event.currentTarget.classList.add('active');
+      const targetPanel = document.getElementById('tab-' + tabId);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+
+      const activeBtn = el || (typeof event !== 'undefined' && event && event.currentTarget ? event.currentTarget : null) || document.querySelector(".nav-tab[onclick*='" + tabId + "']");
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+      }
+
       if (tabId === 'overview') {
         setTimeout(() => {
           if (overviewMapInstance) overviewMapInstance.invalidateSize();
