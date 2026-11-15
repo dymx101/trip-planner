@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新加坡至中国大理 15天跨国陆路远程办公 (Workcation) 行程指南</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent: #f59e0b;
+      --accent-light: #fef3c7;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --tag-work: #dbeafe;
+      --tag-work-text: #1d4ed8;
+      --tag-commute: #fef3c7;
+      --tag-commute-text: #b45309;
+      --tag-border: #fee2e2;
+      --tag-border-text: #b91c1c;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans SC', system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 0 60px 0;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0369a1 100%);
+      color: white;
+      padding: 60px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .badge-hero {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+    .quick-stats {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .stat-pill {
+      background: rgba(255,255,255,0.1);
+      padding: 8px 18px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .stat-pill span {
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1140px;
+      margin: -40px auto 0;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    /* Nav Tabs */
+    .nav-tabs {
+      display: flex;
+      background: var(--card-bg);
+      padding: 6px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      gap: 6px;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+    }
+    .nav-tab {
+      flex: 1;
+      min-width: 140px;
+      text-align: center;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-tab:hover {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+    .nav-tab.active {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    }
+
+    /* Tab Content Panels */
+    .tab-panel {
+      display: none;
+    }
+    .tab-panel.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Core Principles Banner */
+    .rule-banner {
+      background: #ffffff;
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      border: 1px solid var(--border);
+    }
+    .rule-item h4 {
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .rule-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Timeline Day Cards */
+    .day-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .day-card:hover {
+      box-shadow: 0 10px 20px -3px rgb(0 0 0 / 0.08);
+    }
+    .day-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed var(--border);
+    }
+    .day-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .day-badge {
+      background: #0f172a;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .day-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .day-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+    .tag-work { background: var(--tag-work); color: var(--tag-work-text); }
+    .tag-commute { background: var(--tag-commute); color: var(--tag-commute-text); }
+    .tag-border { background: var(--tag-border); color: var(--tag-border-text); }
+
+    .day-body {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .section-block {
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #f1f5f9;
+    }
+    .section-block h5 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .work-block h5 { color: #1d4ed8; }
+    .commute-block h5 { color: #b45309; }
+    .detail-item {
+      font-size: 0.9rem;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+    .detail-item strong {
+      color: #0f172a;
+    }
+
+    /* Stations Table View */
+    .station-table-wrap {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    th {
+      background: #f1f5f9;
+      padding: 14px 18px;
+      font-weight: 600;
+      color: #475569;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #fafafa; }
+    .station-name {
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .station-loc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Cafe Directory Grid */
+    .cafe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .cafe-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 22px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cafe-city {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .cafe-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .cafe-desc {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .cafe-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .cafe-badge {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #f1f5f9;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+      .container { margin-top: -20px; }
+      .day-card { padding: 18px; }
+      .day-body { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge-hero">🌍 跨国数字游民 (Workcation) 路线</div>
+    <h1>新加坡至中国大理 15 天陆路旅行方案</h1>
+    <p>白天专注高效办公（09:00 - 18:00），跨城通勤锁定傍晚至清晨。避开吉隆坡与大城，大理停留整整 3 天！</p>
+    <div class="quick-stats">
+      <div class="stat-pill">出发日期：<span>2026年12月13日</span></div>
+      <div class="stat-pill">途径国家：<span>新加坡 ➔ 马来西亚 ➔ 泰国 ➔ 老挝 ➔ 中国</span></div>
+      <div class="stat-pill">终点站：<span>云南大理（洱海&古城）</span></div>
+      <div class="stat-pill">出行总天数：<span>15 天</span></div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- 顶栏切换导航 -->
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="switchTab('itinerary')">📅 每日完整日程 (Day 1-15)</button>
+      <button class="nav-tab" onclick="switchTab('stations')">🚉 车站位置与接驳表</button>
+      <button class="nav-tab" onclick="switchTab('cafes')">☕ 精选办公咖啡馆</button>
+      <button class="nav-tab" onclick="switchTab('borders')">🛂 四国通关口岸指南</button>
+    </div>
+
+    <!-- 核心原则提示卡 -->
+    <div class="rule-banner">
+      <div class="rule-item">
+        <h4>💻 09:00 - 18:00 白天办公时段</h4>
+        <p>精选室内强冷气、千兆网络与插座充足的高水准咖啡馆，全天专注处理工作。</p>
+      </div>
+      <div class="rule-item">
+        <h4>🚆 18:00 - 清晨 傍晚夜间通勤</h4>
+        <p>长途跨国路段采用夕发朝至特快夜卧列车与豪华巴士，既不占白天工作时间又省酒店住宿。</p>
+      </div>
+      <div class="rule-item">
+        <h4>🏔️ 终点大理 3 天慢生活</h4>
+        <p>已剔除兰卡威与大城行程，省下时间全部留给大理，苍山脚下洱海之滨惬意收官。</p>
+      </div>
+    </div>
+
+    <!-- TAB 1: 每日详细日程 -->
+    <div id="tab-itinerary" class="tab-panel active">
+
+      <!-- Day 1 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 1</span>
+            <div class="day-title">12/13 (周日) · 新加坡 ➔ 新山 ➔ 马六甲</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">白天正常工作</span>
+            <span class="tag tag-commute">傍晚通关大巴</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 白天远程工作</h5>
+            <div class="detail-item"><strong>办公地点</strong>：新加坡酒店/常驻办公点</div>
+            <div class="detail-item"><strong>工作时间</strong>：09:00 - 17:30，完成工作交接与行李打包</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🚍 傍晚跨国通勤</h5>
+            <div class="detail-item"><strong>上车站</strong>：新加坡兀兰关卡 (Woodlands Checkpoint) ➔ 新山拉庆中央车站 (Larkin Sentral)</div>
+            <div class="detail-item"><strong>到达站</strong>：马六甲仙特拉车站 (Melaka Sentral, 打车15分钟入鸡场街)</div>
+            <div class="detail-item"><strong>住宿地点</strong>：马六甲古城精选特色民宿（宿马六甲）</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 2</span>
+            <div class="day-title">12/14 (周一) · 马六甲深度办公与古城夜市</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">全天咖啡馆办公</span>
+            <span class="tag tag-commute">古城晚间漫步</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 白天远程工作</h5>
+            <div class="detail-item"><strong>办公地点</strong>：<strong>The Daily Fix Cafe</strong>（鸡场街老宅深处天井庭院）</div>
+            <div class="detail-item"><strong>办公设施</strong>：冷气充足、高速 Wi-Fi、电源插座多，供应招牌班兰松饼与手冲</div>
+            <div class="detail-item"><strong>工作时间</strong>：09:00 - 18:00 全天深度工作</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🌙 晚间人文放松</h5>
+            <div class="detail-item"><strong>游览路线</strong>：傍晚漫步荷兰红屋、圣保罗山圣手堂、品尝地道娘惹菜与鸡场街夜市</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿马六甲古城民宿</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 3</span>
+            <div class="day-title">12/15 (周二) · 马六甲 ➔ 跨国夜卧直达泰国合艾 (完全避开吉隆坡)</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">白天稳定办公</span>
+            <span class="tag tag-commute">跨国夜卧大巴</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 白天远程工作</h5>
+            <div class="detail-item"><strong>办公地点</strong>：<strong>Calanthe Art Cafe</strong>（十三州特色咖啡馆，空间开阔静谧）</div>
+            <div class="detail-item"><strong>工作时间</strong>：09:00 - 18:00 完成当日工作任务并享用南洋晚餐</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🚍 跨国夜班直达通勤</h5>
+            <div class="detail-item"><strong>上车站</strong>：马六甲仙特拉长途车站 (Melaka Sentral Bus Terminal, 20:30 发车)</div>
+            <div class="detail-item"><strong>交通车型</strong>：跨国 2+1 豪华宽体商务夜卧大巴（走南北高速，<strong>完全不进吉隆坡市区</strong>）</div>
+            <div class="detail-item"><strong>住宿方式</strong>：夜宿跨国豪华大巴，清晨直接抵达泰国边境</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 4</span>
+            <div class="day-title">12/16 (周三) · 泰国合艾火车站旁办公 ➔ 泰铁32次特快夜卧赴曼谷</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-border">免签入境泰国</span>
+            <span class="tag tag-work">火车站旁极速网络</span>
+            <span class="tag tag-commute">CNR特快夜卧列车</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 白天远程工作</h5>
+            <div class="detail-item"><strong>到达与通关</strong>：清晨经黑木山/沙道口岸免签盖章入境，08:30 抵合艾火车站寄存行李</div>
+            <div class="detail-item"><strong>办公地点</strong>：<strong>Space Tea & Coffee</strong> 或 <strong>Alive Specialty Coffee</strong>（火车站旁，步行仅需3-5分钟）</div>
+            <div class="detail-item"><strong>工作时间</strong>：09:00 - 17:00，品尝泰南炸鸡与特色芒果糯米饭</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🚆 傍晚夜卧列车</h5>
+            <div class="detail-item"><strong>上车站</strong>：合艾火车站 (Hat Yai Junction Station, 17:45 发车)</div>
+            <div class="detail-item"><strong>车次席位</strong>：泰铁 SRT 32 次特快 CNR 现代化空调软卧（带充电插座与餐车）</div>
+            <div class="detail-item"><strong>住宿方式</strong>：宿列车软卧，安睡一整晚省去酒店房费</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 5</span>
+            <div class="day-title">12/17 (周四) · 抵达曼谷 ➔ 网红咖啡办公 ➔ 约见朋友聚餐</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">曼谷顶级办公</span>
+            <span class="tag tag-commute">朋友聚会</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 白天远程工作</h5>
+            <div class="detail-item"><strong>到达站</strong>：上午 10:30 抵达曼谷阿皮瓦中央车站 (Krung Thep Aphiwat)，无缝转乘 MRT 蓝色线</div>
+            <div class="detail-item"><strong>办公地点</strong>：<strong>Ari 街区 / Thong Lor</strong>（如 Roast、Factory Coffee、The Commons）</div>
+            <div class="detail-item"><strong>工作时间</strong>：11:30 - 18:00 曼谷市中心极速网络环境深度办公</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🍲 晚间会友与美食</h5>
+            <div class="detail-item"><strong>活动安排</strong>：约见曼谷朋友聚餐，探索朱拉隆功大学美食街 Ban Tad Thong 或唐人街</div>
+            <div class="detail-item"><strong>住宿地点</strong>：曼谷市中心精品酒店（宿曼谷）</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 6</span>
+            <div class="day-title">12/18 (周五) · 曼谷惬意办公会友 ➔ 晚间国际列车直达老挝万象</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">全天舒适办公</span>
+            <span class="tag tag-commute">跨国直达卧铺列车</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 白天远程工作</h5>
+            <div class="detail-item"><strong>办公地点</strong>：曼谷素坤逸轻食咖啡馆，或酒店专属商务中心</div>
+            <div class="detail-item"><strong>工作时间</strong>：09:00 - 18:00 全天办公，傍晚享受正宗泰式精油按摩放松</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🚆 晚间直达老挝列车</h5>
+            <div class="detail-item"><strong>上车站</strong>：曼谷阿皮瓦中央车站 (21:25 发车)</div>
+            <div class="detail-item"><strong>到达站</strong>：老挝万象坎萨瓦站 (Vientiane Khamsavath, 次日 09:05 直达，免中转大巴)</div>
+            <div class="detail-item"><strong>住宿方式</strong>：宿国际旅客列车空调卧铺</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 7 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 7</span>
+            <div class="day-title">12/19 (周六) · 老挝万象 ➔ 凯旋门大塔銮与湄公河落日</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-border">免检直达通关</span>
+            <span class="tag tag-work">周末轻办公</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 灵活办公与落脚</h5>
+            <div class="detail-item"><strong>通关到达</strong>：09:05 坎萨瓦站下车办理老挝落地签，15分钟车程入住万象市区酒店</div>
+            <div class="detail-item"><strong>办公地点</strong>：<strong>Common Grounds Cafe Vientiane</strong> 或酒店行政廊</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🏛️ 市区历史与夜市</h5>
+            <div class="detail-item"><strong>游览景点</strong>：万象凯旋门 (Patuxay)、金碧辉煌大塔銮、西萨格寺上千尊古佛</div>
+            <div class="detail-item"><strong>住宿地点</strong>：傍晚品尝老挝啤酒与湄公河夜市烤鱼，宿万象市区</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 8 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 8</span>
+            <div class="day-title">12/20 (周日) · 香昆佛像公园 ➔ 中老铁路动车赴世界遗产琅勃拉邦</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">中老铁路澜沧号</span>
+            <span class="tag tag-commute">高铁2小时即达</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>🗿 上午佛像公园探秘</h5>
+            <div class="detail-item"><strong>游览地点</strong>：近郊香昆寺/佛像公园（巨型佛教与印度教奇特雕塑群）</div>
+            <div class="detail-item"><strong>下午办公</strong>：Joma Bakery Cafe 处理邮件与周一工作安排</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🚆 傍晚动车北上</h5>
+            <div class="detail-item"><strong>上车站</strong>：中老铁路万象站 (Vientiane Station, 16:30 发车)</div>
+            <div class="detail-item"><strong>到达站</strong>：中老铁路琅勃拉邦站 (Luang Prabang Station, 18:30 抵达，专车接送入古城)</div>
+            <div class="detail-item"><strong>住宿地点</strong>：琅勃拉邦世界遗产古城特色法式客栈（宿琅勃拉邦）</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 9 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 9</span>
+            <div class="day-title">12/21 (周一) · 琅勃拉邦清晨布施 ➔ Saffron 江景冷气深度办公</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">数字游民神级咖啡</span>
+            <span class="tag tag-commute">普西山日落</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 白天远程工作</h5>
+            <div class="detail-item"><strong>清晨体验</strong>：05:30 观赏老挝传承千年的橙衣僧侣托钵布施仪式</div>
+            <div class="detail-item"><strong>办公地点</strong>：<strong>Saffron Coffee 湄公河旗舰店</strong>（室内强冷气、长木桌、极速千兆网络）</div>
+            <div class="detail-item"><strong>工作时间</strong>：09:00 - 18:00 室内深度办公，下午移步户外木质露台看湄公河水</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🌄 傍晚登高俯瞰</h5>
+            <div class="detail-item"><strong>活动安排</strong>：下班后登普西山俯瞰古城全景与湄公河壮丽晚霞，逛手工艺夜市</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿琅勃拉邦古城客栈</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 10 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 10</span>
+            <div class="day-title">12/22 (周二) · 琅勃拉邦临江办公 ➔ 香通寺文化巡礼</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">临江阳台办公</span>
+            <span class="tag tag-commute">慢调法式生活</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 白天远程工作</h5>
+            <div class="detail-item"><strong>办公地点</strong>：<strong>View An Cafe / Belle Rive Terrace</strong>（临江独立玻璃房）</div>
+            <div class="detail-item"><strong>办公体验</strong>：插座充裕、环境清幽无噪杂打扰，品尝法式牛角包与老挝冰咖啡</div>
+            <div class="detail-item"><strong>工作时间</strong>：09:00 - 18:00 专注处理业务与线上沟通</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🛕 傍晚古寺散步</h5>
+            <div class="detail-item"><strong>游览亮点</strong>：步行探访香通寺（生命之树彩色玻璃镶嵌）、皇宫博物馆</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿琅勃拉邦古城客栈</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 11 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 11</span>
+            <div class="day-title">12/23 (周三) · 中老铁路 D888 次跨国列车直达中国西双版纳</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-border">D888 一站式通关</span>
+            <span class="tag tag-commute">3.5小时入境中国</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 上午轻办公与乘车</h5>
+            <div class="detail-item"><strong>办公地点</strong>：古城客栈露台轻办公，11:30 专车前往中老铁路琅勃拉邦火车站</div>
+            <div class="detail-item"><strong>车上办公</strong>：动车车厢提供全列空调、每座独立国标电源插座与 5G 信号</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🚆 D888 跨境国际旅客列车</h5>
+            <div class="detail-item"><strong>发车时刻</strong>：12:52 琅勃拉邦站准时发车</div>
+            <div class="detail-item"><strong>口岸通关</strong>：14:14 抵磨丁站下车办老挝出境 ➔ 经友谊隧道入磨憨口岸大厅刷中国护照闸机秒通关</div>
+            <div class="detail-item"><strong>到达时刻</strong>：<strong>15:47 直接抵达中国西双版纳站</strong>（打车15分钟入住告庄西双景酒店）</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 12 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 12</span>
+            <div class="day-title">12/24 (周四) · 西双版纳告庄傣风咖啡办公 ➔ 星光夜市</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">澜沧江畔办公</span>
+            <span class="tag tag-commute">星光夜市美食</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 白天远程工作</h5>
+            <div class="detail-item"><strong>办公地点</strong>：告庄西双景澜沧江畔特色傣风咖啡馆或文创办公空间</div>
+            <div class="detail-item"><strong>工作时间</strong>：09:00 - 18:00 高速 Wi-Fi 办公，品尝小粒咖啡与热带水果</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>✨ 晚间星光璀璨</h5>
+            <div class="detail-item"><strong>活动安排</strong>：漫步亚洲最大露天夜市——告庄西双景星光夜市，品尝傣味香茅草烤鱼与舂鸡脚</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿西双版纳告庄特色度假酒店</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 13 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 13</span>
+            <div class="day-title">12/25 (周五) · 曼听公园总佛寺 ➔ 直达动车飞驰抵终点云南大理</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-commute">直达动车抵大理</span>
+            <span class="tag tag-work">终点站就位</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>🦚 上午傣王御花园</h5>
+            <div class="detail-item"><strong>游览景点</strong>：上午漫步曼听公园与总佛寺，欣赏金碧辉煌的南传上座部佛教建筑</div>
+            <div class="detail-item"><strong>动车办公</strong>：中午 11:30 在西双版纳火车站搭乘直达大理的高铁动车（约6小时），车上充电办公</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🏔️ 傍晚抵大理苍山洱海</h5>
+            <div class="detail-item"><strong>到达车站</strong>：大理火车站 (Dali Station, 下关镇) ➔ 乘坐景区直通车直达大理古城南门 / 洱海生态廊道客栈</div>
+            <div class="detail-item"><strong>住宿地点</strong>：大理洱海边海景客栈或大理古城特色院落（宿大理）</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 14 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 14</span>
+            <div class="day-title">12/26 (周六) · 大理洱海生态廊道海景办公 ➔ 古城人民路漫步</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">直面洱海办公</span>
+            <span class="tag tag-commute">数字游民社区</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>💻 苍山洱海神仙办公</h5>
+            <div class="detail-item"><strong>办公地点</strong>：磻溪村 S 弯或才村码头海景咖啡馆（全景落地窗直面蓝天与碧波）</div>
+            <div class="detail-item"><strong>办公体验</strong>：顶级千兆光纤网络，冬日暖阳洒在桌上，享受全国最好的数字游民氛围</div>
+            <div class="detail-item"><strong>工作时间</strong>：09:00 - 18:00 舒适办公</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🎸 傍晚文艺慢生活</h5>
+            <div class="detail-item"><strong>活动安排</strong>：漫步大理古城床单厂艺术区、人民路民谣小酒吧，品尝白族酸辣鱼</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿大理</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 15 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-badge">Day 15</span>
+            <div class="day-title">12/27 (周日) · 喜洲古镇稻田咖啡 ➔ 苍山雪洱海月完美收官</div>
+          </div>
+          <div class="day-tags">
+            <span class="tag tag-work">15天圆满收官</span>
+            <span class="tag tag-commute">跨国壮举达成</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="section-block work-block">
+            <h5>🌾 喜洲稻田慢咖啡复盘</h5>
+            <div class="detail-item"><strong>地点</strong>：喜洲古镇稻田边咖啡工坊，品尝喜洲粑粑与云南本土日晒豆手冲</div>
+            <div class="detail-item"><strong>工作时间</strong>：轻松复盘两周跨国旅行工作成果</div>
+          </div>
+          <div class="section-block commute-block">
+            <h5>🎉 15天跨国穿越成功</h5>
+            <div class="detail-item"><strong>总结</strong>：从赤道新加坡出发，穿越马来半岛、泰国中南部、湄公河老挝，顺利抵达云南大理！</div>
+            <div class="detail-item"><strong>后续</strong>：可在大理继续旅居或从大理机场直飞回程。</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: 车站位置与接驳指南 -->
+    <div id="tab-stations" class="tab-panel">
+      <div class="station-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>区间航段</th>
+              <th>出发车站及精确位置</th>
+              <th>到达车站及精确位置</th>
+              <th>交通工具 / 车次时刻</th>
+              <th>接驳与通关注意事项</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. 新加坡 ➔ 马六甲</strong></td>
+              <td>
+                <span class="station-name">新山拉庆中央车站</span>
+                <span class="station-loc">Larkin Sentral, Jalan Garuda, Johor Bahru</span>
+              </td>
+              <td>
+                <span class="station-name">马六甲仙特拉车站</span>
+                <span class="station-loc">Melaka Sentral, Jalan Peringgit, Melaka</span>
+              </td>
+              <td>长途冷气巴士 (Causeway Link / KKKL)<br>车程约 2.5 小时</td>
+              <td>兀兰出境 ➔ 新山 CIQ 入境 ➔ 站前打车 10 分钟到 Larkin 乘车。到马六甲打车 15 分钟抵古城。</td>
+            </tr>
+            <tr>
+              <td><strong>2. 马六甲 ➔ 泰国合艾</strong></td>
+              <td>
+                <span class="station-name">马六甲仙特拉长途车站</span>
+                <span class="station-loc">Melaka Sentral Bus Terminal 候车大厅</span>
+              </td>
+              <td>
+                <span class="station-name">合艾火车站前</span>
+                <span class="station-loc">Hat Yai Junction Station, Thammanoonvithi Rd</span>
+              </td>
+              <td>跨国豪华 2+1 夜班宽体客车 (Suasana/Sri Maju)<br>20:30 发车，次日 08:30 抵</td>
+              <td>走 E2 南北高速，<strong>完全不进吉隆坡市区</strong>！清晨在黑木山 (Bukit Kayu Hitam) 免签盖章入境泰国。</td>
+            </tr>
+            <tr>
+              <td><strong>3. 泰国合艾 ➔ 曼谷</strong></td>
+              <td>
+                <span class="station-name">合艾火车站</span>
+                <span class="station-loc">Hat Yai Junction Railway Station</span>
+              </td>
+              <td>
+                <span class="station-name">曼谷阿皮瓦中央车站</span>
+                <span class="station-loc">Krung Thep Aphiwat Central Terminal, Chatuchak</span>
+              </td>
+              <td>泰铁 SRT 32 次特快 CNR 空调卧铺<br>17:45 发车，次日 10:30 抵达曼谷</td>
+              <td>合艾火车站设行李寄存；白天在火车站周边极速网络咖啡办公，傍晚乘卧铺，次日直通曼谷 MRT 蓝色线。</td>
+            </tr>
+            <tr>
+              <td><strong>4. 曼谷 ➔ 老挝万象</strong></td>
+              <td>
+                <span class="station-name">曼谷阿皮瓦中央车站</span>
+                <span class="station-loc">Krung Thep Aphiwat Central Terminal</span>
+              </td>
+              <td>
+                <span class="station-name">老挝万象坎萨瓦站</span>
+                <span class="station-loc">Vientiane Khamsavath Station, Saysettha</span>
+              </td>
+              <td>曼谷直达万象国际旅客列车 (133/147次)<br>21:25 发车，次日 09:05 直达老挝</td>
+              <td>列车在泰国边境廊开站停靠办泰出境，跨过第一友谊大桥直入老挝坎萨瓦站办入境落地签，免拖行李换大巴！</td>
+            </tr>
+            <tr>
+              <td><strong>5. 万象 ➔ 琅勃拉邦</strong></td>
+              <td>
+                <span class="station-name">中老铁路万象站</span>
+                <span class="station-loc">Vientiane Railway Station (市区以北14公里)</span>
+              </td>
+              <td>
+                <span class="station-name">中老铁路琅勃拉邦站</span>
+                <span class="station-loc">Luang Prabang Station (距古城11公里)</span>
+              </td>
+              <td>中老铁路“澜沧号”动车 (C84/K12)<br>16:30 发车，车程仅 2 小时</td>
+              <td>市区打车 25 分钟抵车站；到达琅勃拉邦出站后乘坐官方正规小巴（3.5万基普，20分钟）直达古城酒店。</td>
+            </tr>
+            <tr>
+              <td><strong>6. 琅勃拉邦 ➔ 西双版纳</strong></td>
+              <td>
+                <span class="station-name">中老铁路琅勃拉邦站</span>
+                <span class="station-loc">Luang Prabang Railway Station</span>
+              </td>
+              <td>
+                <span class="station-name">西双版纳火车站</span>
+                <span class="station-loc">景洪市嘎洒镇站前大道 (距告庄8公里)</span>
+              </td>
+              <td><strong>中老铁路 D888 次直达国际旅客列车</strong><br>12:52 发车，15:47 直达西双版纳</td>
+              <td>14:14 磨丁站办老挝出境 ➔ 经友谊隧道入磨憨口岸大厅刷中国护照秒通关 ➔ 15:47 抵达西双版纳，全程仅3.5小时！</td>
+            </tr>
+            <tr>
+              <td><strong>7. 西双版纳 ➔ 云南大理</strong></td>
+              <td>
+                <span class="station-name">西双版纳火车站</span>
+                <span class="station-loc">Xishuangbanna Railway Station</span>
+              </td>
+              <td>
+                <span class="station-name">大理火车站</span>
+                <span class="station-loc">大理市下关镇云山路 (距古城17公里)</span>
+              </td>
+              <td>云南省内直达动车 / 高铁<br>车程约 6 小时 (上午或中午发车)</td>
+              <td>出站口右侧直接乘坐“大理古城旅游景区直通车”（5元，35分钟）或打车直达大理古城南门或洱海生态廊道客栈。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: 精选办公咖啡馆 -->
+    <div id="tab-cafes" class="tab-panel">
+      <div class="cafe-grid">
+        <div class="cafe-card">
+          <div>
+            <div class="cafe-city">🇲🇾 马六甲 (Melaka)</div>
+            <div class="cafe-name">The Daily Fix Cafe</div>
+            <div class="cafe-desc">隐藏在鸡场街历史老洋房深处的静谧天井庭院，环境极其舒适优雅，招牌班兰松饼与精品手冲极为出色。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">📶 高速 Wi-Fi</span>
+            <span class="cafe-badge">🔌 电源插座充沛</span>
+            <span class="cafe-badge">❄️ 舒适冷气</span>
+            <span class="cafe-badge">🌿 绿意天井</span>
+          </div>
+        </div>
+
+        <div class="cafe-card">
+          <div>
+            <div class="cafe-city">🇲🇾 马六甲 (Melaka)</div>
+            <div class="cafe-name">Calanthe Art Cafe</div>
+            <div class="cafe-desc">汇集马来西亚十三州特色风味咖啡的艺术老店，空间宽敞开阔，白天人流适中，非常适合长时间带电脑办公。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">📶 稳定网络</span>
+            <span class="cafe-badge">☕ 13州特色咖啡</span>
+            <span class="cafe-badge">🪑 宽敞长桌</span>
+            <span class="cafe-badge">📍 靠近鸡场街</span>
+          </div>
+        </div>
+
+        <div class="cafe-card">
+          <div>
+            <div class="cafe-city">🇹🇭 合艾 (Hat Yai)</div>
+            <div class="cafe-name">Space Tea & Coffee</div>
+            <div class="cafe-desc">极简现代极客工业风，距离合艾火车站步行仅3分钟，冷气强劲安静无嘈杂，专门配备长办公桌与多孔插座。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🚶 火车站步行3分</span>
+            <span class="cafe-badge">⚡ 极速千兆网络</span>
+            <span class="cafe-badge">🔌 每座独立插座</span>
+            <span class="cafe-badge">🤫 极度安静</span>
+          </div>
+        </div>
+
+        <div class="cafe-card">
+          <div>
+            <div class="cafe-city">🇹🇭 合艾 (Hat Yai)</div>
+            <div class="cafe-name">Alive Specialty Coffee</div>
+            <div class="cafe-desc">合艾当地顶级水准精品咖啡馆，室内高挑宽敞，通透采光，冷气与咖啡香气环绕，数字游民高频打卡地。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">☕ 冠军级手冲</span>
+            <span class="cafe-badge">📶 商务级 Wi-Fi</span>
+            <span class="cafe-badge">🥪 丰盛早午餐</span>
+            <span class="cafe-badge">❄️ 恒温冷气</span>
+          </div>
+        </div>
+
+        <div class="cafe-card">
+          <div>
+            <div class="cafe-city">🇹🇭 曼谷 (Bangkok)</div>
+            <div class="cafe-name">The Commons / Roast (Thong Lor)</div>
+            <div class="cafe-desc">曼谷最具代表性的开放式社区文创中心，绿植环绕、半开放通风与室内冷气无缝融合，拥有全曼谷最顶级的远程办公氛围。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🌟 亚洲最佳文创</span>
+            <span class="cafe-badge">📶 极速光纤</span>
+            <span class="cafe-badge">🥑 国际健康餐</span>
+            <span class="cafe-badge">🚇 BTS 通罗站</span>
+          </div>
+        </div>
+
+        <div class="cafe-card">
+          <div>
+            <div class="cafe-city">🇱🇦 琅勃拉邦 (Luang Prabang)</div>
+            <div class="cafe-name">Saffron Coffee 湄公河旗舰店</div>
+            <div class="cafe-desc"><strong>“江景露台 + 室内强冷气”双区配置！</strong>老挝高山公平贸易精品咖啡，室内长木桌插座多，户外直接面对湄公河。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🌊 直面湄公河</span>
+            <span class="cafe-badge">❄️ 独立冷气大厅</span>
+            <span class="cafe-badge">🔌 多孔插座</span>
+            <span class="cafe-badge">☕ 本土顶级豆</span>
+          </div>
+        </div>
+
+        <div class="cafe-card">
+          <div>
+            <div class="cafe-city">🇱🇦 琅勃拉邦 (Luang Prabang)</div>
+            <div class="cafe-name">View An Cafe / Belle Rive</div>
+            <div class="cafe-desc">紧邻湄公河的静谧玻璃屋咖啡馆，配有遮阳伞露台，法式烘焙与可颂香脆可口，网速飞快且服务极佳。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🥐 法式手工烘焙</span>
+            <span class="cafe-badge">📶 高速 Wi-Fi</span>
+            <span class="cafe-badge">🌅 绝美落日视角</span>
+            <span class="cafe-badge">📍 沿河主街</span>
+          </div>
+        </div>
+
+        <div class="cafe-card">
+          <div>
+            <div class="cafe-city">🇨🇳 西双版纳 (Xishuangbanna)</div>
+            <div class="cafe-name">告庄澜沧江畔傣风咖啡馆群</div>
+            <div class="cafe-desc">位于告庄西双景沿江步道，结合傣泰风情竹编建筑，白天迎着江风轻办公，品尝云南普洱小粒咖啡与手作甜品。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🌴 傣式热带风情</span>
+            <span class="cafe-badge">📶 5G 极速覆盖</span>
+            <span class="cafe-badge">🚶 步行即达星光夜市</span>
+            <span class="cafe-badge">☕ 云南小粒咖啡</span>
+          </div>
+        </div>
+
+        <div class="cafe-card">
+          <div>
+            <div class="cafe-city">🇨🇳 大理 (Dali)</div>
+            <div class="cafe-name">洱海生态廊道 S弯海景咖啡馆</div>
+            <div class="cafe-desc">全国数字游民圣地！全景玻璃大窗直面碧蓝洱海与苍山十九峰，冬日阳光洒满桌面，边看海浪边敲键盘。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🌊 洱海一线海景</span>
+            <span class="cafe-badge">📶 千兆光纤入户</span>
+            <span class="cafe-badge">☀️ 冬日暖阳绝景</span>
+            <span class="cafe-badge">🚲 廊道骑行直达</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: 通关指南 -->
+    <div id="tab-borders" class="tab-panel">
+      <div class="day-card">
+        <h3 style="margin-bottom:16px; color:var(--primary-dark);">🛂 四国陆路跨国口岸通关要点速查</h3>
+        
+        <div style="margin-bottom:20px;">
+          <h4 style="color:#0f172a; margin-bottom:6px;">1. 新加坡 ➔ 马来西亚（新山苏丹依斯干达大厦 JB CIQ）</h4>
+          <p class="detail-item"><strong>签证政策</strong>：持中国普通护照享马来西亚免签（入境前 3 天内在线填写 MDAC 数字入境卡）。</p>
+          <p class="detail-item"><strong>通关流程</strong>：兀兰关卡刷护照出境新加坡 ➔ 乘跨界穿梭车过桥 ➔ 新山 CIQ 刷脸/人工通道盖章入境马来西亚。</p>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <h4 style="color:#0f172a; margin-bottom:6px;">2. 马来西亚 ➔ 泰国（黑木山 Bukit Kayu Hitam / 沙道 Sadao 口岸）</h4>
+          <p class="detail-item"><strong>签证政策</strong>：中泰互免签证协定生效，中国公民免签入境泰国停留不超过 30 天。</p>
+          <p class="detail-item"><strong>通关流程</strong>：夜班长途大巴清晨直抵黑木山 ICQS 检查站，全员带随身贵重物品下车办理马出境，随后步行至泰国柜台免签盖章入境，大巴在泰方出口接驳直奔合艾。</p>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <h4 style="color:#0f172a; margin-bottom:6px;">3. 泰国 ➔ 老挝（国际列车直通廊开 - 万象坎萨瓦站）</h4>
+          <p class="detail-item"><strong>签证政策</strong>：老挝对中国护照实行落地签（Visa on Arrival，费用约 40 美元，需备白底照片）或提前办理 B3 电子签（eVisa）。</p>
+          <p class="detail-item"><strong>通关流程</strong>：列车在泰国边境廊开站停靠办理泰国出境手续 ➔ 列车驶过第一泰老友谊大桥 ➔ 直抵万象坎萨瓦站下车办理老挝入境手续，一站式省心！</p>
+        </div>
+
+        <div>
+          <h4 style="color:#0f172a; margin-bottom:6px;">4. 老挝 ➔ 中国（中老铁路磨丁 / 磨憨铁路口岸大厅）</h4>
+          <p class="detail-item"><strong>口岸规格</strong>：国家一级铁路客运国际口岸，“两地两检”高效模式。</p>
+          <p class="detail-item"><strong>通关流程</strong>：乘坐 D888 次动车抵达磨丁站，下车办理老挝出境盖章 ➔ 上车穿过友谊隧道 ➔ 抵达中国磨憨铁路口岸联检大厅，中国护照走自助电子闸机秒速入境并过海关 X 光机，全程约 1.5 小时无缝完成！</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>💡 本规划方案遵循 Workcation 远程办公最高效率设计 · 愿您沿途网络畅通、办公高效、尽享东南亚至彩云之南的壮美山川！</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+      document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      document.getElementById('tab-' + tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
