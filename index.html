@@ -283,6 +283,163 @@
     .detail-item strong { color: #0f172a; }
 
     /* Tables & Grids */
+    
+    /* Mobile-first Responsive Transit Cards */
+    .station-table-desktop {
+      display: block;
+    }
+    .station-cards-mobile {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .station-table-desktop {
+        display: none !important;
+      }
+      .station-cards-mobile {
+        display: flex !important;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+
+    .transit-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .transit-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .transit-tag-title {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .transit-seg-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    .transit-title-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.3;
+    }
+    .transit-price-tag {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: right;
+    }
+    .transit-price-tag small {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: normal;
+      color: #b45309;
+      margin-top: 2px;
+    }
+    .transit-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .transit-meta-pill {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .transit-stations-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .transit-station-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .station-role-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+    .station-role-label.dep {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+    .station-role-label.arr {
+      background: #dcfce7;
+      color: #15803d;
+    }
+    .station-info {
+      flex: 1;
+    }
+    .station-main-name {
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .station-sub-loc {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 2px;
+      line-height: 1.35;
+    }
+    .transit-arrow-divider {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      line-height: 1;
+      margin: -4px 0 -4px 18px;
+    }
+    .transit-notes-box {
+      background: #fffbeb;
+      border-left: 3px solid #f59e0b;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #78350f;
+      line-height: 1.5;
+    }
+    .transit-notes-title {
+      font-weight: 700;
+      margin-bottom: 2px;
+      color: #92400e;
+    }
+
     .station-table-wrap {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -1528,16 +1685,358 @@
       </div>
     </div>
 
-        <!-- TAB 3: 车站位置与接驳指南 -->
+            <!-- TAB 3: 车站位置与接驳指南 -->
     <div id="tab-stations" class="tab-panel">
       <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:14px 20px; margin-bottom:20px; font-size:0.92rem; color:#1e40af; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
         <div>
           <span style="font-size:1.05rem; font-weight:700;">🚉 全线车站 Google Maps 定位与车票票价表</span>
-          <p style="margin:2px 0 0; font-size:0.85rem; color:#2563eb;">全程 7 段陆路跨国长途交通票价仅 <strong>约 ¥920 - ¥1,180 / 人</strong>（夫妻双人约 <strong>¥1,850 - ¥2,360</strong>）。点击任意车站的蓝色按钮即可在 <strong>Google Maps</strong> 中打开精确定位与周边导航！</p>
+          <p style="margin:2px 0 0; font-size:0.85rem; color:#2563eb;">手机端已自动切换为<strong>纵向自适应卡片布局</strong>，无需左右滑动！全程 7 段陆路跨国长途交通票价仅 <strong>约 ¥920 - ¥1,180 / 人</strong>（夫妻双人约 <strong>¥1,850 - ¥2,360</strong>）。点击任意车站的蓝色按钮即可在 <strong>Google Maps</strong> 中打开精确定位与周边导航！</p>
         </div>
-        <span style="font-weight:700; background:white; padding:6px 12px; border-radius:8px; border:1px solid #bfdbfe;">全程票价透明公开 🎫</span>
+        <span style="font-weight:700; background:white; padding:6px 12px; border-radius:8px; border:1px solid #bfdbfe;">📱 完美自适应手机 🎫</span>
       </div>
-      <div class="station-table-wrap">
+
+      <!-- 手机端纵向卡片布局 (屏幕宽度 <= 768px 自动显示，绝无左右滑动) -->
+      <div class="station-cards-mobile">
+        <div class="transit-card">
+          <div class="transit-card-header">
+            <div class="transit-tag-title">
+              <span class="transit-seg-badge">✈️ 妻子前置航班</span>
+              <div class="transit-title-text">武汉 ➔ 新加坡直飞</div>
+            </div>
+            <div class="transit-price-tag">
+              约 ¥1,100 - ¥1,600 /人
+              <small>单程红眼直飞机票 (经济舱)</small>
+            </div>
+          </div>
+
+          <div class="transit-meta-row">
+            <span class="transit-meta-pill">✈️ 酷航 / 东航直飞航班</span>
+            <span class="transit-meta-pill">⏱️ 00:15 起飞 ➔ 05:25 抵樟宜 (约 5.1h)</span>
+          </div>
+
+          <div class="transit-stations-box">
+            <div class="transit-station-item">
+              <span class="station-role-label dep">出发</span>
+              <div class="station-info">
+                <div class="station-main-name">武汉天河国际机场 T3</div>
+                <div class="station-sub-loc">Wuhan Tianhe International Airport (WUH)</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Wuhan+Tianhe+International+Airport+T3" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+            <div class="transit-arrow-divider">↓</div>
+            <div class="transit-station-item">
+              <span class="station-role-label arr">到达</span>
+              <div class="station-info">
+                <div class="station-main-name">新加坡樟宜国际机场 T1/T2</div>
+                <div class="station-sub-loc">Singapore Changi Airport (SIN)</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Singapore+Changi+Airport" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="transit-notes-box">
+            <div class="transit-notes-title">🛂 接驳与通关要点：</div>
+            <p>清晨抵达樟宜机场，接机后入住酒店补觉休整。傍晚先生下班后汇合，经兀兰关卡出发前往马来西亚。</p>
+          </div>
+        </div>
+        <div class="transit-card">
+          <div class="transit-card-header">
+            <div class="transit-tag-title">
+              <span class="transit-seg-badge">第一段 · 1</span>
+              <div class="transit-title-text">新加坡 ➔ 马六甲</div>
+            </div>
+            <div class="transit-price-tag">
+              约 ¥35 - ¥50 /人
+              <small>双人约 ¥70 - ¥100 (约 22-32 MYR/人)</small>
+            </div>
+          </div>
+
+          <div class="transit-meta-row">
+            <span class="transit-meta-pill">🚌 Causeway Link / KKKL 空调长途客车</span>
+            <span class="transit-meta-pill">⏱️ 19:30 发车 · 车程约 2.5 小时</span>
+          </div>
+
+          <div class="transit-stations-box">
+            <div class="transit-station-item">
+              <span class="station-role-label dep">出发</span>
+              <div class="station-info">
+                <div class="station-main-name">新山拉庆中央车站 (Larkin Sentral)</div>
+                <div class="station-sub-loc">Jalan Garuda, Larkin, Johor Bahru</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Larkin+Sentral+Johor+Bahru" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+            <div class="transit-arrow-divider">↓</div>
+            <div class="transit-station-item">
+              <span class="station-role-label arr">到达</span>
+              <div class="station-info">
+                <div class="station-main-name">马六甲仙特拉车站 (Melaka Sentral)</div>
+                <div class="station-sub-loc">Jalan Peringgit, Melaka</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Melaka+Sentral" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="transit-notes-box">
+            <div class="transit-notes-title">🛂 接驳与通关要点：</div>
+            <p>周五18:00兀兰关卡出境新加坡 ➔ 穿梭大巴过柔佛海峡 ➔ 新山 CIQ 刷脸免签入境马来西亚 ➔ 打车 10 分钟到 Larkin 乘车。22:00 抵马六甲，打车 15 分钟到酒店。</p>
+          </div>
+        </div>
+        <div class="transit-card">
+          <div class="transit-card-header">
+            <div class="transit-tag-title">
+              <span class="transit-seg-badge">第二段 · 2</span>
+              <div class="transit-title-text">马六甲 ➔ 泰国合艾 (直达不经吉隆坡)</div>
+            </div>
+            <div class="transit-price-tag">
+              约 ¥150 - ¥190 /人
+              <small>双人约 ¥300 - ¥380 (约 95-120 MYR/人)</small>
+            </div>
+          </div>
+
+          <div class="transit-meta-row">
+            <span class="transit-meta-pill">🚌 跨国豪华 2+1 宽体空调夜班大巴 (Suasana/Sri Maju)</span>
+            <span class="transit-meta-pill">⏱️ 20:30 发车 ➔ 次日 08:30 抵达合艾</span>
+          </div>
+
+          <div class="transit-stations-box">
+            <div class="transit-station-item">
+              <span class="station-role-label dep">出发</span>
+              <div class="station-info">
+                <div class="station-main-name">马六甲仙特拉长途大巴总站</div>
+                <div class="station-sub-loc">Melaka Sentral Bus Terminal 候车大厅</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Melaka+Sentral" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+            <div class="transit-arrow-divider">↓</div>
+            <div class="transit-station-item">
+              <span class="station-role-label arr">到达</span>
+              <div class="station-info">
+                <div class="station-main-name">泰国合艾火车站前 (Hat Yai Junction)</div>
+                <div class="station-sub-loc">Thammanoonvithi Rd, Hat Yai, Songkhla</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hat+Yai+Junction+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="transit-notes-box">
+            <div class="transit-notes-title">🛂 接驳与通关要点：</div>
+            <p>全程走 E2 南北高速，**完全不进吉隆坡市区**！早晨大巴停靠黑木山 (Bukit Kayu Hitam) 口岸办理马出境，免签盖章入境泰国，大巴接驳直抵合艾火车站前。</p>
+          </div>
+        </div>
+        <div class="transit-card">
+          <div class="transit-card-header">
+            <div class="transit-tag-title">
+              <span class="transit-seg-badge">第二段 · 3</span>
+              <div class="transit-title-text">泰国合艾 ➔ 曼谷</div>
+            </div>
+            <div class="transit-price-tag">
+              约 ¥220 - ¥270 /人
+              <small>双人卧铺约 ¥440 - ¥540 (二等下铺约 1050-1250 THB)</small>
+            </div>
+          </div>
+
+          <div class="transit-meta-row">
+            <span class="transit-meta-pill">🚆 泰铁 SRT 32 次特快 CNR 空调卧铺列车</span>
+            <span class="transit-meta-pill">⏱️ 17:45 发车 ➔ 次日 10:30 抵曼谷</span>
+          </div>
+
+          <div class="transit-stations-box">
+            <div class="transit-station-item">
+              <span class="station-role-label dep">出发</span>
+              <div class="station-info">
+                <div class="station-main-name">合艾火车站 (Hat Yai Junction)</div>
+                <div class="station-sub-loc">Hat Yai Railway Station (站内设行李寄存)</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hat+Yai+Junction+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+            <div class="transit-arrow-divider">↓</div>
+            <div class="transit-station-item">
+              <span class="station-role-label arr">到达</span>
+              <div class="station-info">
+                <div class="station-main-name">曼谷阿皮瓦中央车站 (Krung Thep Aphiwat)</div>
+                <div class="station-sub-loc">Chatuchak, Bangkok (直通 MRT 蓝色线)</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Krung+Thep+Aphiwat+Central+Terminal" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="transit-notes-box">
+            <div class="transit-notes-title">🛂 接驳与通关要点：</div>
+            <p>白天在合艾火车站旁的极速网络咖啡馆舒适办公；傍晚登乘新型 CNR 空调夜卧，清晨醒来看泰南田园，抵曼谷后乘 MRT 直达素坤逸/沙吞酒店。</p>
+          </div>
+        </div>
+        <div class="transit-card">
+          <div class="transit-card-header">
+            <div class="transit-tag-title">
+              <span class="transit-seg-badge">第三段 · 4</span>
+              <div class="transit-title-text">曼谷 ➔ 老挝万象 (直通国际列车)</div>
+            </div>
+            <div class="transit-price-tag">
+              约 ¥180 - ¥230 /人
+              <small>双人空调软卧约 ¥360 - ¥460 (约 850-1050 THB/人)</small>
+            </div>
+          </div>
+
+          <div class="transit-meta-row">
+            <span class="transit-meta-pill">🚆 直通国际旅客列车 133/147 次</span>
+            <span class="transit-meta-pill">⏱️ 21:25 发车 ➔ 次日 09:05 直抵老挝万象</span>
+          </div>
+
+          <div class="transit-stations-box">
+            <div class="transit-station-item">
+              <span class="station-role-label dep">出发</span>
+              <div class="station-info">
+                <div class="station-main-name">曼谷阿皮瓦中央车站</div>
+                <div class="station-sub-loc">Krung Thep Aphiwat Central Terminal, Bangkok</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Krung+Thep+Aphiwat+Central+Terminal" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+            <div class="transit-arrow-divider">↓</div>
+            <div class="transit-station-item">
+              <span class="station-role-label arr">到达</span>
+              <div class="station-info">
+                <div class="station-main-name">老挝万象坎萨瓦火车站</div>
+                <div class="station-sub-loc">Vientiane Khamsavath Station, Saysettha</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Khamsavath+Railway+Station+Vientiane" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="transit-notes-box">
+            <div class="transit-notes-title">🛂 接驳与通关要点：</div>
+            <p>列车在泰边境廊开站停靠办泰出境，跨过第一友谊大桥直入老挝坎萨瓦站下车办落地签（带好40美元现金及白底证件照），免换大巴行李一站式直达！</p>
+          </div>
+        </div>
+        <div class="transit-card">
+          <div class="transit-card-header">
+            <div class="transit-tag-title">
+              <span class="transit-seg-badge">第三段 · 5</span>
+              <div class="transit-title-text">万象 ➔ 琅勃拉邦 (中老铁路澜沧号)</div>
+            </div>
+            <div class="transit-price-tag">
+              约 ¥115 /人 (二等座)
+              <small>双人二等座约 ¥230 (一等座约 ¥170/人)</small>
+            </div>
+          </div>
+
+          <div class="transit-meta-row">
+            <span class="transit-meta-pill">🚄 中老铁路“澜沧号”CR200J 动车 (C84/K12)</span>
+            <span class="transit-meta-pill">⏱️ 16:30 发车 · 车程仅 2 小时</span>
+          </div>
+
+          <div class="transit-stations-box">
+            <div class="transit-station-item">
+              <span class="station-role-label dep">出发</span>
+              <div class="station-info">
+                <div class="station-main-name">中老铁路万象站</div>
+                <div class="station-sub-loc">Vientiane Railway Station (市区以北14公里)</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Vientiane+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+            <div class="transit-arrow-divider">↓</div>
+            <div class="transit-station-item">
+              <span class="station-role-label arr">到达</span>
+              <div class="station-info">
+                <div class="station-main-name">中老铁路琅勃拉邦站</div>
+                <div class="station-sub-loc">Luang Prabang Station (距古城11公里)</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="transit-notes-box">
+            <div class="transit-notes-title">🛂 接驳与通关要点：</div>
+            <p>万象市区打车 25 分钟抵车站；列车穿越老挝崇山峻岭，出站后在官方窗口乘正规小巴（3.5万基普，20分钟）直达古城酒店。</p>
+          </div>
+        </div>
+        <div class="transit-card">
+          <div class="transit-card-header">
+            <div class="transit-tag-title">
+              <span class="transit-seg-badge">第四段 · 6</span>
+              <div class="transit-title-text">琅勃拉邦 ➔ 中国西双版纳 (跨境直达国际动车)</div>
+            </div>
+            <div class="transit-price-tag">
+              约 ¥198 /人 (二等座)
+              <small>双人二等座约 ¥396 (一等座约 ¥310/人)</small>
+            </div>
+          </div>
+
+          <div class="transit-meta-row">
+            <span class="transit-meta-pill">🚄 中老铁路 D888 次直达国际旅客列车</span>
+            <span class="transit-meta-pill">⏱️ 12:52 发车 ➔ 15:47 直达版纳 (仅 3.5h)</span>
+          </div>
+
+          <div class="transit-stations-box">
+            <div class="transit-station-item">
+              <span class="station-role-label dep">出发</span>
+              <div class="station-info">
+                <div class="station-main-name">中老铁路琅勃拉邦站</div>
+                <div class="station-sub-loc">Luang Prabang Railway Station</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+            <div class="transit-arrow-divider">↓</div>
+            <div class="transit-station-item">
+              <span class="station-role-label arr">到达</span>
+              <div class="station-info">
+                <div class="station-main-name">西双版纳火车站</div>
+                <div class="station-sub-loc">景洪市嘎洒镇站前大道 (距告庄8公里)</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Xishuangbanna+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="transit-notes-box">
+            <div class="transit-notes-title">🛂 接驳与通关要点：</div>
+            <p>14:14 磨丁站下车办老挝出境 ➔ 经友谊隧道入磨憨口岸大厅刷中国护照秒通关 ➔ 15:47 抵达西双版纳站，全程行李随车无缝衔接！</p>
+          </div>
+        </div>
+        <div class="transit-card">
+          <div class="transit-card-header">
+            <div class="transit-tag-title">
+              <span class="transit-seg-badge">第五段 · 7</span>
+              <div class="transit-title-text">西双版纳 ➔ 云南大理 (终点直达高铁)</div>
+            </div>
+            <div class="transit-price-tag">
+              约 ¥245 - ¥280 /人
+              <small>双人二等座约 ¥490 - ¥560 (一等约 ¥390/人)</small>
+            </div>
+          </div>
+
+          <div class="transit-meta-row">
+            <span class="transit-meta-pill">🚄 云南省内直达高铁 / 动车</span>
+            <span class="transit-meta-pill">⏱️ 上午或中午发车 · 车程约 6 小时直达</span>
+          </div>
+
+          <div class="transit-stations-box">
+            <div class="transit-station-item">
+              <span class="station-role-label dep">出发</span>
+              <div class="station-info">
+                <div class="station-main-name">西双版纳火车站</div>
+                <div class="station-sub-loc">Xishuangbanna Railway Station</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Xishuangbanna+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+            <div class="transit-arrow-divider">↓</div>
+            <div class="transit-station-item">
+              <span class="station-role-label arr">到达</span>
+              <div class="station-info">
+                <div class="station-main-name">大理火车站</div>
+                <div class="station-sub-loc">大理市下关镇云山路 (距古城17公里)</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Dali+Railway+Station" target="_blank" rel="noopener noreferrer" class="station-map-link">📍 在 Google Maps 查看定位 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="transit-notes-box">
+            <div class="transit-notes-title">🛂 接驳与通关要点：</div>
+            <p>出站口右侧直接乘坐“大理古城景区直通车”（5元，35分钟）或打车直达洱海生态廊道客栈，正式开启终点站 3 天苍山洱海慢生活。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 桌面端大屏幕宽表格 (屏幕宽度 > 768px 自动显示) -->
+      <div class="station-table-wrap station-table-desktop">
         <table>
           <thead>
             <tr>
