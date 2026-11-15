@@ -284,6 +284,233 @@
 
     /* Tables & Grids */
     
+    /* Overview 15-Day Responsive Styles */
+    .overview-table-desktop {
+      display: block;
+    }
+    .overview-cards-mobile {
+      display: none;
+    }
+    .overview-header-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .overview-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .ov-mode-switcher {
+      display: inline-flex;
+      background: #dbeafe;
+      padding: 3px;
+      border-radius: 8px;
+      gap: 2px;
+    }
+    .ov-mode-btn {
+      padding: 6px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .ov-mode-btn.active {
+      background: #0284c7;
+      color: white;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35);
+    }
+    .ov-mode-btn.inactive {
+      background: transparent;
+      color: #1e40af;
+    }
+    .ov-action-buttons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ov-btn-gmap {
+      padding: 7px 14px;
+      background: #4285f4;
+      color: white;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(66,133,244,0.3);
+      transition: all 0.2s;
+    }
+    .ov-btn-download {
+      padding: 7px 14px;
+      background: #10b981;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(16,185,129,0.3);
+      transition: all 0.2s;
+    }
+
+    /* Mobile Step Cards for 15-Day Overview */
+    .ov-card-mobile {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ov-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f1f5f9;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .ov-card-day-badge {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #0284c7;
+      background: #e0f2fe;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .ov-card-city {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .ov-timeline-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .ov-timeline-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .ov-time-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #475569;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .ov-time-pill.work {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+    .ov-time-pill.transit {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .ov-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px dashed #f1f5f9;
+      font-size: 0.76rem;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    /* Mobile Responsive Media Query Extension */
+    @media (max-width: 768px) {
+      .overview-header-box {
+        padding: 14px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+      .overview-header-actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .ov-mode-switcher {
+        width: 100%;
+        display: flex;
+      }
+      .ov-mode-btn {
+        flex: 1;
+        padding: 8px 4px;
+        font-size: 0.78rem;
+        text-align: center;
+      }
+      .ov-action-buttons {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+      }
+      .ov-action-buttons > * {
+        flex: 1;
+        text-align: center;
+        justify-content: center;
+        padding: 8px 6px !important;
+        font-size: 0.78rem !important;
+      }
+
+      #overview-google-map {
+        height: 380px !important;
+      }
+      #overview-gmap-container {
+        padding: 10px !important;
+        margin-bottom: 14px !important;
+      }
+      #overview-map-container {
+        padding: 8px !important;
+      }
+      #overview-table-container {
+        padding: 10px !important;
+      }
+      #overview-poster-svg {
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      .overview-table-desktop {
+        display: none !important;
+      }
+      .overview-cards-mobile {
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
     /* Mobile-first Responsive Transit Cards */
     .station-table-desktop {
       display: block;
@@ -1085,26 +1312,29 @@
 
     <!-- TAB 0: 15天总览大图与全景时间轴 -->
     <div id="tab-overview" class="tab-panel active">
-      <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:16px 20px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <div class="overview-header-box">
         <div>
-          <div style="display:flex; align-items:center; gap:8px;">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
             <span style="font-size:1.15rem; font-weight:800; color:#1e40af;">🗺️ 谷歌地图 15天全景路线标注与时刻总览</span>
             <span style="font-size:0.75rem; background:#2563eb; color:white; font-weight:700; padding:2px 8px; border-radius:10px;">Google Maps 实景底图</span>
+            <span style="font-size:0.75rem; background:#dcfce7; color:#166534; font-weight:700; padding:2px 8px; border-radius:10px;">📱 手机端适配已生效</span>
           </div>
-          <p style="margin:4px 0 0; font-size:0.88rem; color:#2563eb;">全程穿越 5 国 3,600 公里，在 Google Maps 实景底图上精确标定 8 个陆路中继站与武汉直飞航线。点击图钉查看每日抵达/启程时间节点，一键启动导航！</p>
+          <p style="margin:4px 0 0; font-size:0.88rem; color:#2563eb;">全程穿越 5 国 3,600 公里，在 Google Maps 实景底图上精确标定。手机端已适配<strong>无水平滑动纵向卡片</strong>，点击图钉即可查看每日时间节点并启动导航！</p>
         </div>
-        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-          <div style="display:inline-flex; background:#dbeafe; padding:3px; border-radius:8px;">
-            <button id="btn-ov-gmap" onclick="toggleOverviewMode('gmap')" style="padding:6px 14px; border:none; border-radius:6px; background:#0284c7; color:white; font-size:0.85rem; font-weight:700; cursor:pointer; transition:all 0.2s;">🗺️ 谷歌实景地图</button>
-            <button id="btn-ov-poster" onclick="toggleOverviewMode('poster')" style="padding:6px 14px; border:none; border-radius:6px; background:transparent; color:#1e40af; font-size:0.85rem; font-weight:700; cursor:pointer; transition:all 0.2s;">🎨 矢量示意大图</button>
-            <button id="btn-ov-table" onclick="toggleOverviewMode('table')" style="padding:6px 14px; border:none; border-radius:6px; background:transparent; color:#1e40af; font-size:0.85rem; font-weight:700; cursor:pointer; transition:all 0.2s;">⏱️ 15天时间表</button>
+        <div class="overview-header-actions">
+          <div class="ov-mode-switcher">
+            <button id="btn-ov-gmap" onclick="toggleOverviewMode('gmap')" class="ov-mode-btn active">🗺️ 谷歌实景地图</button>
+            <button id="btn-ov-poster" onclick="toggleOverviewMode('poster')" class="ov-mode-btn inactive">🎨 矢量示意大图</button>
+            <button id="btn-ov-table" onclick="toggleOverviewMode('table')" class="ov-mode-btn inactive">⏱️ 15天时间表</button>
           </div>
-          <a href="https://www.google.com/maps/dir/?api=1&origin=Singapore&destination=Dali%2C%20Yunnan%2C%20China&waypoints=Melaka%2C%20Malaysia%7CHat%20Yai%2C%20Thailand%7CBangkok%2C%20Thailand%7CVientiane%2C%20Laos%7CLuang%20Prabang%2C%20Laos%7CXishuangbanna%2C%20Yunnan%2C%20China" target="_blank" rel="noopener noreferrer" style="padding:7px 14px; background:#4285f4; color:white; border-radius:8px; font-size:0.85rem; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 8px rgba(66,133,244,0.3); transition:all 0.2s;">
-            🌐 在 Google Maps 打开全路线 ↗
-          </a>
-          <button onclick="downloadOverviewPoster()" style="padding:7px 14px; background:#10b981; color:white; border:none; border-radius:8px; font-size:0.85rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 8px rgba(16,185,129,0.3); transition:all 0.2s;">
-            📥 保存高清长图 (PNG)
-          </button>
+          <div class="ov-action-buttons">
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Singapore&destination=Dali%2C%20Yunnan%2C%20China&waypoints=Melaka%2C%20Malaysia%7CHat%20Yai%2C%20Thailand%7CBangkok%2C%20Thailand%7CVientiane%2C%20Laos%7CLuang%20Prabang%2C%20Laos%7CXishuangbanna%2C%20Yunnan%2C%20China" target="_blank" rel="noopener noreferrer" class="ov-btn-gmap">
+              🌐 Google Maps 全线 ↗
+            </a>
+            <button onclick="downloadOverviewPoster()" class="ov-btn-download">
+              📥 保存长图 (PNG)
+            </button>
+          </div>
         </div>
       </div>
 
@@ -1124,7 +1354,7 @@
 
       <!-- Mode 1: SVG Map Poster -->
       <div id="overview-map-container" style="display:none; background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:20px; box-shadow:var(--shadow); overflow-x:auto;">
-        <svg id="overview-poster-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1220" style="width:100%; min-width:760px; height:auto; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+        <svg id="overview-poster-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1220" style="width:100%; max-width:100%; height:auto; display:block; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
           <defs>
             <linearGradient id="mainRouteGrad" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="#0284c7"/>
@@ -1296,8 +1526,10 @@
       </div>
 
       <!-- Mode 2: 15-Day Chronological Matrix Table -->
-      <div id="overview-table-container" style="display:none; background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow); overflow-x:auto;">
-        <table style="width:100%; border-collapse:collapse; font-size:0.86rem; min-width:700px;">
+      <div id="overview-table-container" style="display:none; background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow);">
+        <!-- Desktop Wide Table -->
+        <div class="overview-table-desktop" style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.86rem; min-width:700px;">
           <thead>
             <tr style="background:#f8fafc; border-bottom:2px solid #e2e8f0; color:#334155; text-align:left;">
               <th style="padding:10px 12px;">天数 / 日期</th>
@@ -1432,6 +1664,383 @@
           </tbody>
         </table>
       </div>
+
+      <!-- Mobile-First Vertical Step Cards (No horizontal scroll on <= 768px screens) -->
+      <div class="overview-cards-mobile">
+        
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 1 · 12/11 (周五)</span>
+            <span class="ov-card-city">🇸🇬 新加坡 ➔ 🇲🇾 马六甲</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">05:25</span>
+              <span>✈️ 妻子武汉直飞抵达樟宜机场，入住酒店补觉休整</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">日间</span>
+              <span>💻 先生白天正常办公 / 妻子充分休整倒时差</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill transit">18:00</span>
+              <span>周五下班汇合，经兀兰关卡出境，新山拉庆车站发车</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">22:00</span>
+              <span>入住马六甲古城酒店，逛周末鸡场街大夜市</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 惠胜酒店 / 宜必思 (约¥420/晚)</span>
+            <span style="color:#2563eb; font-weight:700;">🚌 大巴 2.5h (¥40/人)</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 2 · 12/12 (周六)</span>
+            <span class="ov-card-city">🇲🇾 马六甲 ➔ 🚌 泰国合艾 (跨国夜巴)</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">09:30</span>
+              <span>荷兰红屋、圣保罗山、峇峇娘惹老街文化漫游</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">下午</span>
+              <span>The Daily Fix 历史洋房天井咖啡馆小憩办公</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill transit">21:30</span>
+              <span>马六甲中央车站乘跨国夜班豪华大巴直达泰国合艾（避开吉隆坡）</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#d97706; font-weight:700;">🛌 豪华跨国夜班大巴 (宿车上)</span>
+            <span style="color:#2563eb; font-weight:700;">🚌 9.5h 跨国直通 (¥160/人)</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 3 · 12/13 (周日)</span>
+            <span class="ov-card-city">🇹🇭 泰国合艾 ➔ 🚆 泰铁卧铺赴曼谷</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">07:00</span>
+              <span>黑木山口岸通关入境泰国，抵合艾享用早茶肉骨茶</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">白天</span>
+              <span>Bussaba 咖啡馆休整充电，15:00 前往合艾火车站</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill transit">15:45</span>
+              <span>登上泰铁 32 次特快 CNR 豪华卧铺列车，沿途欣赏泰南日落与清晨稻田</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#d97706; font-weight:700;">🛌 泰铁 32 次 CNR 特快卧铺 (宿车上)</span>
+            <span style="color:#2563eb; font-weight:700;">🚆 18.5h 最美泰铁 (¥230/人)</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 4 · 12/14 (周一)</span>
+            <span class="ov-card-city">🇹🇭 泰国曼谷 · 开启全天远程办公</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">10:30</span>
+              <span>列车抵达曼谷阿皮瓦中央车站，打车入住素坤逸/沙吞酒店</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">下午</span>
+              <span>💻 曼谷远程工作 (Factory Coffee 网红咖啡馆 / 酒店办公桌)</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">晚上</span>
+              <span>湄南河夜景 / 乔德夜市特色海鲜晚餐与火山排骨</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 曼谷沙吞智选假日 / 雅乐轩 (约¥480/晚)</span>
+            <span style="color:#2563eb; font-weight:700;">💻 曼谷首个 Workcation 工作日</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 5 · 12/15 (周二)</span>
+            <span class="ov-card-city">🇹🇭 曼谷 ➔ 🚆 跨国卧铺赴老挝万象</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">全天</span>
+              <span>💻 曼谷全天专注远程办公，17:30 整理行李退房</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">19:30</span>
+              <span>泰式晚餐，打车前往曼谷中央站</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill transit">21:25</span>
+              <span>搭乘曼谷至老挝万象直通跨国夜卧列车，免换大巴直达万象</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#d97706; font-weight:700;">🛌 跨国卧铺客车 (宿车上)</span>
+            <span style="color:#2563eb; font-weight:700;">🚆 11.5h 直达万象 (¥200/人)</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 6 · 12/16 (周三)</span>
+            <span class="ov-card-city">🇱🇦 老挝万象 · 湄公河畔日落市集</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">09:05</span>
+              <span>直通万象坎萨瓦站通关，入住宜必思南普酒店</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">下午</span>
+              <span>💻 万象远程工作 (Naked Espresso 宽敞冷气咖啡馆)</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">晚上</span>
+              <span>湄公河畔漫步看火红日落晚霞，品尝老挝烤鱼与老挝啤酒</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 宜必思万象南普酒店 (约¥390/晚)</span>
+            <span style="color:#2563eb; font-weight:700;">🌅 湄公河最美日落</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 7 · 12/17 (四)</span>
+            <span class="ov-card-city">🇱🇦 万象 ➔ 🇱🇦 琅勃拉邦 (中老动车)</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">上午</span>
+              <span>💻 上午远程工作 / 万象凯旋门与塔銮历史古迹</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill transit">15:05</span>
+              <span>搭乘中老铁路“澜沧号”动车组前往世界遗产琅勃拉邦</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">17:10</span>
+              <span>抵达琅勃拉邦，入住精品花园度假村，夜晚漫游古城夜市</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 梦之精品度假村 / 湄公河洋房 (约¥450/晚)</span>
+            <span style="color:#2563eb; font-weight:700;">🚄 中老动车 2h (¥95/人)</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 8 · 12/18 (周五)</span>
+            <span class="ov-card-city">🇱🇦 老挝琅勃拉邦 · 湄公河畔工作日</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">上午</span>
+              <span>💻 Saffron Coffee 湄公河景露台咖啡馆办公</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">下午</span>
+              <span>💻 酒店静音书桌全天远程工作，高效清空当周事务</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">傍晚</span>
+              <span>包乘传统长尾木船在湄公河上巡游看落日，法式红酒晚餐</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 梦之精品度假村 / 湄公河洋房</span>
+            <span style="color:#2563eb; font-weight:700;">⛵ 湄公河落日游船巡游</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 9 · 12/19 (周六)</span>
+            <span class="ov-card-city">🇱🇦 琅勃拉邦 · 光西瀑布周末度假</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">上午</span>
+              <span>包车游览光西瀑布碧绿多层钙化池，黑熊保护区</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">下午</span>
+              <span>香通寺、大皇宫博物馆建筑与历史深度探访</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">傍晚</span>
+              <span>攀登普西山看落日全景，品尝老挝传统火锅 Sindad</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 梦之精品度假村 (连住3晚)</span>
+            <span style="color:#2563eb; font-weight:700;">💧 世界级钙化瀑布游玩</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 10 · 12/20 (日)</span>
+            <span class="ov-card-city">🇱🇦 琅勃拉邦 ➔ 🇨🇳 中国西双版纳</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">05:45</span>
+              <span>观看街头僧侣清晨布施仪式，享用老挝法式咖啡早餐</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill transit">14:30</span>
+              <span>搭乘中老铁路 D888 次国际列车，磨憨口岸通关入境中国</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">19:30</span>
+              <span>抵达西双版纳火车站，入住告庄西双景，漫步星光夜市</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 西双版纳告庄漫悦江景客栈 (约¥420/晚)</span>
+            <span style="color:#2563eb; font-weight:700;">🚄 D888国际动车 5h (¥150/人)</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 11 · 12/21 (周一)</span>
+            <span class="ov-card-city">🇨🇳 西双版纳 · 全天专注远程办公</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">上午</span>
+              <span>💻 版纳南药咖啡馆 / 客栈千兆专线极速办公</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">下午</span>
+              <span>💻 专注处理工作代码与业务，独享静音茶台</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">晚上</span>
+              <span>告庄大金塔江畔散步，享用傣味特色孔雀宴与柠檬凉粉</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 告庄漫悦客栈 (步行3分到星光夜市)</span>
+            <span style="color:#2563eb; font-weight:700;">⚡ 千兆光纤独享网络</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 12 · 12/22 (周二)</span>
+            <span class="ov-card-city">🇨🇳 西双版纳 · 办公与年前收尾</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">全天</span>
+              <span>💻 客栈江景露台远程办公，完成年前核心任务交付与汇报</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">晚上</span>
+              <span>傣味手抓饭、澜沧江热带星空夜市，打包整理行李</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 告庄漫悦客栈 (连住3晚)</span>
+            <span style="color:#2563eb; font-weight:700;">🍵 热带傣韵旅居生活</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 13 · 12/23 (周三)</span>
+            <span class="ov-card-city">🇨🇳 西双版纳 ➔ 🇨🇳 云南大理 (终点站)</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill transit">09:40</span>
+              <span>西双版纳火车站乘直达动车发车赴大理，沿途观赏高原喀斯特风光</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">15:35</span>
+              <span>抵达大理火车站，出站接驳专车直奔洱海生态廊道客栈</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">傍晚</span>
+              <span>入住磻溪 S 弯一线海景房，观海露台看洱海金色夕阳与苍山雪景</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 大理洱海浅山伴海客栈 (约¥460/晚)</span>
+            <span style="color:#2563eb; font-weight:700;">🚄 省内直达高铁 6h (¥180/人)</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 14 · 12/24 (周四)</span>
+            <span class="ov-card-city">🇨🇳 云南大理 · 平安夜 Workcation</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill work">全天</span>
+              <span>💻 面朝洱海落地窗办公长桌，冬日暖阳洒在桌前，慢节奏收尾</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">晚上</span>
+              <span>大理古城人民路民谣小酒馆，度过浪漫而难忘的平安夜</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🏨 浅山伴海客栈 (直面洱海无遮挡)</span>
+            <span style="color:#2563eb; font-weight:700;">🎄 平安夜古城民谣音乐</span>
+          </div>
+        </div>
+
+        <div class="ov-card-mobile">
+          <div class="ov-card-header">
+            <span class="ov-card-day-badge">Day 15 · 12/25 (周五)</span>
+            <span class="ov-card-city">🇨🇳 云南大理 · 圣诞收官 · 苍山洱海慢生活</span>
+          </div>
+          <div class="ov-timeline-rows">
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">上午</span>
+              <span>洱海生态廊道双人漫步骑行、喂海鸥、吹海风</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">下午</span>
+              <span>喜洲古镇稻田扎染体验、品尝刚出炉的喜洲破酥粑粑</span>
+            </div>
+            <div class="ov-timeline-row">
+              <span class="ov-time-pill">傍晚</span>
+              <span>白族石板烧晚餐，3,600 公里跨国 Workcation 壮举圆满落幕！</span>
+            </div>
+          </div>
+          <div class="ov-card-footer">
+            <span style="color:#059669; font-weight:700;">🎉 15天跨国 Workcation 圆满收官</span>
+            <span style="color:#2563eb; font-weight:700;">🏔️ 苍山洱海慢调游民生活</span>
+          </div>
+        </div>
+
+      </div>
+
       <canvas id="export-overview-canvas" style="display:none;"></canvas>
     </div>
 
@@ -3268,16 +3877,19 @@
       const btnPoster = document.getElementById('btn-ov-poster');
       const btnTable = document.getElementById('btn-ov-table');
       
+      [btnGmap, btnPoster, btnTable].forEach(b => {
+        if (b) {
+          b.classList.remove('active');
+          b.classList.add('inactive');
+        }
+      });
+
       if (mode === 'gmap') {
         gmapContainer.style.display = 'block';
         posterContainer.style.display = 'none';
         tableContainer.style.display = 'none';
-        btnGmap.style.background = '#0284c7';
-        btnGmap.style.color = '#ffffff';
-        btnPoster.style.background = 'transparent';
-        btnPoster.style.color = '#1e40af';
-        btnTable.style.background = 'transparent';
-        btnTable.style.color = '#1e40af';
+        btnGmap.classList.remove('inactive');
+        btnGmap.classList.add('active');
         setTimeout(() => {
           if (overviewMapInstance) overviewMapInstance.invalidateSize();
           else initOverviewGoogleMap();
@@ -3286,22 +3898,14 @@
         gmapContainer.style.display = 'none';
         posterContainer.style.display = 'block';
         tableContainer.style.display = 'none';
-        btnPoster.style.background = '#0284c7';
-        btnPoster.style.color = '#ffffff';
-        btnGmap.style.background = 'transparent';
-        btnGmap.style.color = '#1e40af';
-        btnTable.style.background = 'transparent';
-        btnTable.style.color = '#1e40af';
+        btnPoster.classList.remove('inactive');
+        btnPoster.classList.add('active');
       } else {
         gmapContainer.style.display = 'none';
         posterContainer.style.display = 'none';
         tableContainer.style.display = 'block';
-        btnTable.style.background = '#0284c7';
-        btnTable.style.color = '#ffffff';
-        btnGmap.style.background = 'transparent';
-        btnGmap.style.color = '#1e40af';
-        btnPoster.style.background = 'transparent';
-        btnPoster.style.color = '#1e40af';
+        btnTable.classList.remove('inactive');
+        btnTable.classList.add('active');
       }
     }
 
