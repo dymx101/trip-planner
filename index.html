@@ -1260,7 +1260,109 @@
       font-size: 0.85rem;
       color: var(--text-muted);
     }
-  </style>
+  
+    /* Daily Google Maps Interactive Panel Styles */
+    .daily-map-panel {
+      background: #ffffff;
+      border: 1px solid #bfdbfe;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06);
+    }
+    .daily-pills-scroll {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .daily-pill-btn {
+      flex-shrink: 0;
+      padding: 6px 12px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .daily-pill-btn:hover {
+      background: #e0f2fe;
+      color: #0369a1;
+      border-color: #bae6fd;
+    }
+    .daily-pill-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35);
+    }
+    .daily-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .daily-step-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .daily-step-card:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .step-num-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+    .day-map-jump-btn {
+      padding: 4px 10px;
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .day-map-jump-btn:hover {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+
+    @media (max-width: 768px) {
+      .daily-map-panel {
+        padding: 12px;
+      }
+      #daily-google-map {
+        height: 360px !important;
+      }
+      .daily-steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+</style>
   <!-- Leaflet Interactive Maps -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -2047,6 +2149,65 @@
 
     <!-- TAB 1: 每日详细日程 -->
     <div id="tab-itinerary" class="tab-panel">
+      <!-- 每日行程 Google Maps 交互标记面板 (按游览顺序标定) -->
+      <div id="daily-map-panel" class="daily-map-panel">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <span style="font-size:1.1rem; font-weight:800; color:#1e40af;">🗺️ 每日专属 Google Maps 游览顺序与标记地图</span>
+              <span style="font-size:0.75rem; background:#2563eb; color:white; font-weight:700; padding:2px 8px; border-radius:10px;">Google Maps 动态底图</span>
+              <span style="font-size:0.75rem; background:#dcfce7; color:#166534; font-weight:700; padding:2px 8px; border-radius:10px;">已按游览顺序编号</span>
+            </div>
+            <p style="margin:4px 0 0; font-size:0.86rem; color:#475569;">已将每天的<strong>坐车点、游览景点、办公咖啡馆与酒店位置</strong>按当天先后次序逐一标定在 Google Maps 上，点击下方 Day 1–15 按钮自由切换：</p>
+          </div>
+          <a id="btn-daily-gmap-route" href="#" target="_blank" rel="noopener noreferrer" style="padding:8px 16px; background:#4285f4; color:white; border-radius:8px; font-size:0.84rem; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 8px rgba(66,133,244,0.3); transition:all 0.2s;">
+            🌐 在 Google Maps 打开当天全路线 (按游览顺序) ↗
+          </a>
+        </div>
+
+        <!-- Day Selector Pills (Scrollable horizontally) -->
+        <div class="daily-pills-scroll" id="daily-pills-container">
+          <button class="daily-pill-btn active" onclick="selectDailyMap(1)" id="pill-day-1">Day 1 (12/11)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(2)" id="pill-day-2">Day 2 (12/12)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(3)" id="pill-day-3">Day 3 (12/13)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(4)" id="pill-day-4">Day 4 (12/14)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(5)" id="pill-day-5">Day 5 (12/15)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(6)" id="pill-day-6">Day 6 (12/16)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(7)" id="pill-day-7">Day 7 (12/17)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(8)" id="pill-day-8">Day 8 (12/18)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(9)" id="pill-day-9">Day 9 (12/19)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(10)" id="pill-day-10">Day 10 (12/20)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(11)" id="pill-day-11">Day 11 (12/21)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(12)" id="pill-day-12">Day 12 (12/22)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(13)" id="pill-day-13">Day 13 (12/23)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(14)" id="pill-day-14">Day 14 (12/24)</button>
+          <button class="daily-pill-btn" onclick="selectDailyMap(15)" id="pill-day-15">Day 15 (12/25)</button>
+        </div>
+
+        <!-- Active Day Header Card -->
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 16px; margin-bottom:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span id="daily-active-badge" style="background:#0284c7; color:white; font-size:0.8rem; font-weight:800; padding:2px 8px; border-radius:6px;">Day 1</span>
+              <span id="daily-active-title" style="font-size:1rem; font-weight:800; color:#0f172a;">12/11 (周五) · 🇸🇬 新加坡 ➔ 🇲🇾 马六甲</span>
+            </div>
+            <p id="daily-active-summary" style="margin:4px 0 0; font-size:0.84rem; color:#475569; line-height:1.4;">妻子凌晨直飞抵新补觉休整，先生日间办公。傍晚18:00两人汇合经兀兰通关赴新山，乘大巴入马六甲古城逛周末夜市。</p>
+          </div>
+          <span style="font-size:0.78rem; color:#64748b; background:white; padding:4px 10px; border-radius:6px; border:1px solid #e2e8f0;">💡 点击地图图钉查看详情与导航</span>
+        </div>
+
+        <!-- Google Maps Interactive Container -->
+        <div id="daily-google-map" style="width:100%; height:440px; border-radius:12px; border:1px solid #cbd5e1; margin-bottom:16px; z-index:1;"></div>
+
+        <!-- Sequential Steps List -->
+        <div style="font-size:0.9rem; font-weight:800; color:#1e293b; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+          <span>📍 当天完整游览与行程节点顺序清单：</span>
+        </div>
+        <div id="daily-steps-container" class="daily-steps-grid">
+          <!-- Filled by JavaScript -->
+        </div>
+      </div>
+
 
       <!-- Day 1 -->
       <div class="day-card">
@@ -3662,6 +3823,11 @@
           if (overviewMapInstance) overviewMapInstance.invalidateSize();
           else initOverviewGoogleMap();
         }, 150);
+      } else if (tabId === 'itinerary') {
+        setTimeout(() => {
+          if (dailyMapInstance) dailyMapInstance.invalidateSize();
+          else initDailyGoogleMap();
+        }, 150);
       }
     }
 
@@ -4073,6 +4239,144 @@
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => initOverviewGoogleMap(), 300);
     });
+
+    // ==========================================
+    // 每日行程 Google Maps 交互数据与引擎
+    // ==========================================
+    const DAILY_MAPS_DATA = [{"day": 1, "date": "12/11 (周五)", "city": "🇸🇬 新加坡 ➔ 🇲🇾 马六甲", "theme": "夫妻汇合启程 · 跨国大巴 · 周末鸡场街夜市", "summary": "妻子凌晨从武汉直飞抵新加坡樟宜机场，白天补觉休整，先生日间正常工作。18:00两人汇合经兀兰通关赴新山，19:30乘空调大巴抵达马六甲，入住古城逛周末夜市。", "steps": [{"step": 1, "type": "transit", "typeLabel": "✈️ 坐车/抵新", "name": "新加坡樟宜国际机场 (SIN)", "coords": [1.3644, 103.9915], "time": "05:25", "desc": "妻子搭乘直飞红眼航班抵新接机，前往酒店补觉休整", "gmap": "https://www.google.com/maps/search/?api=1&query=Singapore+Changi+Airport"}, {"step": 2, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "滨海湾鱼尾狮公园", "coords": [1.2868, 103.8545], "time": "下午", "desc": "妻子休整后轻松漫步滨海湾与鱼尾狮，先生白天办公", "gmap": "https://www.google.com/maps/search/?api=1&query=Merlion+Park+Singapore"}, {"step": 3, "type": "transit", "typeLabel": "🛂 坐车/通关", "name": "新加坡兀兰口岸 (Woodlands CIQ)", "coords": [1.4447, 103.769], "time": "18:00", "desc": "夫妻下班汇合，乘坐公共交通通关出境前往马来西亚", "gmap": "https://www.google.com/maps/search/?api=1&query=Woodlands+Checkpoint+Singapore"}, {"step": 4, "type": "transit", "typeLabel": "🚍 坐车出发", "name": "新山拉庆中央车站 (Larkin Sentral)", "coords": [1.4958, 103.7416], "time": "19:30", "desc": "新山通关后打车抵拉庆，乘 19:30 豪华大巴赴马六甲", "gmap": "https://www.google.com/maps/search/?api=1&query=Larkin+Sentral+Johor+Bahru"}, {"step": 5, "type": "transit", "typeLabel": "🚍 坐车到达", "name": "马六甲中央车站 (Melaka Sentral)", "coords": [2.2217, 102.2494], "time": "22:00", "desc": "班车顺利抵达马六甲，打车 10 分钟直达古城核心区", "gmap": "https://www.google.com/maps/search/?api=1&query=Melaka+Sentral"}, {"step": 6, "type": "hotel", "typeLabel": "🏨 当晚酒店", "name": "马六甲惠胜酒店 (Hatten Hotel)", "coords": [2.1895, 102.253], "time": "22:30", "desc": "入住品质酒店（约¥420/晚），放下行李步行前往夜市", "gmap": "https://www.google.com/maps/search/?api=1&query=Hatten+Hotel+Melaka"}, {"step": 7, "type": "sight", "typeLabel": "🏮 夜市游览", "name": "马六甲鸡场街夜市 (Jonker Street)", "coords": [2.1953, 102.2482], "time": "23:00", "desc": "漫游鸡场街大夜市，品尝沙爹朱律与一口榴莲泡芙", "gmap": "https://www.google.com/maps/search/?api=1&query=Jonker+Street+Night+Market+Melaka"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%A8%9F%E5%AE%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA%20%28SIN%29&destination=%E9%A9%AC%E5%85%AD%E7%94%B2%E9%B8%A1%E5%9C%BA%E8%A1%97%E5%A4%9C%E5%B8%82%20%28Jonker%20Street%29&waypoints=%E6%BB%A8%E6%B5%B7%E6%B9%BE%E9%B1%BC%E5%B0%BE%E7%8B%AE%E5%85%AC%E5%9B%AD%7C%E6%96%B0%E5%8A%A0%E5%9D%A1%E5%85%80%E5%85%B0%E5%8F%A3%E5%B2%B8%20%28Woodlands%20CIQ%29%7C%E6%96%B0%E5%B1%B1%E6%8B%89%E5%BA%86%E4%B8%AD%E5%A4%AE%E8%BD%A6%E7%AB%99%20%28Larkin%20Sentral%29%7C%E9%A9%AC%E5%85%AD%E7%94%B2%E4%B8%AD%E5%A4%AE%E8%BD%A6%E7%AB%99%20%28Melaka%20Sentral%29%7C%E9%A9%AC%E5%85%AD%E7%94%B2%E6%83%A0%E8%83%9C%E9%85%92%E5%BA%97%20%28Hatten%20Hotel%29"}, {"day": 2, "date": "12/12 (周六)", "city": "🇲🇾 马六甲 ➔ 🚌 泰国合艾 (跨国夜巴)", "theme": "古城文化深度漫游 · 跨国直达豪华夜车", "summary": "全天在马六甲世界文化遗产古城慢游，参观荷兰红屋、圣保罗山与峇峇娘惹宅院，在 The Daily Fix 天井咖啡小憩。晚间 21:30 乘坐直达跨国夜巴赴泰国合艾（避开吉隆坡）。", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 酒店出发", "name": "惠胜酒店 (Hatten Hotel)", "coords": [2.1895, 102.253], "time": "09:00", "desc": "享用美味早餐后退房并寄存行李，轻装漫步古城", "gmap": "https://www.google.com/maps/search/?api=1&query=Hatten+Hotel+Melaka"}, {"step": 2, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "荷兰红屋与基督教堂 (Stadthuys)", "coords": [2.1944, 102.2492], "time": "09:30", "desc": "马六甲最具代表性的砖红地标，荷兰殖民时代经典建筑", "gmap": "https://www.google.com/maps/search/?api=1&query=The+Stadthuys+Melaka"}, {"step": 3, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "圣保罗山与法摩沙圣地亚哥城堡", "coords": [2.1925, 102.2505], "time": "10:30", "desc": "俯瞰马六甲海峡航道风光，仰望葡萄牙古堡废墟与圣徒雕像", "gmap": "https://www.google.com/maps/search/?api=1&query=A+Famosa+Melaka"}, {"step": 4, "type": "cafe", "typeLabel": "☕ 办公小憩", "name": "The Daily Fix Cafe 天井咖啡馆", "coords": [2.1958, 102.2472], "time": "11:30", "desc": "藏在老宅后的绿意天井咖啡，品尝招牌斑兰松饼与手冲咖啡", "gmap": "https://www.google.com/maps/search/?api=1&query=The+Daily+Fix+Cafe+Melaka"}, {"step": 5, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "峇峇娘惹祖屋博物馆", "coords": [2.1965, 102.2464], "time": "14:30", "desc": "体验土生华人宅院，雕梁画栋与传统娘惹文化瑰宝", "gmap": "https://www.google.com/maps/search/?api=1&query=Baba+Nyonya+Heritage+Museum"}, {"step": 6, "type": "sight", "typeLabel": "🍽️ 晚间美食", "name": "鸡场街娘惹私房菜馆", "coords": [2.195, 102.2478], "time": "18:30", "desc": "享用娘惹叻沙、黑果焖鸡与小金杯，回酒店取行李", "gmap": "https://www.google.com/maps/search/?api=1&query=Jonker+Street+Melaka"}, {"step": 7, "type": "transit", "typeLabel": "🚍 坐车出发", "name": "马六甲仙特拉车站 (Melaka Sentral)", "coords": [2.2217, 102.2494], "time": "21:30", "desc": "登上跨国夜班豪华大巴直奔泰国合艾（走南北高速，直通避开吉隆坡）", "gmap": "https://www.google.com/maps/search/?api=1&query=Melaka+Sentral"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%83%A0%E8%83%9C%E9%85%92%E5%BA%97%20%28Hatten%20Hotel%29&destination=%E9%A9%AC%E5%85%AD%E7%94%B2%E4%BB%99%E7%89%B9%E6%8B%89%E8%BD%A6%E7%AB%99%20%28Melaka%20Sentral%29&waypoints=%E8%8D%B7%E5%85%B0%E7%BA%A2%E5%B1%8B%E4%B8%8E%E5%9F%BA%E7%9D%A3%E6%95%99%E5%A0%82%20%28Stadthuys%29%7C%E5%9C%A3%E4%BF%9D%E7%BD%97%E5%B1%B1%E4%B8%8E%E6%B3%95%E6%91%A9%E6%B2%99%E5%9C%A3%E5%9C%B0%E4%BA%9A%E5%93%A5%E5%9F%8E%E5%A0%A1%7CThe%20Daily%20Fix%20Cafe%20%E5%A4%A9%E4%BA%95%E5%92%96%E5%95%A1%E9%A6%86%7C%E5%B3%87%E5%B3%87%E5%A8%98%E6%83%B9%E7%A5%96%E5%B1%8B%E5%8D%9A%E7%89%A9%E9%A6%86%7C%E9%B8%A1%E5%9C%BA%E8%A1%97%E5%A8%98%E6%83%B9%E7%A7%81%E6%88%BF%E8%8F%9C%E9%A6%86"}, {"day": 3, "date": "12/13 (周日)", "city": "🇹🇭 泰国合艾 ➔ 🚆 泰铁CNR卧铺赴曼谷", "theme": "泰南早茶小憩 · 泰铁 32 次最美特快卧铺", "summary": "清晨经黑木山/昔罗口岸入境泰国，在合艾享用肉骨茶早茶并在 Bussaba 咖啡馆休整充电。下午 15:45 登上全线最抢手的泰铁 32 次 CNR 豪华卧铺列车北上曼谷。", "steps": [{"step": 1, "type": "transit", "typeLabel": "🛂 坐车/通关", "name": "黑木山/昔罗陆路口岸 (Sadao Border)", "coords": [6.5208, 100.4187], "time": "06:30", "desc": "跨国大巴抵口岸，盖章出境马来西亚、入境泰国免签通关", "gmap": "https://www.google.com/maps/search/?api=1&query=Sadao+Customs+Checkpoint"}, {"step": 2, "type": "transit", "typeLabel": "🚍 坐车到达", "name": "合艾长途客运站 (Hat Yai Bus Station)", "coords": [6.9922, 100.4828], "time": "07:30", "desc": "跨国大巴抵达合艾市区，打车或双条车直达早茶老店", "gmap": "https://www.google.com/maps/search/?api=1&query=Hat+Yai+Bus+Terminal"}, {"step": 3, "type": "sight", "typeLabel": "🍲 早茶美食", "name": "合艾清姐肉骨茶点心老店", "coords": [7.0055, 100.4705], "time": "08:30", "desc": "享用正宗砂煲肉骨茶、蒸点小笼与泰式奶茶热饮", "gmap": "https://www.google.com/maps/search/?api=1&query=Ching+Jie+Bak+Kut+Teh+Hat+Yai"}, {"step": 4, "type": "cafe", "typeLabel": "☕ 办公小憩", "name": "Bussaba Cafe & Meal", "coords": [7.0062, 100.472], "time": "10:30", "desc": "合艾高评分静谧咖啡馆，强劲冷气、高速 Wi-Fi、舒适沙发休整", "gmap": "https://www.google.com/maps/search/?api=1&query=Bussaba+Cafe+Hat+Yai"}, {"step": 5, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "合艾金荣商业街区 (Kim Yong Market)", "coords": [7.0058, 100.469], "time": "13:30", "desc": "漫步传统市集采购泰国热带坚果、芒果干与车上零食", "gmap": "https://www.google.com/maps/search/?api=1&query=Kim+Yong+Market+Hat+Yai"}, {"step": 6, "type": "transit", "typeLabel": "🚆 坐车出发", "name": "合艾火车站 (Hat Yai Junction)", "coords": [7.0037, 100.4682], "time": "15:45", "desc": "登上泰铁 32 次 CNR 豪华特快卧铺列车，沿途欣赏泰南夕阳（宿车上）", "gmap": "https://www.google.com/maps/search/?api=1&query=Hat+Yai+Junction+Railway+Station"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E9%BB%91%E6%9C%A8%E5%B1%B1/%E6%98%94%E7%BD%97%E9%99%86%E8%B7%AF%E5%8F%A3%E5%B2%B8%20%28Sadao%20Border%29&destination=%E5%90%88%E8%89%BE%E7%81%AB%E8%BD%A6%E7%AB%99%20%28Hat%20Yai%20Junction%29&waypoints=%E5%90%88%E8%89%BE%E9%95%BF%E9%80%94%E5%AE%A2%E8%BF%90%E7%AB%99%20%28Hat%20Yai%20Bus%20Station%29%7C%E5%90%88%E8%89%BE%E6%B8%85%E5%A7%90%E8%82%89%E9%AA%A8%E8%8C%B6%E7%82%B9%E5%BF%83%E8%80%81%E5%BA%97%7CBussaba%20Cafe%20%26%20Meal%7C%E5%90%88%E8%89%BE%E9%87%91%E8%8D%A3%E5%95%86%E4%B8%9A%E8%A1%97%E5%8C%BA%20%28Kim%20Yong%20Market%29"}, {"day": 4, "date": "12/14 (周一)", "city": "🇹🇭 泰国曼谷 (首个远程工作日)", "theme": "都市品质酒店 · 冠军咖啡办公 · 湄南河夜色", "summary": "10:30 抵达曼谷中央站，打车入住沙吞/素坤逸高性价比品质商务酒店。下午在 Factory Coffee 冠军咖啡馆高效远程办公，傍晚打卡湄南河夜景与乔德夜市。", "steps": [{"step": 1, "type": "transit", "typeLabel": "🚆 坐车到达", "name": "曼谷阿皮瓦中央车站 (Krung Thep Aphiwat)", "coords": [13.8037, 100.5408], "time": "10:30", "desc": "火车准点抵达曼谷中央车站，乘坐 MRT 或打车前往酒店", "gmap": "https://www.google.com/maps/search/?api=1&query=Krung+Thep+Aphiwat+Central+Terminal"}, {"step": 2, "type": "hotel", "typeLabel": "🏨 当晚酒店", "name": "曼谷沙吞智选假日酒店 (Holiday Inn Express)", "coords": [13.7225, 100.5288], "time": "11:30", "desc": "办理入住（约¥480/晚），配备宽敞书桌与舒适大床", "gmap": "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+Bangkok+Sathorn"}, {"step": 3, "type": "cafe", "typeLabel": "☕ 远程办公", "name": "Factory Coffee 曼谷冠军咖啡馆", "coords": [13.758, 100.535], "time": "13:00", "desc": "曼谷极负盛名的精品咖啡馆，极速千兆网络，边喝冠军咖啡边办公", "gmap": "https://www.google.com/maps/search/?api=1&query=Factory+Coffee+Bangkok"}, {"step": 4, "type": "hotel", "typeLabel": "💻 酒店办公", "name": "酒店商务静音办公区", "coords": [13.7225, 100.5288], "time": "15:30", "desc": "返回酒店客房专注处理核心工作代码与业务沟通", "gmap": "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+Bangkok+Sathorn"}, {"step": 5, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "湄南河滨水步道与郑王庙夜景", "coords": [13.7437, 100.4889], "time": "18:30", "desc": "下班后乘河岸观光船，隔江欣赏金色琉璃郑王庙壮美夜景", "gmap": "https://www.google.com/maps/search/?api=1&query=Wat+Arun+Bangkok"}, {"step": 6, "type": "sight", "typeLabel": "🏮 夜市游览", "name": "曼谷乔德夜市 (Jodd Fairs Rama 9)", "coords": [13.757, 100.5665], "time": "20:30", "desc": "打卡火山排骨、海鲜烧烤、生腌海鲜与鲜榨水果冰沙", "gmap": "https://www.google.com/maps/search/?api=1&query=Jodd+Fairs+Rama+9"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%9B%BC%E8%B0%B7%E9%98%BF%E7%9A%AE%E7%93%A6%E4%B8%AD%E5%A4%AE%E8%BD%A6%E7%AB%99%20%28Krung%20Thep%20Aphiwat%29&destination=%E6%9B%BC%E8%B0%B7%E4%B9%94%E5%BE%B7%E5%A4%9C%E5%B8%82%20%28Jodd%20Fairs%20Rama%209%29&waypoints=%E6%9B%BC%E8%B0%B7%E6%B2%99%E5%90%9E%E6%99%BA%E9%80%89%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97%20%28Holiday%20Inn%20Express%29%7CFactory%20Coffee%20%E6%9B%BC%E8%B0%B7%E5%86%A0%E5%86%9B%E5%92%96%E5%95%A1%E9%A6%86%7C%E9%85%92%E5%BA%97%E5%95%86%E5%8A%A1%E9%9D%99%E9%9F%B3%E5%8A%9E%E5%85%AC%E5%8C%BA%7C%E6%B9%84%E5%8D%97%E6%B2%B3%E6%BB%A8%E6%B0%B4%E6%AD%A5%E9%81%93%E4%B8%8E%E9%83%91%E7%8E%8B%E5%BA%99%E5%A4%9C%E6%99%AF"}, {"day": 5, "date": "12/15 (周二)", "city": "🇹🇭 曼谷 ➔ 🚆 跨国夜卧赴老挝万象", "theme": "全天深度远程办公 · 直通跨国夜卧列车", "summary": "在曼谷酒店及网红社区 The COMMONS 完成全天远程工作任务，晚上品尝建兴酒家咖喱蟹后前往中央车站，搭乘直通老挝万象的国际夜卧客车（免换大巴）。", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 酒店出发", "name": "沙吞智选假日酒店", "coords": [13.7225, 100.5288], "time": "09:00", "desc": "酒店享用早餐，上午在客房书桌开启高效深度办公", "gmap": "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+Bangkok+Sathorn"}, {"step": 2, "type": "cafe", "typeLabel": "☕ 办公小憩", "name": "Roast @ The COMMONS Thonglor", "coords": [13.7345, 100.5826], "time": "11:30", "desc": "曼谷知名半开放社区中心，通透采光与优质轻食午餐", "gmap": "https://www.google.com/maps/search/?api=1&query=The+COMMONS+Thonglor"}, {"step": 3, "type": "hotel", "typeLabel": "💻 深度办公", "name": "酒店商务区全天办公", "coords": [13.7225, 100.5288], "time": "14:00", "desc": "专注完成当天工作任务，17:30 整理行李退房寄存", "gmap": "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+Bangkok+Sathorn"}, {"step": 4, "type": "sight", "typeLabel": "🍽️ 特色晚餐", "name": "建兴酒家 (Somboon Seafood)", "coords": [13.7315, 100.531], "time": "18:30", "desc": "品尝闻名遐迩的招牌黄咖喱炒蟹、冬阴功汤与清蒸柠檬鲈鱼", "gmap": "https://www.google.com/maps/search/?api=1&query=Somboon+Seafood+Surawong"}, {"step": 5, "type": "transit", "typeLabel": "🚆 坐车出发", "name": "曼谷阿皮瓦中央车站 (Krung Thep Aphiwat)", "coords": [13.8037, 100.5408], "time": "21:25", "desc": "登上跨国夜卧直通列车，直达老挝万象坎萨瓦站（宿车上）", "gmap": "https://www.google.com/maps/search/?api=1&query=Krung+Thep+Aphiwat+Central+Terminal"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%B2%99%E5%90%9E%E6%99%BA%E9%80%89%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97&destination=%E6%9B%BC%E8%B0%B7%E9%98%BF%E7%9A%AE%E7%93%A6%E4%B8%AD%E5%A4%AE%E8%BD%A6%E7%AB%99%20%28Krung%20Thep%20Aphiwat%29&waypoints=Roast%20%40%20The%20COMMONS%20Thonglor%7C%E9%85%92%E5%BA%97%E5%95%86%E5%8A%A1%E5%8C%BA%E5%85%A8%E5%A4%A9%E5%8A%9E%E5%85%AC%7C%E5%BB%BA%E5%85%B4%E9%85%92%E5%AE%B6%20%28Somboon%20Seafood%29"}, {"day": 6, "date": "12/16 (周三)", "city": "🇱🇦 老挝万象 · 湄公河畔日落市集", "theme": "火车直通万象 · 枫树咖啡办公 · 湄公河晚霞", "summary": "早晨火车直抵万象坎萨瓦站落地签通关。入住市中心宜必思南普酒店，下午在 Naked Espresso 办公，傍晚在湄公河畔欣赏壮丽晚霞，品尝老挝烤鱼。", "steps": [{"step": 1, "type": "transit", "typeLabel": "🚆 坐车到达", "name": "万象坎萨瓦火车站 (Khamsavath Station)", "coords": [17.9757, 102.6331], "time": "09:05", "desc": "直通列车抵达万象，站内快捷办理落地签入境通关", "gmap": "https://www.google.com/maps/search/?api=1&query=Vientiane+Khamsavath+Station"}, {"step": 2, "type": "hotel", "typeLabel": "🏨 当晚酒店", "name": "宜必思万象南普酒店 (Ibis Vientiane)", "coords": [17.9644, 102.6075], "time": "10:30", "desc": "入住市中心国际连锁品牌（约¥390/晚），地理位置极其优越", "gmap": "https://www.google.com/maps/search/?api=1&query=Ibis+Vientiane+Nam+Phu"}, {"step": 3, "type": "cafe", "typeLabel": "☕ 远程办公", "name": "Naked Espresso 万象精品咖啡馆", "coords": [17.968, 102.612], "time": "13:00", "desc": "万象老牌极速网络咖啡馆，宽大办公桌与香浓澳白咖啡", "gmap": "https://www.google.com/maps/search/?api=1&query=Naked+Espresso+Vientiane"}, {"step": 4, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "万象凯旋门 (Patuxay Monument)", "coords": [17.9708, 102.6186], "time": "17:00", "desc": "老挝标志性法式与传统佛教融合建筑，登顶俯瞰万象市区大道", "gmap": "https://www.google.com/maps/search/?api=1&query=Patuxay+Monument+Vientiane"}, {"step": 5, "type": "sight", "typeLabel": "🌅 游览景点", "name": "湄公河畔日落公园 (Mekong Riverfront)", "coords": [17.962, 102.603], "time": "18:00", "desc": "湄公河沿岸漫步，对岸即是泰国廊开，火红夕阳染红河面", "gmap": "https://www.google.com/maps/search/?api=1&query=Chao+Anouvong+Park+Vientiane"}, {"step": 6, "type": "sight", "typeLabel": "🍲 特色晚餐", "name": "湄公河夜市与特色老挝烤鱼街", "coords": [17.961, 102.6045], "time": "19:30", "desc": "品尝盐烤湄公河大鱼、老挝糯米饭与冰镇老挝啤酒 (Beerlao)", "gmap": "https://www.google.com/maps/search/?api=1&query=Vientiane+Night+Market"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E4%B8%87%E8%B1%A1%E5%9D%8E%E8%90%A8%E7%93%A6%E7%81%AB%E8%BD%A6%E7%AB%99%20%28Khamsavath%20Station%29&destination=%E6%B9%84%E5%85%AC%E6%B2%B3%E5%A4%9C%E5%B8%82%E4%B8%8E%E7%89%B9%E8%89%B2%E8%80%81%E6%8C%9D%E7%83%A4%E9%B1%BC%E8%A1%97&waypoints=%E5%AE%9C%E5%BF%85%E6%80%9D%E4%B8%87%E8%B1%A1%E5%8D%97%E6%99%AE%E9%85%92%E5%BA%97%20%28Ibis%20Vientiane%29%7CNaked%20Espresso%20%E4%B8%87%E8%B1%A1%E7%B2%BE%E5%93%81%E5%92%96%E5%95%A1%E9%A6%86%7C%E4%B8%87%E8%B1%A1%E5%87%AF%E6%97%8B%E9%97%A8%20%28Patuxay%20Monument%29%7C%E6%B9%84%E5%85%AC%E6%B2%B3%E7%95%94%E6%97%A5%E8%90%BD%E5%85%AC%E5%9B%AD%20%28Mekong%20Riverfront%29"}, {"day": 7, "date": "12/17 (周四)", "city": "🇱🇦 万象 ➔ 🇱🇦 琅勃拉邦 (中老铁路动车)", "theme": "塔銮寺打卡 · 澜沧号动车 · 世界遗产古城夜市", "summary": "上午参观万象塔銮寺并完成工作，下午 15:05 搭乘中老铁路“澜沧号”动车组前往琅勃拉邦（仅2小时）。入住花园度假村，夜晚漫游古城夜市。", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 酒店出发", "name": "宜必思万象南普酒店", "coords": [17.9644, 102.6075], "time": "09:00", "desc": "享用美味法式早餐，退房并寄存行李", "gmap": "https://www.google.com/maps/search/?api=1&query=Ibis+Vientiane+Nam+Phu"}, {"step": 2, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "老挝国家象征·金色塔銮寺 (Pha That Luang)", "coords": [17.9765, 102.6365], "time": "09:30", "desc": "金色尖顶在晨光下熠熠生辉，老挝最神圣的佛教圣地", "gmap": "https://www.google.com/maps/search/?api=1&query=Pha+That+Luang+Vientiane"}, {"step": 3, "type": "hotel", "typeLabel": "💻 办公收尾", "name": "酒店大堂商务区工作", "coords": [17.9644, 102.6075], "time": "11:30", "desc": "完成上半周工作汇总，轻装取行李乘车去车站", "gmap": "https://www.google.com/maps/search/?api=1&query=Ibis+Vientiane+Nam+Phu"}, {"step": 4, "type": "transit", "typeLabel": "🚄 坐车出发", "name": "中老铁路万象站 (Vientiane Station)", "coords": [18.0475, 102.723], "time": "15:05", "desc": "搭乘中老铁路“澜沧号”动车，车厢整洁舒适，2小时直达", "gmap": "https://www.google.com/maps/search/?api=1&query=Vientiane+Railway+Station"}, {"step": 5, "type": "transit", "typeLabel": "🚄 坐车到达", "name": "中老铁路琅勃拉邦站", "coords": [19.8512, 102.1935], "time": "17:10", "desc": "抵达琅勃拉邦，出站乘坐官方拼车小巴直奔古城", "gmap": "https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Railway+Station"}, {"step": 6, "type": "hotel", "typeLabel": "🏨 当晚酒店", "name": "琅勃拉邦梦之精品度假村 (The Dream Boutique)", "coords": [19.882, 102.1385], "time": "18:00", "desc": "入住热带花园度假村（约¥450/晚），带泳池与静音书桌", "gmap": "https://www.google.com/maps/search/?api=1&query=The+Dream+Boutique+Resort+Luang+Prabang"}, {"step": 7, "type": "sight", "typeLabel": "🏮 夜市游览", "name": "琅勃拉邦古城夜市 (Night Market)", "coords": [19.8915, 102.135], "time": "19:30", "desc": "漫步东南亚最安静文艺的夜市，选购老挝织锦手工艺品与手工皂", "gmap": "https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Night+Market"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E5%AE%9C%E5%BF%85%E6%80%9D%E4%B8%87%E8%B1%A1%E5%8D%97%E6%99%AE%E9%85%92%E5%BA%97&destination=%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6%E5%8F%A4%E5%9F%8E%E5%A4%9C%E5%B8%82%20%28Night%20Market%29&waypoints=%E8%80%81%E6%8C%9D%E5%9B%BD%E5%AE%B6%E8%B1%A1%E5%BE%81%C2%B7%E9%87%91%E8%89%B2%E5%A1%94%E9%8A%AE%E5%AF%BA%20%28Pha%20That%20Luang%29%7C%E9%85%92%E5%BA%97%E5%A4%A7%E5%A0%82%E5%95%86%E5%8A%A1%E5%8C%BA%E5%B7%A5%E4%BD%9C%7C%E4%B8%AD%E8%80%81%E9%93%81%E8%B7%AF%E4%B8%87%E8%B1%A1%E7%AB%99%20%28Vientiane%20Station%29%7C%E4%B8%AD%E8%80%81%E9%93%81%E8%B7%AF%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6%E7%AB%99%7C%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6%E6%A2%A6%E4%B9%8B%E7%B2%BE%E5%93%81%E5%BA%A6%E5%81%87%E6%9D%91%20%28The%20Dream%20Boutique%29"}, {"day": 8, "date": "12/18 (周五)", "city": "🇱🇦 老挝琅勃拉邦 · 湄公河畔工作日", "theme": "河景露台办公 · 湄公河落日长尾船巡游 · 法餐红酒", "summary": "在 Saffron Coffee 湄公河一线露台办公，下午在度假村静音工作清空周度任务。傍晚包乘长尾木船在湄公河上看日落，享用浪漫法式红酒晚餐。", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 酒店出发", "name": "梦之精品度假村", "coords": [19.882, 102.1385], "time": "09:00", "desc": "享受池畔热带水果早餐，晨风惬意舒畅", "gmap": "https://www.google.com/maps/search/?api=1&query=The+Dream+Boutique+Resort+Luang+Prabang"}, {"step": 2, "type": "cafe", "typeLabel": "☕ 露台办公", "name": "Saffron Coffee 湄公河景咖啡馆", "coords": [19.8955, 102.1388], "time": "09:30", "desc": "老挝本地高山公平贸易咖啡，面朝滔滔湄公河的木质露台办公位", "gmap": "https://www.google.com/maps/search/?api=1&query=Saffron+Coffee+Luang+Prabang"}, {"step": 3, "type": "hotel", "typeLabel": "💻 专注工作", "name": "度假村独立书桌深度工作", "coords": [19.882, 102.1385], "time": "14:00", "desc": "在客房静音办公区专注清空当周事务，迎接精彩周末", "gmap": "https://www.google.com/maps/search/?api=1&query=The+Dream+Boutique+Resort+Luang+Prabang"}, {"step": 4, "type": "sight", "typeLabel": "⛵ 游船巡游", "name": "湄公河落日长尾游船码头", "coords": [19.8965, 102.1395], "time": "17:30", "desc": "包乘木质长尾船顺水巡游，微风拂面，在河上碰杯看夕阳染红两岸青山", "gmap": "https://www.google.com/maps/search/?api=1&query=Luang+Prabang+River+Cruise"}, {"step": 5, "type": "sight", "typeLabel": "🍷 法式晚餐", "name": "L'Elephant Restaurant 殖民风味法餐", "coords": [19.894, 102.1375], "time": "19:30", "desc": "老城著名法餐老字号，品尝法式油封鸭腿、法棍与精选红酒", "gmap": "https://www.google.com/maps/search/?api=1&query=L%27Elephant+Restaurant+Luang+Prabang"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%A2%A6%E4%B9%8B%E7%B2%BE%E5%93%81%E5%BA%A6%E5%81%87%E6%9D%91&destination=L%27Elephant%20Restaurant%20%E6%AE%96%E6%B0%91%E9%A3%8E%E5%91%B3%E6%B3%95%E9%A4%90&waypoints=Saffron%20Coffee%20%E6%B9%84%E5%85%AC%E6%B2%B3%E6%99%AF%E5%92%96%E5%95%A1%E9%A6%86%7C%E5%BA%A6%E5%81%87%E6%9D%91%E7%8B%AC%E7%AB%8B%E4%B9%A6%E6%A1%8C%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C%7C%E6%B9%84%E5%85%AC%E6%B2%B3%E8%90%BD%E6%97%A5%E9%95%BF%E5%B0%BE%E6%B8%B8%E8%88%B9%E7%A0%81%E5%A4%B4"}, {"day": 9, "date": "12/19 (周六)", "city": "🇱🇦 琅勃拉邦 · 光西瀑布与文化漫游", "theme": "碧绿钙化瀑布池 · 香通寺生命之树 · 普西山夕阳", "summary": "全天周六度假胜境。包车游览世界级光西瀑布碧绿多层钙化池，探访香通寺绝美生命之树壁画与大皇宫，傍晚登普西山俯瞰全城落日，吃老挝传统火锅。", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 度假村出发", "name": "梦之精品度假村", "coords": [19.882, 102.1385], "time": "09:00", "desc": "包乘双条车或小汽车出发前往光西瀑布景区（约45分钟）", "gmap": "https://www.google.com/maps/search/?api=1&query=The+Dream+Boutique+Resort+Luang+Prabang"}, {"step": 2, "type": "sight", "typeLabel": "💧 游览景点", "name": "光西瀑布碧绿钙化池 (Kuang Si Waterfall)", "coords": [19.749, 101.9925], "time": "10:00", "desc": "奶蓝色层叠钙化瀑布水潭，林间徒步野餐，宛若童话仙境", "gmap": "https://www.google.com/maps/search/?api=1&query=Kuang+Si+Waterfall"}, {"step": 3, "type": "sight", "typeLabel": "🐻 游览景点", "name": "亚洲黑熊救助保护区 (Tat Kuang Si Bear Rescue)", "coords": [19.7505, 101.9935], "time": "12:00", "desc": "探访可爱憨厚的亚洲月熊生活营地", "gmap": "https://www.google.com/maps/search/?api=1&query=Tat+Kuang+Si+Bear+Rescue+Centre"}, {"step": 4, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "香通寺生命之树 (Wat Xieng Thong)", "coords": [19.8978, 102.1432], "time": "14:30", "desc": "琅勃拉邦最华美的寺院，后墙以彩色琉璃镶嵌生命之树壁画", "gmap": "https://www.google.com/maps/search/?api=1&query=Wat+Xieng+Thong"}, {"step": 5, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "琅勃拉邦大皇宫与王宫博物馆", "coords": [19.892, 102.136], "time": "16:00", "desc": "融合老挝传统与法式风格的皇宫大殿，收藏珍贵佛像与文物", "gmap": "https://www.google.com/maps/search/?api=1&query=Royal+Palace+Luang+Prabang"}, {"step": 6, "type": "sight", "typeLabel": "⛰️ 游览景点", "name": "普西山金色落日 (Mount Phousi)", "coords": [19.8905, 102.137], "time": "17:30", "desc": "攀登328级石阶至山顶佛塔，360度俯瞰湄公河与古城全景落日", "gmap": "https://www.google.com/maps/search/?api=1&query=Mount+Phousi+Luang+Prabang"}, {"step": 7, "type": "sight", "typeLabel": "🍲 特色晚餐", "name": "老挝传统烤肉火锅 (Sindad BBQ)", "coords": [19.895, 102.138], "time": "19:00", "desc": "河畔特色中间烤肉外圈火锅，搭配秘制花生蘸酱，烟火气十足", "gmap": "https://www.google.com/maps/search/?api=1&query=Sindad+BBQ+Luang+Prabang"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%A2%A6%E4%B9%8B%E7%B2%BE%E5%93%81%E5%BA%A6%E5%81%87%E6%9D%91&destination=%E8%80%81%E6%8C%9D%E4%BC%A0%E7%BB%9F%E7%83%A4%E8%82%89%E7%81%AB%E9%94%85%20%28Sindad%20BBQ%29&waypoints=%E5%85%89%E8%A5%BF%E7%80%91%E5%B8%83%E7%A2%A7%E7%BB%BF%E9%92%99%E5%8C%96%E6%B1%A0%20%28Kuang%20Si%20Waterfall%29%7C%E4%BA%9A%E6%B4%B2%E9%BB%91%E7%86%8A%E6%95%91%E5%8A%A9%E4%BF%9D%E6%8A%A4%E5%8C%BA%20%28Tat%20Kuang%20Si%20Bear%20Rescue%29%7C%E9%A6%99%E9%80%9A%E5%AF%BA%E7%94%9F%E5%91%BD%E4%B9%8B%E6%A0%91%20%28Wat%20Xieng%20Thong%29%7C%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6%E5%A4%A7%E7%9A%87%E5%AE%AB%E4%B8%8E%E7%8E%8B%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%A6%86%7C%E6%99%AE%E8%A5%BF%E5%B1%B1%E9%87%91%E8%89%B2%E8%90%BD%E6%97%A5%20%28Mount%20Phousi%29"}, {"day": 10, "date": "12/20 (周日)", "city": "🇱🇦 琅勃拉邦 ➔ 🇨🇳 中国西双版纳", "theme": "清晨布施仪式 · 中老铁路 D888 跨境动车 · 星光夜市", "summary": "清晨体验千年庄严布施仪式，享用老挝法式咖啡早餐。下午 14:30 搭乘中老铁路 D888 次国际旅客列车，磨憨口岸通关入境中国，晚上抵达西双版纳逛告庄星光夜市。", "steps": [{"step": 1, "type": "sight", "typeLabel": "🧘 文化体验", "name": "洋人街清晨僧侣布施仪式 (Morning Alms)", "coords": [19.8925, 102.1365], "time": "05:45", "desc": "静静跪坐在街道旁，向沿街化缘的僧侣奉献温热糯米饭，庄严肃穆", "gmap": "https://www.google.com/maps/search/?api=1&query=Alms+Giving+Ceremony+Luang+Prabang"}, {"step": 2, "type": "cafe", "typeLabel": "🥐 法式早餐", "name": "Le Banneton Cafe 法式面包房", "coords": [19.897, 102.142], "time": "07:30", "desc": "品尝新鲜出炉的松脆可颂、法式煎蛋卷与香浓拿铁咖啡", "gmap": "https://www.google.com/maps/search/?api=1&query=Le+Banneton+Cafe+Luang+Prabang"}, {"step": 3, "type": "transit", "typeLabel": "🚄 坐车出发", "name": "中老铁路琅勃拉邦火车站", "coords": [19.8512, 102.1935], "time": "14:30", "desc": "搭乘 D888 次国际旅客动车组（12306直接购票，凭护照乘车）", "gmap": "https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Railway+Station"}, {"step": 4, "type": "transit", "typeLabel": "🛂 坐车/通关", "name": "中老铁路磨憨口岸 (铁路客运口岸)", "coords": [21.1855, 101.6885], "time": "16:30", "desc": "磨丁老挝出境，列车穿过友谊隧道抵达磨憨口岸大厅，刷中国护照秒通关", "gmap": "https://www.google.com/maps/search/?api=1&query=Mohan+Railway+Port"}, {"step": 5, "type": "transit", "typeLabel": "🚄 坐车到达", "name": "西双版纳火车站", "coords": [21.9775, 100.763], "time": "19:30", "desc": "顺利抵达版纳站，出站打车 20 分钟直达告庄西双景", "gmap": "https://www.google.com/maps/search/?api=1&query=Xishuangbanna+Railway+Station"}, {"step": 6, "type": "hotel", "typeLabel": "🏨 当晚酒店", "name": "告庄西双景漫悦江景客栈", "coords": [22.0135, 100.8035], "time": "20:15", "desc": "入住傣式原木风江景美宿（约¥420/晚），步行3分钟即达星光夜市", "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨"}, {"step": 7, "type": "sight", "typeLabel": "🏮 夜市游览", "name": "告庄西双景星光夜市 (Starlight Market)", "coords": [22.0125, 100.802], "time": "21:00", "desc": "东南亚最大的水上星光夜市，流光溢彩，品尝傣味烤鸡与热带鲜果汁", "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景星光夜市"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%B4%8B%E4%BA%BA%E8%A1%97%E6%B8%85%E6%99%A8%E5%83%A7%E4%BE%A3%E5%B8%83%E6%96%BD%E4%BB%AA%E5%BC%8F%20%28Morning%20Alms%29&destination=%E5%91%8A%E5%BA%84%E8%A5%BF%E5%8F%8C%E6%99%AF%E6%98%9F%E5%85%89%E5%A4%9C%E5%B8%82%20%28Starlight%20Market%29&waypoints=Le%20Banneton%20Cafe%20%E6%B3%95%E5%BC%8F%E9%9D%A2%E5%8C%85%E6%88%BF%7C%E4%B8%AD%E8%80%81%E9%93%81%E8%B7%AF%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6%E7%81%AB%E8%BD%A6%E7%AB%99%7C%E4%B8%AD%E8%80%81%E9%93%81%E8%B7%AF%E7%A3%A8%E6%86%A8%E5%8F%A3%E5%B2%B8%20%28%E9%93%81%E8%B7%AF%E5%AE%A2%E8%BF%90%E5%8F%A3%E5%B2%B8%29%7C%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%81%AB%E8%BD%A6%E7%AB%99%7C%E5%91%8A%E5%BA%84%E8%A5%BF%E5%8F%8C%E6%99%AF%E6%BC%AB%E6%82%A6%E6%B1%9F%E6%99%AF%E5%AE%A2%E6%A0%88"}, {"day": 11, "date": "12/21 (周一)", "city": "🇨🇳 西双版纳 (首个全天工作日)", "theme": "千兆高速专线办公 · 景洪大金塔 · 傣味孔雀宴", "summary": "在告庄南药咖啡馆与客栈千兆光纤专线高效远程办公。傍晚在澜沧江边与大金塔下散步，享用具有浓郁热带傣家风情的孔雀宴盛宴。", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 客栈出发", "name": "告庄漫悦江景客栈", "coords": [22.0135, 100.8035], "time": "09:00", "desc": "享用特色米线早餐，开启本周第一个高效 Workcation 工作日", "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨"}, {"step": 2, "type": "cafe", "typeLabel": "☕ 远程办公", "name": "告庄极客南药咖啡馆", "coords": [22.011, 100.801], "time": "09:30", "desc": "数字游民极佳工作站，安静多插座，独享高速专线网络", "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景咖啡馆"}, {"step": 3, "type": "hotel", "typeLabel": "💻 客栈深度办公", "name": "客栈实木茶台静音办公区", "coords": [22.0135, 100.8035], "time": "14:00", "desc": "在客房独立茶台办公，泡一壶地道普洱茶，专注处理年前业务", "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨"}, {"step": 4, "type": "sight", "typeLabel": "🏛️ 游览景点", "name": "景洪大金塔与澜沧江滨江步道", "coords": [22.014, 100.8015], "time": "18:00", "desc": "巍峨的大金塔在夕阳下泛起金色光辉，江畔微风徐徐惬意宜人", "gmap": "https://www.google.com/maps/search/?api=1&query=告庄大金塔"}, {"step": 5, "type": "sight", "typeLabel": "🍽️ 特色晚餐", "name": "曼飞龙白塔傣家风味楼·孔雀宴", "coords": [22.013, 100.804], "time": "19:30", "desc": "品尝芭蕉叶盛装的孔雀手抓饭、香茅草烤罗非鱼、包烧猪肉与柠檬舂鸡脚", "gmap": "https://www.google.com/maps/search/?api=1&query=曼飞龙白塔傣家风味楼"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E5%91%8A%E5%BA%84%E6%BC%AB%E6%82%A6%E6%B1%9F%E6%99%AF%E5%AE%A2%E6%A0%88&destination=%E6%9B%BC%E9%A3%9E%E9%BE%99%E7%99%BD%E5%A1%94%E5%82%A3%E5%AE%B6%E9%A3%8E%E5%91%B3%E6%A5%BC%C2%B7%E5%AD%94%E9%9B%80%E5%AE%B4&waypoints=%E5%91%8A%E5%BA%84%E6%9E%81%E5%AE%A2%E5%8D%97%E8%8D%AF%E5%92%96%E5%95%A1%E9%A6%86%7C%E5%AE%A2%E6%A0%88%E5%AE%9E%E6%9C%A8%E8%8C%B6%E5%8F%B0%E9%9D%99%E9%9F%B3%E5%8A%9E%E5%85%AC%E5%8C%BA%7C%E6%99%AF%E6%B4%AA%E5%A4%A7%E9%87%91%E5%A1%94%E4%B8%8E%E6%BE%9C%E6%B2%A7%E6%B1%9F%E6%BB%A8%E6%B1%9F%E6%AD%A5%E9%81%93"}, {"day": 12, "date": "12/22 (周二)", "city": "🇨🇳 西双版纳 (深度工作与热带慢生活)", "theme": "露台江景远程工作 · 热带水果集市 · 傣味手抓饭", "summary": "客栈江景露台全天远程办公，完成年前核心业务汇报交代。傍晚漫步热带水果集市，品尝各色百香果释迦，为次日乘高铁赴大理做好准备。", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 客栈早晨", "name": "告庄漫悦客栈澜沧江晨景", "coords": [22.0135, 100.8035], "time": "09:00", "desc": "推开落地窗，晨雾笼罩的澜沧江宛若仙境", "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨"}, {"step": 2, "type": "hotel", "typeLabel": "💻 全天办公", "name": "客栈江景露台全天办公", "coords": [22.0135, 100.8035], "time": "09:30", "desc": "全天专注工作，完成年度工作汇报交付，彻底卸下工作担子", "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨"}, {"step": 3, "type": "sight", "typeLabel": "🥭 游览市集", "name": "景洪热带水果批发集市", "coords": [22.0105, 100.8], "time": "17:30", "desc": "采买当季菠萝蜜、百香果、释迦果、红毛丹，新鲜甘甜且物美价廉", "gmap": "https://www.google.com/maps/search/?api=1&query=告庄水果集市"}, {"step": 4, "type": "sight", "typeLabel": "🍲 特色晚餐", "name": "傣味手抓饭与热带夜市小吃", "coords": [22.012, 100.8025], "time": "19:00", "desc": "品尝正宗傣味柠檬凉粉、竹筒饭与热带星空烧烤", "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景美食"}, {"step": 5, "type": "hotel", "typeLabel": "🏨 整理行李", "name": "客栈休息与行李打包", "coords": [22.0135, 100.8035], "time": "21:30", "desc": "早点休息，准备次日早起乘直达高铁奔赴终点站大理", "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E5%91%8A%E5%BA%84%E6%BC%AB%E6%82%A6%E5%AE%A2%E6%A0%88%E6%BE%9C%E6%B2%A7%E6%B1%9F%E6%99%A8%E6%99%AF&destination=%E5%AE%A2%E6%A0%88%E4%BC%91%E6%81%AF%E4%B8%8E%E8%A1%8C%E6%9D%8E%E6%89%93%E5%8C%85&waypoints=%E5%AE%A2%E6%A0%88%E6%B1%9F%E6%99%AF%E9%9C%B2%E5%8F%B0%E5%85%A8%E5%A4%A9%E5%8A%9E%E5%85%AC%7C%E6%99%AF%E6%B4%AA%E7%83%AD%E5%B8%A6%E6%B0%B4%E6%9E%9C%E6%89%B9%E5%8F%91%E9%9B%86%E5%B8%82%7C%E5%82%A3%E5%91%B3%E6%89%8B%E6%8A%93%E9%A5%AD%E4%B8%8E%E7%83%AD%E5%B8%A6%E5%A4%9C%E5%B8%82%E5%B0%8F%E5%90%83"}, {"day": 13, "date": "12/23 (周三)", "city": "🇨🇳 西双版纳 ➔ 🇨🇳 云南大理 (终点站)", "theme": "云南高铁直达 · 洱海生态廊道 · S 弯观海客栈", "summary": "上午乘直达动车前往大理（6小时，直通无需转车）。15:35 抵达大理站，专车接送入住磻溪 S 弯一线海景客栈，观海露台看洱海落日与苍山晚霞。", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 客栈出发", "name": "告庄客栈退房出发", "coords": [22.0135, 100.8035], "time": "08:40", "desc": "打车前往西双版纳火车站", "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨"}, {"step": 2, "type": "transit", "typeLabel": "🚄 坐车出发", "name": "西双版纳火车站 (动车发车)", "coords": [21.9775, 100.763], "time": "09:40", "desc": "搭乘省内直达高铁赴大理（沿途欣赏云南喀斯特地貌与红土地）", "gmap": "https://www.google.com/maps/search/?api=1&query=Xishuangbanna+Railway+Station"}, {"step": 3, "type": "transit", "typeLabel": "🚄 坐车到达", "name": "大理火车站 (抵达大理)", "coords": [25.5927, 100.2285], "time": "15:35", "desc": "列车顺利抵达大理站，出站与客栈接驳专车汇合", "gmap": "https://www.google.com/maps/search/?api=1&query=Dali+Railway+Station"}, {"step": 4, "type": "transit", "typeLabel": "🚗 专车接驳", "name": "大理洱海生态廊道入口", "coords": [25.68, 100.19], "time": "16:20", "desc": "沿大丽线与环海西路前行，饱览苍山洱海风光", "gmap": "https://www.google.com/maps/search/?api=1&query=大理洱海生态廊道"}, {"step": 5, "type": "hotel", "typeLabel": "🏨 当晚客栈", "name": "大理浅山伴海客栈 (磻溪 S 弯店)", "coords": [25.768, 100.1655], "time": "16:45", "desc": "入住磻溪 S 弯一线海景房（约¥460/晚），落地窗直面洱海碧波", "gmap": "https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道"}, {"step": 6, "type": "sight", "typeLabel": "🌊 游览景点", "name": "磻溪村 S 弯洱海夕阳晚霞", "coords": [25.7685, 100.166], "time": "17:30", "desc": "在客栈门前漫步洱海生态廊道，观赏苍山日落染红万顷碧波", "gmap": "https://www.google.com/maps/search/?api=1&query=磻溪村S弯"}, {"step": 7, "type": "sight", "typeLabel": "🍲 特色晚餐", "name": "洱海畔白族特色石板烧餐厅", "coords": [25.766, 100.164], "time": "19:00", "desc": "在天然大理石板上炙烤五花肉、洱海大虾与包浆豆腐，配大理风花雪月啤酒", "gmap": "https://www.google.com/maps/search/?api=1&query=大理白族石板烧"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E5%91%8A%E5%BA%84%E5%AE%A2%E6%A0%88%E9%80%80%E6%88%BF%E5%87%BA%E5%8F%91&destination=%E6%B4%B1%E6%B5%B7%E7%95%94%E7%99%BD%E6%97%8F%E7%89%B9%E8%89%B2%E7%9F%B3%E6%9D%BF%E7%83%A7%E9%A4%90%E5%8E%85&waypoints=%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%81%AB%E8%BD%A6%E7%AB%99%20%28%E5%8A%A8%E8%BD%A6%E5%8F%91%E8%BD%A6%29%7C%E5%A4%A7%E7%90%86%E7%81%AB%E8%BD%A6%E7%AB%99%20%28%E6%8A%B5%E8%BE%BE%E5%A4%A7%E7%90%86%29%7C%E5%A4%A7%E7%90%86%E6%B4%B1%E6%B5%B7%E7%94%9F%E6%80%81%E5%BB%8A%E9%81%93%E5%85%A5%E5%8F%A3%7C%E5%A4%A7%E7%90%86%E6%B5%85%E5%B1%B1%E4%BC%B4%E6%B5%B7%E5%AE%A2%E6%A0%88%20%28%E7%A3%BB%E6%BA%AA%20S%20%E5%BC%AF%E5%BA%97%29%7C%E7%A3%BB%E6%BA%AA%E6%9D%91%20S%20%E5%BC%AF%E6%B4%B1%E6%B5%B7%E5%A4%95%E9%98%B3%E6%99%9A%E9%9C%9E"}, {"day": 14, "date": "12/24 (周四 · 平安夜)", "city": "🇨🇳 云南大理 · 平安夜浪漫 Workcation", "theme": "观海落地窗办公 · 苍山如黛 · 古城民谣平安夜", "summary": "冬日暖阳洒在客栈面海长桌上，惬意收尾办公。下午在唐咖海景咖啡馆品尝云南小粒咖啡，傍晚打卡大理古城，在人民路民谣小酒馆度过浪漫平安夜。", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 客栈晨起", "name": "浅山伴海客栈晨光观海", "coords": [25.768, 100.1655], "time": "09:00", "desc": "在观海露台享用自制白族早餐与手冲云南咖啡", "gmap": "https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道"}, {"step": 2, "type": "hotel", "typeLabel": "💻 观海办公", "name": "客房全景落地窗办公长桌", "coords": [25.768, 100.1655], "time": "09:30", "desc": "面朝浩瀚洱海与苍山雪顶，享受极致舒适惬意的慢调远程工作", "gmap": "https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道"}, {"step": 3, "type": "cafe", "typeLabel": "☕ 海景咖啡", "name": "唐咖·海景精品咖啡馆", "coords": [25.7675, 100.165], "time": "14:30", "desc": "廊道旁的优质独立咖啡馆，品尝保山与普洱产区精品日晒小粒咖啡", "gmap": "https://www.google.com/maps/search/?api=1&query=唐咖大理"}, {"step": 4, "type": "sight", "typeLabel": "🏛️ 游览古城", "name": "大理古城南门与五华楼", "coords": [25.694, 100.163], "time": "17:30", "desc": "漫步大理古城青石板街道，仰望巍峨古城门与灯火初上的五华楼", "gmap": "https://www.google.com/maps/search/?api=1&query=大理古城南门"}, {"step": 5, "type": "sight", "typeLabel": "🍷 平安夜酒馆", "name": "大理古城人民路民谣小酒馆", "coords": [25.698, 100.165], "time": "19:30", "desc": "点一杯特调鸡尾酒或大理青梅酒，静静倾听民谣歌手弹唱，度过浪漫平安夜", "gmap": "https://www.google.com/maps/search/?api=1&query=大理人民路小酒馆"}, {"step": 6, "type": "hotel", "typeLabel": "🏨 返回客栈", "name": "返回浅山伴海客栈伴涛声入眠", "coords": [25.768, 100.1655], "time": "22:30", "desc": "打车返回客栈，在静谧的洱海轻涛声中安然入眠", "gmap": "https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%B5%85%E5%B1%B1%E4%BC%B4%E6%B5%B7%E5%AE%A2%E6%A0%88%E6%99%A8%E5%85%89%E8%A7%82%E6%B5%B7&destination=%E8%BF%94%E5%9B%9E%E6%B5%85%E5%B1%B1%E4%BC%B4%E6%B5%B7%E5%AE%A2%E6%A0%88%E4%BC%B4%E6%B6%9B%E5%A3%B0%E5%85%A5%E7%9C%A0&waypoints=%E5%AE%A2%E6%88%BF%E5%85%A8%E6%99%AF%E8%90%BD%E5%9C%B0%E7%AA%97%E5%8A%9E%E5%85%AC%E9%95%BF%E6%A1%8C%7C%E5%94%90%E5%92%96%C2%B7%E6%B5%B7%E6%99%AF%E7%B2%BE%E5%93%81%E5%92%96%E5%95%A1%E9%A6%86%7C%E5%A4%A7%E7%90%86%E5%8F%A4%E5%9F%8E%E5%8D%97%E9%97%A8%E4%B8%8E%E4%BA%94%E5%8D%8E%E6%A5%BC%7C%E5%A4%A7%E7%90%86%E5%8F%A4%E5%9F%8E%E4%BA%BA%E6%B0%91%E8%B7%AF%E6%B0%91%E8%B0%A3%E5%B0%8F%E9%85%92%E9%A6%86"}, {"day": 15, "date": "12/25 (周五 · 圣诞节收官)", "city": "🇨🇳 云南大理 · 圣诞收官 · 苍山洱海慢生活", "theme": "廊道双人骑行 · 喜洲古镇扎染 · 3,600公里壮举圆满落幕", "summary": "圣诞节双人漫步骑行洱海生态廊道，投喂红嘴鸥。前往喜洲古镇打卡转角楼与麦田扎染，品尝刚出炉的喜洲粑粑。15天5国跨国陆路大旅行圆满收官！", "steps": [{"step": 1, "type": "hotel", "typeLabel": "🏨 客栈出发", "name": "浅山伴海客栈出发", "coords": [25.768, 100.1655], "time": "09:00", "desc": "整理行李寄存，租借双人自行车开启环海骑行", "gmap": "https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道"}, {"step": 2, "type": "sight", "typeLabel": "🚲 骑行游览", "name": "洱海生态廊道骑行与红嘴鸥互动", "coords": [25.772, 100.164], "time": "09:30", "desc": "沿着生态廊道微风骑行，水草清澈见底，与冬日南迁红嘴鸥亲密互动", "gmap": "https://www.google.com/maps/search/?api=1&query=大理洱海生态廊道骑行"}, {"step": 3, "type": "sight", "typeLabel": "🏛️ 游览古镇", "name": "喜洲古镇转角楼与严家大院", "coords": [25.855, 100.138], "time": "12:00", "desc": "打卡著名黄色圆角楼建筑，参观典型“三坊一照壁”白族传统古建", "gmap": "https://www.google.com/maps/search/?api=1&query=喜洲古镇转角楼"}, {"step": 4, "type": "sight", "typeLabel": "🎨 非遗体验", "name": "喜洲麦田白族扎染体验馆", "coords": [25.857, 100.139], "time": "14:00", "desc": "在古色古香的白族染坊亲手制作一份靛蓝扎染围巾，带走一份大理手作心意", "gmap": "https://www.google.com/maps/search/?api=1&query=喜洲白族扎染"}, {"step": 5, "type": "cafe", "typeLabel": "☕ 田园咖啡", "name": "喜洲田园咖啡馆·喜洲破酥粑粑", "coords": [25.856, 100.1385], "time": "15:30", "desc": "在稻田边品尝刚出炉的外酥里嫩喜洲破酥粑粑与热咖啡，复盘15天奇幻旅程", "gmap": "https://www.google.com/maps/search/?api=1&query=喜洲粑粑"}, {"step": 6, "type": "transit", "typeLabel": "🏁 旅程收官", "name": "大理火车站 / 大理凤仪机场 (送行返程)", "coords": [25.5927, 100.2285], "time": "18:00", "desc": "专车送往大理站或大理机场，15天跨越5国、3,600公里壮美旅程圆满落幕！", "gmap": "https://www.google.com/maps/search/?api=1&query=Dali+Railway+Station"}], "gmapsRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%B5%85%E5%B1%B1%E4%BC%B4%E6%B5%B7%E5%AE%A2%E6%A0%88%E5%87%BA%E5%8F%91&destination=%E5%A4%A7%E7%90%86%E7%81%AB%E8%BD%A6%E7%AB%99%20/%20%E5%A4%A7%E7%90%86%E5%87%A4%E4%BB%AA%E6%9C%BA%E5%9C%BA%20%28%E9%80%81%E8%A1%8C%E8%BF%94%E7%A8%8B%29&waypoints=%E6%B4%B1%E6%B5%B7%E7%94%9F%E6%80%81%E5%BB%8A%E9%81%93%E9%AA%91%E8%A1%8C%E4%B8%8E%E7%BA%A2%E5%98%B4%E9%B8%A5%E4%BA%92%E5%8A%A8%7C%E5%96%9C%E6%B4%B2%E5%8F%A4%E9%95%87%E8%BD%AC%E8%A7%92%E6%A5%BC%E4%B8%8E%E4%B8%A5%E5%AE%B6%E5%A4%A7%E9%99%A2%7C%E5%96%9C%E6%B4%B2%E9%BA%A6%E7%94%B0%E7%99%BD%E6%97%8F%E6%89%8E%E6%9F%93%E4%BD%93%E9%AA%8C%E9%A6%86%7C%E5%96%9C%E6%B4%B2%E7%94%B0%E5%9B%AD%E5%92%96%E5%95%A1%E9%A6%86%C2%B7%E5%96%9C%E6%B4%B2%E7%A0%B4%E9%85%A5%E7%B2%91%E7%B2%91"}];
+
+    let dailyMapInstance = null;
+    let dailyMapRoadmapLayer = null;
+    let dailyMarkersGroup = null;
+    let dailyPolyline = null;
+    let currentSelectedDay = 1;
+
+    function initDailyGoogleMap() {
+      const container = document.getElementById('daily-google-map');
+      if (!container || dailyMapInstance) return;
+
+      dailyMapInstance = L.map('daily-google-map', {
+        zoomControl: true,
+        scrollWheelZoom: true
+      }).setView([1.3521, 103.8198], 11);
+
+      // Google Maps Roadmap Tiles
+      dailyMapRoadmapLayer = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        attribution: 'Map data &copy; <a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a>'
+      }).addTo(dailyMapInstance);
+
+      dailyMarkersGroup = L.layerGroup().addTo(dailyMapInstance);
+
+      renderDailyMap(1);
+    }
+
+    function selectDailyMap(dayNum) {
+      currentSelectedDay = dayNum;
+
+      // Update pills
+      document.querySelectorAll('.daily-pill-btn').forEach(btn => btn.classList.remove('active'));
+      const activePill = document.getElementById('pill-day-' + dayNum);
+      if (activePill) {
+        activePill.classList.add('active');
+        activePill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+
+      renderDailyMap(dayNum);
+    }
+
+    function renderDailyMap(dayNum) {
+      const dayData = DAILY_MAPS_DATA.find(d => d.day === dayNum);
+      if (!dayData) return;
+
+      // Update Header Text
+      document.getElementById('daily-active-badge').textContent = 'Day ' + dayData.day;
+      document.getElementById('daily-active-title').textContent = dayData.date + ' · ' + dayData.city;
+      document.getElementById('daily-active-summary').textContent = dayData.summary;
+      document.getElementById('btn-daily-gmap-route').href = dayData.gmapsRouteUrl;
+
+      // Clear existing markers & polyline
+      if (dailyMarkersGroup) dailyMarkersGroup.clearLayers();
+      if (dailyPolyline && dailyMapInstance) dailyMapInstance.removeLayer(dailyPolyline);
+
+      const latLngs = [];
+      const stepsContainer = document.getElementById('daily-steps-container');
+      stepsContainer.innerHTML = '';
+
+      const typeColors = {
+        'transit': '#8b5cf6',
+        'sight': '#0284c7',
+        'cafe': '#f59e0b',
+        'hotel': '#10b981'
+      };
+
+      dayData.steps.forEach((st, idx) => {
+        latLngs.push(st.coords);
+        const color = typeColors[st.type] || '#0284c7';
+
+        // Add Marker
+        if (dailyMapInstance && dailyMarkersGroup) {
+          const customIcon = L.divIcon({
+            className: 'daily-step-pin',
+            html: '<div style="background:' + color + '; color:white; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:12px; border:2.5px solid white; box-shadow:0 3px 8px rgba(0,0,0,0.3); text-align:center;">' + st.step + '</div>',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15],
+            popupAnchor: [0, -16]
+          });
+
+          const marker = L.marker(st.coords, { icon: customIcon }).addTo(dailyMarkersGroup);
+          marker.bindPopup(
+            '<div style="font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; min-width:220px; padding:4px;">' +
+              '<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">' +
+                '<span style="font-size:0.75rem; font-weight:800; color:' + color + ';">第 ' + st.step + ' 站 · ' + st.typeLabel + '</span>' +
+                '<span style="font-size:0.72rem; color:#64748b;">⏰ ' + st.time + '</span>' +
+              '</div>' +
+              '<div style="font-size:0.95rem; font-weight:800; color:#0f172a; margin-bottom:4px;">' + st.name + '</div>' +
+              '<p style="font-size:0.8rem; color:#334155; margin:0 0 8px; line-height:1.4;">' + st.desc + '</p>' +
+              '<a href="' + st.gmap + '" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; padding:5px 10px; background:#2563eb; color:white; border-radius:6px; text-decoration:none; font-size:0.75rem; font-weight:700;">📍 在 Google Maps 查看 ↗</a>' +
+            '</div>'
+          );
+        }
+
+        // Add Step Card in List
+        const card = document.createElement('div');
+        card.className = 'daily-step-card';
+        card.innerHTML = 
+          '<div style="display:flex; justify-content:space-between; align-items:center;">' +
+            '<div style="display:flex; align-items:center; gap:8px;">' +
+              '<span class="step-num-badge" style="background:' + color + ';">' + st.step + '</span>' +
+              '<span style="font-size:0.88rem; font-weight:800; color:#0f172a;">' + st.name + '</span>' +
+            '</div>' +
+            '<span style="font-size:0.72rem; background:#f1f5f9; padding:2px 6px; border-radius:4px; color:#475569; font-weight:600;">' + st.time + '</span>' +
+          '</div>' +
+          '<div style="font-size:0.76rem; color:' + color + '; font-weight:700;">' + st.typeLabel + '</div>' +
+          '<p style="font-size:0.8rem; color:#475569; margin:0; line-height:1.4;">' + st.desc + '</p>' +
+          '<div style="display:flex; justify-content:flex-end; margin-top:2px;">' +
+            '<a href="' + st.gmap + '" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem; color:#2563eb; font-weight:700; text-decoration:none;">📍 Google Maps 导航 ↗</a>' +
+          '</div>';
+        stepsContainer.appendChild(card);
+      });
+
+      // Draw polyline connecting the points in order
+      if (dailyMapInstance && latLngs.length > 1) {
+        dailyPolyline = L.polyline(latLngs, {
+          color: '#2563eb',
+          weight: 4,
+          opacity: 0.85,
+          dashArray: '6, 6',
+          lineJoin: 'round'
+        }).addTo(dailyMapInstance);
+
+        dailyMapInstance.fitBounds(L.latLngBounds(latLngs).pad(0.12));
+      } else if (dailyMapInstance && latLngs.length === 1) {
+        dailyMapInstance.setView(latLngs[0], 13);
+      }
+
+      if (dailyMapInstance) {
+        setTimeout(() => dailyMapInstance.invalidateSize(), 150);
+      }
+    }
+
 </script>
 </body>
 </html>
