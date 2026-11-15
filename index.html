@@ -371,6 +371,38 @@
     }
 
     /* Hotel Cards */
+    
+    .hotel-price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .modal-price-box {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 14px 18px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .modal-price-val {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #047857;
+    }
+
     .hotel-card {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -417,6 +449,38 @@
       cursor: pointer;
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
+    
+    .hotel-price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .modal-price-box {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 14px 18px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .modal-price-val {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #047857;
+    }
+
     .hotel-card {
       border-top: 4px solid var(--hotel);
     }
@@ -1224,6 +1288,7 @@
             <div>
               <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 12/11 - 12/13 · 共2晚</div>
               <div class="hotel-name">六门精品酒店 (Liu Men Melaka)</div>
+              <div class="hotel-price-badge">💰 房费参考：约 ¥650 - ¥950 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 420 - 620 MYR)</span></div>
               <div class="hotel-desc">位于马六甲鸡场街核心区，由数座 1930 年代海峡华人娘惹老洋房改造而成的奢华精品酒店。挑高天井、采光极佳，客房配备专属静谧办公写字台与极速光纤 Wi-Fi，步行 3 分钟即可融入鸡场街周末夜市。</div>
             </div>
             <div>
@@ -1246,6 +1311,7 @@
             <div>
               <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 马六甲河畔豪华备选</div>
               <div class="hotel-name">马六甲大华酒店 (The Majestic Malacca)</div>
+              <div class="hotel-price-badge">💰 房费参考：约 ¥800 - ¥1,200 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 520 - 780 MYR)</span></div>
               <div class="hotel-desc">杨忠礼集团（YTL）旗下的英殖民传奇老牌豪华五星，依偎在马六甲河畔。客房配备柚木地板、复古写字台与贵妃榻，英式管家服务周到，私密性极高。</div>
             </div>
             <div>
@@ -1268,6 +1334,7 @@
             <div>
               <div class="hotel-city">🇹🇭 曼谷 (Bangkok) · 12/15 - 12/16 · 1晚会友高光</div>
               <div class="hotel-name">辛通中城酒店 (Sindhorn Midtown Bangkok)</div>
+              <div class="hotel-price-badge">💰 房费参考：约 ¥1,000 - ¥1,500 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 5,000 - 7,500 THB)</span></div>
               <div class="hotel-desc">洲际酒店集团（IHG）旗下的 Vignette Collection 奢华生活方式酒店，位于曼谷最尊贵的 Langsuan 使馆街区。客房全景落地窗视野开阔，极速 300M 商务网，18楼无边际天际线泳池直眺曼谷金融区。</div>
             </div>
             <div>
@@ -1290,6 +1357,7 @@
             <div>
               <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 12/17 - 12/18 · 1晚中转休整</div>
               <div class="hotel-name">万象皇冠假日酒店 (Crowne Plaza Vientiane)</div>
+              <div class="hotel-price-badge">💰 房费参考：约 ¥850 - ¥1,250 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 120 - 180 USD)</span></div>
               <div class="hotel-desc">老挝首都万象首屈一指的国际五星级商务酒店。在老挝当地网络波动普遍的环境下，皇冠假日提供极为稳定的独立专线光纤 Wi-Fi，并配有设施完善的行政酒廊与商务中心，是跨境远程办公的最稳妥选择。</div>
             </div>
             <div>
@@ -1312,6 +1380,7 @@
             <div>
               <div class="hotel-city">🇱🇦 琅勃拉邦 (Luang Prabang) · 12/18 - 12/21 · 共3晚核心度假</div>
               <div class="hotel-name">安凡尼+ 琅勃拉邦度假酒店 (Avani+ Luang Prabang)</div>
+              <div class="hotel-price-badge">💰 房费参考：约 ¥1,600 - ¥2,400 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 230 - 340 USD)</span></div>
               <div class="hotel-desc">位于世界文化遗产琅勃拉邦古城核心，前身是法国殖民军官营房。百年古菩提树环绕着蔚蓝泳池，每间客房均有法式木制百叶窗、柚木阳台与独立办公书桌，出门即可漫步洋人街夜市与清晨布施路线。</div>
             </div>
             <div>
@@ -1334,6 +1403,7 @@
             <div>
               <div class="hotel-city">🇱🇦 琅勃拉邦备选 (Luang Prabang) · 湄公河临江浪漫备选</div>
               <div class="hotel-name">美丽河精品酒店 (The Belle Rive Boutique Hotel)</div>
+              <div class="hotel-price-badge">💰 房费参考：约 ¥900 - ¥1,400 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 130 - 200 USD)</span></div>
               <div class="hotel-desc">坐落在湄公河畔的一线绝美江景精品酒店。推窗即可看到滔滔江水与缓缓驶过的小木船。客房以老挝传统木艺与法式乡村风格交融，自带河畔露台咖啡座，入住包含专属日落巡游船票。</div>
             </div>
             <div>
@@ -1356,6 +1426,7 @@
             <div>
               <div class="hotel-city">🇨🇳 西双版纳 (Xishuangbanna) · 12/21 - 12/23 · 共2晚</div>
               <div class="hotel-name">告庄西双景湄公河景兰大酒店</div>
+              <div class="hotel-price-badge">💰 房费参考：约 ¥550 - ¥900 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(旺季约 ¥750 - ¥1,100)</span></div>
               <div class="hotel-desc">西双版纳城市名片级地标！坐落于告庄西双景核心，紧邻大金塔与澜沧江畔，楼下即是全亚洲规模最大的星光夜市。建筑融合傣泰皇家宫廷风情，顶层拥有高空水乐园，5G 千兆网络全覆盖，吃住行与办公一站式解决。</div>
             </div>
             <div>
@@ -1378,6 +1449,7 @@
             <div>
               <div class="hotel-city">🇨🇳 云南大理 (Dali) · 12/23 - 12/26 · 共3晚终点慢生活</div>
               <div class="hotel-name">大理慢屋·极目 / 喜度客栈 (洱海生态廊道店)</div>
+              <div class="hotel-price-badge">💰 房费参考：约 ¥700 - ¥1,300 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(一线全海景约 ¥950 - ¥1,400)</span></div>
               <div class="hotel-desc">全国数字游民梦想中的终极目的地！客栈直面洱海无遮挡一线海景与苍山十九峰。全屋智能家居联动、千兆独享光纤入户、超大落地全景海景书桌。下楼便是洱海生态廊道，冬日暖阳洒在桌面上，敲代码宛如身处画卷。</div>
             </div>
             <div>
@@ -1400,6 +1472,7 @@
             <div>
               <div class="hotel-city">🇨🇳 云南大理备选 (Dali) · 大理古城深处禅意宿集</div>
               <div class="hotel-name">既下山·SUNYATA (大理古城店)</div>
+              <div class="hotel-price-badge">💰 房费参考：约 ¥1,200 - ¥1,900 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(大理古城核心静院)</span></div>
               <div class="hotel-desc">国内顶级精品奢华宿集品牌，隐匿于大理古城繁华深处的三进庭院。著名建筑师设计，极简东方禅意与现代高品质舒适完美融合，内设静谧禅茶室、阳光书房与中庭水景，非常适合深度思考与沉浸式创作。</div>
             </div>
             <div>
@@ -1793,6 +1866,16 @@
           <div id="modal-badges" class="modal-badges"></div>
           
           <div id="modal-desc" class="modal-desc-box"></div>
+          <div id="modal-price-container" class="modal-price-box">
+            <div>
+              <div style="font-size:0.78rem; font-weight:700; color:#065f46; text-transform:uppercase;">💰 参考房费 / 消费预算范围</div>
+              <div id="modal-price-val" class="modal-price-val"></div>
+              <div id="modal-price-detail" style="font-size:0.82rem; color:#059669; margin-top:2px;"></div>
+            </div>
+            <span style="font-size:0.76rem; color:#047857; background:white; padding:4px 8px; border-radius:6px; border:1px solid #a7f3d0;">
+              ✨ 双人 Workcation 建议价位
+            </span>
+          </div>
 
           <h3 class="modal-section-title">⚡ 远程办公及旅居设施规格</h3>
           <div class="amenities-grid">
@@ -1853,7 +1936,7 @@
     // ==========================================
     // 场地数据库与弹窗交互逻辑
     // ==========================================
-    const VENUES_DB = {"hotel-liumen": {"id": "hotel-liumen", "type": "hotel", "typeLabel": "🏨 精选设计酒店", "name": "六门精品酒店 (Liu Men Melaka)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "12/11 - 12/13 · 共2晚", "photo": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80", "address": "48-56, Jalan Tokong, 75200 Melaka, Malaysia", "lat": 2.1978, "lng": 102.2475, "mapsQuery": "Liu Men Melaka, Jalan Tokong, Melaka", "desc": "位于马六甲鸡场街核心区，由数座 1930 年代海峡华人娘惹老洋房改造而成的奢华精品酒店。挑高天井、采光极佳，客房配备专属静谧办公写字台与极速光纤 Wi-Fi，步行 3 分钟即可融入鸡场街周末夜市。", "badges": ["📍 鸡场街步行3分", "📶 高速光纤 Wi-Fi", "🪑 舒适办公书桌", "🏛️ 娘惹奢华风范"], "amenities": {"wifi": "实测 150Mbps+ 稳定光纤专线，客房及天井全覆盖", "desk": "独立宽大实木书桌配护眼台灯及舒适扶手椅", "power": "桌面及床头均有通用国际多功能电源插孔", "quiet": "位于古城次街，闹中取静，隔音极佳适合语音会议"}, "tips": "建议预订内庭套房，白天办公光线柔和，周五周六晚出门步行即可尝遍娘惹美食。"}, "hotel-majestic": {"id": "hotel-majestic", "type": "hotel", "typeLabel": "🏨 传奇五星备选", "name": "马六甲大华酒店 (The Majestic Malacca)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "马六甲河畔豪华备选", "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80", "address": "188, Jalan Bunga Raya, 75100 Melaka, Malaysia", "lat": 2.203, "lng": 102.2514, "mapsQuery": "The Majestic Malacca, Jalan Bunga Raya, Melaka", "desc": "杨忠礼集团（YTL）旗下的英殖民传奇老牌豪华五星，依偎在马六甲河畔。客房配备柚木地板、复古写字台与贵妃榻，英式管家服务周到，私密性极高。", "badges": ["🌊 临马六甲河", "🏊 户外热带泳池", "⚡ 商务办公设施齐备", "⭐ 奢华五星"], "amenities": {"wifi": "全馆高速无线 Wi-Fi，漫游无缝切换", "desk": "古典实木办公桌，空间宽绰", "power": "英标及多国转换插座，前台可随叫随借", "quiet": "五星级安静隔音，临河阳台适合午休放空"}, "tips": "河景房可俯瞰马六甲河游船驶过，酒店内的 Spa Village 极具南洋特色。"}, "hotel-sindhorn": {"id": "hotel-sindhorn", "type": "hotel", "typeLabel": "🏨 奢华生活方式酒店", "name": "辛通中城酒店 (Sindhorn Midtown Bangkok)", "city": "🇹🇭 曼谷 (Bangkok)", "dateStay": "12/15 - 12/16 · 1晚会友高光", "photo": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80", "address": "68 Lang Suan Rd, Lumphini, Pathum Wan, Bangkok 10330, Thailand", "lat": 13.7372, "lng": 100.5434, "mapsQuery": "Sindhorn Midtown Hotel Bangkok, Lang Suan, Bangkok", "desc": "洲际酒店集团（IHG）旗下的 Vignette Collection 奢华生活方式酒店，位于曼谷最尊贵的 Langsuan 使馆街区。客房全景落地窗视野开阔，极速 300M 商务网，18楼无边际天际线泳池直眺曼谷金融区。", "badges": ["🚇 靠近 BTS Chit Lom", "🏊 高空天际线泳池", "📶 300M商务高速网", "🏙️ 使馆区黄金地段"], "amenities": {"wifi": "300Mbps 极速商用光纤，视频会议与大文件上传毫无卡顿", "desk": "现代人体工学工作台与高品质办公椅，采光充足", "power": "床头、书桌配备充足 Type-C 及 USB 快充接口", "quiet": "双层中空隔音玻璃，完全隔绝曼谷城市车流噪音"}, "tips": "步行 5 分钟即达 BTS Chit Lom 站，附近网红绿洲咖啡馆与会友餐厅云集。"}, "hotel-crowne": {"id": "hotel-crowne", "type": "hotel", "typeLabel": "🏨 国际商务五星首选", "name": "万象皇冠假日酒店 (Crowne Plaza Vientiane)", "city": "🇱🇦 老挝万象 (Vientiane)", "dateStay": "12/17 - 12/18 · 1晚中转休整", "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80", "address": "20 Samsenthai Road, Sikhottabong District, Vientiane, Laos", "lat": 17.9664, "lng": 102.5976, "mapsQuery": "Crowne Plaza Vientiane, Samsenthai Road, Vientiane", "desc": "老挝首都万象首屈一指的国际五星级商务酒店。在老挝当地网络波动普遍的环境下，皇冠假日提供极为稳定的独立专线光纤 Wi-Fi，并配有设施完善的行政酒廊与商务中心，是跨境远程办公的最稳妥选择。", "badges": ["⭐ 国际五星标准", "⚡ 万象最稳独立专线网", "💼 专属行政办公区", "🚗 距凯旋门10分钟"], "amenities": {"wifi": "国际专线高速 Wi-Fi，直连各类海外及国内远程协作系统", "desk": "行政客房带独立商务大书桌，配备护眼照明", "power": "桌面具备多组国际万用插孔与网络接口", "quiet": "五星级高品质隔音，会议通话无噪音干扰"}, "tips": "傍晚可前往酒店顶楼酒吧或步行至湄公河夜市，感受万象落日余晖。"}, "hotel-avani": {"id": "hotel-avani", "type": "hotel", "typeLabel": "🏨 法式殖民庭院度假", "name": "安凡尼+ 琅勃拉邦度假酒店 (Avani+ Luang Prabang)", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "12/18 - 12/21 · 共3晚核心度假", "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80", "address": "Setthathirath Road, Hua Xieng Village, Luang Prabang 06000, Laos", "lat": 19.8906, "lng": 102.1347, "mapsQuery": "Avani+ Luang Prabang Hotel, Setthathirath Road, Luang Prabang", "desc": "位于世界文化遗产琅勃拉邦古城核心，前身是法国殖民军官营房。百年古菩提树环绕着蔚蓝泳池，每间客房均有法式木制百叶窗、柚木阳台与独立办公书桌，出门即可漫步洋人街夜市与清晨布施路线。", "badges": ["📍 古城中心步行即达", "🌴 法式殖民庭院泳池", "📶 稳定高速无线", "🧘 宁静慢生活"], "amenities": {"wifi": "度假区全覆盖稳定无线网络，客房内信号强劲", "desk": "柚木工作台配阳台景观，冬日办公极为惬意", "power": "国际通用电源接口，办公充电便利", "quiet": "庭院深幽，避开主路游人嘈杂"}, "tips": "清晨 5:30 步行 2 分钟到主街即可观摩庄严的僧侣托钵布施仪式。"}, "hotel-bellerive": {"id": "hotel-bellerive", "type": "hotel", "typeLabel": "🏨 湄公河一线江景精品", "name": "美丽河精品酒店 (The Belle Rive Boutique Hotel)", "city": "🇱🇦 琅勃拉邦备选 (Luang Prabang)", "dateStay": "湄公河临江浪漫备选", "photo": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80", "address": "99 Baan Phoneheuang, Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8967, "lng": 102.1408, "mapsQuery": "The Belle Rive Boutique Hotel, Khem Khong, Luang Prabang", "desc": "坐落在湄公河畔的一线绝美江景精品酒店。推窗即可看到滔滔江水与缓缓驶过的小木船。客房以老挝传统木艺与法式乡村风格交融，自带河畔露台咖啡座，入住包含专属日落巡游船票。", "badges": ["🌊 湄公河一线江景", "☕ 专属露台慢咖啡", "🥐 精致法式早餐", "🌅 日落绝佳视角"], "amenities": {"wifi": "客房及江畔餐厅均覆盖高速 Wi-Fi", "desk": "露台临江木桌与室内写字台双选择", "power": "床头及书桌均备有便捷插座", "quiet": "伴随潺潺水声与自然鸟鸣，治愈系远程办公环境"}, "tips": "下午四点在露台点一杯老挝高山手冲咖啡，边看夕阳边写代码，体验无与伦比。"}, "hotel-jinglan": {"id": "hotel-jinglan", "type": "hotel", "typeLabel": "🏨 版纳地标傣泰宫廷", "name": "告庄西双景湄公河景兰大酒店", "city": "🇨🇳 西双版纳 (Xishuangbanna)", "dateStay": "12/21 - 12/23 · 共2晚", "photo": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80", "address": "云南省西双版纳傣族自治州景洪市告庄西双景孔雀大道1号", "lat": 22.0125, "lng": 100.8038, "mapsQuery": "告庄西双景湄公河景兰大酒店, 景洪市", "desc": "西双版纳城市名片级地标！坐落于告庄西双景核心，紧邻大金塔与澜沧江畔，楼下即是全亚洲规模最大的星光夜市。建筑融合傣泰皇家宫廷风情，顶层拥有高空水乐园，5G 千兆网络全覆盖，吃住行与办公一站式解决。", "badges": ["🚶 楼下即是星光夜市", "🏰 傣泰宫廷建筑", "📶 5G 千兆网络", "🏊 空中水上乐园"], "amenities": {"wifi": "5G 全覆盖 + 千兆客房专线网络，无缝支持远程办公与大吞吐数据", "desk": "豪华客房配备大理石/实木宽敞办公桌与舒适办公椅", "power": "国标五孔插座及多功能 USB 接口充裕", "quiet": "高楼层江景房视野开阔，远离夜市喧嚣，安静惬意"}, "tips": "推荐高楼层澜沧江景大床房，晚上办公完毕下楼步行即可畅享星光夜市傣味烧烤。"}, "hotel-manwu": {"id": "hotel-manwu", "type": "hotel", "typeLabel": "🏨 洱海一线生态海景客栈", "name": "大理慢屋·极目 / 喜度客栈 (洱海生态廊道店)", "city": "🇨🇳 云南大理 (Dali)", "dateStay": "12/23 - 12/26 · 共3晚终点慢生活", "photo": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理市银桥镇磻溪村 S弯生态廊道旁", "lat": 25.7682, "lng": 100.1651, "mapsQuery": "大理磻溪村S弯生态廊道", "desc": "全国数字游民梦想中的终极目的地！客栈直面洱海无遮挡一线海景与苍山十九峰。全屋智能家居联动、千兆独享光纤入户、超大落地全景海景书桌。下楼便是洱海生态廊道，冬日暖阳洒在桌面上，敲代码宛如身处画卷。", "badges": ["🌊 洱海一线直面海景", "⚡ 千兆独享光纤", "☀️ 苍山雪洱海月", "🚲 廊道骑行直达"], "amenities": {"wifi": "全屋千兆光纤独享网络，网速实测 500Mbps+，低延迟极稳", "desk": "定制落地窗景观长木桌，配备人体工学椅与 Marshall 音箱", "power": "桌面嵌入式隐藏电源排插，笔记本与拓展坞轻松取电", "quiet": "生态廊道机动车禁行区，唯有洱海微风与浪涛声，极致宁静专注"}, "tips": "客栈提供免费自行车，清晨或傍晚沿廊道骑行看日出日落，享受纯粹慢生活。"}, "hotel-sunyata": {"id": "hotel-sunyata", "type": "hotel", "typeLabel": "🏨 大理古城奢华静谧宿集", "name": "既下山·SUNYATA (大理古城店)", "city": "🇨🇳 云南大理备选 (Dali)", "dateStay": "大理古城深处禅意宿集", "photo": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理市大理古城叶榆路南段", "lat": 25.6983, "lng": 100.1602, "mapsQuery": "既下山 SUNYATA 大理古城", "desc": "国内顶级精品奢华宿集品牌，隐匿于大理古城繁华深处的三进庭院。著名建筑师设计，极简东方禅意与现代高品质舒适完美融合，内设静谧禅茶室、阳光书房与中庭水景，非常适合深度思考与沉浸式创作。", "badges": ["🏯 大理古城核心静巷", "🍵 专属禅意茶室办公", "📶 极速专线 Wi-Fi", "⭐ 高品质奢华宿集"], "amenities": {"wifi": "高速光纤全院覆盖，各区域信号满格", "desk": "实木禅风大茶台兼工作台，静心办公绝佳", "power": "隐藏式地插与墙插完备", "quiet": "古城内罕见的高私密幽静空间，出则繁华入则宁静"}, "tips": "步行可达人民路与床单厂文创园，既能随时会友逛展，又能保有专属宁静空间。"}, "cafe-dailyfix": {"id": "cafe-dailyfix", "type": "cafe", "typeLabel": "☕ 历史洋房天井咖啡", "name": "The Daily Fix Cafe", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "Day 2 (12/12) 推荐办公地", "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80", "address": "55, Jalan Hang Jebat, 75200 Melaka, Malaysia", "lat": 2.1958, "lng": 102.2472, "mapsQuery": "The Daily Fix Cafe, Jalan Hang Jebat, Melaka", "desc": "马六甲最负盛名的精品咖啡馆之一，巧妙隐藏在鸡场街一家老字号土产店的后进天井。红砖斑驳、绿植垂挂，室内强劲冷气与复古长木桌并存，招牌斑兰松饼（Pandan Pancake）与咸焦糖手冲咖啡堪称绝配。", "badges": ["📶 高速 Wi-Fi", "🔌 电源插座充沛", "❄️ 舒适冷气", "🌿 绿意庭院天井"], "amenities": {"wifi": "实测 60Mbps 稳定无线网络，网页及通讯畅快", "desk": "靠墙及后厅设有多张木质长桌，高度适宜打字", "power": "靠墙卡座下方多处配有电源插座", "quiet": "上午 9:00 - 11:30 最为清幽，午后游人增多但后区依然舒适"}, "tips": "建议早上 9:00 开门即到，选择内庭天井旁的自然光长桌，开启元气满满的办公日。"}, "cafe-calanthe": {"id": "cafe-calanthe", "type": "cafe", "typeLabel": "☕ 13州传统咖啡艺术馆", "name": "Calanthe Art Cafe (十三州咖啡)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "Day 3 (12/13) 推荐办公地", "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80", "address": "11, Jalan Hang Kasturi, 75200 Melaka, Malaysia", "lat": 2.1963, "lng": 102.2468, "mapsQuery": "Calanthe Art Cafe, Jalan Hang Kasturi, Melaka", "desc": "全马唯一一家集齐马来西亚全十三州不同特色风味咖啡的艺术老店。店内挂满当地艺术家的手绘与古董摆设，空间开阔通风，白天客流适中，浓郁的南洋老时光氛围非常激发创意。", "badges": ["📶 稳定网络", "☕ 13州特色风味咖啡", "🪑 宽敞艺术长桌", "📍 靠近鸡场街"], "amenities": {"wifi": "覆盖良好的免费无线网络", "desk": "多张宽阔大木桌，适合放笔记本电脑与书本文档", "power": "部分长桌靠近墙壁插座，入座时可咨询店员", "quiet": "店内播放轻柔背景爵士音乐，适合深度代码编写与写作"}, "tips": "推荐尝试马六甲本地白咖啡与砂拉越黑咖啡，搭配一份马来娘惹叻沙充当午餐。"}, "cafe-space": {"id": "cafe-space", "type": "cafe", "typeLabel": "☕ 极客工业风自习工作站", "name": "Space Tea & Coffee (Hat Yai)", "city": "🇹🇭 合艾 (Hat Yai)", "dateStay": "Day 4 (12/14) 跨境首站工作营地", "photo": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80", "address": "Near Hat Yai Junction Railway Station, Hat Yai, Songkhla 90110, Thailand", "lat": 7.0036, "lng": 100.4682, "mapsQuery": "Space Tea & Coffee, Hat Yai, Thailand", "desc": "极简工业极客风的高品质咖啡馆，距离合艾火车站步行仅需 3 分钟！特别为移动办公与数字游民设计，室内冷气强劲且安静，配有专属长条吧台、千兆 Wi-Fi 与每个座位独立的电源接口。", "badges": ["🚶 火车站步行3分", "⚡ 极速千兆网络", "🔌 每座独立插座", "🤫 极度安静"], "amenities": {"wifi": "泰国顶级电信商 AIS 千兆光纤，测速下行超 300Mbps", "desk": "标准人体工学办公长桌，配备舒适软垫座椅", "power": "桌面集成多孔电源插座及 USB 快速充电口", "quiet": "全天保持极佳自习室级安静度，工作专注度拉满"}, "tips": "大巴清晨入境泰国后可在此全天工作至 17:00，随后从容步行至火车站搭乘 32 次夕发朝至卧铺列车。"}, "cafe-alive": {"id": "cafe-alive", "type": "cafe", "typeLabel": "☕ 冠军精品手冲早午餐", "name": "Alive Specialty Coffee", "city": "🇹🇭 合艾 (Hat Yai)", "dateStay": "合艾精品手冲备选地", "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80", "address": "10/10 Soi 5 Supasarnrangsan Rd, Hat Yai, Songkhla 90110, Thailand", "lat": 7.0094, "lng": 100.4795, "mapsQuery": "Alive Specialty Coffee, Hat Yai, Thailand", "desc": "合艾本地顶尖水准的精品咖啡馆，挑高空间与全玻璃通透采光，店内烘焙单品咖啡豆种类丰富，提供世界级品质手冲。冷气舒适，早午餐丰盛，深受年轻远程工作者喜爱。", "badges": ["☕ 冠军级单品手冲", "📶 商务级 Wi-Fi", "🥪 丰盛早午餐", "❄️ 恒温冷气"], "amenities": {"wifi": "100Mbps 稳定无线覆盖", "desk": "高脚吧台与多张宽敞方桌", "power": "卡座区域配备电源插口", "quiet": "早晨时段最适宜集中办公，氛围积极活跃"}, "tips": "手冲埃塞俄比亚与 Dirty 是招牌，搭配自制松饼能提供整天的能量。"}, "cafe-commons": {"id": "cafe-commons", "type": "cafe", "typeLabel": "☕ 亚洲顶级开放文创社区", "name": "The Commons / Roast (Thong Lor)", "city": "🇹🇭 曼谷 (Bangkok)", "dateStay": "Day 5-6 (12/15-16) 曼谷会友办公地", "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80", "address": "335 Thong Lo 17 Alley, Klongton Nuea, Watthana, Bangkok 10110, Thailand", "lat": 13.7345, "lng": 100.5826, "mapsQuery": "theCOMMONS Thonglor, Bangkok", "desc": "亚洲闻名的开放式阶梯式社区文创地标！绿色植物与露天阶梯巧妙结合，顶层 Roast 咖啡餐厅提供极高水准的精品咖啡与全日早午餐。半开放阶梯与室内空调区域任君选择，是曼谷数字游民与创意社群的大本营。", "badges": ["🌟 亚洲顶尖文创地标", "📶 极速商用光纤", "🥑 国际精致早午餐", "🚇 近 BTS 通罗站"], "amenities": {"wifi": "高速光纤无限制免费接入，漫游整个 Commons 建筑群", "desk": "木质长桌、露台沙发与 Roast 宽绰餐桌随意切换", "power": "Roast 室内卡座及公共办公长桌均有充足电源插孔", "quiet": "室内安静舒适，户外台阶适合休闲交流与会友"}, "tips": "白天在此办公，傍晚正好与曼谷当地好友在楼下或通罗酒吧街共进晚餐。"}, "cafe-saffron": {"id": "cafe-saffron", "type": "cafe", "typeLabel": "☕ 湄公河旗舰冷气工作站", "name": "Saffron Coffee 湄公河旗舰店", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "Day 9 (12/19) 深度全天办公地", "photo": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80", "address": "Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8953, "lng": 102.1384, "mapsQuery": "Saffron Coffee, Khem Khong, Luang Prabang", "desc": "“临江露台 + 室内强冷气大厅”双区域豪华配置！作为老挝高山公平贸易咖啡的典范，店内精选北部高原阿拉比卡豆。室内长实木桌配备充足插座，户外露台可饱览湄公河水色与缓缓驶过的渡船。", "badges": ["🌊 直面湄公河壮阔江景", "❄️ 独立强冷气大厅", "🔌 长桌多孔插座", "☕ 老挝顶级公平贸易豆"], "amenities": {"wifi": "琅勃拉邦最稳定的商业无线网络之一，测速 50Mbps+", "desk": "室内长条厚实原木工作台，适合长时间笔记本作业", "power": "长桌下方配有多组多功能插座", "quiet": "室内冷气区工作氛围极好，多为外国远程工作者，安静互不打扰"}, "tips": "推荐点一杯老挝冰拿铁（Lao Iced Latte）与青柠派，上午在室内专注冲刺，下午移步户外露台看日落。"}, "cafe-viewan": {"id": "cafe-viewan", "type": "cafe", "typeLabel": "☕ 阳光玻璃屋法式烘焙", "name": "View An Cafe / The Belle Rive", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "Day 10 (12/20) 临江惬意办公地", "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80", "address": "Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8962, "lng": 102.1402, "mapsQuery": "View An Cafe, Luang Prabang", "desc": "紧靠湄公河边的精致阳光玻璃屋咖啡馆，配有宽敞的遮阳伞观景露台。由法国烘焙师指导的手工法式可颂酥脆芳香，咖啡醇厚，服务极其体贴，是琅勃拉邦公认最惬意的沿河工作点之一。", "badges": ["🥐 法式手工正宗烘焙", "📶 高速稳定 Wi-Fi", "🌅 绝美湄公河落日", "📍 沿河主街便利位置"], "amenities": {"wifi": "全店高速 Wi-Fi 覆盖，视频沟通流畅", "desk": "露台遮阳伞木桌及室内空调小桌", "power": "室内靠墙位置有便捷插座", "quiet": "波光粼粼的江面与轻柔微风，环境优雅惬意"}, "tips": "下午四点半阳光斜照时最为迷人，点上一壶老挝有机花草茶，边办公边欣赏金色湄公河。"}, "cafe-gaozhuang": {"id": "cafe-gaozhuang", "type": "cafe", "typeLabel": "☕ 傣式热带滨江小粒咖啡", "name": "告庄澜沧江畔傣风咖啡馆群", "city": "🇨🇳 西双版纳 (Xishuangbanna)", "dateStay": "Day 12 (12/22) 傣乡热带办公地", "photo": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=1200&q=80", "address": "云南省西双版纳景洪市告庄西双景滨江酒吧街及赶摆街", "lat": 22.0138, "lng": 100.8042, "mapsQuery": "告庄西双景, 景洪市", "desc": "告庄澜沧江沿江步道上的特色傣风竹楼咖啡馆群。融合傣泰吊脚竹编建筑美学与云南高山普洱小粒咖啡，白天江风吹拂，绿竹成荫，夜晚灯火辉煌，充满南亚热带异域情调。", "badges": ["🌴 傣泰热带竹楼美学", "📶 5G 极速千兆覆盖", "🚶 步行即达星光夜市", "☕ 甄选云南小粒咖啡"], "amenities": {"wifi": "中国移动/电信 5G 双千兆无缝覆盖，延迟低至 15ms", "desk": "实木大茶桌与竹编卡座，空间宽大舒适", "power": "桌面大多嵌入安全电源孔", "quiet": "白天江边极度安详静谧，适合深度工作，傍晚无缝衔接夜市"}, "tips": "推荐品尝特色的“冰滴云南小粒咖啡”与“手作鲜椰乳咖啡”，风味独特难忘。"}, "cafe-erhai": {"id": "cafe-erhai", "type": "cafe", "typeLabel": "☕ 洱海S弯一线海景圣殿", "name": "洱海生态廊道 S弯海景咖啡馆", "city": "🇨🇳 云南大理 (Dali)", "dateStay": "Day 14-15 (12/24-25) 苍山洱海慢生活", "photo": "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理白族自治州大理市银桥镇磻溪村 S弯生态廊道", "lat": 25.7675, "lng": 100.1658, "mapsQuery": "大理磻溪村S弯生态廊道", "desc": "全中国数字游民与自由职业者的终极圣殿！纯白简约现代建筑坐落于洱海生态廊道最经典的 S 弯转角，超大通透全景落地玻璃直面碧蓝无垠的洱海，远处苍山雪峰巍峨挺立。冬日阳光温暖洒下，品着云南特产玫瑰拿铁，敲击键盘成为极致的享受。", "badges": ["🌊 洱海一线无敌海景", "📶 千兆光纤入户", "☀️ 冬日暖阳绝景", "🚲 廊道骑行直达"], "amenities": {"wifi": "千兆光纤网络专线，网速飞快，无论写代码还是音视频协同均行云流水", "desk": "直面海景的无遮挡全景木质长吧台，配有插座与舒服坐垫", "power": "吧台下每隔 1 米均设有独立五孔电源插座", "quiet": "机动车完全禁行，耳畔唯有清脆海鸥鸣叫与舒缓海浪声"}, "tips": "冬天的洱海有成群的西伯利亚红嘴鸥飞过，下午阳光最为通透，是整个行程最治愈的办公高光时刻！"}};
+    const VENUES_DB = {"hotel-liumen": {"id": "hotel-liumen", "type": "hotel", "typeLabel": "🏨 精选设计酒店", "name": "六门精品酒店 (Liu Men Melaka)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "12/11 - 12/13 · 共2晚", "photo": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80", "address": "48-56, Jalan Tokong, 75200 Melaka, Malaysia", "lat": 2.1978, "lng": 102.2475, "mapsQuery": "Liu Men Melaka, Jalan Tokong, Melaka", "desc": "位于马六甲鸡场街核心区，由数座 1930 年代海峡华人娘惹老洋房改造而成的奢华精品酒店。挑高天井、采光极佳，客房配备专属静谧办公写字台与极速光纤 Wi-Fi，步行 3 分钟即可融入鸡场街周末夜市。", "badges": ["📍 鸡场街步行3分", "📶 高速光纤 Wi-Fi", "🪑 舒适办公书桌", "🏛️ 娘惹奢华风范"], "amenities": {"wifi": "实测 150Mbps+ 稳定光纤专线，客房及天井全覆盖", "desk": "独立宽大实木书桌配护眼台灯及舒适扶手椅", "power": "桌面及床头均有通用国际多功能电源插孔", "quiet": "位于古城次街，闹中取静，隔音极佳适合语音会议"}, "tips": "建议预订内庭套房，白天办公光线柔和，周五周六晚出门步行即可尝遍娘惹美食。", "priceRange": "约 ¥650 - ¥950 / 晚", "currencyNote": "约 420 - 620 MYR", "priceDetail": "娘惹海峡老宅精品房 · 含特色南洋早餐"}, "hotel-majestic": {"id": "hotel-majestic", "type": "hotel", "typeLabel": "🏨 传奇五星备选", "name": "马六甲大华酒店 (The Majestic Malacca)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "马六甲河畔豪华备选", "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80", "address": "188, Jalan Bunga Raya, 75100 Melaka, Malaysia", "lat": 2.203, "lng": 102.2514, "mapsQuery": "The Majestic Malacca, Jalan Bunga Raya, Melaka", "desc": "杨忠礼集团（YTL）旗下的英殖民传奇老牌豪华五星，依偎在马六甲河畔。客房配备柚木地板、复古写字台与贵妃榻，英式管家服务周到，私密性极高。", "badges": ["🌊 临马六甲河", "🏊 户外热带泳池", "⚡ 商务办公设施齐备", "⭐ 奢华五星"], "amenities": {"wifi": "全馆高速无线 Wi-Fi，漫游无缝切换", "desk": "古典实木办公桌，空间宽绰", "power": "英标及多国转换插座，前台可随叫随借", "quiet": "五星级安静隔音，临河阳台适合午休放空"}, "tips": "河景房可俯瞰马六甲河游船驶过，酒店内的 Spa Village 极具南洋特色。", "priceRange": "约 ¥800 - ¥1,200 / 晚", "currencyNote": "约 520 - 780 MYR", "priceDetail": "豪华河景大床房 · YTL 英式管家服务"}, "hotel-sindhorn": {"id": "hotel-sindhorn", "type": "hotel", "typeLabel": "🏨 奢华生活方式酒店", "name": "辛通中城酒店 (Sindhorn Midtown Bangkok)", "city": "🇹🇭 曼谷 (Bangkok)", "dateStay": "12/15 - 12/16 · 1晚会友高光", "photo": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80", "address": "68 Lang Suan Rd, Lumphini, Pathum Wan, Bangkok 10330, Thailand", "lat": 13.7372, "lng": 100.5434, "mapsQuery": "Sindhorn Midtown Hotel Bangkok, Lang Suan, Bangkok", "desc": "洲际酒店集团（IHG）旗下的 Vignette Collection 奢华生活方式酒店，位于曼谷最尊贵的 Langsuan 使馆街区。客房全景落地窗视野开阔，极速 300M 商务网，18楼无边际天际线泳池直眺曼谷金融区。", "badges": ["🚇 靠近 BTS Chit Lom", "🏊 高空天际线泳池", "📶 300M商务高速网", "🏙️ 使馆区黄金地段"], "amenities": {"wifi": "300Mbps 极速商用光纤，视频会议与大文件上传毫无卡顿", "desk": "现代人体工学工作台与高品质办公椅，采光充足", "power": "床头、书桌配备充足 Type-C 及 USB 快充接口", "quiet": "双层中空隔音玻璃，完全隔绝曼谷城市车流噪音"}, "tips": "步行 5 分钟即达 BTS Chit Lom 站，附近网红绿洲咖啡馆与会友餐厅云集。", "priceRange": "约 ¥1,000 - ¥1,500 / 晚", "currencyNote": "约 5,000 - 7,500 THB", "priceDetail": "使馆区高级城市景观房 · 含天际线无边泳池"}, "hotel-crowne": {"id": "hotel-crowne", "type": "hotel", "typeLabel": "🏨 国际商务五星首选", "name": "万象皇冠假日酒店 (Crowne Plaza Vientiane)", "city": "🇱🇦 老挝万象 (Vientiane)", "dateStay": "12/17 - 12/18 · 1晚中转休整", "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80", "address": "20 Samsenthai Road, Sikhottabong District, Vientiane, Laos", "lat": 17.9664, "lng": 102.5976, "mapsQuery": "Crowne Plaza Vientiane, Samsenthai Road, Vientiane", "desc": "老挝首都万象首屈一指的国际五星级商务酒店。在老挝当地网络波动普遍的环境下，皇冠假日提供极为稳定的独立专线光纤 Wi-Fi，并配有设施完善的行政酒廊与商务中心，是跨境远程办公的最稳妥选择。", "badges": ["⭐ 国际五星标准", "⚡ 万象最稳独立专线网", "💼 专属行政办公区", "🚗 距凯旋门10分钟"], "amenities": {"wifi": "国际专线高速 Wi-Fi，直连各类海外及国内远程协作系统", "desk": "行政客房带独立商务大书桌，配备护眼照明", "power": "桌面具备多组国际万用插孔与网络接口", "quiet": "五星级高品质隔音，会议通话无噪音干扰"}, "tips": "傍晚可前往酒店顶楼酒吧或步行至湄公河夜市，感受万象落日余晖。", "priceRange": "约 ¥850 - ¥1,250 / 晚", "currencyNote": "约 120 - 180 USD", "priceDetail": "国际五星豪华客房 · 最稳专线网络与行政设施"}, "hotel-avani": {"id": "hotel-avani", "type": "hotel", "typeLabel": "🏨 法式殖民庭院度假", "name": "安凡尼+ 琅勃拉邦度假酒店 (Avani+ Luang Prabang)", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "12/18 - 12/21 · 共3晚核心度假", "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80", "address": "Setthathirath Road, Hua Xieng Village, Luang Prabang 06000, Laos", "lat": 19.8906, "lng": 102.1347, "mapsQuery": "Avani+ Luang Prabang Hotel, Setthathirath Road, Luang Prabang", "desc": "位于世界文化遗产琅勃拉邦古城核心，前身是法国殖民军官营房。百年古菩提树环绕着蔚蓝泳池，每间客房均有法式木制百叶窗、柚木阳台与独立办公书桌，出门即可漫步洋人街夜市与清晨布施路线。", "badges": ["📍 古城中心步行即达", "🌴 法式殖民庭院泳池", "📶 稳定高速无线", "🧘 宁静慢生活"], "amenities": {"wifi": "度假区全覆盖稳定无线网络，客房内信号强劲", "desk": "柚木工作台配阳台景观，冬日办公极为惬意", "power": "国际通用电源接口，办公充电便利", "quiet": "庭院深幽，避开主路游人嘈杂"}, "tips": "清晨 5:30 步行 2 分钟到主街即可观摩庄严的僧侣托钵布施仪式。", "priceRange": "约 ¥1,600 - ¥2,400 / 晚", "currencyNote": "约 230 - 340 USD", "priceDetail": "古城中心法式柚木庭院房 · 含精致法式双人早餐"}, "hotel-bellerive": {"id": "hotel-bellerive", "type": "hotel", "typeLabel": "🏨 湄公河一线江景精品", "name": "美丽河精品酒店 (The Belle Rive Boutique Hotel)", "city": "🇱🇦 琅勃拉邦备选 (Luang Prabang)", "dateStay": "湄公河临江浪漫备选", "photo": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80", "address": "99 Baan Phoneheuang, Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8967, "lng": 102.1408, "mapsQuery": "The Belle Rive Boutique Hotel, Khem Khong, Luang Prabang", "desc": "坐落在湄公河畔的一线绝美江景精品酒店。推窗即可看到滔滔江水与缓缓驶过的小木船。客房以老挝传统木艺与法式乡村风格交融，自带河畔露台咖啡座，入住包含专属日落巡游船票。", "badges": ["🌊 湄公河一线江景", "☕ 专属露台慢咖啡", "🥐 精致法式早餐", "🌅 日落绝佳视角"], "amenities": {"wifi": "客房及江畔餐厅均覆盖高速 Wi-Fi", "desk": "露台临江木桌与室内写字台双选择", "power": "床头及书桌均备有便捷插座", "quiet": "伴随潺潺水声与自然鸟鸣，治愈系远程办公环境"}, "tips": "下午四点在露台点一杯老挝高山手冲咖啡，边看夕阳边写代码，体验无与伦比。", "priceRange": "约 ¥900 - ¥1,400 / 晚", "currencyNote": "约 130 - 200 USD", "priceDetail": "湄公河一线江景房 · 赠日落巡游船票及早餐"}, "hotel-jinglan": {"id": "hotel-jinglan", "type": "hotel", "typeLabel": "🏨 版纳地标傣泰宫廷", "name": "告庄西双景湄公河景兰大酒店", "city": "🇨🇳 西双版纳 (Xishuangbanna)", "dateStay": "12/21 - 12/23 · 共2晚", "photo": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80", "address": "云南省西双版纳傣族自治州景洪市告庄西双景孔雀大道1号", "lat": 22.0125, "lng": 100.8038, "mapsQuery": "告庄西双景湄公河景兰大酒店, 景洪市", "desc": "西双版纳城市名片级地标！坐落于告庄西双景核心，紧邻大金塔与澜沧江畔，楼下即是全亚洲规模最大的星光夜市。建筑融合傣泰皇家宫廷风情，顶层拥有高空水乐园，5G 千兆网络全覆盖，吃住行与办公一站式解决。", "badges": ["🚶 楼下即是星光夜市", "🏰 傣泰宫廷建筑", "📶 5G 千兆网络", "🏊 空中水上乐园"], "amenities": {"wifi": "5G 全覆盖 + 千兆客房专线网络，无缝支持远程办公与大吞吐数据", "desk": "豪华客房配备大理石/实木宽敞办公桌与舒适办公椅", "power": "国标五孔插座及多功能 USB 接口充裕", "quiet": "高楼层江景房视野开阔，远离夜市喧嚣，安静惬意"}, "tips": "推荐高楼层澜沧江景大床房，晚上办公完毕下楼步行即可畅享星光夜市傣味烧烤。", "priceRange": "约 ¥550 - ¥900 / 晚", "currencyNote": "旺季约 ¥750 - ¥1,100", "priceDetail": "大金塔/江景豪华房 · 赠空中水上乐园门票"}, "hotel-manwu": {"id": "hotel-manwu", "type": "hotel", "typeLabel": "🏨 洱海一线生态海景客栈", "name": "大理慢屋·极目 / 喜度客栈 (洱海生态廊道店)", "city": "🇨🇳 云南大理 (Dali)", "dateStay": "12/23 - 12/26 · 共3晚终点慢生活", "photo": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理市银桥镇磻溪村 S弯生态廊道旁", "lat": 25.7682, "lng": 100.1651, "mapsQuery": "大理磻溪村S弯生态廊道", "desc": "全国数字游民梦想中的终极目的地！客栈直面洱海无遮挡一线海景与苍山十九峰。全屋智能家居联动、千兆独享光纤入户、超大落地全景海景书桌。下楼便是洱海生态廊道，冬日暖阳洒在桌面上，敲代码宛如身处画卷。", "badges": ["🌊 洱海一线直面海景", "⚡ 千兆独享光纤", "☀️ 苍山雪洱海月", "🚲 廊道骑行直达"], "amenities": {"wifi": "全屋千兆光纤独享网络，网速实测 500Mbps+，低延迟极稳", "desk": "定制落地窗景观长木桌，配备人体工学椅与 Marshall 音箱", "power": "桌面嵌入式隐藏电源排插，笔记本与拓展坞轻松取电", "quiet": "生态廊道机动车禁行区，唯有洱海微风与浪涛声，极致宁静专注"}, "tips": "客栈提供免费自行车，清晨或傍晚沿廊道骑行看日出日落，享受纯粹慢生活。", "priceRange": "约 ¥700 - ¥1,300 / 晚", "currencyNote": "一线全海景约 ¥950 - ¥1,400", "priceDetail": "洱海一线落地窗海景房 · 独立千兆光纤与现磨咖啡"}, "hotel-sunyata": {"id": "hotel-sunyata", "type": "hotel", "typeLabel": "🏨 大理古城奢华静谧宿集", "name": "既下山·SUNYATA (大理古城店)", "city": "🇨🇳 云南大理备选 (Dali)", "dateStay": "大理古城深处禅意宿集", "photo": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理市大理古城叶榆路南段", "lat": 25.6983, "lng": 100.1602, "mapsQuery": "既下山 SUNYATA 大理古城", "desc": "国内顶级精品奢华宿集品牌，隐匿于大理古城繁华深处的三进庭院。著名建筑师设计，极简东方禅意与现代高品质舒适完美融合，内设静谧禅茶室、阳光书房与中庭水景，非常适合深度思考与沉浸式创作。", "badges": ["🏯 大理古城核心静巷", "🍵 专属禅意茶室办公", "📶 极速专线 Wi-Fi", "⭐ 高品质奢华宿集"], "amenities": {"wifi": "高速光纤全院覆盖，各区域信号满格", "desk": "实木禅风大茶台兼工作台，静心办公绝佳", "power": "隐藏式地插与墙插完备", "quiet": "古城内罕见的高私密幽静空间，出则繁华入则宁静"}, "tips": "步行可达人民路与床单厂文创园，既能随时会友逛展，又能保有专属宁静空间。", "priceRange": "约 ¥1,200 - ¥1,900 / 晚", "currencyNote": "大理古城核心静院", "priceDetail": "东方禅意奢华院落套房 · 专属茶室茶饮与定制早餐"}, "cafe-dailyfix": {"id": "cafe-dailyfix", "type": "cafe", "typeLabel": "☕ 历史洋房天井咖啡", "name": "The Daily Fix Cafe", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "Day 2 (12/12) 推荐办公地", "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80", "address": "55, Jalan Hang Jebat, 75200 Melaka, Malaysia", "lat": 2.1958, "lng": 102.2472, "mapsQuery": "The Daily Fix Cafe, Jalan Hang Jebat, Melaka", "desc": "马六甲最负盛名的精品咖啡馆之一，巧妙隐藏在鸡场街一家老字号土产店的后进天井。红砖斑驳、绿植垂挂，室内强劲冷气与复古长木桌并存，招牌斑兰松饼（Pandan Pancake）与咸焦糖手冲咖啡堪称绝配。", "badges": ["📶 高速 Wi-Fi", "🔌 电源插座充沛", "❄️ 舒适冷气", "🌿 绿意庭院天井"], "amenities": {"wifi": "实测 60Mbps 稳定无线网络，网页及通讯畅快", "desk": "靠墙及后厅设有多张木质长桌，高度适宜打字", "power": "靠墙卡座下方多处配有电源插座", "quiet": "上午 9:00 - 11:30 最为清幽，午后游人增多但后区依然舒适"}, "tips": "建议早上 9:00 开门即到，选择内庭天井旁的自然光长桌，开启元气满满的办公日。"}, "cafe-calanthe": {"id": "cafe-calanthe", "type": "cafe", "typeLabel": "☕ 13州传统咖啡艺术馆", "name": "Calanthe Art Cafe (十三州咖啡)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "Day 3 (12/13) 推荐办公地", "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80", "address": "11, Jalan Hang Kasturi, 75200 Melaka, Malaysia", "lat": 2.1963, "lng": 102.2468, "mapsQuery": "Calanthe Art Cafe, Jalan Hang Kasturi, Melaka", "desc": "全马唯一一家集齐马来西亚全十三州不同特色风味咖啡的艺术老店。店内挂满当地艺术家的手绘与古董摆设，空间开阔通风，白天客流适中，浓郁的南洋老时光氛围非常激发创意。", "badges": ["📶 稳定网络", "☕ 13州特色风味咖啡", "🪑 宽敞艺术长桌", "📍 靠近鸡场街"], "amenities": {"wifi": "覆盖良好的免费无线网络", "desk": "多张宽阔大木桌，适合放笔记本电脑与书本文档", "power": "部分长桌靠近墙壁插座，入座时可咨询店员", "quiet": "店内播放轻柔背景爵士音乐，适合深度代码编写与写作"}, "tips": "推荐尝试马六甲本地白咖啡与砂拉越黑咖啡，搭配一份马来娘惹叻沙充当午餐。"}, "cafe-space": {"id": "cafe-space", "type": "cafe", "typeLabel": "☕ 极客工业风自习工作站", "name": "Space Tea & Coffee (Hat Yai)", "city": "🇹🇭 合艾 (Hat Yai)", "dateStay": "Day 4 (12/14) 跨境首站工作营地", "photo": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80", "address": "Near Hat Yai Junction Railway Station, Hat Yai, Songkhla 90110, Thailand", "lat": 7.0036, "lng": 100.4682, "mapsQuery": "Space Tea & Coffee, Hat Yai, Thailand", "desc": "极简工业极客风的高品质咖啡馆，距离合艾火车站步行仅需 3 分钟！特别为移动办公与数字游民设计，室内冷气强劲且安静，配有专属长条吧台、千兆 Wi-Fi 与每个座位独立的电源接口。", "badges": ["🚶 火车站步行3分", "⚡ 极速千兆网络", "🔌 每座独立插座", "🤫 极度安静"], "amenities": {"wifi": "泰国顶级电信商 AIS 千兆光纤，测速下行超 300Mbps", "desk": "标准人体工学办公长桌，配备舒适软垫座椅", "power": "桌面集成多孔电源插座及 USB 快速充电口", "quiet": "全天保持极佳自习室级安静度，工作专注度拉满"}, "tips": "大巴清晨入境泰国后可在此全天工作至 17:00，随后从容步行至火车站搭乘 32 次夕发朝至卧铺列车。"}, "cafe-alive": {"id": "cafe-alive", "type": "cafe", "typeLabel": "☕ 冠军精品手冲早午餐", "name": "Alive Specialty Coffee", "city": "🇹🇭 合艾 (Hat Yai)", "dateStay": "合艾精品手冲备选地", "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80", "address": "10/10 Soi 5 Supasarnrangsan Rd, Hat Yai, Songkhla 90110, Thailand", "lat": 7.0094, "lng": 100.4795, "mapsQuery": "Alive Specialty Coffee, Hat Yai, Thailand", "desc": "合艾本地顶尖水准的精品咖啡馆，挑高空间与全玻璃通透采光，店内烘焙单品咖啡豆种类丰富，提供世界级品质手冲。冷气舒适，早午餐丰盛，深受年轻远程工作者喜爱。", "badges": ["☕ 冠军级单品手冲", "📶 商务级 Wi-Fi", "🥪 丰盛早午餐", "❄️ 恒温冷气"], "amenities": {"wifi": "100Mbps 稳定无线覆盖", "desk": "高脚吧台与多张宽敞方桌", "power": "卡座区域配备电源插口", "quiet": "早晨时段最适宜集中办公，氛围积极活跃"}, "tips": "手冲埃塞俄比亚与 Dirty 是招牌，搭配自制松饼能提供整天的能量。"}, "cafe-commons": {"id": "cafe-commons", "type": "cafe", "typeLabel": "☕ 亚洲顶级开放文创社区", "name": "The Commons / Roast (Thong Lor)", "city": "🇹🇭 曼谷 (Bangkok)", "dateStay": "Day 5-6 (12/15-16) 曼谷会友办公地", "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80", "address": "335 Thong Lo 17 Alley, Klongton Nuea, Watthana, Bangkok 10110, Thailand", "lat": 13.7345, "lng": 100.5826, "mapsQuery": "theCOMMONS Thonglor, Bangkok", "desc": "亚洲闻名的开放式阶梯式社区文创地标！绿色植物与露天阶梯巧妙结合，顶层 Roast 咖啡餐厅提供极高水准的精品咖啡与全日早午餐。半开放阶梯与室内空调区域任君选择，是曼谷数字游民与创意社群的大本营。", "badges": ["🌟 亚洲顶尖文创地标", "📶 极速商用光纤", "🥑 国际精致早午餐", "🚇 近 BTS 通罗站"], "amenities": {"wifi": "高速光纤无限制免费接入，漫游整个 Commons 建筑群", "desk": "木质长桌、露台沙发与 Roast 宽绰餐桌随意切换", "power": "Roast 室内卡座及公共办公长桌均有充足电源插孔", "quiet": "室内安静舒适，户外台阶适合休闲交流与会友"}, "tips": "白天在此办公，傍晚正好与曼谷当地好友在楼下或通罗酒吧街共进晚餐。"}, "cafe-saffron": {"id": "cafe-saffron", "type": "cafe", "typeLabel": "☕ 湄公河旗舰冷气工作站", "name": "Saffron Coffee 湄公河旗舰店", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "Day 9 (12/19) 深度全天办公地", "photo": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80", "address": "Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8953, "lng": 102.1384, "mapsQuery": "Saffron Coffee, Khem Khong, Luang Prabang", "desc": "“临江露台 + 室内强冷气大厅”双区域豪华配置！作为老挝高山公平贸易咖啡的典范，店内精选北部高原阿拉比卡豆。室内长实木桌配备充足插座，户外露台可饱览湄公河水色与缓缓驶过的渡船。", "badges": ["🌊 直面湄公河壮阔江景", "❄️ 独立强冷气大厅", "🔌 长桌多孔插座", "☕ 老挝顶级公平贸易豆"], "amenities": {"wifi": "琅勃拉邦最稳定的商业无线网络之一，测速 50Mbps+", "desk": "室内长条厚实原木工作台，适合长时间笔记本作业", "power": "长桌下方配有多组多功能插座", "quiet": "室内冷气区工作氛围极好，多为外国远程工作者，安静互不打扰"}, "tips": "推荐点一杯老挝冰拿铁（Lao Iced Latte）与青柠派，上午在室内专注冲刺，下午移步户外露台看日落。"}, "cafe-viewan": {"id": "cafe-viewan", "type": "cafe", "typeLabel": "☕ 阳光玻璃屋法式烘焙", "name": "View An Cafe / The Belle Rive", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "Day 10 (12/20) 临江惬意办公地", "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80", "address": "Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8962, "lng": 102.1402, "mapsQuery": "View An Cafe, Luang Prabang", "desc": "紧靠湄公河边的精致阳光玻璃屋咖啡馆，配有宽敞的遮阳伞观景露台。由法国烘焙师指导的手工法式可颂酥脆芳香，咖啡醇厚，服务极其体贴，是琅勃拉邦公认最惬意的沿河工作点之一。", "badges": ["🥐 法式手工正宗烘焙", "📶 高速稳定 Wi-Fi", "🌅 绝美湄公河落日", "📍 沿河主街便利位置"], "amenities": {"wifi": "全店高速 Wi-Fi 覆盖，视频沟通流畅", "desk": "露台遮阳伞木桌及室内空调小桌", "power": "室内靠墙位置有便捷插座", "quiet": "波光粼粼的江面与轻柔微风，环境优雅惬意"}, "tips": "下午四点半阳光斜照时最为迷人，点上一壶老挝有机花草茶，边办公边欣赏金色湄公河。"}, "cafe-gaozhuang": {"id": "cafe-gaozhuang", "type": "cafe", "typeLabel": "☕ 傣式热带滨江小粒咖啡", "name": "告庄澜沧江畔傣风咖啡馆群", "city": "🇨🇳 西双版纳 (Xishuangbanna)", "dateStay": "Day 12 (12/22) 傣乡热带办公地", "photo": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=1200&q=80", "address": "云南省西双版纳景洪市告庄西双景滨江酒吧街及赶摆街", "lat": 22.0138, "lng": 100.8042, "mapsQuery": "告庄西双景, 景洪市", "desc": "告庄澜沧江沿江步道上的特色傣风竹楼咖啡馆群。融合傣泰吊脚竹编建筑美学与云南高山普洱小粒咖啡，白天江风吹拂，绿竹成荫，夜晚灯火辉煌，充满南亚热带异域情调。", "badges": ["🌴 傣泰热带竹楼美学", "📶 5G 极速千兆覆盖", "🚶 步行即达星光夜市", "☕ 甄选云南小粒咖啡"], "amenities": {"wifi": "中国移动/电信 5G 双千兆无缝覆盖，延迟低至 15ms", "desk": "实木大茶桌与竹编卡座，空间宽大舒适", "power": "桌面大多嵌入安全电源孔", "quiet": "白天江边极度安详静谧，适合深度工作，傍晚无缝衔接夜市"}, "tips": "推荐品尝特色的“冰滴云南小粒咖啡”与“手作鲜椰乳咖啡”，风味独特难忘。"}, "cafe-erhai": {"id": "cafe-erhai", "type": "cafe", "typeLabel": "☕ 洱海S弯一线海景圣殿", "name": "洱海生态廊道 S弯海景咖啡馆", "city": "🇨🇳 云南大理 (Dali)", "dateStay": "Day 14-15 (12/24-25) 苍山洱海慢生活", "photo": "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理白族自治州大理市银桥镇磻溪村 S弯生态廊道", "lat": 25.7675, "lng": 100.1658, "mapsQuery": "大理磻溪村S弯生态廊道", "desc": "全中国数字游民与自由职业者的终极圣殿！纯白简约现代建筑坐落于洱海生态廊道最经典的 S 弯转角，超大通透全景落地玻璃直面碧蓝无垠的洱海，远处苍山雪峰巍峨挺立。冬日阳光温暖洒下，品着云南特产玫瑰拿铁，敲击键盘成为极致的享受。", "badges": ["🌊 洱海一线无敌海景", "📶 千兆光纤入户", "☀️ 冬日暖阳绝景", "🚲 廊道骑行直达"], "amenities": {"wifi": "千兆光纤网络专线，网速飞快，无论写代码还是音视频协同均行云流水", "desk": "直面海景的无遮挡全景木质长吧台，配有插座与舒服坐垫", "power": "吧台下每隔 1 米均设有独立五孔电源插座", "quiet": "机动车完全禁行，耳畔唯有清脆海鸥鸣叫与舒缓海浪声"}, "tips": "冬天的洱海有成群的西伯利亚红嘴鸥飞过，下午阳光最为通透，是整个行程最治愈的办公高光时刻！"}};
     let leafletMapInstance = null;
     let leafletMarkerInstance = null;
     let currentAddressToCopy = '';
@@ -1877,6 +1960,17 @@
 
       // Desc
       document.getElementById('modal-desc').textContent = venue.desc;
+
+      // Price
+      const priceContainer = document.getElementById('modal-price-container');
+      if (venue.priceRange) {
+        priceContainer.style.display = 'flex';
+        document.getElementById('modal-price-val').textContent = venue.priceRange + ' (' + (venue.currencyNote || '') + ')';
+        document.getElementById('modal-price-detail').textContent = venue.priceDetail || '标准双人入住房型参考';
+      } else {
+        priceContainer.style.display = 'none';
+      }
+
 
       // Amenities
       document.getElementById('amenity-wifi').textContent = venue.amenities.wifi;
