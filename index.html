@@ -402,6 +402,334 @@
       flex-grow: 1;
     }
 
+    
+    /* Interactive Card Thumbnails & Hover */
+    .hotel-card, .cafe-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 0;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .hotel-card {
+      border-top: 4px solid var(--hotel);
+    }
+    .cafe-card {
+      border-top: 4px solid var(--accent);
+    }
+    .hotel-card:hover, .cafe-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.15);
+      border-color: #cbd5e1;
+    }
+    .card-thumb {
+      height: 175px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .card-thumb-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.82);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      backdrop-filter: blur(4px);
+    }
+    .card-thumb-hint {
+      position: absolute;
+      bottom: 10px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--primary-dark);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .card-content-wrap {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .card-open-hint {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hotel-card:hover .card-open-hint { color: var(--hotel); }
+    .cafe-card:hover .card-open-hint { color: #d97706; }
+
+    /* Modal Overlay & Dialog */
+    .venue-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .venue-modal-overlay.active {
+      display: flex;
+      opacity: 1;
+    }
+    .venue-modal {
+      background: var(--card-bg);
+      border-radius: 22px;
+      max-width: 760px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35);
+      position: relative;
+      border: 1px solid var(--border);
+      transform: translateY(20px) scale(0.97);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .venue-modal-overlay.active .venue-modal {
+      transform: translateY(0) scale(1);
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.75);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 30;
+      backdrop-filter: blur(4px);
+      transition: all 0.2s;
+    }
+    .modal-close-btn:hover {
+      background: rgba(15, 23, 42, 0.95);
+      transform: scale(1.1);
+    }
+    .modal-hero {
+      height: 260px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 26px;
+      color: white;
+      border-radius: 22px 22px 0 0;
+    }
+    .modal-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.45) 60%, rgba(15, 23, 42, 0.15) 100%);
+      border-radius: 22px 22px 0 0;
+    }
+    .modal-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .modal-city-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(6px);
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .modal-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 4px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    .modal-stay-time {
+      font-size: 0.88rem;
+      color: #93c5fd;
+      font-weight: 600;
+    }
+    .modal-body {
+      padding: 24px;
+    }
+    .modal-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .modal-badge-pill {
+      font-size: 0.82rem;
+      padding: 5px 12px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 600;
+    }
+    .modal-desc-box {
+      font-size: 0.94rem;
+      color: #334155;
+      line-height: 1.65;
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .modal-section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .amenity-card {
+      background: #ffffff;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .amenity-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .amenity-val {
+      font-size: 0.88rem;
+      color: #1e293b;
+      line-height: 1.45;
+    }
+    .map-box {
+      background: #f8fafc;
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .address-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+      gap: 14px;
+    }
+    .address-text {
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .btn-copy-addr {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .btn-copy-addr:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+    #modal-map-view {
+      height: 230px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .btn-gmaps {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 13px 20px;
+      background: #1a73e8;
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(26,115,232,0.3);
+      transition: all 0.2s ease;
+    }
+    .btn-gmaps:hover {
+      background: #1557b0;
+      box-shadow: 0 6px 16px rgba(26,115,232,0.4);
+      transform: translateY(-1px);
+    }
+    .tips-box {
+      background: #fffbeb;
+      border: 1px solid #fef3c7;
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      color: #92400e;
+      line-height: 1.5;
+    }
+
     footer {
       text-align: center;
       margin-top: 50px;
@@ -409,6 +737,9 @@
       color: var(--text-muted);
     }
   </style>
+  <!-- Leaflet Interactive Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
 
@@ -877,132 +1208,209 @@
 
     </div>
 
-    <!-- TAB 2: 精选住宿酒店推荐 -->
+        <!-- TAB 2: 精选住宿酒店推荐 -->
     <div id="tab-hotels" class="tab-panel">
+      <div style="background:var(--hotel-light); border:1px solid #ddd6fe; border-radius:12px; padding:12px 18px; margin-bottom:20px; font-size:0.9rem; color:#5b21b6; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+        <span>💡 <strong>交互提示</strong>：点击任意酒店卡片，即可弹窗查看<strong>高清实景照片、详细办公网络参数、精确地址</strong>及<strong>一键直达 Google Maps 导航</strong>！</span>
+        <span style="font-weight:700;">共收录 9 处精选品质住宿 🏨</span>
+      </div>
       <div class="cafe-grid">
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 12/11-12/13 (2晚)</div>
-            <div class="hotel-name">六门精品酒店 (Liu Men Melaka)</div>
-            <div class="hotel-desc">位于鸡场街核心区，由数座 1930 年代海峡华人老宅改造而成的奢华精品酒店。闹中取静，拥有精致挑高天井与极佳的静谧书桌办公空间，步行 3 分钟即达鸡场街夜市。</div>
+        <div class="hotel-card" onclick="openVenueModal('hotel-liumen')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏨 精选设计酒店</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">📍 鸡场街步行3分</span>
-            <span class="cafe-badge">📶 高速光纤 Wi-Fi</span>
-            <span class="cafe-badge">🪑 舒适办公书桌</span>
-            <span class="cafe-badge">🏛️ 娘惹奢华风范</span>
-          </div>
-        </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-city">🇲🇾 马六甲备选 (Melaka)</div>
-            <div class="hotel-name">马六甲大华酒店 (The Majestic Malacca)</div>
-            <div class="hotel-desc">杨忠礼集团（YTL）旗下的英殖民传奇老牌豪华五星，紧邻马六甲河。客房配备实木宽大写字台与复古贵妃椅，服务与私密性堪称全马六甲天花板。</div>
-          </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🌊 临马六甲河</span>
-            <span class="cafe-badge">🏊 户外热带泳池</span>
-            <span class="cafe-badge">⚡ 商务办公设施齐备</span>
-            <span class="cafe-badge">⭐ 奢华五星</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 12/11 - 12/13 · 共2晚</div>
+              <div class="hotel-name">六门精品酒店 (Liu Men Melaka)</div>
+              <div class="hotel-desc">位于马六甲鸡场街核心区，由数座 1930 年代海峡华人娘惹老洋房改造而成的奢华精品酒店。挑高天井、采光极佳，客房配备专属静谧办公写字台与极速光纤 Wi-Fi，步行 3 分钟即可融入鸡场街周末夜市。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">📍 鸡场街步行3分</span><span class="cafe-badge">📶 高速光纤 Wi-Fi</span><span class="cafe-badge">🪑 舒适办公书桌</span><span class="cafe-badge">🏛️ 娘惹奢华风范</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-city">🇹🇭 曼谷 (Bangkok) · 12/15-12/16 (1晚)</div>
-            <div class="hotel-name">辛通中城酒店 (Sindhorn Midtown Vignette Collection)</div>
-            <div class="hotel-desc">洲际酒店集团旗下的高级生活方式酒店，位于 Chit Lom 黄金使馆区。客房全景落地窗采光极佳，网络极速，步行可达轻轨站与各大会友餐厅，顶楼无边泳池尽览曼谷天际线。</div>
+        <div class="hotel-card" onclick="openVenueModal('hotel-majestic')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏨 传奇五星备选</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🚇 靠近 BTS 轻轨</span>
-            <span class="cafe-badge">🏊 高空天际线泳池</span>
-            <span class="cafe-badge">📶 商务高速网络</span>
-            <span class="cafe-badge">🏙️ 市中心黄金地段</span>
-          </div>
-        </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 12/17-12/18 (1晚)</div>
-            <div class="hotel-name">万象皇冠假日酒店 (Crowne Plaza Vientiane)</div>
-            <div class="hotel-desc">老挝首都首屈一指的国际五星级商务酒店，拥有万象最稳定、最高速的网络保障。行政酒廊、商务中心、健身房与多国餐饮设施齐全，办公体验无懈可击。</div>
-          </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">⭐ 国际五星标准</span>
-            <span class="cafe-badge">⚡ 万象最稳高速网</span>
-            <span class="cafe-badge">💼 专属行政办公区</span>
-            <span class="cafe-badge">🚗 距凯旋门10分钟</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 马六甲河畔豪华备选</div>
+              <div class="hotel-name">马六甲大华酒店 (The Majestic Malacca)</div>
+              <div class="hotel-desc">杨忠礼集团（YTL）旗下的英殖民传奇老牌豪华五星，依偎在马六甲河畔。客房配备柚木地板、复古写字台与贵妃榻，英式管家服务周到，私密性极高。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌊 临马六甲河</span><span class="cafe-badge">🏊 户外热带泳池</span><span class="cafe-badge">⚡ 商务办公设施齐备</span><span class="cafe-badge">⭐ 奢华五星</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-city">🇱🇦 琅勃拉邦 (Luang Prabang) · 12/18-12/21 (3晚)</div>
-            <div class="hotel-name">安凡尼+ 度假酒店 (Avani+ Luang Prabang)</div>
-            <div class="hotel-desc">坐落于古城绝对核心，前身是法国殖民军官营房，被古老菩提树环绕。每间客房都有法式柚木阳台与独立办公台，出酒店大门就是晨起布施路线与洋人街夜市。</div>
+        <div class="hotel-card" onclick="openVenueModal('hotel-sindhorn')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏨 奢华生活方式酒店</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">📍 古城中心步行即达</span>
-            <span class="cafe-badge">🌴 法式庭院泳池</span>
-            <span class="cafe-badge">📶 稳定高速无线</span>
-            <span class="cafe-badge">🧘 宁静慢生活</span>
-          </div>
-        </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-city">🇱🇦 琅勃拉邦备选 (Luang Prabang)</div>
-            <div class="hotel-name">美丽河精品酒店 (The Belle Rive Boutique Hotel)</div>
-            <div class="hotel-desc">湄公河一线绝美江景客栈，推开窗就是滔滔江水与缓缓驶过的小木船。客房木质调温馨典雅，阳台看江办公极为治愈，附赠下午茶与湄公河游船巡游。</div>
-          </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🌊 湄公河一线江景</span>
-            <span class="cafe-badge">☕ 专属露台慢咖啡</span>
-            <span class="cafe-badge">🥐 精致法式早餐</span>
-            <span class="cafe-badge">🌅 日落绝佳视角</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 曼谷 (Bangkok) · 12/15 - 12/16 · 1晚会友高光</div>
+              <div class="hotel-name">辛通中城酒店 (Sindhorn Midtown Bangkok)</div>
+              <div class="hotel-desc">洲际酒店集团（IHG）旗下的 Vignette Collection 奢华生活方式酒店，位于曼谷最尊贵的 Langsuan 使馆街区。客房全景落地窗视野开阔，极速 300M 商务网，18楼无边际天际线泳池直眺曼谷金融区。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🚇 靠近 BTS Chit Lom</span><span class="cafe-badge">🏊 高空天际线泳池</span><span class="cafe-badge">📶 300M商务高速网</span><span class="cafe-badge">🏙️ 使馆区黄金地段</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-city">🇨🇳 西双版纳 (Xishuangbanna) · 12/21-12/23 (2晚)</div>
-            <div class="hotel-name">湄公河景兰大酒店 (告庄西双景)</div>
-            <div class="hotel-desc">西双版纳核心地标！紧邻大金塔与澜沧江，楼下就是亚洲最大的星光夜市。酒店集傣泰宫廷风情与现代商务于一体，拥有空中水乐园与极速 5G 网络，吃喝玩乐出差一体化。</div>
+        <div class="hotel-card" onclick="openVenueModal('hotel-crowne')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏨 国际商务五星首选</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🚶 楼下即是星光夜市</span>
-            <span class="cafe-badge">🏰 傣泰宫廷建筑</span>
-            <span class="cafe-badge">📶 5G 极速网络</span>
-            <span class="cafe-badge">🏊 空中水上乐园</span>
-          </div>
-        </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-city">🇨🇳 云南大理 (Dali) · 12/23-12/26 (3晚)</div>
-            <div class="hotel-name">大理慢屋·极目 / 喜度客栈 (洱海生态廊道店)</div>
-            <div class="hotel-desc">全国数字游民梦想中的终点站！直面洱海无遮挡一线海景与苍山十九峰。全屋智能家居、千兆光纤入户、超大落地窗海景书桌，下楼就是生态廊道，冬日暖阳下工作宛如仙境。</div>
-          </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🌊 洱海一线直面海景</span>
-            <span class="cafe-badge">⚡ 千兆光纤高速网</span>
-            <span class="cafe-badge">☀️ 苍山雪洱海月</span>
-            <span class="cafe-badge">🚲 廊道骑行直达</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 12/17 - 12/18 · 1晚中转休整</div>
+              <div class="hotel-name">万象皇冠假日酒店 (Crowne Plaza Vientiane)</div>
+              <div class="hotel-desc">老挝首都万象首屈一指的国际五星级商务酒店。在老挝当地网络波动普遍的环境下，皇冠假日提供极为稳定的独立专线光纤 Wi-Fi，并配有设施完善的行政酒廊与商务中心，是跨境远程办公的最稳妥选择。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">⭐ 国际五星标准</span><span class="cafe-badge">⚡ 万象最稳独立专线网</span><span class="cafe-badge">💼 专属行政办公区</span><span class="cafe-badge">🚗 距凯旋门10分钟</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="hotel-card">
-          <div>
-            <div class="hotel-city">🇨🇳 云南大理古城备选 (Dali)</div>
-            <div class="hotel-name">既下山·SUNYATA (大理古城店)</div>
-            <div class="hotel-desc">国内知名精品奢华度假品牌，隐于大理古城繁华深处的三进院落。设计大师操刀，极简东方禅意与现代舒适结合，拥有幽静的茶室、书房与阳光中庭，极其适合专注沉淀。</div>
+        <div class="hotel-card" onclick="openVenueModal('hotel-avani')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏨 法式殖民庭院度假</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🏯 大理古城核心静巷</span>
-            <span class="cafe-badge">🍵 专属禅意茶室办公</span>
-            <span class="cafe-badge">📶 极速专线 Wi-Fi</span>
-            <span class="cafe-badge">⭐ 高品质奢华宿集</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 琅勃拉邦 (Luang Prabang) · 12/18 - 12/21 · 共3晚核心度假</div>
+              <div class="hotel-name">安凡尼+ 琅勃拉邦度假酒店 (Avani+ Luang Prabang)</div>
+              <div class="hotel-desc">位于世界文化遗产琅勃拉邦古城核心，前身是法国殖民军官营房。百年古菩提树环绕着蔚蓝泳池，每间客房均有法式木制百叶窗、柚木阳台与独立办公书桌，出门即可漫步洋人街夜市与清晨布施路线。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">📍 古城中心步行即达</span><span class="cafe-badge">🌴 法式殖民庭院泳池</span><span class="cafe-badge">📶 稳定高速无线</span><span class="cafe-badge">🧘 宁静慢生活</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-card" onclick="openVenueModal('hotel-bellerive')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏨 湄公河一线江景精品</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 琅勃拉邦备选 (Luang Prabang) · 湄公河临江浪漫备选</div>
+              <div class="hotel-name">美丽河精品酒店 (The Belle Rive Boutique Hotel)</div>
+              <div class="hotel-desc">坐落在湄公河畔的一线绝美江景精品酒店。推窗即可看到滔滔江水与缓缓驶过的小木船。客房以老挝传统木艺与法式乡村风格交融，自带河畔露台咖啡座，入住包含专属日落巡游船票。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌊 湄公河一线江景</span><span class="cafe-badge">☕ 专属露台慢咖啡</span><span class="cafe-badge">🥐 精致法式早餐</span><span class="cafe-badge">🌅 日落绝佳视角</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-card" onclick="openVenueModal('hotel-jinglan')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏨 版纳地标傣泰宫廷</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 西双版纳 (Xishuangbanna) · 12/21 - 12/23 · 共2晚</div>
+              <div class="hotel-name">告庄西双景湄公河景兰大酒店</div>
+              <div class="hotel-desc">西双版纳城市名片级地标！坐落于告庄西双景核心，紧邻大金塔与澜沧江畔，楼下即是全亚洲规模最大的星光夜市。建筑融合傣泰皇家宫廷风情，顶层拥有高空水乐园，5G 千兆网络全覆盖，吃住行与办公一站式解决。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🚶 楼下即是星光夜市</span><span class="cafe-badge">🏰 傣泰宫廷建筑</span><span class="cafe-badge">📶 5G 千兆网络</span><span class="cafe-badge">🏊 空中水上乐园</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-card" onclick="openVenueModal('hotel-manwu')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏨 洱海一线生态海景客栈</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 云南大理 (Dali) · 12/23 - 12/26 · 共3晚终点慢生活</div>
+              <div class="hotel-name">大理慢屋·极目 / 喜度客栈 (洱海生态廊道店)</div>
+              <div class="hotel-desc">全国数字游民梦想中的终极目的地！客栈直面洱海无遮挡一线海景与苍山十九峰。全屋智能家居联动、千兆独享光纤入户、超大落地全景海景书桌。下楼便是洱海生态廊道，冬日暖阳洒在桌面上，敲代码宛如身处画卷。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌊 洱海一线直面海景</span><span class="cafe-badge">⚡ 千兆独享光纤</span><span class="cafe-badge">☀️ 苍山雪洱海月</span><span class="cafe-badge">🚲 廊道骑行直达</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-card" onclick="openVenueModal('hotel-sunyata')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏨 大理古城奢华静谧宿集</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 云南大理备选 (Dali) · 大理古城深处禅意宿集</div>
+              <div class="hotel-name">既下山·SUNYATA (大理古城店)</div>
+              <div class="hotel-desc">国内顶级精品奢华宿集品牌，隐匿于大理古城繁华深处的三进庭院。著名建筑师设计，极简东方禅意与现代高品质舒适完美融合，内设静谧禅茶室、阳光书房与中庭水景，非常适合深度思考与沉浸式创作。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏯 大理古城核心静巷</span><span class="cafe-badge">🍵 专属禅意茶室办公</span><span class="cafe-badge">📶 极速专线 Wi-Fi</span><span class="cafe-badge">⭐ 高品质奢华宿集</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1131,132 +1539,209 @@
       </div>
     </div>
 
-    <!-- TAB 4: 精选办公咖啡馆 -->
+        <!-- TAB 4: 精选办公咖啡馆 -->
     <div id="tab-cafes" class="tab-panel">
+      <div style="background:var(--accent-light); border:1px solid #fde68a; border-radius:12px; padding:12px 18px; margin-bottom:20px; font-size:0.9rem; color:#92400e; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+        <span>💡 <strong>交互提示</strong>：点击任意咖啡馆卡片，即可弹窗查看<strong>环境实景大图、电源插座及网络实测</strong>并开启<strong> Google Maps 导航</strong>！</span>
+        <span style="font-weight:700;">共收录 9 家数字游民严选工作站 ☕</span>
+      </div>
       <div class="cafe-grid">
-        <div class="cafe-card">
-          <div>
-            <div class="cafe-city">🇲🇾 马六甲 (Melaka)</div>
-            <div class="cafe-name">The Daily Fix Cafe</div>
-            <div class="cafe-desc">隐藏在鸡场街历史老洋房深处的静谧天井庭院，环境极其舒适优雅，招牌班兰松饼与精品手冲极为出色。</div>
+        <div class="cafe-card" onclick="openVenueModal('cafe-dailyfix')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 历史洋房天井咖啡</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">📶 高速 Wi-Fi</span>
-            <span class="cafe-badge">🔌 电源插座充沛</span>
-            <span class="cafe-badge">❄️ 舒适冷气</span>
-            <span class="cafe-badge">🌿 绿意天井</span>
-          </div>
-        </div>
-
-        <div class="cafe-card">
-          <div>
-            <div class="cafe-city">🇲🇾 马六甲 (Melaka)</div>
-            <div class="cafe-name">Calanthe Art Cafe</div>
-            <div class="cafe-desc">汇集马来西亚十三州特色风味咖啡的艺术老店，空间宽敞开阔，白天人流适中，非常适合长时间带电脑办公。</div>
-          </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">📶 稳定网络</span>
-            <span class="cafe-badge">☕ 13州特色咖啡</span>
-            <span class="cafe-badge">🪑 宽敞长桌</span>
-            <span class="cafe-badge">📍 靠近鸡场街</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="cafe-city">🇲🇾 马六甲 (Melaka) · Day 2 (12/12) 推荐办公地</div>
+              <div class="cafe-name">The Daily Fix Cafe</div>
+              <div class="cafe-desc">马六甲最负盛名的精品咖啡馆之一，巧妙隐藏在鸡场街一家老字号土产店的后进天井。红砖斑驳、绿植垂挂，室内强劲冷气与复古长木桌并存，招牌斑兰松饼（Pandan Pancake）与咸焦糖手冲咖啡堪称绝配。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">📶 高速 Wi-Fi</span><span class="cafe-badge">🔌 电源插座充沛</span><span class="cafe-badge">❄️ 舒适冷气</span><span class="cafe-badge">🌿 绿意庭院天井</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="cafe-card">
-          <div>
-            <div class="cafe-city">🇹🇭 合艾 (Hat Yai)</div>
-            <div class="cafe-name">Space Tea & Coffee</div>
-            <div class="cafe-desc">极简现代极客工业风，距离合艾火车站步行仅3分钟，冷气强劲安静无嘈杂，专门配备长办公桌与多孔插座。</div>
+        <div class="cafe-card" onclick="openVenueModal('cafe-calanthe')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 13州传统咖啡艺术馆</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🚶 火车站步行3分</span>
-            <span class="cafe-badge">⚡ 极速千兆网络</span>
-            <span class="cafe-badge">🔌 每座独立插座</span>
-            <span class="cafe-badge">🤫 极度安静</span>
-          </div>
-        </div>
-
-        <div class="cafe-card">
-          <div>
-            <div class="cafe-city">🇹🇭 合艾 (Hat Yai)</div>
-            <div class="cafe-name">Alive Specialty Coffee</div>
-            <div class="cafe-desc">合艾当地顶级水准精品咖啡馆，室内高挑宽敞，通透采光，冷气与咖啡香气环绕，数字游民高频打卡地。</div>
-          </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">☕ 冠军级手冲</span>
-            <span class="cafe-badge">📶 商务级 Wi-Fi</span>
-            <span class="cafe-badge">🥪 丰盛早午餐</span>
-            <span class="cafe-badge">❄️ 恒温冷气</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="cafe-city">🇲🇾 马六甲 (Melaka) · Day 3 (12/13) 推荐办公地</div>
+              <div class="cafe-name">Calanthe Art Cafe (十三州咖啡)</div>
+              <div class="cafe-desc">全马唯一一家集齐马来西亚全十三州不同特色风味咖啡的艺术老店。店内挂满当地艺术家的手绘与古董摆设，空间开阔通风，白天客流适中，浓郁的南洋老时光氛围非常激发创意。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">📶 稳定网络</span><span class="cafe-badge">☕ 13州特色风味咖啡</span><span class="cafe-badge">🪑 宽敞艺术长桌</span><span class="cafe-badge">📍 靠近鸡场街</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="cafe-card">
-          <div>
-            <div class="cafe-city">🇹🇭 曼谷 (Bangkok)</div>
-            <div class="cafe-name">The Commons / Roast (Thong Lor)</div>
-            <div class="cafe-desc">曼谷最具代表性的开放式社区文创中心，绿植环绕、半开放通风与室内冷气无缝融合，拥有全曼谷最顶级的远程办公氛围。</div>
+        <div class="cafe-card" onclick="openVenueModal('cafe-space')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 极客工业风自习工作站</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🌟 亚洲最佳文创</span>
-            <span class="cafe-badge">📶 极速光纤</span>
-            <span class="cafe-badge">🥑 国际健康餐</span>
-            <span class="cafe-badge">🚇 BTS 通罗站</span>
-          </div>
-        </div>
-
-        <div class="cafe-card">
-          <div>
-            <div class="cafe-city">🇱🇦 琅勃拉邦 (Luang Prabang)</div>
-            <div class="cafe-name">Saffron Coffee 湄公河旗舰店</div>
-            <div class="cafe-desc"><strong>“江景露台 + 室内强冷气”双区配置！</strong>老挝高山公平贸易精品咖啡，室内长木桌插座多，户外直接面对湄公河。</div>
-          </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🌊 直面湄公河</span>
-            <span class="cafe-badge">❄️ 独立冷气大厅</span>
-            <span class="cafe-badge">🔌 多孔插座</span>
-            <span class="cafe-badge">☕ 本土顶级豆</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="cafe-city">🇹🇭 合艾 (Hat Yai) · Day 4 (12/14) 跨境首站工作营地</div>
+              <div class="cafe-name">Space Tea & Coffee (Hat Yai)</div>
+              <div class="cafe-desc">极简工业极客风的高品质咖啡馆，距离合艾火车站步行仅需 3 分钟！特别为移动办公与数字游民设计，室内冷气强劲且安静，配有专属长条吧台、千兆 Wi-Fi 与每个座位独立的电源接口。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🚶 火车站步行3分</span><span class="cafe-badge">⚡ 极速千兆网络</span><span class="cafe-badge">🔌 每座独立插座</span><span class="cafe-badge">🤫 极度安静</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="cafe-card">
-          <div>
-            <div class="cafe-city">🇱🇦 琅勃拉邦 (Luang Prabang)</div>
-            <div class="cafe-name">View An Cafe / Belle Rive</div>
-            <div class="cafe-desc">紧邻湄公河的静谧玻璃屋咖啡馆，配有遮阳伞露台，法式烘焙与可颂香脆可口，网速飞快且服务极佳。</div>
+        <div class="cafe-card" onclick="openVenueModal('cafe-alive')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 冠军精品手冲早午餐</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🥐 法式手工烘焙</span>
-            <span class="cafe-badge">📶 高速 Wi-Fi</span>
-            <span class="cafe-badge">🌅 绝美落日视角</span>
-            <span class="cafe-badge">📍 沿河主街</span>
-          </div>
-        </div>
-
-        <div class="cafe-card">
-          <div>
-            <div class="cafe-city">🇨🇳 西双版纳 (Xishuangbanna)</div>
-            <div class="cafe-name">告庄澜沧江畔傣风咖啡馆群</div>
-            <div class="cafe-desc">位于告庄西双景沿江步道，结合傣泰风情竹编建筑，白天迎着江风轻办公，品尝云南普洱小粒咖啡与手作甜品。</div>
-          </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🌴 傣式热带风情</span>
-            <span class="cafe-badge">📶 5G 极速覆盖</span>
-            <span class="cafe-badge">🚶 步行即达星光夜市</span>
-            <span class="cafe-badge">☕ 云南小粒咖啡</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="cafe-city">🇹🇭 合艾 (Hat Yai) · 合艾精品手冲备选地</div>
+              <div class="cafe-name">Alive Specialty Coffee</div>
+              <div class="cafe-desc">合艾本地顶尖水准的精品咖啡馆，挑高空间与全玻璃通透采光，店内烘焙单品咖啡豆种类丰富，提供世界级品质手冲。冷气舒适，早午餐丰盛，深受年轻远程工作者喜爱。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">☕ 冠军级单品手冲</span><span class="cafe-badge">📶 商务级 Wi-Fi</span><span class="cafe-badge">🥪 丰盛早午餐</span><span class="cafe-badge">❄️ 恒温冷气</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="cafe-card">
-          <div>
-            <div class="cafe-city">🇨🇳 大理 (Dali)</div>
-            <div class="cafe-name">洱海生态廊道 S弯海景咖啡馆</div>
-            <div class="cafe-desc">全国数字游民圣地！全景玻璃大窗直面碧蓝洱海与苍山十九峰，冬日阳光洒满桌面，边看海浪边敲键盘。</div>
+        <div class="cafe-card" onclick="openVenueModal('cafe-commons')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 亚洲顶级开放文创社区</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
           </div>
-          <div class="cafe-badges">
-            <span class="cafe-badge">🌊 洱海一线海景</span>
-            <span class="cafe-badge">📶 千兆光纤入户</span>
-            <span class="cafe-badge">☀️ 冬日暖阳绝景</span>
-            <span class="cafe-badge">🚲 廊道骑行直达</span>
+          <div class="card-content-wrap">
+            <div>
+              <div class="cafe-city">🇹🇭 曼谷 (Bangkok) · Day 5-6 (12/15-16) 曼谷会友办公地</div>
+              <div class="cafe-name">The Commons / Roast (Thong Lor)</div>
+              <div class="cafe-desc">亚洲闻名的开放式阶梯式社区文创地标！绿色植物与露天阶梯巧妙结合，顶层 Roast 咖啡餐厅提供极高水准的精品咖啡与全日早午餐。半开放阶梯与室内空调区域任君选择，是曼谷数字游民与创意社群的大本营。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌟 亚洲顶尖文创地标</span><span class="cafe-badge">📶 极速商用光纤</span><span class="cafe-badge">🥑 国际精致早午餐</span><span class="cafe-badge">🚇 近 BTS 通罗站</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cafe-card" onclick="openVenueModal('cafe-saffron')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 湄公河旗舰冷气工作站</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="cafe-city">🇱🇦 琅勃拉邦 (Luang Prabang) · Day 9 (12/19) 深度全天办公地</div>
+              <div class="cafe-name">Saffron Coffee 湄公河旗舰店</div>
+              <div class="cafe-desc">“临江露台 + 室内强冷气大厅”双区域豪华配置！作为老挝高山公平贸易咖啡的典范，店内精选北部高原阿拉比卡豆。室内长实木桌配备充足插座，户外露台可饱览湄公河水色与缓缓驶过的渡船。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌊 直面湄公河壮阔江景</span><span class="cafe-badge">❄️ 独立强冷气大厅</span><span class="cafe-badge">🔌 长桌多孔插座</span><span class="cafe-badge">☕ 老挝顶级公平贸易豆</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cafe-card" onclick="openVenueModal('cafe-viewan')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 阳光玻璃屋法式烘焙</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="cafe-city">🇱🇦 琅勃拉邦 (Luang Prabang) · Day 10 (12/20) 临江惬意办公地</div>
+              <div class="cafe-name">View An Cafe / The Belle Rive</div>
+              <div class="cafe-desc">紧靠湄公河边的精致阳光玻璃屋咖啡馆，配有宽敞的遮阳伞观景露台。由法国烘焙师指导的手工法式可颂酥脆芳香，咖啡醇厚，服务极其体贴，是琅勃拉邦公认最惬意的沿河工作点之一。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🥐 法式手工正宗烘焙</span><span class="cafe-badge">📶 高速稳定 Wi-Fi</span><span class="cafe-badge">🌅 绝美湄公河落日</span><span class="cafe-badge">📍 沿河主街便利位置</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cafe-card" onclick="openVenueModal('cafe-gaozhuang')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 傣式热带滨江小粒咖啡</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="cafe-city">🇨🇳 西双版纳 (Xishuangbanna) · Day 12 (12/22) 傣乡热带办公地</div>
+              <div class="cafe-name">告庄澜沧江畔傣风咖啡馆群</div>
+              <div class="cafe-desc">告庄澜沧江沿江步道上的特色傣风竹楼咖啡馆群。融合傣泰吊脚竹编建筑美学与云南高山普洱小粒咖啡，白天江风吹拂，绿竹成荫，夜晚灯火辉煌，充满南亚热带异域情调。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌴 傣泰热带竹楼美学</span><span class="cafe-badge">📶 5G 极速千兆覆盖</span><span class="cafe-badge">🚶 步行即达星光夜市</span><span class="cafe-badge">☕ 甄选云南小粒咖啡</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cafe-card" onclick="openVenueModal('cafe-erhai')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 洱海S弯一线海景圣殿</span>
+            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="cafe-city">🇨🇳 云南大理 (Dali) · Day 14-15 (12/24-25) 苍山洱海慢生活</div>
+              <div class="cafe-name">洱海生态廊道 S弯海景咖啡馆</div>
+              <div class="cafe-desc">全中国数字游民与自由职业者的终极圣殿！纯白简约现代建筑坐落于洱海生态廊道最经典的 S 弯转角，超大通透全景落地玻璃直面碧蓝无垠的洱海，远处苍山雪峰巍峨挺立。冬日阳光温暖洒下，品着云南特产玫瑰拿铁，敲击键盘成为极致的享受。</div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌊 洱海一线无敌海景</span><span class="cafe-badge">📶 千兆光纤入户</span><span class="cafe-badge">☀️ 冬日暖阳绝景</span><span class="cafe-badge">🚲 廊道骑行直达</span>
+              </div>
+              <div class="card-open-hint">
+                <span>📍 查看精确位置与 Google Maps 导航</span>
+                <span>👉 点击展开</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1293,6 +1778,59 @@
       </div>
     </div>
 
+        <!-- VENUE INTERACTIVE MODAL DIALOG -->
+    <div id="venue-modal-overlay" class="venue-modal-overlay" onclick="handleOverlayClick(event)">
+      <div class="venue-modal" role="dialog" aria-modal="true">
+        <button class="modal-close-btn" onclick="closeVenueModal()" title="关闭 (Esc)">✕</button>
+        <div id="modal-hero" class="modal-hero">
+          <div class="modal-hero-content">
+            <span id="modal-city-tag" class="modal-city-tag">城市</span>
+            <h2 id="modal-title" class="modal-title">场地名称</h2>
+            <div id="modal-stay-time" class="modal-stay-time">推荐阶段</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div id="modal-badges" class="modal-badges"></div>
+          
+          <div id="modal-desc" class="modal-desc-box"></div>
+
+          <h3 class="modal-section-title">⚡ 远程办公及旅居设施规格</h3>
+          <div class="amenities-grid">
+            <div class="amenity-card">
+              <div class="amenity-label">📶 网络 Wi-Fi</div>
+              <div id="amenity-wifi" class="amenity-val"></div>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-label">🪑 工作桌面</div>
+              <div id="amenity-desk" class="amenity-val"></div>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-label">🔌 电源接口</div>
+              <div id="amenity-power" class="amenity-val"></div>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-label">🤫 环境安静度</div>
+              <div id="amenity-quiet" class="amenity-val"></div>
+            </div>
+          </div>
+
+          <h3 class="modal-section-title">📍 精确地理位置与 Google Maps 导航</h3>
+          <div class="map-box">
+            <div class="address-bar">
+              <span id="modal-address" class="address-text"></span>
+              <button class="btn-copy-addr" onclick="copyModalAddress()">📋 复制地址</button>
+            </div>
+            <div id="modal-map-view"></div>
+            <a id="modal-gmaps-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-gmaps">
+              🗺️ 在 Google Maps 中打开精确定位 / 实时导航 ↗
+            </a>
+          </div>
+
+          <div id="modal-tips" class="tips-box"></div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <p>💡 本规划方案遵循 Workcation 远程办公最高效率设计 · 愿您与太太旅途甜蜜愉快、沿途网络畅通、尽享南洋至彩云之南的壮美山川！</p>
     </footer>
@@ -1311,6 +1849,117 @@
       document.getElementById('tab-' + tabId).classList.add('active');
       event.currentTarget.classList.add('active');
     }
+  
+    // ==========================================
+    // 场地数据库与弹窗交互逻辑
+    // ==========================================
+    const VENUES_DB = {"hotel-liumen": {"id": "hotel-liumen", "type": "hotel", "typeLabel": "🏨 精选设计酒店", "name": "六门精品酒店 (Liu Men Melaka)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "12/11 - 12/13 · 共2晚", "photo": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80", "address": "48-56, Jalan Tokong, 75200 Melaka, Malaysia", "lat": 2.1978, "lng": 102.2475, "mapsQuery": "Liu Men Melaka, Jalan Tokong, Melaka", "desc": "位于马六甲鸡场街核心区，由数座 1930 年代海峡华人娘惹老洋房改造而成的奢华精品酒店。挑高天井、采光极佳，客房配备专属静谧办公写字台与极速光纤 Wi-Fi，步行 3 分钟即可融入鸡场街周末夜市。", "badges": ["📍 鸡场街步行3分", "📶 高速光纤 Wi-Fi", "🪑 舒适办公书桌", "🏛️ 娘惹奢华风范"], "amenities": {"wifi": "实测 150Mbps+ 稳定光纤专线，客房及天井全覆盖", "desk": "独立宽大实木书桌配护眼台灯及舒适扶手椅", "power": "桌面及床头均有通用国际多功能电源插孔", "quiet": "位于古城次街，闹中取静，隔音极佳适合语音会议"}, "tips": "建议预订内庭套房，白天办公光线柔和，周五周六晚出门步行即可尝遍娘惹美食。"}, "hotel-majestic": {"id": "hotel-majestic", "type": "hotel", "typeLabel": "🏨 传奇五星备选", "name": "马六甲大华酒店 (The Majestic Malacca)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "马六甲河畔豪华备选", "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80", "address": "188, Jalan Bunga Raya, 75100 Melaka, Malaysia", "lat": 2.203, "lng": 102.2514, "mapsQuery": "The Majestic Malacca, Jalan Bunga Raya, Melaka", "desc": "杨忠礼集团（YTL）旗下的英殖民传奇老牌豪华五星，依偎在马六甲河畔。客房配备柚木地板、复古写字台与贵妃榻，英式管家服务周到，私密性极高。", "badges": ["🌊 临马六甲河", "🏊 户外热带泳池", "⚡ 商务办公设施齐备", "⭐ 奢华五星"], "amenities": {"wifi": "全馆高速无线 Wi-Fi，漫游无缝切换", "desk": "古典实木办公桌，空间宽绰", "power": "英标及多国转换插座，前台可随叫随借", "quiet": "五星级安静隔音，临河阳台适合午休放空"}, "tips": "河景房可俯瞰马六甲河游船驶过，酒店内的 Spa Village 极具南洋特色。"}, "hotel-sindhorn": {"id": "hotel-sindhorn", "type": "hotel", "typeLabel": "🏨 奢华生活方式酒店", "name": "辛通中城酒店 (Sindhorn Midtown Bangkok)", "city": "🇹🇭 曼谷 (Bangkok)", "dateStay": "12/15 - 12/16 · 1晚会友高光", "photo": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80", "address": "68 Lang Suan Rd, Lumphini, Pathum Wan, Bangkok 10330, Thailand", "lat": 13.7372, "lng": 100.5434, "mapsQuery": "Sindhorn Midtown Hotel Bangkok, Lang Suan, Bangkok", "desc": "洲际酒店集团（IHG）旗下的 Vignette Collection 奢华生活方式酒店，位于曼谷最尊贵的 Langsuan 使馆街区。客房全景落地窗视野开阔，极速 300M 商务网，18楼无边际天际线泳池直眺曼谷金融区。", "badges": ["🚇 靠近 BTS Chit Lom", "🏊 高空天际线泳池", "📶 300M商务高速网", "🏙️ 使馆区黄金地段"], "amenities": {"wifi": "300Mbps 极速商用光纤，视频会议与大文件上传毫无卡顿", "desk": "现代人体工学工作台与高品质办公椅，采光充足", "power": "床头、书桌配备充足 Type-C 及 USB 快充接口", "quiet": "双层中空隔音玻璃，完全隔绝曼谷城市车流噪音"}, "tips": "步行 5 分钟即达 BTS Chit Lom 站，附近网红绿洲咖啡馆与会友餐厅云集。"}, "hotel-crowne": {"id": "hotel-crowne", "type": "hotel", "typeLabel": "🏨 国际商务五星首选", "name": "万象皇冠假日酒店 (Crowne Plaza Vientiane)", "city": "🇱🇦 老挝万象 (Vientiane)", "dateStay": "12/17 - 12/18 · 1晚中转休整", "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80", "address": "20 Samsenthai Road, Sikhottabong District, Vientiane, Laos", "lat": 17.9664, "lng": 102.5976, "mapsQuery": "Crowne Plaza Vientiane, Samsenthai Road, Vientiane", "desc": "老挝首都万象首屈一指的国际五星级商务酒店。在老挝当地网络波动普遍的环境下，皇冠假日提供极为稳定的独立专线光纤 Wi-Fi，并配有设施完善的行政酒廊与商务中心，是跨境远程办公的最稳妥选择。", "badges": ["⭐ 国际五星标准", "⚡ 万象最稳独立专线网", "💼 专属行政办公区", "🚗 距凯旋门10分钟"], "amenities": {"wifi": "国际专线高速 Wi-Fi，直连各类海外及国内远程协作系统", "desk": "行政客房带独立商务大书桌，配备护眼照明", "power": "桌面具备多组国际万用插孔与网络接口", "quiet": "五星级高品质隔音，会议通话无噪音干扰"}, "tips": "傍晚可前往酒店顶楼酒吧或步行至湄公河夜市，感受万象落日余晖。"}, "hotel-avani": {"id": "hotel-avani", "type": "hotel", "typeLabel": "🏨 法式殖民庭院度假", "name": "安凡尼+ 琅勃拉邦度假酒店 (Avani+ Luang Prabang)", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "12/18 - 12/21 · 共3晚核心度假", "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80", "address": "Setthathirath Road, Hua Xieng Village, Luang Prabang 06000, Laos", "lat": 19.8906, "lng": 102.1347, "mapsQuery": "Avani+ Luang Prabang Hotel, Setthathirath Road, Luang Prabang", "desc": "位于世界文化遗产琅勃拉邦古城核心，前身是法国殖民军官营房。百年古菩提树环绕着蔚蓝泳池，每间客房均有法式木制百叶窗、柚木阳台与独立办公书桌，出门即可漫步洋人街夜市与清晨布施路线。", "badges": ["📍 古城中心步行即达", "🌴 法式殖民庭院泳池", "📶 稳定高速无线", "🧘 宁静慢生活"], "amenities": {"wifi": "度假区全覆盖稳定无线网络，客房内信号强劲", "desk": "柚木工作台配阳台景观，冬日办公极为惬意", "power": "国际通用电源接口，办公充电便利", "quiet": "庭院深幽，避开主路游人嘈杂"}, "tips": "清晨 5:30 步行 2 分钟到主街即可观摩庄严的僧侣托钵布施仪式。"}, "hotel-bellerive": {"id": "hotel-bellerive", "type": "hotel", "typeLabel": "🏨 湄公河一线江景精品", "name": "美丽河精品酒店 (The Belle Rive Boutique Hotel)", "city": "🇱🇦 琅勃拉邦备选 (Luang Prabang)", "dateStay": "湄公河临江浪漫备选", "photo": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80", "address": "99 Baan Phoneheuang, Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8967, "lng": 102.1408, "mapsQuery": "The Belle Rive Boutique Hotel, Khem Khong, Luang Prabang", "desc": "坐落在湄公河畔的一线绝美江景精品酒店。推窗即可看到滔滔江水与缓缓驶过的小木船。客房以老挝传统木艺与法式乡村风格交融，自带河畔露台咖啡座，入住包含专属日落巡游船票。", "badges": ["🌊 湄公河一线江景", "☕ 专属露台慢咖啡", "🥐 精致法式早餐", "🌅 日落绝佳视角"], "amenities": {"wifi": "客房及江畔餐厅均覆盖高速 Wi-Fi", "desk": "露台临江木桌与室内写字台双选择", "power": "床头及书桌均备有便捷插座", "quiet": "伴随潺潺水声与自然鸟鸣，治愈系远程办公环境"}, "tips": "下午四点在露台点一杯老挝高山手冲咖啡，边看夕阳边写代码，体验无与伦比。"}, "hotel-jinglan": {"id": "hotel-jinglan", "type": "hotel", "typeLabel": "🏨 版纳地标傣泰宫廷", "name": "告庄西双景湄公河景兰大酒店", "city": "🇨🇳 西双版纳 (Xishuangbanna)", "dateStay": "12/21 - 12/23 · 共2晚", "photo": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80", "address": "云南省西双版纳傣族自治州景洪市告庄西双景孔雀大道1号", "lat": 22.0125, "lng": 100.8038, "mapsQuery": "告庄西双景湄公河景兰大酒店, 景洪市", "desc": "西双版纳城市名片级地标！坐落于告庄西双景核心，紧邻大金塔与澜沧江畔，楼下即是全亚洲规模最大的星光夜市。建筑融合傣泰皇家宫廷风情，顶层拥有高空水乐园，5G 千兆网络全覆盖，吃住行与办公一站式解决。", "badges": ["🚶 楼下即是星光夜市", "🏰 傣泰宫廷建筑", "📶 5G 千兆网络", "🏊 空中水上乐园"], "amenities": {"wifi": "5G 全覆盖 + 千兆客房专线网络，无缝支持远程办公与大吞吐数据", "desk": "豪华客房配备大理石/实木宽敞办公桌与舒适办公椅", "power": "国标五孔插座及多功能 USB 接口充裕", "quiet": "高楼层江景房视野开阔，远离夜市喧嚣，安静惬意"}, "tips": "推荐高楼层澜沧江景大床房，晚上办公完毕下楼步行即可畅享星光夜市傣味烧烤。"}, "hotel-manwu": {"id": "hotel-manwu", "type": "hotel", "typeLabel": "🏨 洱海一线生态海景客栈", "name": "大理慢屋·极目 / 喜度客栈 (洱海生态廊道店)", "city": "🇨🇳 云南大理 (Dali)", "dateStay": "12/23 - 12/26 · 共3晚终点慢生活", "photo": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理市银桥镇磻溪村 S弯生态廊道旁", "lat": 25.7682, "lng": 100.1651, "mapsQuery": "大理磻溪村S弯生态廊道", "desc": "全国数字游民梦想中的终极目的地！客栈直面洱海无遮挡一线海景与苍山十九峰。全屋智能家居联动、千兆独享光纤入户、超大落地全景海景书桌。下楼便是洱海生态廊道，冬日暖阳洒在桌面上，敲代码宛如身处画卷。", "badges": ["🌊 洱海一线直面海景", "⚡ 千兆独享光纤", "☀️ 苍山雪洱海月", "🚲 廊道骑行直达"], "amenities": {"wifi": "全屋千兆光纤独享网络，网速实测 500Mbps+，低延迟极稳", "desk": "定制落地窗景观长木桌，配备人体工学椅与 Marshall 音箱", "power": "桌面嵌入式隐藏电源排插，笔记本与拓展坞轻松取电", "quiet": "生态廊道机动车禁行区，唯有洱海微风与浪涛声，极致宁静专注"}, "tips": "客栈提供免费自行车，清晨或傍晚沿廊道骑行看日出日落，享受纯粹慢生活。"}, "hotel-sunyata": {"id": "hotel-sunyata", "type": "hotel", "typeLabel": "🏨 大理古城奢华静谧宿集", "name": "既下山·SUNYATA (大理古城店)", "city": "🇨🇳 云南大理备选 (Dali)", "dateStay": "大理古城深处禅意宿集", "photo": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理市大理古城叶榆路南段", "lat": 25.6983, "lng": 100.1602, "mapsQuery": "既下山 SUNYATA 大理古城", "desc": "国内顶级精品奢华宿集品牌，隐匿于大理古城繁华深处的三进庭院。著名建筑师设计，极简东方禅意与现代高品质舒适完美融合，内设静谧禅茶室、阳光书房与中庭水景，非常适合深度思考与沉浸式创作。", "badges": ["🏯 大理古城核心静巷", "🍵 专属禅意茶室办公", "📶 极速专线 Wi-Fi", "⭐ 高品质奢华宿集"], "amenities": {"wifi": "高速光纤全院覆盖，各区域信号满格", "desk": "实木禅风大茶台兼工作台，静心办公绝佳", "power": "隐藏式地插与墙插完备", "quiet": "古城内罕见的高私密幽静空间，出则繁华入则宁静"}, "tips": "步行可达人民路与床单厂文创园，既能随时会友逛展，又能保有专属宁静空间。"}, "cafe-dailyfix": {"id": "cafe-dailyfix", "type": "cafe", "typeLabel": "☕ 历史洋房天井咖啡", "name": "The Daily Fix Cafe", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "Day 2 (12/12) 推荐办公地", "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80", "address": "55, Jalan Hang Jebat, 75200 Melaka, Malaysia", "lat": 2.1958, "lng": 102.2472, "mapsQuery": "The Daily Fix Cafe, Jalan Hang Jebat, Melaka", "desc": "马六甲最负盛名的精品咖啡馆之一，巧妙隐藏在鸡场街一家老字号土产店的后进天井。红砖斑驳、绿植垂挂，室内强劲冷气与复古长木桌并存，招牌斑兰松饼（Pandan Pancake）与咸焦糖手冲咖啡堪称绝配。", "badges": ["📶 高速 Wi-Fi", "🔌 电源插座充沛", "❄️ 舒适冷气", "🌿 绿意庭院天井"], "amenities": {"wifi": "实测 60Mbps 稳定无线网络，网页及通讯畅快", "desk": "靠墙及后厅设有多张木质长桌，高度适宜打字", "power": "靠墙卡座下方多处配有电源插座", "quiet": "上午 9:00 - 11:30 最为清幽，午后游人增多但后区依然舒适"}, "tips": "建议早上 9:00 开门即到，选择内庭天井旁的自然光长桌，开启元气满满的办公日。"}, "cafe-calanthe": {"id": "cafe-calanthe", "type": "cafe", "typeLabel": "☕ 13州传统咖啡艺术馆", "name": "Calanthe Art Cafe (十三州咖啡)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "Day 3 (12/13) 推荐办公地", "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80", "address": "11, Jalan Hang Kasturi, 75200 Melaka, Malaysia", "lat": 2.1963, "lng": 102.2468, "mapsQuery": "Calanthe Art Cafe, Jalan Hang Kasturi, Melaka", "desc": "全马唯一一家集齐马来西亚全十三州不同特色风味咖啡的艺术老店。店内挂满当地艺术家的手绘与古董摆设，空间开阔通风，白天客流适中，浓郁的南洋老时光氛围非常激发创意。", "badges": ["📶 稳定网络", "☕ 13州特色风味咖啡", "🪑 宽敞艺术长桌", "📍 靠近鸡场街"], "amenities": {"wifi": "覆盖良好的免费无线网络", "desk": "多张宽阔大木桌，适合放笔记本电脑与书本文档", "power": "部分长桌靠近墙壁插座，入座时可咨询店员", "quiet": "店内播放轻柔背景爵士音乐，适合深度代码编写与写作"}, "tips": "推荐尝试马六甲本地白咖啡与砂拉越黑咖啡，搭配一份马来娘惹叻沙充当午餐。"}, "cafe-space": {"id": "cafe-space", "type": "cafe", "typeLabel": "☕ 极客工业风自习工作站", "name": "Space Tea & Coffee (Hat Yai)", "city": "🇹🇭 合艾 (Hat Yai)", "dateStay": "Day 4 (12/14) 跨境首站工作营地", "photo": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80", "address": "Near Hat Yai Junction Railway Station, Hat Yai, Songkhla 90110, Thailand", "lat": 7.0036, "lng": 100.4682, "mapsQuery": "Space Tea & Coffee, Hat Yai, Thailand", "desc": "极简工业极客风的高品质咖啡馆，距离合艾火车站步行仅需 3 分钟！特别为移动办公与数字游民设计，室内冷气强劲且安静，配有专属长条吧台、千兆 Wi-Fi 与每个座位独立的电源接口。", "badges": ["🚶 火车站步行3分", "⚡ 极速千兆网络", "🔌 每座独立插座", "🤫 极度安静"], "amenities": {"wifi": "泰国顶级电信商 AIS 千兆光纤，测速下行超 300Mbps", "desk": "标准人体工学办公长桌，配备舒适软垫座椅", "power": "桌面集成多孔电源插座及 USB 快速充电口", "quiet": "全天保持极佳自习室级安静度，工作专注度拉满"}, "tips": "大巴清晨入境泰国后可在此全天工作至 17:00，随后从容步行至火车站搭乘 32 次夕发朝至卧铺列车。"}, "cafe-alive": {"id": "cafe-alive", "type": "cafe", "typeLabel": "☕ 冠军精品手冲早午餐", "name": "Alive Specialty Coffee", "city": "🇹🇭 合艾 (Hat Yai)", "dateStay": "合艾精品手冲备选地", "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80", "address": "10/10 Soi 5 Supasarnrangsan Rd, Hat Yai, Songkhla 90110, Thailand", "lat": 7.0094, "lng": 100.4795, "mapsQuery": "Alive Specialty Coffee, Hat Yai, Thailand", "desc": "合艾本地顶尖水准的精品咖啡馆，挑高空间与全玻璃通透采光，店内烘焙单品咖啡豆种类丰富，提供世界级品质手冲。冷气舒适，早午餐丰盛，深受年轻远程工作者喜爱。", "badges": ["☕ 冠军级单品手冲", "📶 商务级 Wi-Fi", "🥪 丰盛早午餐", "❄️ 恒温冷气"], "amenities": {"wifi": "100Mbps 稳定无线覆盖", "desk": "高脚吧台与多张宽敞方桌", "power": "卡座区域配备电源插口", "quiet": "早晨时段最适宜集中办公，氛围积极活跃"}, "tips": "手冲埃塞俄比亚与 Dirty 是招牌，搭配自制松饼能提供整天的能量。"}, "cafe-commons": {"id": "cafe-commons", "type": "cafe", "typeLabel": "☕ 亚洲顶级开放文创社区", "name": "The Commons / Roast (Thong Lor)", "city": "🇹🇭 曼谷 (Bangkok)", "dateStay": "Day 5-6 (12/15-16) 曼谷会友办公地", "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80", "address": "335 Thong Lo 17 Alley, Klongton Nuea, Watthana, Bangkok 10110, Thailand", "lat": 13.7345, "lng": 100.5826, "mapsQuery": "theCOMMONS Thonglor, Bangkok", "desc": "亚洲闻名的开放式阶梯式社区文创地标！绿色植物与露天阶梯巧妙结合，顶层 Roast 咖啡餐厅提供极高水准的精品咖啡与全日早午餐。半开放阶梯与室内空调区域任君选择，是曼谷数字游民与创意社群的大本营。", "badges": ["🌟 亚洲顶尖文创地标", "📶 极速商用光纤", "🥑 国际精致早午餐", "🚇 近 BTS 通罗站"], "amenities": {"wifi": "高速光纤无限制免费接入，漫游整个 Commons 建筑群", "desk": "木质长桌、露台沙发与 Roast 宽绰餐桌随意切换", "power": "Roast 室内卡座及公共办公长桌均有充足电源插孔", "quiet": "室内安静舒适，户外台阶适合休闲交流与会友"}, "tips": "白天在此办公，傍晚正好与曼谷当地好友在楼下或通罗酒吧街共进晚餐。"}, "cafe-saffron": {"id": "cafe-saffron", "type": "cafe", "typeLabel": "☕ 湄公河旗舰冷气工作站", "name": "Saffron Coffee 湄公河旗舰店", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "Day 9 (12/19) 深度全天办公地", "photo": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80", "address": "Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8953, "lng": 102.1384, "mapsQuery": "Saffron Coffee, Khem Khong, Luang Prabang", "desc": "“临江露台 + 室内强冷气大厅”双区域豪华配置！作为老挝高山公平贸易咖啡的典范，店内精选北部高原阿拉比卡豆。室内长实木桌配备充足插座，户外露台可饱览湄公河水色与缓缓驶过的渡船。", "badges": ["🌊 直面湄公河壮阔江景", "❄️ 独立强冷气大厅", "🔌 长桌多孔插座", "☕ 老挝顶级公平贸易豆"], "amenities": {"wifi": "琅勃拉邦最稳定的商业无线网络之一，测速 50Mbps+", "desk": "室内长条厚实原木工作台，适合长时间笔记本作业", "power": "长桌下方配有多组多功能插座", "quiet": "室内冷气区工作氛围极好，多为外国远程工作者，安静互不打扰"}, "tips": "推荐点一杯老挝冰拿铁（Lao Iced Latte）与青柠派，上午在室内专注冲刺，下午移步户外露台看日落。"}, "cafe-viewan": {"id": "cafe-viewan", "type": "cafe", "typeLabel": "☕ 阳光玻璃屋法式烘焙", "name": "View An Cafe / The Belle Rive", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "Day 10 (12/20) 临江惬意办公地", "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80", "address": "Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8962, "lng": 102.1402, "mapsQuery": "View An Cafe, Luang Prabang", "desc": "紧靠湄公河边的精致阳光玻璃屋咖啡馆，配有宽敞的遮阳伞观景露台。由法国烘焙师指导的手工法式可颂酥脆芳香，咖啡醇厚，服务极其体贴，是琅勃拉邦公认最惬意的沿河工作点之一。", "badges": ["🥐 法式手工正宗烘焙", "📶 高速稳定 Wi-Fi", "🌅 绝美湄公河落日", "📍 沿河主街便利位置"], "amenities": {"wifi": "全店高速 Wi-Fi 覆盖，视频沟通流畅", "desk": "露台遮阳伞木桌及室内空调小桌", "power": "室内靠墙位置有便捷插座", "quiet": "波光粼粼的江面与轻柔微风，环境优雅惬意"}, "tips": "下午四点半阳光斜照时最为迷人，点上一壶老挝有机花草茶，边办公边欣赏金色湄公河。"}, "cafe-gaozhuang": {"id": "cafe-gaozhuang", "type": "cafe", "typeLabel": "☕ 傣式热带滨江小粒咖啡", "name": "告庄澜沧江畔傣风咖啡馆群", "city": "🇨🇳 西双版纳 (Xishuangbanna)", "dateStay": "Day 12 (12/22) 傣乡热带办公地", "photo": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=1200&q=80", "address": "云南省西双版纳景洪市告庄西双景滨江酒吧街及赶摆街", "lat": 22.0138, "lng": 100.8042, "mapsQuery": "告庄西双景, 景洪市", "desc": "告庄澜沧江沿江步道上的特色傣风竹楼咖啡馆群。融合傣泰吊脚竹编建筑美学与云南高山普洱小粒咖啡，白天江风吹拂，绿竹成荫，夜晚灯火辉煌，充满南亚热带异域情调。", "badges": ["🌴 傣泰热带竹楼美学", "📶 5G 极速千兆覆盖", "🚶 步行即达星光夜市", "☕ 甄选云南小粒咖啡"], "amenities": {"wifi": "中国移动/电信 5G 双千兆无缝覆盖，延迟低至 15ms", "desk": "实木大茶桌与竹编卡座，空间宽大舒适", "power": "桌面大多嵌入安全电源孔", "quiet": "白天江边极度安详静谧，适合深度工作，傍晚无缝衔接夜市"}, "tips": "推荐品尝特色的“冰滴云南小粒咖啡”与“手作鲜椰乳咖啡”，风味独特难忘。"}, "cafe-erhai": {"id": "cafe-erhai", "type": "cafe", "typeLabel": "☕ 洱海S弯一线海景圣殿", "name": "洱海生态廊道 S弯海景咖啡馆", "city": "🇨🇳 云南大理 (Dali)", "dateStay": "Day 14-15 (12/24-25) 苍山洱海慢生活", "photo": "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理白族自治州大理市银桥镇磻溪村 S弯生态廊道", "lat": 25.7675, "lng": 100.1658, "mapsQuery": "大理磻溪村S弯生态廊道", "desc": "全中国数字游民与自由职业者的终极圣殿！纯白简约现代建筑坐落于洱海生态廊道最经典的 S 弯转角，超大通透全景落地玻璃直面碧蓝无垠的洱海，远处苍山雪峰巍峨挺立。冬日阳光温暖洒下，品着云南特产玫瑰拿铁，敲击键盘成为极致的享受。", "badges": ["🌊 洱海一线无敌海景", "📶 千兆光纤入户", "☀️ 冬日暖阳绝景", "🚲 廊道骑行直达"], "amenities": {"wifi": "千兆光纤网络专线，网速飞快，无论写代码还是音视频协同均行云流水", "desk": "直面海景的无遮挡全景木质长吧台，配有插座与舒服坐垫", "power": "吧台下每隔 1 米均设有独立五孔电源插座", "quiet": "机动车完全禁行，耳畔唯有清脆海鸥鸣叫与舒缓海浪声"}, "tips": "冬天的洱海有成群的西伯利亚红嘴鸥飞过，下午阳光最为通透，是整个行程最治愈的办公高光时刻！"}};
+    let leafletMapInstance = null;
+    let leafletMarkerInstance = null;
+    let currentAddressToCopy = '';
+
+    function openVenueModal(venueId) {
+      const venue = VENUES_DB[venueId];
+      if (!venue) return;
+
+      currentAddressToCopy = venue.address;
+
+      // Fill in Header & Hero
+      const heroEl = document.getElementById('modal-hero');
+      heroEl.style.backgroundImage = `url('${venue.photo}')`;
+      document.getElementById('modal-city-tag').textContent = `${venue.city} · ${venue.typeLabel}`;
+      document.getElementById('modal-title').textContent = venue.name;
+      document.getElementById('modal-stay-time').textContent = venue.dateStay;
+
+      // Badges
+      const badgesContainer = document.getElementById('modal-badges');
+      badgesContainer.innerHTML = venue.badges.map(b => `<span class="modal-badge-pill">${b}</span>`).join('');
+
+      // Desc
+      document.getElementById('modal-desc').textContent = venue.desc;
+
+      // Amenities
+      document.getElementById('amenity-wifi').textContent = venue.amenities.wifi;
+      document.getElementById('amenity-desk').textContent = venue.amenities.desk;
+      document.getElementById('amenity-power').textContent = venue.amenities.power;
+      document.getElementById('amenity-quiet').textContent = venue.amenities.quiet;
+
+      // Address & Google Maps link
+      document.getElementById('modal-address').textContent = venue.address;
+      const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.mapsQuery)}`;
+      const gmapsBtn = document.getElementById('modal-gmaps-link');
+      gmapsBtn.href = gmapsUrl;
+
+      // Tips
+      document.getElementById('modal-tips').innerHTML = `💡 <strong>出行/办公小贴士</strong>：${venue.tips}`;
+
+      // Show Modal
+      const overlay = document.getElementById('venue-modal-overlay');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      // Initialize or update Leaflet Map
+      setTimeout(() => {
+        initOrUpdateMap(venue.lat, venue.lng, venue.name, venue.address);
+      }, 150);
+    }
+
+    function initOrUpdateMap(lat, lng, title, address) {
+      const mapContainer = document.getElementById('modal-map-view');
+      if (!leafletMapInstance) {
+        leafletMapInstance = L.map('modal-map-view', {
+          zoomControl: true,
+          scrollWheelZoom: false
+        }).setView([lat, lng], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '© OpenStreetMap'
+        }).addTo(leafletMapInstance);
+
+        leafletMarkerInstance = L.marker([lat, lng]).addTo(leafletMapInstance);
+      } else {
+        leafletMapInstance.setView([lat, lng], 15);
+        leafletMarkerInstance.setLatLng([lat, lng]);
+      }
+
+      leafletMarkerInstance.bindPopup(`<strong>${title}</strong><br><small>${address}</small>`).openPopup();
+      leafletMapInstance.invalidateSize();
+    }
+
+    function closeVenueModal() {
+      const overlay = document.getElementById('venue-modal-overlay');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleOverlayClick(event) {
+      if (event.target.id === 'venue-modal-overlay') {
+        closeVenueModal();
+      }
+    }
+
+    function copyModalAddress() {
+      if (!currentAddressToCopy) return;
+      navigator.clipboard.writeText(currentAddressToCopy).then(() => {
+        const btn = document.querySelector('.btn-copy-addr');
+        const origText = btn.textContent;
+        btn.textContent = '✅ 已复制！';
+        setTimeout(() => {
+          btn.textContent = origText;
+        }, 2000);
+      }).catch(() => {
+        alert('地址：' + currentAddressToCopy);
+      });
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeVenueModal();
+      }
+    });
+
   </script>
 </body>
 </html>
