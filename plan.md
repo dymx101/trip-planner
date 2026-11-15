@@ -98,3 +98,23 @@
 
 ### 💰 优化后住宿总预算（夫妻双人 9 晚）
 * **9 晚酒店总费用**：**约 ¥3,800 - ¥4,800**（相比原奢华方案直接节省约 **¥6,000 - ¥9,000**，平均每晚仅约 450 - 500 元）！
+
+---
+
+## 沿途全线车站位置、Google Maps 定位与车票票价表
+
+| 区间航段 | 出发车站及精确位置 (含 Google Maps) | 到达车站及精确位置 (含 Google Maps) | 交通工具 / 车次时刻 | 💰 车票票价参考 (单人/双人) | 接驳与通关注意事项 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **✈️ 武汉 ➔ 新加坡<br>(妻子前置航班)** | **武汉天河国际机场 T3**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Wuhan+Tianhe+International+Airport+T3) | **新加坡樟宜机场 T1/T2**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Singapore+Changi+Airport) | 直飞航班 (酷航/东航)<br>00:15 起飞 ➔ 05:25 抵 | **约 ¥1,100 - ¥1,600 /人**<br>(红眼直飞单程经济舱) | 清晨抵樟宜机场，接机后入住酒店补觉休整。傍晚先生下班后两人汇合出发。 |
+| **1. 新加坡 ➔ 马六甲** | **新山拉庆中央车站 (Larkin)**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Larkin+Sentral+Johor+Bahru) | **马六甲仙特拉车站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Melaka+Sentral) | Causeway Link / KKKL 空调大巴<br>车程约 2.5 小时 (19:30班次) | **约 ¥35 - ¥50 /人**<br>(双人约 ¥70 - ¥100) | 12/11周五18:00兀兰出境 ➔ 新山 CIQ 入境 ➔ 站前打车 10 分钟到 Larkin 乘车。22:00抵马六甲。 |
+| **2. 马六甲 ➔ 泰国合艾** | **马六甲仙特拉长途车站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Melaka+Sentral) | **合艾火车站前**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Hat+Yai+Junction+Railway+Station) | 豪华 2+1 宽体夜班客车<br>20:30 发车 ➔ 次日 08:30 抵 | **约 ¥150 - ¥190 /人**<br>(双人约 ¥300 - ¥380) | 走 E2 南北高速，**完全不进吉隆坡市区**！清晨在黑木山 (Bukit Kayu Hitam) 免签盖章入境泰国。 |
+| **3. 泰国合艾 ➔ 曼谷** | **合艾火车站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Hat+Yai+Junction+Railway+Station) | **曼谷阿皮瓦中央车站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Krung+Thep+Aphiwat+Central+Terminal) | 泰铁 SRT 32 次特快 CNR 卧铺<br>17:45 发车 ➔ 次日 10:30 抵曼谷 | **约 ¥220 - ¥270 /人** (二等卧铺)<br>(双人卧铺约 ¥440 - ¥540) | 合艾站寄存行李；白天在站旁极速网络咖啡办公，傍晚乘卧铺，次日直通曼谷 MRT 蓝色线。 |
+| **4. 曼谷 ➔ 老挝万象** | **曼谷阿皮瓦中央车站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Krung+Thep+Aphiwat+Central+Terminal) | **老挝万象坎萨瓦站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Khamsavath+Railway+Station+Vientiane) | 曼谷直达万象国际列车 133/147次<br>21:25 发车 ➔ 次日 09:05 直达老挝 | **约 ¥180 - ¥230 /人** (软卧)<br>(双人卧铺约 ¥360 - ¥460) | 廊开站停靠办泰出境，跨过第一友谊大桥直入万象坎萨瓦站办入境落地签，免拖行李换大巴！ |
+| **5. 万象 ➔ 琅勃拉邦** | **中老铁路万象站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Vientiane+Railway+Station) | **中老铁路琅勃拉邦站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Railway+Station) | 中老铁路“澜沧号”动车 C84/K12<br>16:30 发车，车程仅 2 小时 | **约 ¥115 /人** (二等座)<br>(双人二等座约 ¥230) | 市区打车 25 分钟抵车站；到达琅勃拉邦出站后乘坐官方小巴（3.5万基普，20分钟）直达古城。 |
+| **6. 琅勃拉邦 ➔ 西双版纳** | **中老铁路琅勃拉邦站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Railway+Station) | **西双版纳火车站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Xishuangbanna+Railway+Station) | **中老铁路 D888 次直达国际动车**<br>12:52 发车 ➔ 15:47 直达版纳 | **约 ¥198 /人** (二等座)<br>(双人二等座约 ¥396) | 14:14 磨丁站办老挝出境 ➔ 经友谊隧道入磨憨口岸大厅刷中国护照秒通关 ➔ 15:47 抵版纳。全程仅3.5小时！ |
+| **7. 西双版纳 ➔ 云南大理** | **西双版纳火车站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Xishuangbanna+Railway+Station) | **大理火车站**<br>[📍 在 Google Maps 查看](https://www.google.com/maps/search/?api=1&query=Dali+Railway+Station) | 云南省内直达动车 / 高铁<br>车程约 6 小时 (上午或中午发车) | **约 ¥245 - ¥280 /人** (二等座)<br>(双人二等座约 ¥490 - ¥560) | 出站口直接乘坐“大理古城景区直通车”（5元，35分钟）或打车直达洱海生态廊道客栈。 |
+
+### 💰 全程交通票价总计
+- **7 段陆路跨国长途交通总花费（单人）**：约 **¥920 - ¥1,180**
+- **夫妻双人 7 段陆路交通总花费**：约 **¥1,850 - ¥2,360**
+- **加上妻子武汉至新加坡前置单程直飞机票（约 ¥1,300）后**：两人全部交通花费仅约 **¥3,150 - ¥3,650**！
