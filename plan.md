@@ -247,3 +247,193 @@
 | **D13 · 12/23 (三)** | 🇨🇳 西双版纳 ➔ 🇨🇳 云南大理 | 09:40 乘省内直达动车启程赴大理 | 车上欣赏云南高原喀斯特与红土风光 | 15:35 抵大理 ➔ 专车入住洱海廊道客栈看夕阳 | 大理洱海生态客栈 |
 | **D14 · 12/24 (四)** | 🇨🇳 大理 (平安夜 Workcation) | 💻 **洱海客栈观海露台轻松远程办公** | 💻 **慢节奏收尾工作**，面朝苍山洱海 | 大理古城人民路民谣酒馆度过浪漫平安夜 | 大理洱海生态客栈 |
 | **D15 · 12/25 (五)** | 🇨🇳 大理 (圣诞节收官) | 洱海生态廊道双人漫步骑行、吹海风 | 喜洲古镇稻田扎染体验、品尝喜洲粑粑 | 白族石板烧晚餐，15天跨国壮举圆满落幕 | 大理/返程 |
+
+
+---
+
+## ☕ 沿途 7 大站点远程办公精选咖啡馆（按地点归组 · 每地 5 家 · 共 35 家 · 附详细地址与 Google Maps 导航）
+
+针对全行程白天远程办公需求，为 7 大停靠站点各精选 5 家具备**高速 Wi-Fi、充足充电插座、安静专注环境与舒适桌椅**的优质咖啡馆。每家均配备精确地址与 Google Maps 直达导航链接。
+
+### 🇲🇾 马六甲 (Melaka)（Day 2–3 (12/12–12/13) · 鸡场街慢生活办公）
+
+| 序号 | 咖啡馆名称 | 类别/特色 | 详细街道地址 | 远程办公实测配置 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **The Daily Fix Cafe (鸡场街天井老洋房咖啡)** | ☕ 历史洋房天井咖啡 | `55, Jalan Hang Jebat, 75200 Melaka, Malaysia` | 实测 80Mbps 稳定 Wi-Fi，后进木桌区备有多个三孔插座，工作氛围安静舒适。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=The+Daily+Fix+Cafe+Melaka) |
+| 2 | **Calanthe Art Cafe (十三州咖啡馆)** | ☕ 南洋十三州风味咖啡 | `11, Jalan Hang Kasturi, 75200 Melaka, Malaysia` | 室内冷气区桌椅平稳，插座充足，采光通透，适合写方案与处理文档。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Calanthe+Art+Cafe+Melaka) |
+| 3 | **The Coffee Jar (啡嚼 · 鸡场街小巧手冲馆)** | ☕ 极简自烘焙手冲精品馆 | `38, Lorong Hang Jebat, 75200 Melaka, Malaysia` | 靠墙长木吧台配插座，背景音乐轻柔，适合单人专注编码与查阅资料。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=The+Coffee+Jar+Melaka) |
+| 4 | **Heeren 119 Cafe (荷兰街娘惹老宅咖啡)** | 🏛️ 百年娘惹大宅庭院咖啡 | `119, Jalan Tun Tan Cheng Lock, 75200 Melaka, Malaysia` | 大理石长方桌平整开阔，实测 60Mbps 无线网络，环境优雅静谧。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Heeren+119+Cafe+Melaka) |
+| 5 | **Backlane Coffee (鸡场街后巷现代极简馆)** | 🌿 极简明亮现代工业风 | `145, Jalan Hang Jebat, 75200 Melaka, Malaysia` | 超长共享原木工作桌配有多组地面插座，数码游民打卡首选，全天办公无压力。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Backlane+Coffee+Melaka) |
+
+### 🇹🇭 泰国合艾 (Hat Yai)（Day 4 (12/14) · 泰铁发车前全天极速办公营地）
+
+| 序号 | 咖啡馆名称 | 类别/特色 | 详细街道地址 | 远程办公实测配置 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **Space Tea & Coffee (Hat Yai)** | 🚀 火车站旁极速办公营地 | `126 Thammanoonvithi Rd, Hat Yai, Songkhla 90110, Thailand` | 实测 120Mbps 高速光纤专线，长条工作长桌配有多孔国际插座，适合全天高效编码与视频会议。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Space+Tea+and+Coffee+Hat+Yai) |
+| 2 | **Alive Specialty Coffee (合艾手冲美学馆)** | ☕ 泰南精品手冲单品馆 | `10/10 Poonnakan Rd, Hat Yai, Songkhla 90110, Thailand` | 优质稳定网络，客座区备有专用办公小台灯与插座，适合专注深度思考。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Alive+Specialty+Coffee+Hat+Yai) |
+| 3 | **The Company Coffee (合艾挑高工业自习馆)** | 🏢 现代自由职业者自习共享空间 | `22 Rat Uthit Rd, Hat Yai, Songkhla 90110, Thailand` | 专门为笔记本办公设计的桌面高度与人体工学靠椅，是合艾敲代码效率最高的地标之一。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=The+Company+Coffee+Hat+Yai) |
+| 4 | **Doppio Cafe (合艾意式浓缩精品店)** | ☕ 意式浓缩与泰式特调小馆 | `151 Nipat Uthit 1 Rd, Hat Yai, Songkhla 90110, Thailand` | 室内安静整洁，靠窗座位采光良好且配有插座，适合处理紧急邮件。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Doppio+Cafe+Hat+Yai) |
+| 5 | **The Habita Coffee & Library (书香艺术馆)** | 📚 艺术书吧与咖啡结合体 | `151 Sangchan Rd, Hat Yai, Songkhla 90110, Thailand` | 超长静音书桌配有充足台灯与插座，环境极度安宁，极其适合写方案与深度创作。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=The+Habita+Hatyai) |
+
+### 🇹🇭 泰国曼谷 (Bangkok)（Day 5–6 (12/15–12/16) · 曼谷连续 2 天高效会友与办公）
+
+| 序号 | 咖啡馆名称 | 类别/特色 | 详细街道地址 | 远程办公实测配置 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **The Commons / Roast (Thong Lor)** | 🏙️ 半开放式生态社区工作空间 | `335 Thong Lo 17 Alley, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand` | 全区域免费极速 Wi-Fi 覆盖，随处可见可用电源插座，极度开放友好的工作氛围。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=The+Commons+Thonglor+Bangkok) |
+| 2 | **Factory Coffee - Bangkok (世界冠军旗舰店)** | 🏆 世界咖啡冠军级创意工作空间 | `49 Phaya Thai Rd, Thanon Phaya Thai, Ratchathewi, Bangkok 10400, Thailand` | 配备双频高速企业 Wi-Fi，中央实木长吧台与靠墙座位密集配置电源插座。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Factory+Coffee+Bangkok) |
+| 3 | **Nana Coffee Roasters (Ari 绿植庭院旗舰店)** | 🌿 独栋热带花园精品咖啡庄园 | `24/2 Ari Samphan 4 Alley, Samsen Nai, Phaya Thai, Bangkok 10400, Thailand` | 二楼设有专门的办公长桌与极速无线网络，阳光透过绿植洒在桌面上，灵感爆棚。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Nana+Coffee+Roasters+Ari+Bangkok) |
+| 4 | **Kaizen Coffee Co. (Ekkamai 现代极简双层馆)** | ✨ 现代北欧纯白极简空间 | `888 6-7 Ekkamai Rd, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand` | 二楼为专注办公专区，全木长桌每位均配有电源插座与 USB 接口，冷气充足安静。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Kaizen+Coffee+Ekkamai+Bangkok) |
+| 5 | **Ceresia Coffee Roasters (Sukhumvit 47 日式匠心馆)** | ☕ 日系严谨浅烘手冲馆 | `593/29-41 Sukhumvit 47 Alley, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand` | 环境不放嘈杂音乐，客流稳定礼貌，适合一对一商务沟通或长时间静心写作。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Ceresia+Coffee+Roasters+Bangkok) |
+
+### 🇱🇦 老挝万象 (Vientiane)（Day 7 (12/17) · 湄公河畔南普广场办公营地）
+
+| 序号 | 咖啡馆名称 | 类别/特色 | 详细街道地址 | 远程办公实测配置 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **Naked Espresso (万象数码游民大本营)** | ⚡ 专线光纤游民核心营地 | `Rue Manthatourath, Ban Xiengyeun, Vientiane 01000, Laos` | 实测 100Mbps 极速稳定光纤，多组舒适长条工作桌，冷气极足，插座充沛。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Naked+Espresso+Vientiane) |
+| 2 | **Joma Bakery Cafe (Nam Phou 喷泉店)** | 🥐 喷泉广场经典法式长桌咖啡 | `Rue Setthathilath, Nam Phou, Vientiane 01000, Laos` | 二楼设有专门的长条木制工作大桌，电源接口充足，网络稳定，适合多人协同办公。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Joma+Bakery+Cafe+Nam+Phou+Vientiane) |
+| 3 | **Common Grounds Cafe (万象静音工作坊)** | 💻 宽大实木工作台与静音会议角 | `Chao Anou Rd, Ban Wat Chan, Vientiane 01000, Laos` | 二楼带有专用的独立插座工作岛，禁止大声喧哗，适合专注写代码与处理重要工作。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Common+Grounds+Cafe+Vientiane) |
+| 4 | **Le Banneton Cafe French Bakery (法式烘焙馆)** | 🥖 老挝国家博物馆旁法式传统 | `Rue Nokeokoummane, Vientiane 01000, Laos` | 室内环境清凉舒适，提供免费 Wi-Fi，早上边吃现出炉法棍边梳理日程极具仪式感。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Le+Banneton+Vientiane) |
+| 5 | **Kung's Cafe Lao (老挝传统热带小院)** | 🍌 传统香蕉薄饼与滴漏咖啡院落 | `Simuang Rd, Ban Dongpalane, Vientiane 01000, Laos` | 院内芒果树下微风习习，配有电源插座与良好网络，体验原汁原味的当地慢生活办公。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Kung+Cafe+Lao+Vientiane) |
+
+### 🇱🇦 老挝琅勃拉邦 (Luang Prabang)（Day 8–10 (12/18–12/20) · 世界文化遗产慢生活全天工作站）
+
+| 序号 | 咖啡馆名称 | 类别/特色 | 详细街道地址 | 远程办公实测配置 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **Saffron Coffee (湄公河旗舰店)** | 🌊 湄公河高山有机咖啡工作站 | `Khem Khong, Ban Wat Nong, Luang Prabang 06000, Laos` | 室内冷气区网络极佳，配备带插座实木写字台，江风拂面，全天办公身心极度放松。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Saffron+Coffee+Luang+Prabang) |
+| 2 | **View An Cafe / The Belle Rive** | 🌅 临江惬意落日露台咖啡 | `Baan Vat Sene, Sakkarine Rd, Luang Prabang 06000, Laos` | 露台各柱位均配有电源插座，Wi-Fi 覆盖全区，傍晚抬头即是金色晚霞。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=The+Belle+Rive+Terrace+Luang+Prabang) |
+| 3 | **Le Cafe Ban Vat Sene (古城历史法式小资馆)** | 🏛️ 古城主街殖民地风情红木馆 | `Sakkarine Rd, Ban Vat Sene, Luang Prabang 06000, Laos` | 木质长桌平稳，配有室内插座，光纤网络测速稳定在 50Mbps，适合安静打字写策划。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Le+Cafe+Ban+Vat+Sene+Luang+Prabang) |
+| 4 | **Zurich Bread Artisan Bakery (南康河畔欧包长桌)** | 🥖 南康河畔全麦硬欧艺术烘焙 | `Kingkitsarath Rd, Ban Aphay, Luang Prabang 06000, Laos` | 工作长桌配有独立延长线插座板，空调凉爽，许多欧美自由职业者常在此开远程会议。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Zurich+Bread+Artisan+Bakery+Luang+Prabang) |
+| 5 | **Silk Road Cafe by Ock Pop Tok (湄公河丝织庄园)** | 🧶 传统丝织庄园与落日江景露台 | `Ban Saylom, Khem Khong, Luang Prabang 06000, Laos` | 户外露台遮阴极好且江风清凉，设有可用电源插座，环境充满艺术灵感与慢节奏。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Ock+Pop+Tok+Silk+Road+Cafe+Luang+Prabang) |
+
+### 🇨🇳 中国西双版纳 (Xishuangbanna)（Day 11–12 (12/21–12/22) · 告庄澜沧江畔与热带傣韵办公）
+
+| 序号 | 咖啡馆名称 | 类别/特色 | 详细街道地址 | 远程办公实测配置 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **告庄澜沧江畔·猫卡江景咖啡 (星光夜市店)** | 🌴 告庄澜沧江景傣风咖啡 | `云南省西双版纳景洪市告庄西双景景真寨澜沧江畔` | 独享千兆无线光纤，长桌电源插座充沛，吹着澜沧江暖风办公效率翻倍。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景猫卡咖啡) |
+| 2 | **景洪曼听御花园旁·野象庭院手冲咖啡** | 🐘 傣式庭院云南小粒咖啡手冲馆 | `云南省西双版纳景洪市曼听路曼听公园正门旁` | 庭院木桌设有充足电源与稳定 Wi-Fi，远离景区喧闹，适合全天静心写代码与深度思考。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=西双版纳曼听公园) |
+| 3 | **婉泰老挝冰咖啡 (告庄星光夜市旗舰店)** | ☕ 泰式傣风冰咖啡与泡鲁达名店 | `云南省景洪市告庄西双景景亮寨 5 栋 102 号` | 白天二楼卡座区环境舒适安静，配有电源插座与快速无线网络，避开下午日晒绝佳处。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=婉泰告庄西双景) |
+| 4 | **曼飞龙白塔旁·傣乡竹楼原生态咖啡** | 🎍 传统傣族竹楼吊脚楼咖啡馆 | `云南省景洪市大曼么村曼飞龙古寨旁` | 吊脚楼二层凉风习习无需空调，竹桌宽大，配有排插，充满山野田园避世灵感。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=景洪大曼么村) |
+| 5 | **景洪澜沧江畔·黑胶文艺手冲咖啡馆** | 🎵 黑胶唱片复古文艺慢生活馆 | `云南省景洪市滨江大道江边酒吧街中段` | 大理石吧台配有专用笔记本工作区，极速光纤网络，背景音效高保真，舒适惬意。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=景洪滨江大道) |
+
+### 🇨🇳 中国云南大理 (Dali)（Day 13–15 (12/23–12/25) · 苍山洱海慢生活数字游民终点圣地）
+
+| 序号 | 咖啡馆名称 | 类别/特色 | 详细街道地址 | 远程办公实测配置 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **洱海生态廊道·浅山伴海 S 弯海景咖啡馆** | 🌊 磻溪 S 弯一线海景游民圣地 | `云南省大理市银桥镇磻溪村 7 组洱海生态廊道旁` | 千兆独享专线（实测 300Mbps+），每张海景长桌均有地插与护眼台灯，一边看海鸥飞过一边敲代码。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道) |
+| 2 | **大理古城床单厂艺术区·海豚阿德书店咖啡** | 🎨 苍山脚下文艺游民精神坐标 | `云南省大理市大理古城苍坪街 56 号床单厂艺术区内` | 古朴长木大桌，高网速与充足插座，众多跨国远程工作者在这里写书、编程，游民社区氛围极佳。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理古城床单厂艺术区) |
+| 3 | **喜洲古镇·甲马咖啡 (麦田全景露台)** | 🌾 喜洲麦田微风与非遗甲马工坊 | `云南省大理市喜洲古镇市上街 69 号` | 二层与顶楼长桌均有防风排插，网络流畅，点一杯云南厌氧日晒咖啡办公极为治愈。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=喜洲古镇甲马咖啡) |
+| 4 | **大理才村湿地·水上森林亲水木屋咖啡** | 🌲 洱海水上水杉与晨光咖啡屋 | `云南省大理市大理镇才村生态廊道水上森林旁` | 亲水落地玻璃窗前设有长条木吧台，配有多孔插座，清晨 8:30 即可入内一边看日出一边开工。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理才村码头) |
+| 5 | **双廊古镇·海妖咖啡 (正对苍山十九峰)** | 🏔️ 艺术小镇全景观海平台咖啡 | `云南省大理市双廊镇大建旁村环海路 108 号` | 户外露台实木卡座带有遮阳伞与户外防水插座，吹着洱海微风编程，体验大理式神仙旅居。 | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理双廊大建旁村) |
+
+
+---
+
+## 🍜 沿途 7 大站点特色地道美食全景清单（按地点归组 · 每地 10 绝 · 共 70 道非遗与地道名吃 · 附详细地址与 Google Maps 导航）
+
+针对夫妻深度旅行与寻味体验，为沿线 7 大站点各收录 10 家最具代表性的地道美食、老字号餐厅与夜市必吃档口（共 70 道）。每道均列明**参考消费价格、必点招牌菜品、详细地址与 Google Maps 导航**。
+
+### 🇲🇾 马六甲 (Melaka) · 南洋古城古早味 · 娘惹美食与海南鸡饭粒之都
+
+| 序号 | 美食/老字号名称 | 分类/定位 | 参考人均消费 | 🥢 必点招牌推荐 | 详细街道地址 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **和记鸡饭团 (Hoe Kee Chicken Rice)** | 🍗 经典海南鸡饭粒老字号 | 约 12 - 20 MYR (约 ¥20 - ¥32) | 招牌海南白斩鸡 + 手工鸡饭粒（每人5粒起） | `4, 6, 8, Jalan Hang Jebat, 75200 Melaka, Malaysia` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Hoe+Kee+Chicken+Rice+Melaka) |
+| 2 | **佳必多沙爹朱律 (Capitol Satay Celup)** | 🍢 传统沙爹朱律火锅名店 | 每串 1.5 - 2.5 MYR (人均约 ¥35 - ¥60) | 鲍鱼菇、鲜大头虾、鲜鱿鱼、自制猪肉丸串 | `41, Lorong Bukit Cina, 75100 Melaka, Malaysia` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Capitol+Satay+Celup+Melaka) |
+| 3 | **大宝小食 (Jonker 88 娘惹叻沙与珍多冰)** | 🍜 鸡场街地标娘惹叻沙与甜品 | 约 8 - 16 MYR (约 ¥13 - ¥26) | Kahwin 混合双拼叻沙 + 原味马六甲纯椰糖珍多冰 (Cendol) | `88, Jalan Hang Jebat, 75200 Melaka, Malaysia` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Jonker+88+Melaka) |
+| 4 | **麦哥娘惹餐馆 (Restoran Makko)** | 🍲 正宗家庭式娘惹菜标杆 | 人均约 35 - 55 MYR (约 ¥58 - ¥90) | 黑果焖鸡 (Ayam Buah Keluak) + 娘惹阿参辣鱼 (Asam Pedas) | `123, Jalan Merdeka, Taman Melaka Raya, 75000 Melaka, Malaysia` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Restoran+Makko+Melaka) |
+| 5 | **Nadeje Cake House (马六甲千层蛋糕创始店)** | 🍰 南洋手工千层蛋糕鼻祖 | 每块约 14 - 18 MYR (约 ¥23 - ¥30) | 招牌原味千层 (Original Mille Crepe) + 朗姆葡萄千层 | `G-23, 25 & 27, Dataran Pahlawan, Jalan Merdeka, 75000 Melaka` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Nadeje+Cake+House+Melaka) |
+| 6 | **鸡场街夜市潮州蚝煎与炒粿条** | 🍳 周末夜市炭火镬气排挡 | 约 10 - 15 MYR (约 ¥16 - ¥25) | 大份酥脆潮州生蚝煎 + 鸭蛋炒粿条 | `Jalan Hang Jebat, 75200 Melaka (周末夜市中央档口)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Jonker+Street+Night+Market) |
+| 7 | **板底街阿兰芋饭肉羹汤 (Ah Lan Pork Soup)** | 🥣 潮州传统咸香芋头饭肉汤 | 约 10 - 18 MYR (约 ¥16 - ¥30) | 招牌肉羹猪杂汤 + 秘制香葱芋头饭 | `11, Jalan Kampung Pantai, 75200 Melaka, Malaysia` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Ah+Lan+Pork+Soup+Melaka) |
+| 8 | **隆安茶室 (Kedai Kopi Loong Ann)** | ☕ 传统南洋炭烤面包与生熟蛋 | 约 6 - 12 MYR (约 ¥10 - ¥20) | 炭烤咖椰牛油烤面包 + 生熟蛋一对 + 传统海南咖啡O | `93/807, Jalan Hang Jebat, 75200 Melaka, Malaysia` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Loong+Ann+Coffee+Shop+Melaka) |
+| 9 | **巴巴查理娘惹糕 (Baba Charlie Nyonya Kuih)** | 🍡 手工鲜蒸传统五彩娘惹糕 | 每块约 1.5 - 3 MYR (约 ¥2.5 - ¥5) | 娘惹椰糖椰丝球 (Ondeh-Ondeh) + 兰花糯米糕 (Pulut Tai Tai) | `72, Jalan Tengkera Pantai 2, 75200 Melaka, Malaysia` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Baba+Charlie+Nyonya+Cake+Melaka) |
+| 10 | **葡萄牙村海鲜烤魔鬼鱼 (Portuguese Settlement)** | 🐟 海滨露天烧烤葡式海鲜排挡 | 人均约 35 - 55 MYR (约 ¥58 - ¥90) | 香蕉叶炭烤魔鬼鱼 (Ikan Bakar) + 葡式浓汁青口贝 | `Medan Selera, Portuguese Settlement, Ujong Pasir, 75050 Melaka` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Portuguese+Settlement+Melaka) |
+
+### 🇹🇭 泰国合艾 (Hat Yai) · 泰南美食第一都 · 炭烤炸鸡、早茶点心与浓香肉骨茶
+
+| 序号 | 美食/老字号名称 | 分类/定位 | 参考人均消费 | 🥢 必点招牌推荐 | 详细街道地址 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **德查合艾炸鸡总店 (Kai Tod Decha)** | 🍗 享誉全泰的合艾炸鸡天花板 | 约 60 - 120 THB (约 ¥12 - ¥24) | 金牌酥脆大炸鸡腿 + 芭蕉叶蒸热糯米饭 + 特调甜辣酱 | `Chee Uthit Rd, Tambon Hat Yai, Songkhla 90110, Thailand` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Kai+Tod+Decha+Hat+Yai) |
+| 2 | **清姐肉骨茶 (Ching Jie Bak Kut Teh)** | 🍲 泰南浓郁砂锅药膳肉骨茶 | 约 150 - 250 THB (约 ¥30 - ¥50) | 极品砂锅肉骨茶双人煲 + 现炸酥脆老油条 + 烫生菜 | `Thanon Saeng Chan, Hat Yai, Songkhla 90110, Thailand` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Ching+Jie+Restaurant+Hat+Yai) |
+| 3 | **福泰点心 / 好运点心 (Chok Dee Dim Sum)** | 🥟 泰南特色百样蒸笼早茶点心 | 每笼 20 - 35 THB (人均约 ¥30 - ¥50) | 水晶鲜虾烧麦 + 泰式皮蛋烧肉卷 + 秘制肉骨茶小盅 | `58/25 Lamai Songkrew Rd, Hat Yai, Songkhla 90110, Thailand` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Chok+Dee+Dim+Sum+Hat+Yai) |
+| 4 | **合艾金荣市场老字号卤猪脚饭 (Khao Kha Moo)** | 🍖 软糯胶原蛋白古法卤猪手 | 约 60 - 90 THB (约 ¥12 - ¥18) | 至尊蹄膀双拼饭（带皮猪肘+瘦肉+卤蛋+酸菜） | `Supanasan Rd, Hat Yai (金荣市场外围早市街)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Kim+Yong+Market+Hat+Yai) |
+| 5 | **南盛燕窝鱼翅煲 (Nam Seng Bird's Nest)** | 🪺 泰南老字号冰糖燕窝鱼翅 | 每碗约 200 - 500 THB (约 ¥40 - ¥100) | 极品浓稠冰糖砂锅炖燕窝 + 砂锅红烧鱼鳔煲 | `Nipat Uthit 3 Rd, Hat Yai, Songkhla 90110, Thailand` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Nam+Seng+Birds+Nest+Hat+Yai) |
+| 6 | **金荣市场湄茶薇芒果糯米饭 (Mae Chawee)** | 🥭 泰南椰香芒果糯米饭天花板 | 约 80 - 120 THB (约 ¥16 - ¥24) | 特级三色椰浆熟芒糯米饭（含蝶豆花蓝与斑兰绿） | `Kim Yong Market, Hat Yai, Songkhla 90110` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Kim+Yong+Market+Hat+Yai) |
+| 7 | **泰南酸辣海鲜冬阴功配妈妈面** | 🍲 浓郁椰浆酸辣海鲜铜锅煲 | 约 120 - 180 THB (约 ¥24 - ¥36) | 招牌海鲜全家福冬阴功锅配加倍妈妈面 | `Prachathipat Rd, Hat Yai, Songkhla 90110` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Lee+Gardens+Plaza+Hat+Yai) |
+| 8 | **绿山夜市炭火现烤大头虾 (Greenway Night Market)** | 🦐 夜市现捞炭烤罗氏沼虾 | 半公斤约 250 - 350 THB (约 ¥50 - ¥70) | 炭火大头虾 1 斤 + 泰式生腌生蚝拼盘 | `Greenway Night Market, Hat Yai, Songkhla 90110` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Greenway+Night+Market+Hat+Yai) |
+| 9 | **合艾生滚潮州猪肉粉与牛肉船粉 (Boat Noodles)** | 🍜 泰式浓黑中草药船面 | 每碗约 20 - 45 THB (约 ¥4 - ¥9) | 传统黑汤牛肉小船粉（微辣）+ 香脆炸猪皮包 | `Nipat Uthit 2 Rd, Hat Yai, Songkhla 90110` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Nipat+Uthit+2+Rd+Hat+Yai) |
+| 10 | **街头鲜椰壳冰淇淋与泰式香蕉飞饼 (Roti)** | 🥥 原只椰子手工冰淇淋与煎饼 | 约 40 - 60 THB (约 ¥8 - ¥12) | 双拼鲜椰壳冰淇淋 + 经典黄油香蕉炼乳飞饼 (Roti Kluay) | `Sanehanusorn Rd, Hat Yai (李花园步行街夜市)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Lee+Gardens+Plaza+Hat+Yai) |
+
+### 🇹🇭 泰国曼谷 (Bangkok) · 世界美食之都 · 米其林街头传奇、炭烤海鲜与火山排骨
+
+| 序号 | 美食/老字号名称 | 分类/定位 | 参考人均消费 | 🥢 必点招牌推荐 | 详细街道地址 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **痣姐热炒 (Jay Fai · 米其林一星传奇)** | 👑 世界级米其林一星街头热炒 | 人均约 1,200 - 2,000 THB (约 ¥240 - ¥400) | 爆浆黄金蟹肉煎蛋卷 (Crab Omelette) + 醉汉炒海鲜河粉 | `327 Maha Chai Rd, Samran Rat, Phra Nakhon, Bangkok 10200` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Jay+Fai+Bangkok) |
+| 2 | **建兴酒家 (Somboon Seafood 咖喱炒蟹创始店)** | 🦀 全曼谷咖喱炒蟹金字招牌 | 人均约 500 - 800 THB (约 ¥100 - ¥160) | 独家秘制黄咖喱炒活肉蟹 (Fried Crab with Curry Powder) | `169 / 7-12 Surawong Rd, Suriyawong, Bang Rak, Bangkok 10500` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Somboon+Seafood+Surawong+Bangkok) |
+| 3 | **吞武里海鲜市场 (Thonburi Market Place 现捞现烤)** | 🦞 曼谷最大的活海鲜平价盛宴 | 人均约 400 - 700 THB (约 ¥80 - ¥140) | 炭烤手臂粗大头虾 (按公斤) + 现开泰式大生蚝配炸葱蘸酱 | `58 Borommaratchachonnani Rd, Sala Thammasop, Thawi Watthana, Bangkok 10170` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Thonburi+Market+Place+Bangkok) |
+| 4 | **红大哥水门鸡饭 (Go-Ang Pratunam · 米其林必比登)** | 🍗 水门市场老字号海南鸡饭 | 约 60 - 100 THB (约 ¥12 - ¥20) | 招牌双拼鸡肉饭 (白切+香脆) + 特制生姜蒜蓉黑豉油蘸酱 | `962 Phetchaburi Rd, Makkasan, Ratchathewi, Bangkok 10400` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Go-Ang+Pratunam+Chicken+Rice+Bangkok) |
+| 5 | **瓦塔纳帕尼牛肉面 (Wattana Panich 50年老卤煲)** | 🥩 传承半世纪的巨型陈年卤牛肉锅 | 约 120 - 200 THB (约 ¥24 - ¥40) | 特级红烧牛杂全拼牛肉粉 (Kuay Teow Neua) + 慢炖牛筋煲 | `336-338 Ekkamai Rd, Khlong Tan Nuea, Watthana, Bangkok 10110` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Wattana+Panich+Bangkok) |
+| 6 | **荣泰猪肉粉 (Rung Rueang Pork Noodles · 米其林必比登)** | 🍜 曼谷第一生滚肉末冬阴米粉 | 约 60 - 100 THB (约 ¥12 - ¥20) | 冬阴酸辣粗米粉 (Tom Yum Dry Noodles) + 炸香脆鱼皮 | `10/3 Sukhumvit 26 Alley, Khlong Tan, Khlong Toei, Bangkok 10110` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Rung+Rueang+Pork+Noodles+Bangkok) |
+| 7 | **乔德夜市火山排骨 (Jodd Fairs Leng Saap)** | 🌋 壮观火山酸辣大猪脊骨高塔 | 约 200 - 450 THB (约 ¥40 - ¥90) | 中号或大号招牌青柠指天椒火山排骨 (带一次性手套啃) | `Rama IX Rd, Huai Khwang, Bangkok 10310 (Jodd Fairs 乔德夜市)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Jodd+Fairs+Night+Market+Bangkok) |
+| 8 | **颂通酒家 (Sornthong Seafood 曼谷老饕海鲜排挡)** | 🦐 宵夜档炭火烤海鲜与海鲜煲 | 人均约 400 - 700 THB (约 ¥80 - ¥140) | 砂锅鲜虾粉丝煲 + 炭火生烤大头虾 + 蒜蓉爆炒含羞草 | `2829-2831 Rama IV Rd, Khlong Toei, Bangkok 10110` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Sornthong+Seafood+Bangkok) |
+| 9 | **Thip Samai 鬼门泰式炒河粉 (Pad Thai Pratu Phi)** | 🍳 全泰炒河粉 Pad Thai 开山鼻祖 | 约 120 - 200 THB (约 ¥24 - ¥40) | 金包银蛋包鲜虾炒河粉 (Superb Pad Thai) + 招牌带果肉鲜橙汁 | `313 315 Maha Chai Rd, Samran Rat, Phra Nakhon, Bangkok 10200` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Thip+Samai+Pad+Thai+Bangkok) |
+| 10 | **Mae Varee 芒果糯米饭 (Thong Lor 天花板甜品)** | 🥭 曼谷公认第一名芒果糯米饭 | 约 150 - 200 THB (约 ¥30 - ¥40) | 招牌三色斑兰蝶豆花芒果糯米饭礼盒 | `1 Sukhumvit 55 Alley, Khlong Tan Nuea, Watthana, Bangkok 10110` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Mae+Varee+Mango+Sticky+Rice+Bangkok) |
+
+### 🇱🇦 老挝万象 (Vientiane) · 湄公河畔慢调滋味 · 炭火盐烤鱼、传统肉末沙拉与法式红酒餐
+
+| 序号 | 美食/老字号名称 | 分类/定位 | 参考人均消费 | 🥢 必点招牌推荐 | 详细街道地址 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **老挝国菜肉末沙拉 (Laap / Larb)** | 🥗 老挝最具代表性的非遗国菜 | 约 50,000 - 80,000 LAK (约 ¥16 - ¥26) | 传统香草柠檬碎牛肉肉末沙拉配新鲜苦瓜包菜叶 | `Ban Anou Night Food Street, Vientiane 01000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Ban+Anou+Night+Market+Vientiane) |
+| 2 | **湄公河畔炭火盐烤香茅草罗非鱼 (Ping Pa)** | 🐟 湄公河畔经典盐焗炭烤活鱼 | 约 70,000 - 110,000 LAK (约 ¥23 - ¥36) | 整条香茅草盐烤罗非鱼 + 泰老酸辣海鲜绿蘸酱 + 细米线米纸包 | `Fa Ngum Rd (湄公河夜市沿江露天排挡区)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Vientiane+Night+Market) |
+| 3 | **老挝法式长棍三夹板三明治 (Khao Jee)** | 🥖 法越融合手撕爆浆法棍三明治 | 约 25,000 - 40,000 LAK (约 ¥8 - ¥13) | 全套豪华手工鹅肝酱猪肉火腿法棍三明治 | `Khao Jee Pates, Rue Hengboun, Vientiane 01000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Rue+Hengboun+Vientiane) |
+| 4 | **老挝手抓竹篓糯米饭配香茅烤鸡 (Khao Niew & Ping Gai)** | 🍗 传统竹编篓糯米饭与野木烤鸡 | 约 60,000 - 100,000 LAK (约 ¥20 - ¥33) | 手抓竹篓蒸糯米饭 + 炭烤香茅草半只鸡 + 番茄辣椒酱 | `Khua Din Market (早市农贸生鲜熟食区)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Talat+Sao+Morning+Market+Vientiane) |
+| 5 | **老挝传统手工粘米粉汤 (Khao Piak Sen)** | 🥣 现揉现切木薯粘米暖胃汤粉 | 约 30,000 - 45,000 LAK (约 ¥10 - ¥15) | 招牌土鸡手切粗米粉汤配现炸蒜油与溏心蛋 | `Ban Simeuang, Rue Setthathilath, Vientiane 01000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Wat+Si+Muang+Vientiane) |
+| 6 | **湄公河炸河苔片与脆皮老挝春卷 (Kaipen & Nem)** | 🍘 湄公河特色水草干与香脆春卷 | 约 35,000 - 60,000 LAK (约 ¥11 - ¥20) | 金牌酥脆炸河苔片配大金塔酱 (Jaew Bong) + 炸春卷拼盘 | `Chao Anouvong Park 湄公河夜市沿线摊位` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Chao+Anouvong+Park+Vientiane) |
+| 7 | **冰镇 Beerlao 老挝啤酒配香脆柠檬花生** | 🍺 国际金奖老挝啤酒国民盛宴 | 每大瓶约 20,000 - 30,000 LAK (约 ¥6 - ¥10) | 经典大瓶装 Beerlao Original + 炸柠檬草炒脆花生 | `Fa Ngum Rd (湄公河落日景观酒馆区)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Mekong+River+Sunset+Vientiane) |
+| 8 | **塔銮夜市老挝香辣青木瓜沙拉 (Tam Mak Hoong)** | 🥗 擂钵现场捣碎老挝风辣木瓜丝 | 约 25,000 - 40,000 LAK (约 ¥8 - ¥13) | 地道老挝风味生捣青木瓜丝配炸猪皮与冰生菜 | `Pha That Luang Esplanade (大塔銮夜市区)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Pha+That+Luang+Vientiane) |
+| 9 | **椰香脆皮小圆饼 (Khao Nom Krok)** | 🥞 街头半球形椰奶铁板小酥饼 | 每盒约 15,000 - 25,000 LAK (约 ¥5 - ¥8) | 双拼现烤椰奶小圆饼（甜味椰丝 + 咸香细葱花） | `Ban Anou Night Market (每晚五点出摊)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Ban+Anou+Night+Market+Vientiane) |
+| 10 | **Le Bistro 经典法餐 (法式油封鸭腿与红酒炖牛肉)** | 🍷 湄公河畔高性价比法式正餐 | 人均约 150,000 - 250,000 LAK (约 ¥50 - ¥80) | 脆皮法式传统油封鸭腿 (Confit de Canard) + 普罗旺斯慢炖牛肉 | `Rue Francois Ngin, Ban Mixay, Vientiane 01000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Rue+Francois+Ngin+Vientiane) |
+
+### 🇱🇦 老挝琅勃拉邦 (Luang Prabang) · 世界文化遗产慢时光 · 皇室传统老挝盛宴与南康河畔手抓烧烤
+
+| 序号 | 美食/老字号名称 | 分类/定位 | 参考人均消费 | 🥢 必点招牌推荐 | 详细街道地址 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **Tamarind 餐厅老挝皇室品鉴盛宴 (Royal Lao Feast)** | 👑 琅勃拉邦皇家传统料理殿堂 | 人均约 120,000 - 200,000 LAK (约 ¥40 - ¥66) | 老挝品鉴拼盘大盛宴 (Tasting Platter with Five Dips & Stews) | `Kingkitsarath Rd, Ban Aphay, Luang Prabang 06000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Tamarind+Restaurant+Luang+Prabang) |
+| 2 | **琅勃拉邦夜市自选烧烤大拼盘 (Night Market BBQ)** | 🍢 古城夜市横街露天炭火烧烤 | 每串 15,000 - 45,000 LAK (人均约 ¥20 - ¥35) | 炭烤泰老香肠 (Sai Oua) + 蕉叶包蒸鱼肉 (Mok Pa) + 烤大肉串 | `Night Market Alley, Sakkarine Rd, Luang Prabang 06000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Night+Market) |
+| 3 | **传统皇室香草牛蹄牛杂炖煲 (Or Lam)** | 🍲 老挝北部最具特色的古法黑金炖菜 | 约 60,000 - 90,000 LAK (约 ¥20 - ¥30) | 传统古法 Or Lam 香草炖干牛肉煲配紫糯米饭 | `Bamboo Tree Restaurant, Sakkarine Rd, Luang Prabang 06000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Bamboo+Tree+Luang+Prabang) |
+| 4 | **琅勃拉邦香茅酸肉手工香肠 (Sai Oua)** | 🌭 充满香茅青柠叶草本风味手工烤肠 | 约 40,000 - 70,000 LAK (约 ¥13 - ¥23) | 现切刚出炉炭烤老挝香肠配生姜片与紫糯米饭 | `Phousi Market (普西农贸市场熟食区)` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Phousi+Market+Luang+Prabang) |
+| 5 | **普西山下老挝传统法棍配自制肉酱** | 🥖 古城皇宫正门前排队法棍摊 | 约 20,000 - 35,000 LAK (约 ¥7 - ¥12) | 加蛋加肉酱全家福热法棍三明治 + 鲜榨牛油果奶昔 | `Sisavangvong Rd, Opposite Royal Palace, Luang Prabang 06000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Royal+Palace+Luang+Prabang) |
+| 6 | **香茅草烤排骨与蕉叶包蒸鱼 (Mok Pa)** | 🌿 芭蕉叶包裹清蒸湄公河无刺鱼肉 | 约 50,000 - 80,000 LAK (约 ¥16 - ¥26) | 传统芭蕉叶蒸香草鱼蓉 (Mok Pa) + 炭烤香茅肋排 | `Kualao Restaurant, Sakkarine Rd, Luang Prabang 06000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Kualao+Restaurant+Luang+Prabang) |
+| 7 | **湄公河长尾船水上餐厅酸辣河鱼汤 (Tom Yum Pa)** | ⛵ 漂浮水上船坞湄公河鲜汤 | 约 60,000 - 90,000 LAK (约 ¥20 - ¥30) | 罗望子酸笋鲜河鱼汤 + 凉拌芭蕉花丝 | `Mekong River Floating Restaurants, Luang Prabang 06000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Mekong+River+Sunset+Luang+Prabang) |
+| 8 | **老挝炭火烤竹筒糯米饭 (Khao Lam)** | 🎍 新鲜天然青竹筒烤紫糯米 | 每竹筒约 15,000 - 25,000 LAK (约 ¥5 - ¥8) | 炭烤黑紫米椰奶竹筒饭（趁热剥竹皮吃） | `沿街推车摊贩及夜市入口` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Night+Market) |
+| 9 | **古城早市老挝古法咖啡配现炸油条 (Khao Tom)** | ☕ 清晨布施后老挝炭烧咖啡铺 | 约 15,000 - 25,000 LAK (约 ¥5 - ¥8) | 传统厚炼乳热滴漏咖啡 (Cafe Lao) + 现炸小油条一对 | `Morning Market, Old Town, Luang Prabang 06000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Morning+Market) |
+| 10 | **Manda de Laos 睡莲池畔法老融合私房菜** | 🪷 联合国教科文组织保护睡莲池景观餐厅 | 人均约 180,000 - 300,000 LAK (约 ¥60 - ¥100) | 香茅烤羊排配罗望子蘸汁 + 睡莲池畔特调鸡尾酒 | `10 Norraphat Rd, Ban That Luang, Luang Prabang 06000` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=Manda+de+Laos+Luang+Prabang) |
+
+### 🇨🇳 中国西双版纳 (Xishuangbanna) · 热带傣韵饕餮 · 香茅草烤鸡、傣味手抓饭、包烧与星光夜市小吃
+
+| 序号 | 美食/老字号名称 | 分类/定位 | 参考人均消费 | 🥢 必点招牌推荐 | 详细街道地址 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **曼飞龙烤鸡 (告庄星光夜市总店)** | 🍗 傣乡经典皮脆肉嫩炭烤小走地鸡 | 每只约 ¥48 - ¥68 | 金牌香茅草烤鸡整只 + 手撕紫糯米饭团 + 柠檬蘸水 | `云南省景洪市告庄西双景景法寨 1 栋` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=曼飞龙烤鸡告庄西双景) |
+| 2 | **傣味包烧澜沧江鱼与包烧鲜脑花** | 🌿 芭蕉叶包裹炭火慢煨无油包烧 | 每份约 ¥25 - ¥45 | 经典包烧江鱼 + 包烧猪脑花 + 包烧鲜金针菇 | `告庄西双景星光夜市滨江美食区` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=告庄西双景星光夜市) |
+| 3 | **孔雀开屏傣式手抓饭大簸箕盛宴** | 🦚 巨大竹簸箕手抓饭仪式感大餐 | 双人套餐约 ¥98 - ¥138 | 豪华双人孔雀手抓饭簸箕大拼盘 | `景洪市宣慰大道曼听小寨傣家乐` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=西双版纳曼听小寨) |
+| 4 | **天然菠萝紫米饭** | 🍍 原只鲜菠萝蒸热带紫糯米 | 每只约 ¥25 - ¥35 | 金牌原只鲜菠萝紫米饭 | `景洪市曼听路傣家风味餐馆` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=西双版纳曼听公园) |
+| 5 | **告庄星光夜市舂鸡脚与老挝冰咖啡** | 🌶️ 木臼现舂柠檬无骨凤爪与袋装冰咖啡 | 约 ¥20 - ¥35 | 特辣手舂无骨鸡脚 + 现拉袋装老挝冰咖啡 | `告庄星光夜市大金塔脚下夜市档口` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=告庄西双景大金塔) |
+| 6 | **傣式柠檬凉拌米线与杂菜汤** | 🍜 酸辣清爽傣味凉拌米线 | 每碗约 ¥12 - ¥18 | 招牌傣式柠檬凉米线 + 傣家酸笋牛杂汤 | `景洪市区江北农贸市场旁老字号` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=景洪江北农贸市场) |
+| 7 | **勐海烤五花肉与炭烤猪皮** | 🥓 炭烤滋滋冒油五花配酸辣蘸水 | 每份约 ¥30 - ¥48 | 炭烤脆皮五花肉 + 烤膨胀猪皮 + 傣式青椒蘸水 | `景洪市滨江路夜市烧烤街` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=景洪滨江大道) |
+| 8 | **傣族酸笋煮澜沧江野生鱼** | 🍲 傣乡灵魂老坛酸笋鲜鱼汤 | 每份约 ¥45 - ¥68 | 老坛酸笋煮江团鱼（微辣） | `景洪市曼景兰风味美食街` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=景洪曼景兰风味美食街) |
+| 9 | **正宗泡鲁达 (Paoluda 热带甜品之王)** | 🍨 椰香鲜奶酥脆面包干热带甜品 | 每碗约 ¥12 - ¥18 | 招牌椰奶坚果泡鲁达 (少糖加冰) | `景洪市告庄西双景各甜品店` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=告庄西双景) |
+| 10 | **景洪热带水果批发市场原产地自由** | 🥭 释迦果、无眼菠萝与甜角鲜切狂欢 | 人均约 ¥30 - ¥50 吃到撑 | 现开熟透释迦果 + 手剥甜角 + 鲜切芒果蘸辣椒盐 | `景洪市宣慰大道中段热带水果批发市场` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=景洪宣慰大道) |
+
+### 🇨🇳 中国云南大理 (Dali) · 风花雪月慢生活 · 白族酸辣鱼、破酥粑粑、野生菌与烤乳扇
+
+| 序号 | 美食/老字号名称 | 分类/定位 | 参考人均消费 | 🥢 必点招牌推荐 | 详细街道地址 | Google Maps 导航 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **大理白族经典木瓜酸辣洱海鱼** | 🐟 苍山大理白族第一非遗硬菜 | 每份约 ¥58 - ¥88 | 古法大理酸木瓜野生鲤鱼煲 + 浸汁豆腐 | `大理市喜洲古镇市上街段家院旁` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=喜洲古镇) |
+| 2 | **喜洲破酥粑粑 (喜洲古镇百年老店)** | 🥞 层次分明酥脆掉渣白族名饼 | 每个约 ¥10 - ¥15 | 葱油肉糜咸酥粑粑 + 红糖玫瑰甜酥粑粑各一个 | `大理市喜洲古镇正义门旁四方街` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=喜洲古镇四方街) |
+| 3 | **苍山野生菌土鸡鲜汤火锅** | 🍄 云南野生菌王国的至鲜享受 | 双人套餐约 ¥150 - ¥220 | 极品鲜野生菌八拼土鸡汤锅 + 自制野生菌干巴蘸水 | `大理古城玉洱路中段野生菌一条街` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理古城玉洱路) |
+| 4 | **街头炭烤乳扇与油炸乳饼** | 🧀 白族独特的天然鲜奶酪艺术 | 每串约 ¥5 - ¥10 | 炭烤玫瑰酱卷乳扇 + 香煎夹火腿乳饼片 | `大理古城复兴路与人民路十字街口` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理古城复兴路) |
+| 5 | **再回首白族传统凉鸡米线 (人民路老店)** | 🍜 大理古城三十年老字号排队王 | 每碗约 ¥12 - ¥18 | 招牌手撕凉鸡米线 + 卤鸡爪 + 冰镇自酿米酒 | `大理古城人民路 198 号` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=再回首凉鸡米线大理古城) |
+| 6 | **诺邓火腿炒苍山金雀花与树皮炒蛋** | 🌸 舌尖上的中国千载盐泥风干火腿 | 每道约 ¥35 - ¥58 | 三年诺邓陈年火腿片炒金雀花 + 苍山树皮炒农家蛋 | `大理古城博爱路白族庭院餐馆` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理古城博爱路) |
+| 7 | **大理水性杨花海菜花炒火腿 (海菜花)** | 🌊 洱海清澈水质特产天然海菜花 | 每份约 ¥28 - ¥38 | 蒜蓉云腿丝清炒水性杨花 (洱海海菜花) | `大理银桥镇磻溪村洱海生态廊道餐厅` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道) |
+| 8 | **洱海海菜豆腐汤与白族瓦片烤肉** | 🥘 白族瓦片炭火烤肉与清凉海菜汤 | 双人套餐约 ¥80 - ¥120 | 瓦片生烤秘制猪五花 + 鲜海菜煮手磨老豆腐汤 | `大理市才村码头村口特色排挡` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理才村码头) |
+| 9 | **白族三道茶文化品鉴 (一苦二甜三回味)** | 🍵 白族千年迎宾茶礼文化盛宴 | 人均约 ¥30 - ¥60 | 严家大院白族三道茶仪式与歌舞品尝套席 | `大理喜洲严家民居大院内` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=喜洲严家大院) |
+| 10 | **双廊海景庭院白族小炒肉配大理精酿啤酒** | 🍺 洱海悬崖露台白族小炒与风花雪月啤酒 | 人均约 ¥60 - ¥90 | 大理白族自腌酸椒小炒肉 + 冰镇风花雪月精酿麦啤 | `大理市双廊古镇大建旁村临海客栈庭院` | [🗺️ 地图导航](https://www.google.com/maps/search/?api=1&query=大理双廊大建旁村) |
+

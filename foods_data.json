@@ -1,0 +1,1171 @@
+[
+  {
+    "cityId": "melaka",
+    "cityName": "🇲🇾 马六甲 (Melaka)",
+    "foodSummary": "南洋古城古早味 · 娘惹美食与海南鸡饭粒之都",
+    "foods": [
+      {
+        "id": "food-mlk-1",
+        "name": "和记鸡饭团 (Hoe Kee Chicken Rice)",
+        "category": "🍗 经典海南鸡饭粒老字号",
+        "price": "约 12 - 20 MYR (约 ¥20 - ¥32)",
+        "address": "4, 6, 8, Jalan Hang Jebat, 75200 Melaka, Malaysia",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Hoe+Kee+Chicken+Rice+Melaka",
+        "desc": "马六甲最经典的百年传统鸡饭粒。将鸡油饭手工搓成乒乓球大小的饭粒，滑嫩白斩鸡浇上特调生抽香油，配特制鲜辣酱。",
+        "must_order": "招牌海南白斩鸡 + 手工鸡饭粒（每人5粒起）",
+        "badges": [
+          "🏆 百年古早味",
+          "🍗 手工搓制鸡饭粒",
+          "🌶️ 鲜榨秘制辣酱"
+        ],
+        "photo": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-mlk-2",
+        "name": "佳必多沙爹朱律 (Capitol Satay Celup)",
+        "category": "🍢 传统沙爹朱律火锅名店",
+        "price": "每串 1.5 - 2.5 MYR (人均约 ¥35 - ¥60)",
+        "address": "41, Lorong Bukit Cina, 75100 Melaka, Malaysia",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Capitol+Satay+Celup+Melaka",
+        "desc": "马六甲独有的沙爹火锅吃法。浓郁的花生碎、南姜与香料沙爹汤底在大锅中滚沸，自行挑选大头虾、苏东、肉串在锅内烫熟。",
+        "must_order": "鲍鱼菇、鲜大头虾、鲜鱿鱼、自制猪肉丸串",
+        "badges": [
+          "🍢 马六甲独创吃法",
+          "🥜 浓郁花生沙爹锅",
+          "🦐 现串海鲜肉类"
+        ],
+        "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-mlk-3",
+        "name": "大宝小食 (Jonker 88 娘惹叻沙与珍多冰)",
+        "category": "🍜 鸡场街地标娘惹叻沙与甜品",
+        "price": "约 8 - 16 MYR (约 ¥13 - ¥26)",
+        "address": "88, Jalan Hang Jebat, 75200 Melaka, Malaysia",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Jonker+88+Melaka",
+        "desc": "鸡场街排队大户，古色古香的钱币博物馆内。招牌峇峇叻沙（咖喱浓香）与娘惹叻沙（酸辣开胃）绝顶过瘾，饭后来一碗马六甲椰糖珍多冰。",
+        "must_order": "Kahwin 混合双拼叻沙 + 原味马六甲纯椰糖珍多冰 (Cendol)",
+        "badges": [
+          "🍜 浓香娘惹叻沙",
+          "🍧 纯马六甲椰糖珍多",
+          "🏛️ 百年老钱庄古董装潢"
+        ],
+        "photo": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-mlk-4",
+        "name": "麦哥娘惹餐馆 (Restoran Makko)",
+        "category": "🍲 正宗家庭式娘惹菜标杆",
+        "price": "人均约 35 - 55 MYR (约 ¥58 - ¥90)",
+        "address": "123, Jalan Merdeka, Taman Melaka Raya, 75000 Melaka, Malaysia",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Restoran+Makko+Melaka",
+        "desc": "马六甲当地华人与娘惹家庭几代人推崇的老字号。黑果焖鸡、娘惹阿参鱼、豆酱焖猪肉火候地道，辛香料研磨细腻，极具南洋家传风味。",
+        "must_order": "黑果焖鸡 (Ayam Buah Keluak) + 娘惹阿参辣鱼 (Asam Pedas)",
+        "badges": [
+          "👑 娘惹家庭家传菜",
+          "🪵 珍贵黑果焖鸡",
+          "🥘 浓香阿参辣汤"
+        ],
+        "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-mlk-5",
+        "name": "Nadeje Cake House (马六甲千层蛋糕创始店)",
+        "category": "🍰 南洋手工千层蛋糕鼻祖",
+        "price": "每块约 14 - 18 MYR (约 ¥23 - ¥30)",
+        "address": "G-23, 25 & 27, Dataran Pahlawan, Jalan Merdeka, 75000 Melaka",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Nadeje+Cake+House+Melaka",
+        "desc": "马来西亚千层蛋糕的天花板创始名店。超过 20 层薄如蝉翼的法式可丽饼与香滑轻盈鲜奶油层层叠合，冷藏后入口即化。",
+        "must_order": "招牌原味千层 (Original Mille Crepe) + 朗姆葡萄千层",
+        "badges": [
+          "🍰 纯手工20层薄饼",
+          "🍦 轻盈入口即化",
+          "🏆 全马千层蛋糕鼻祖"
+        ],
+        "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-mlk-6",
+        "name": "鸡场街夜市潮州蚝煎与炒粿条",
+        "category": "🍳 周末夜市炭火镬气排挡",
+        "price": "约 10 - 15 MYR (约 ¥16 - ¥25)",
+        "address": "Jalan Hang Jebat, 75200 Melaka (周末夜市中央档口)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Jonker+Street+Night+Market",
+        "desc": "周末鸡场街夜市最聚集人气的炭火摊位。大铁板上生蚝肥美多汁，外焦里嫩蛋液香气四溢；炒粿条伴随大火爆炒豆芽与鲜蛤，镬气十足。",
+        "must_order": "大份酥脆潮州生蚝煎 + 鸭蛋炒粿条",
+        "badges": [
+          "🔥 猛火镬气十足",
+          "🦪 鲜嫩爆汁大生蚝",
+          "🏮 周末限定夜市狂欢"
+        ],
+        "photo": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-mlk-7",
+        "name": "板底街阿兰芋饭肉羹汤 (Ah Lan Pork Soup)",
+        "category": "🥣 潮州传统咸香芋头饭肉汤",
+        "price": "约 10 - 18 MYR (约 ¥16 - ¥30)",
+        "address": "11, Jalan Kampung Pantai, 75200 Melaka, Malaysia",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Ah+Lan+Pork+Soup+Melaka",
+        "desc": "清晨营业的老字号小摊。浓郁黑胡椒骨汤里盛满嫩滑肉羹与炸猪油渣，配上一碗拌入干葱酥与香浓芋头粒的深褐色芋饭，温暖舒畅。",
+        "must_order": "招牌肉羹猪杂汤 + 秘制香葱芋头饭",
+        "badges": [
+          "🥣 暖胃浓郁白胡椒汤",
+          "🍚 酥香粒粒芋头饭",
+          "🌅 当地人早午餐精选"
+        ],
+        "photo": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-mlk-8",
+        "name": "隆安茶室 (Kedai Kopi Loong Ann)",
+        "category": "☕ 传统南洋炭烤面包与生熟蛋",
+        "price": "约 6 - 12 MYR (约 ¥10 - ¥20)",
+        "address": "93/807, Jalan Hang Jebat, 75200 Melaka, Malaysia",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Loong+Ann+Coffee+Shop+Melaka",
+        "desc": "保留着几十年前古朴风貌的老海南茶室。炭火慢烤吐司抹上厚切冷牛油与手工咖椰酱，磕开两个农家半熟温泉蛋滴入生抽胡椒粉，配一杯浓咖啡乌。",
+        "must_order": "炭烤咖椰牛油烤面包 + 生熟蛋一对 + 传统海南咖啡O",
+        "badges": [
+          "🔥 真正传统炭火烤面包",
+          "🥚 丝滑生熟鸡蛋",
+          "☕ 老字号南洋咖啡乌"
+        ],
+        "photo": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-mlk-9",
+        "name": "巴巴查理娘惹糕 (Baba Charlie Nyonya Kuih)",
+        "category": "🍡 手工鲜蒸传统五彩娘惹糕",
+        "price": "每块约 1.5 - 3 MYR (约 ¥2.5 - ¥5)",
+        "address": "72, Jalan Tengkera Pantai 2, 75200 Melaka, Malaysia",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Baba+Charlie+Nyonya+Cake+Melaka",
+        "desc": "娘惹糕手艺传承人 Baba Charlie 开设的作坊式小店。每天清晨鲜榨班兰叶汁与浓椰浆制作数十种五彩斑斓的传统娘惹九层糕、九层塔、糯米兰花糕。",
+        "must_order": "娘惹椰糖椰丝球 (Ondeh-Ondeh) + 兰花糯米糕 (Pulut Tai Tai)",
+        "badges": [
+          "🌿 天然班兰纯鲜榨",
+          "🍡 数十种非遗手工糕点",
+          "🥥 咬开即爆浆热椰糖"
+        ],
+        "photo": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-mlk-10",
+        "name": "葡萄牙村海鲜烤魔鬼鱼 (Portuguese Settlement)",
+        "category": "🐟 海滨露天烧烤葡式海鲜排挡",
+        "price": "人均约 35 - 55 MYR (约 ¥58 - ¥90)",
+        "address": "Medan Selera, Portuguese Settlement, Ujong Pasir, 75050 Melaka",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Portuguese+Settlement+Melaka",
+        "desc": "马六甲海峡海滨的葡萄牙后裔渔村。露天海风排挡将新鲜魔鬼鱼（魟鱼）裹在香蕉叶中涂满葡式娘惹叁巴酱慢火碳烤，鱼肉鲜嫩无骨，酸辣鲜香。",
+        "must_order": "香蕉叶炭烤魔鬼鱼 (Ikan Bakar) + 葡式浓汁青口贝",
+        "badges": [
+          "🌊 海边渔村日落夜市",
+          "🐟 芭蕉叶包裹炭烤",
+          "🌶️ 独门葡式酸辣叁巴酱"
+        ],
+        "photo": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  {
+    "cityId": "hatyai",
+    "cityName": "🇹🇭 泰国合艾 (Hat Yai)",
+    "foodSummary": "泰南美食第一都 · 炭烤炸鸡、早茶点心与浓香肉骨茶",
+    "foods": [
+      {
+        "id": "food-hy-1",
+        "name": "德查合艾炸鸡总店 (Kai Tod Decha)",
+        "category": "🍗 享誉全泰的合艾炸鸡天花板",
+        "price": "约 60 - 120 THB (约 ¥12 - ¥24)",
+        "address": "Chee Uthit Rd, Tambon Hat Yai, Songkhla 90110, Thailand",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Kai+Tod+Decha+Hat+Yai",
+        "desc": "“合艾炸鸡”名满全泰国的发源地代表。带皮大鸡腿裹上秘制香料炸至金黄酥脆，必须撒上厚厚的炸红葱酥，搭配软糯香甜的手抓糯米饭。",
+        "must_order": "金牌酥脆大炸鸡腿 + 芭蕉叶蒸热糯米饭 + 特调甜辣酱",
+        "badges": [
+          "🏆 全泰第一炸鸡美誉",
+          "🧅 灵魂香脆炸红葱碎",
+          "🍗 酥脆多汁骨肉分离"
+        ],
+        "photo": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-hy-2",
+        "name": "清姐肉骨茶 (Ching Jie Bak Kut Teh)",
+        "category": "🍲 泰南浓郁砂锅药膳肉骨茶",
+        "price": "约 150 - 250 THB (约 ¥30 - ¥50)",
+        "address": "Thanon Saeng Chan, Hat Yai, Songkhla 90110, Thailand",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Ching+Jie+Restaurant+Hat+Yai",
+        "desc": "合艾三十年老店，浓油赤酱的泰南潮州药膳风格。砂锅滚沸上桌，排骨酥烂脱骨，金针菇、腐竹、香菇吸饱当归党参药膳浓汤，配油条绝配。",
+        "must_order": "极品砂锅肉骨茶双人煲 + 现炸酥脆老油条 + 烫生菜",
+        "badges": [
+          "🍲 砂锅沸腾上桌",
+          "🪵 十余味中药膳熬制",
+          "🍖 软烂脱骨大肋排"
+        ],
+        "photo": "https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-hy-3",
+        "name": "福泰点心 / 好运点心 (Chok Dee Dim Sum)",
+        "category": "🥟 泰南特色百样蒸笼早茶点心",
+        "price": "每笼 20 - 35 THB (人均约 ¥30 - ¥50)",
+        "address": "58/25 Lamai Songkrew Rd, Hat Yai, Songkhla 90110, Thailand",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Chok+Dee+Dim+Sum+Hat+Yai",
+        "desc": "合艾清晨最壮观的早茶胜地。冰柜里摆满上百种现包的鲜虾烧麦、排骨、肉燕、鱼丸，挑好后交由店家现场大蒸笼开蒸，配特调泰南酸辣酱与肉骨茶。",
+        "must_order": "水晶鲜虾烧麦 + 泰式皮蛋烧肉卷 + 秘制肉骨茶小盅",
+        "badges": [
+          "🥟 百种蒸笼现挑现蒸",
+          "🦐 整颗鲜虾弹牙多汁",
+          "🌅 晨间最具烟火气"
+        ],
+        "photo": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-hy-4",
+        "name": "合艾金荣市场老字号卤猪脚饭 (Khao Kha Moo)",
+        "category": "🍖 软糯胶原蛋白古法卤猪手",
+        "price": "约 60 - 90 THB (约 ¥12 - ¥18)",
+        "address": "Supanasan Rd, Hat Yai (金荣市场外围早市街)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Kim+Yong+Market+Hat+Yai",
+        "desc": "大铁锅中文火慢卤数小时的猪肘肉，肉皮晶莹弹牙、肥而不腻。切片铺在热米饭上，浇上浓稠醇香卤汁，配溏心卤蛋与酸爽芥菜解腻。",
+        "must_order": "至尊蹄膀双拼饭（带皮猪肘+瘦肉+卤蛋+酸菜）",
+        "badges": [
+          "🍖 慢火熬煮胶质满满",
+          "🍳 入味卤溏心蛋",
+          "💰 极实惠美味便当"
+        ],
+        "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-hy-5",
+        "name": "南盛燕窝鱼翅煲 (Nam Seng Bird's Nest)",
+        "category": "🪺 泰南老字号冰糖燕窝鱼翅",
+        "price": "每碗约 200 - 500 THB (约 ¥40 - ¥100)",
+        "address": "Nipat Uthit 3 Rd, Hat Yai, Songkhla 90110, Thailand",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Nam+Seng+Birds+Nest+Hat+Yai",
+        "desc": "泰南是天然高品质金丝燕窝原产地，价格仅国内数分之一。南盛老店选用纯天然白燕窝，用砂锅慢炖，配温热白果与泰国纯土蜂蜜。",
+        "must_order": "极品浓稠冰糖砂锅炖燕窝 + 砂锅红烧鱼鳔煲",
+        "badges": [
+          "🪺 泰南原产金丝燕窝",
+          "🍯 纯天然土蜂蜜调味",
+          "💰 仅国内三分之一价格"
+        ],
+        "photo": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-hy-6",
+        "name": "金荣市场湄茶薇芒果糯米饭 (Mae Chawee)",
+        "category": "🥭 泰南椰香芒果糯米饭天花板",
+        "price": "约 80 - 120 THB (约 ¥16 - ¥24)",
+        "address": "Kim Yong Market, Hat Yai, Songkhla 90110",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Kim+Yong+Market+Hat+Yai",
+        "desc": "选用当季甜度极高的熟透水仙芒果与白金芒果，一整颗现削切块，厚厚盖在温热的三色椰浆糯米饭上，撒上脆脆的炸绿豆仁与浓稠咸甜椰浆。",
+        "must_order": "特级三色椰浆熟芒糯米饭（含蝶豆花蓝与斑兰绿）",
+        "badges": [
+          "🥭 现削整颗熟甜水仙芒",
+          "🥥 独门浓郁咸甜椰浆",
+          "🌾 软糯三色手作糯米"
+        ],
+        "photo": "https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-hy-7",
+        "name": "泰南酸辣海鲜冬阴功配妈妈面",
+        "category": "🍲 浓郁椰浆酸辣海鲜铜锅煲",
+        "price": "约 120 - 180 THB (约 ¥24 - ¥36)",
+        "address": "Prachathipat Rd, Hat Yai, Songkhla 90110",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Lee+Gardens+Plaza+Hat+Yai",
+        "desc": "加入鲜榨浓椰浆与红亮辣油的泰南浓汤冬阴功。锅里塞满大头虾、鲜鱿鱼圈与花蛤，最后放入劲道筋道的妈妈面（Mama 面），吸足海鲜酸辣精华。",
+        "must_order": "招牌海鲜全家福冬阴功锅配加倍妈妈面",
+        "badges": [
+          "🦐 鲜活泰南海鲜",
+          "🌶️ 浓烈青柠香茅酸辣",
+          "🍜 筋道爽口泡面吸收"
+        ],
+        "photo": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-hy-8",
+        "name": "绿山夜市炭火现烤大头虾 (Greenway Night Market)",
+        "category": "🦐 夜市现捞炭烤罗氏沼虾",
+        "price": "半公斤约 250 - 350 THB (约 ¥50 - ¥70)",
+        "address": "Greenway Night Market, Hat Yai, Songkhla 90110",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Greenway+Night+Market+Hat+Yai",
+        "desc": "水箱中鲜活跳跃的大头罗氏虾，现捞现开背放在炭火铁网上猛火快烤。虾头里满是浓郁流油的金黄色虾膏，虾肉紧实弹牙，蘸青辣椒海鲜酱一绝。",
+        "must_order": "炭火大头虾 1 斤 + 泰式生腌生蚝拼盘",
+        "badges": [
+          "🦐 水箱鲜活现捞现烤",
+          "🟡 爆浆金黄浓郁虾膏",
+          "🌶️ 灵魂泰式青柠海鲜蘸汁"
+        ],
+        "photo": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-hy-9",
+        "name": "合艾生滚潮州猪肉粉与牛肉船粉 (Boat Noodles)",
+        "category": "🍜 泰式浓黑中草药船面",
+        "price": "每碗约 20 - 45 THB (约 ¥4 - ¥9)",
+        "address": "Nipat Uthit 2 Rd, Hat Yai, Songkhla 90110",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Nipat+Uthit+2+Rd+Hat+Yai",
+        "desc": "浓缩中药草与香料熬煮成深褐色的浓香汤底。配上嫩滑牛肉片、现炸脆猪皮与手工肉丸，一口一小碗，桌上放满空碗是标志性体验。",
+        "must_order": "传统黑汤牛肉小船粉（微辣）+ 香脆炸猪皮包",
+        "badges": [
+          "🍜 浓醇黑金药膳高汤",
+          "🥩 鲜滑牛肉片与肉丸",
+          "💰 几块钱一碗超实惠"
+        ],
+        "photo": "https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-hy-10",
+        "name": "街头鲜椰壳冰淇淋与泰式香蕉飞饼 (Roti)",
+        "category": "🥥 原只椰子手工冰淇淋与煎饼",
+        "price": "约 40 - 60 THB (约 ¥8 - ¥12)",
+        "address": "Sanehanusorn Rd, Hat Yai (李花园步行街夜市)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Lee+Gardens+Plaza+Hat+Yai",
+        "desc": "用刮出的新鲜嫩椰肉做底，盛上三颗现制纯椰奶冰淇淋，撒上烤花生碎、甜玉米与糯米饭；旁边的飞饼摊现场甩出薄如蝉翼的饼皮包入香蕉片黄油煎脆，淋满炼乳与巧克力酱。",
+        "must_order": "双拼鲜椰壳冰淇淋 + 经典黄油香蕉炼乳飞饼 (Roti Kluay)",
+        "badges": [
+          "🥥 原只椰壳手刮新鲜椰肉",
+          "🍌 黄油香煎香蕉薄饼",
+          "🍧 街头必尝清凉甜品"
+        ],
+        "photo": "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  {
+    "cityId": "bangkok",
+    "cityName": "🇹🇭 泰国曼谷 (Bangkok)",
+    "foodSummary": "世界美食之都 · 米其林街头传奇、炭烤海鲜与火山排骨",
+    "foods": [
+      {
+        "id": "food-bkk-1",
+        "name": "痣姐热炒 (Jay Fai · 米其林一星传奇)",
+        "category": "👑 世界级米其林一星街头热炒",
+        "price": "人均约 1,200 - 2,000 THB (约 ¥240 - ¥400)",
+        "address": "327 Maha Chai Rd, Samran Rat, Phra Nakhon, Bangkok 10200",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Jay+Fai+Bangkok",
+        "desc": "戴着护目镜在炭火大镬前亲自掌勺的全球传奇厨神。招牌黄金巨型蟹肉煎蛋卷，外层蛋皮酥香金黄，切开是整整半斤纯鲜甜的大块野生梭子蟹肉！",
+        "must_order": "爆浆黄金蟹肉煎蛋卷 (Crab Omelette) + 醉汉炒海鲜河粉",
+        "badges": [
+          "⭐ 连续多年米其林一星",
+          "🦀 足量整块大梭子蟹肉",
+          "🔥 传统炭火烈焰猛炒"
+        ],
+        "photo": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bkk-2",
+        "name": "建兴酒家 (Somboon Seafood 咖喱炒蟹创始店)",
+        "category": "🦀 全曼谷咖喱炒蟹金字招牌",
+        "price": "人均约 500 - 800 THB (约 ¥100 - ¥160)",
+        "address": "169 / 7-12 Surawong Rd, Suriyawong, Bang Rak, Bangkok 10500",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Somboon+Seafood+Surawong+Bangkok",
+        "desc": "全泰国咖喱炒蟹的发明者，老派华人海鲜殿堂。特调黄咖喱融合浓香鸡蛋液与鲜奶，淋在肥硕的大青蟹上炒至滑嫩如布丁，拌白米饭连干三碗。",
+        "must_order": "独家秘制黄咖喱炒活肉蟹 (Fried Crab with Curry Powder)",
+        "badges": [
+          "👑 泰式咖喱炒蟹始祖",
+          "🦀 肥硕生猛深海肉蟹",
+          "🍚 绝品咖喱拌饭神器"
+        ],
+        "photo": "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bkk-3",
+        "name": "吞武里海鲜市场 (Thonburi Market Place 现捞现烤)",
+        "category": "🦞 曼谷最大的活海鲜平价盛宴",
+        "price": "人均约 400 - 700 THB (约 ¥80 - ¥140)",
+        "address": "58 Borommaratchachonnani Rd, Sala Thammasop, Thawi Watthana, Bangkok 10170",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Thonburi+Market+Place+Bangkok",
+        "desc": "曼谷本地人最爱的新晋海鲜航母。上百个海鲜摊位整齐排列，巨型手臂粗罗氏虾、生蚝、皮皮虾、东星斑明码标价，免费炭烤加工并提供堂食空调大厅。",
+        "must_order": "炭烤手臂粗大头虾 (按公斤) + 现开泰式大生蚝配炸葱蘸酱",
+        "badges": [
+          "🦞 现捞鲜活明码实价",
+          "🔥 免费炭烤清蒸加工",
+          "❄️ 冷气大排档极舒适"
+        ],
+        "photo": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bkk-4",
+        "name": "红大哥水门鸡饭 (Go-Ang Pratunam · 米其林必比登)",
+        "category": "🍗 水门市场老字号海南鸡饭",
+        "price": "约 60 - 100 THB (约 ¥12 - ¥20)",
+        "address": "962 Phetchaburi Rd, Makkasan, Ratchathewi, Bangkok 10400",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Go-Ang+Pratunam+Chicken+Rice+Bangkok",
+        "desc": "水门市场粉红制服的知名地标。鸡肉鲜嫩多汁连皮带冻，用鸡汤与大蒜生姜烹煮的泰国茉莉香米油润喷香，配一碗浓醇冬瓜胡椒鸡骨汤。",
+        "must_order": "招牌双拼鸡肉饭 (白切+香脆) + 特制生姜蒜蓉黑豉油蘸酱",
+        "badges": [
+          "⭐ 米其林必比登推荐",
+          "🍚 鸡汤焖泰国茉莉香米",
+          "🍗 鸡肉嫩滑多汁脱骨"
+        ],
+        "photo": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bkk-5",
+        "name": "瓦塔纳帕尼牛肉面 (Wattana Panich 50年老卤煲)",
+        "category": "🥩 传承半世纪的巨型陈年卤牛肉锅",
+        "price": "约 120 - 200 THB (约 ¥24 - ¥40)",
+        "address": "336-338 Ekkamai Rd, Khlong Tan Nuea, Watthana, Bangkok 10110",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Wattana+Panich+Bangkok",
+        "desc": "门口支着一口煮了五十余年从未熄火的巨型陈年卤汁大铜锅。大块牛腩、牛筋、牛腱肉炖至胶质软糯拉丝，中药草高汤醇厚回甘无与伦比。",
+        "must_order": "特级红烧牛杂全拼牛肉粉 (Kuay Teow Neua) + 慢炖牛筋煲",
+        "badges": [
+          "🥘 传承50年不熄火陈年老卤",
+          "🥩 软烂拉丝大块牛筋",
+          "⭐ 米其林指南推荐名店"
+        ],
+        "photo": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bkk-6",
+        "name": "荣泰猪肉粉 (Rung Rueang Pork Noodles · 米其林必比登)",
+        "category": "🍜 曼谷第一生滚肉末冬阴米粉",
+        "price": "约 60 - 100 THB (约 ¥12 - ¥20)",
+        "address": "10/3 Sukhumvit 26 Alley, Khlong Tan, Khlong Toei, Bangkok 10110",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Rung+Rueang+Pork+Noodles+Bangkok",
+        "desc": "素坤逸 26 巷老字号。清甜排骨汤搭配现焯新鲜肉糜、手工鱼丸与爽口猪肝，点冬阴酸辣干拌或汤粉，挤上新鲜青柠汁，一口惊艳。",
+        "must_order": "冬阴酸辣粗米粉 (Tom Yum Dry Noodles) + 炸香脆鱼皮",
+        "badges": [
+          "⭐ 连续多年必比登推介",
+          "🐟 手打Q弹纯鲜鱼丸",
+          "🥣 肉末鲜嫩汤头至清至甜"
+        ],
+        "photo": "https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bkk-7",
+        "name": "乔德夜市火山排骨 (Jodd Fairs Leng Saap)",
+        "category": "🌋 壮观火山酸辣大猪脊骨高塔",
+        "price": "约 200 - 450 THB (约 ¥40 - ¥90)",
+        "address": "Rama IX Rd, Huai Khwang, Bangkok 10310 (Jodd Fairs 乔德夜市)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Jodd+Fairs+Night+Market+Bangkok",
+        "desc": "视觉冲击力拉满的巨型猪大排高塔。慢炖到轻轻一吸就脱骨的大肉骨堆叠成火山状，淋上滚烫的青雀椒碎与鲜青柠原汁，酸爽过瘾，辣得大呼过瘾。",
+        "must_order": "中号或大号招牌青柠指天椒火山排骨 (带一次性手套啃)",
+        "badges": [
+          "🌋 极度震撼火山造型",
+          "🌶️ 铺满鲜青雀椒酸爽爆棚",
+          "🍖 骨肉酥烂手撕过瘾"
+        ],
+        "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bkk-8",
+        "name": "颂通酒家 (Sornthong Seafood 曼谷老饕海鲜排挡)",
+        "category": "🦐 宵夜档炭火烤海鲜与海鲜煲",
+        "price": "人均约 400 - 700 THB (约 ¥80 - ¥140)",
+        "address": "2829-2831 Rama IV Rd, Khlong Toei, Bangkok 10110",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Sornthong+Seafood+Bangkok",
+        "desc": "曼谷夜猫子老饕的心头好。蒜蓉黑胡椒炒蟹、泰式生腌生蚝、炭火现烤大头虾、砂锅粉丝焖大虾无一踩雷，镬气十足，营业至凌晨。",
+        "must_order": "砂锅鲜虾粉丝煲 + 炭火生烤大头虾 + 蒜蓉爆炒含羞草",
+        "badges": [
+          "🌙 营业至深夜地道宵夜",
+          "🦐 粉丝吸满虾油高汤",
+          "⭐ 众多明星打卡名店"
+        ],
+        "photo": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bkk-9",
+        "name": "Thip Samai 鬼门泰式炒河粉 (Pad Thai Pratu Phi)",
+        "category": "🍳 全泰炒河粉 Pad Thai 开山鼻祖",
+        "price": "约 120 - 200 THB (约 ¥24 - ¥40)",
+        "address": "313 315 Maha Chai Rd, Samran Rat, Phra Nakhon, Bangkok 10200",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Thip+Samai+Pad+Thai+Bangkok",
+        "desc": "被评为全泰国最好吃的炒河粉殿堂。用自熬新鲜虾油大火翻炒细米粉，最后用一张吹弹可破的金黄蛋皮将整盘河粉像包礼物一样严丝合缝包裹起来。",
+        "must_order": "金包银蛋包鲜虾炒河粉 (Superb Pad Thai) + 招牌带果肉鲜橙汁",
+        "badges": [
+          "👑 泰式炒河粉绝对代表",
+          "🍳 黄金蛋网包裹绝技",
+          "🍊 惊艳全城的鲜榨橙汁"
+        ],
+        "photo": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bkk-10",
+        "name": "Mae Varee 芒果糯米饭 (Thong Lor 天花板甜品)",
+        "category": "🥭 曼谷公认第一名芒果糯米饭",
+        "price": "约 150 - 200 THB (约 ¥30 - ¥40)",
+        "address": "1 Sukhumvit 55 Alley, Khlong Tan Nuea, Watthana, Bangkok 10110",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Mae+Varee+Mango+Sticky+Rice+Bangkok",
+        "desc": "通罗街口营业几十年的外带传奇老店。三色糯米饭分别浸润了白椰浆、斑兰叶绿汁和蝶豆花蓝汁，配上全曼谷筛选最高级别的黄金熟甜大芒，入口幸福感爆棚。",
+        "must_order": "招牌三色斑兰蝶豆花芒果糯米饭礼盒",
+        "badges": [
+          "🏆 曼谷公认芒果糯米饭天花板",
+          "🌾 纯天然植物鲜榨三色米",
+          "🥥 独家顶级极浓厚鲜椰浆"
+        ],
+        "photo": "https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  {
+    "cityId": "vientiane",
+    "cityName": "🇱🇦 老挝万象 (Vientiane)",
+    "foodSummary": "湄公河畔慢调滋味 · 炭火盐烤鱼、传统肉末沙拉与法式红酒餐",
+    "foods": [
+      {
+        "id": "food-vte-1",
+        "name": "老挝国菜肉末沙拉 (Laap / Larb)",
+        "category": "🥗 老挝最具代表性的非遗国菜",
+        "price": "约 50,000 - 80,000 LAK (约 ¥16 - ¥26)",
+        "address": "Ban Anou Night Food Street, Vientiane 01000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Ban+Anou+Night+Market+Vientiane",
+        "desc": "老挝逢年过节必吃的第一国菜。精选新鲜牛肉或鸡肉手剁成极细肉茸，拌入炒香烘脆的糯米碎粉、薄荷叶、红葱头、青柠汁与生辣椒，酸辣生津。",
+        "must_order": "传统香草柠檬碎牛肉肉末沙拉配新鲜苦瓜包菜叶",
+        "badges": [
+          "🇱🇦 老挝第一代表国菜",
+          "🌾 烘香炒糯米粉灵魂香气",
+          "🌿 丰富热带新鲜香草"
+        ],
+        "photo": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-vte-2",
+        "name": "湄公河畔炭火盐烤香茅草罗非鱼 (Ping Pa)",
+        "category": "🐟 湄公河畔经典盐焗炭烤活鱼",
+        "price": "约 70,000 - 110,000 LAK (约 ¥23 - ¥36)",
+        "address": "Fa Ngum Rd (湄公河夜市沿江露天排挡区)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Vientiane+Night+Market",
+        "desc": "湄公河捕捞的活罗非鱼，鱼膛内塞满整把新鲜香茅草、青柠叶与南姜，鱼鳞外裹满一层厚厚的粗盐在炭火上慢烤。鱼皮剥开热气蒸腾，鱼肉嫩滑多汁。",
+        "must_order": "整条香茅草盐烤罗非鱼 + 泰老酸辣海鲜绿蘸酱 + 细米线米纸包",
+        "badges": [
+          "🐟 湄公河活鱼炭火现烤",
+          "🧂 厚海盐锁水鲜嫩多汁",
+          "🌿 肚塞整把清香香茅草"
+        ],
+        "photo": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-vte-3",
+        "name": "老挝法式长棍三夹板三明治 (Khao Jee)",
+        "category": "🥖 法越融合手撕爆浆法棍三明治",
+        "price": "约 25,000 - 40,000 LAK (约 ¥8 - ¥13)",
+        "address": "Khao Jee Pates, Rue Hengboun, Vientiane 01000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Rue+Hengboun+Vientiane",
+        "desc": "法式长棍面包炭火复烤至外壳薄脆掉渣，抹上厚厚的老挝手工自制法式肝酱（Pâté）、肉松、香肠、腌酸萝卜丝与香菜，浇上浓香甜辣酱。",
+        "must_order": "全套豪华手工鹅肝酱猪肉火腿法棍三明治",
+        "badges": [
+          "🥖 炭火慢烤外脆内软",
+          "🥫 自家手制浓郁肝酱",
+          "💰 几块钱巨饱便当"
+        ],
+        "photo": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-vte-4",
+        "name": "老挝手抓竹篓糯米饭配香茅烤鸡 (Khao Niew & Ping Gai)",
+        "category": "🍗 传统竹编篓糯米饭与野木烤鸡",
+        "price": "约 60,000 - 100,000 LAK (约 ¥20 - ¥33)",
+        "address": "Khua Din Market (早市农贸生鲜熟食区)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Talat+Sao+Morning+Market+Vientiane",
+        "desc": "用小竹篓盛装的温热纯糯米饭，用手捏成小饭团，蘸特制老挝番茄肉酱（Jeaw Mak Len），一口咬下木炭慢火烤出的金黄脆皮香茅草走地鸡。",
+        "must_order": "手抓竹篓蒸糯米饭 + 炭烤香茅草半只鸡 + 番茄辣椒酱",
+        "badges": [
+          "🌾 传统竹编篓原味蒸饭",
+          "🍗 走地草鸡皮脆肉香",
+          "🖐️ 体验地道手抓吃法"
+        ],
+        "photo": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-vte-5",
+        "name": "老挝传统手工粘米粉汤 (Khao Piak Sen)",
+        "category": "🥣 现揉现切木薯粘米暖胃汤粉",
+        "price": "约 30,000 - 45,000 LAK (约 ¥10 - ¥15)",
+        "address": "Ban Simeuang, Rue Setthathilath, Vientiane 01000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Wat+Si+Muang+Vientiane",
+        "desc": "万象人清晨灵魂早餐。用大米粉与木薯粉现揉手切的手工粗面条，放入浓稠的大骨鸡汤中煮沸，汤头天然粘稠如糊，配脆炸蒜酥、葱花与溏心蛋。",
+        "must_order": "招牌土鸡手切粗米粉汤配现炸蒜油与溏心蛋",
+        "badges": [
+          "🥣 骨汤浓醇天然粘稠",
+          "🍜 纯手揉木薯面条筋道",
+          "🌅 温暖解酒治愈早餐"
+        ],
+        "photo": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-vte-6",
+        "name": "湄公河炸河苔片与脆皮老挝春卷 (Kaipen & Nem)",
+        "category": "🍘 湄公河特色水草干与香脆春卷",
+        "price": "约 35,000 - 60,000 LAK (约 ¥11 - ¥20)",
+        "address": "Chao Anouvong Park 湄公河夜市沿线摊位",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Chao+Anouvong+Park+Vientiane",
+        "desc": "将湄公河清澈水域捞出的天然绿河苔压成薄片，撒上白芝麻与番茄干慢火油炸，香脆甘甜带着海洋般清香；搭配裹满猪肉香菇现炸的酥脆老挝春卷。",
+        "must_order": "金牌酥脆炸河苔片配大金塔酱 (Jaew Bong) + 炸春卷拼盘",
+        "badges": [
+          "🌊 湄公河天然绿色河苔",
+          "🥢 极度爽脆下酒极品",
+          "🏮 夜市漫步必吃小点"
+        ],
+        "photo": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-vte-7",
+        "name": "冰镇 Beerlao 老挝啤酒配香脆柠檬花生",
+        "category": "🍺 国际金奖老挝啤酒国民盛宴",
+        "price": "每大瓶约 20,000 - 30,000 LAK (约 ¥6 - ¥10)",
+        "address": "Fa Ngum Rd (湄公河落日景观酒馆区)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Mekong+River+Sunset+Vientiane",
+        "desc": "被《时代》杂志誉为亚洲最好的啤酒。使用老挝茉莉香米、德国啤酒花与法国麦芽精酿而成，泡沫细腻甘甜。傍晚坐在湄公河堤看日落，喝一杯冰镇 Beerlao 堪称神仙体验。",
+        "must_order": "经典大瓶装 Beerlao Original + 炸柠檬草炒脆花生",
+        "badges": [
+          "🏆 享誉全球亚洲最佳啤酒",
+          "🌾 纯老挝茉莉香米精酿",
+          "🌅 湄公河夕阳绝配"
+        ],
+        "photo": "https://images.unsplash.com/photo-1608270546057-0097f4803d65?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-vte-8",
+        "name": "塔銮夜市老挝香辣青木瓜沙拉 (Tam Mak Hoong)",
+        "category": "🥗 擂钵现场捣碎老挝风辣木瓜丝",
+        "price": "约 25,000 - 40,000 LAK (约 ¥8 - ¥13)",
+        "address": "Pha That Luang Esplanade (大塔銮夜市区)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Pha+That+Luang+Vientiane",
+        "desc": "不同于泰式偏甜，老挝青木瓜沙拉更突出浓香的小水蟹酱、小番茄、青柠和生辣椒。在木擂钵中猛力捣捶让木瓜丝饱吸汁水，辣得满头大汗却停不下筷子。",
+        "must_order": "地道老挝风味生捣青木瓜丝配炸猪皮与冰生菜",
+        "badges": [
+          "🪵 传统大木杵现场捣制",
+          "🦀 独门泰老小水蟹咸鲜酱",
+          "🌶️ 劲辣酸爽极度开胃"
+        ],
+        "photo": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-vte-9",
+        "name": "椰香脆皮小圆饼 (Khao Nom Krok)",
+        "category": "🥞 街头半球形椰奶铁板小酥饼",
+        "price": "每盒约 15,000 - 25,000 LAK (约 ¥5 - ¥8)",
+        "address": "Ban Anou Night Market (每晚五点出摊)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Ban+Anou+Night+Market+Vientiane",
+        "desc": "在半球形凹坑铁板上现浇米浆与纯椰奶。外壳烤至微焦香脆，内馅却是半流质热腾腾的香甜椰奶膏，撒上少许葱花平衡甜味，趁热吃满口奶香。",
+        "must_order": "双拼现烤椰奶小圆饼（甜味椰丝 + 咸香细葱花）",
+        "badges": [
+          "🥞 传统铸铁圆模现煎",
+          "🥥 咬开即爆浆热椰奶",
+          "💰 几块钱一盒幸福感"
+        ],
+        "photo": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-vte-10",
+        "name": "Le Bistro 经典法餐 (法式油封鸭腿与红酒炖牛肉)",
+        "category": "🍷 湄公河畔高性价比法式正餐",
+        "price": "人均约 150,000 - 250,000 LAK (约 ¥50 - ¥80)",
+        "address": "Rue Francois Ngin, Ban Mixay, Vientiane 01000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Rue+Francois+Ngin+Vientiane",
+        "desc": "万象保留了纯正浓郁的法式餐饮传统，价格却仅为欧美的四分之一。法国大厨亲调，油封鸭腿外皮酥脆如纸、鸭肉软烂脱骨，搭配土豆泥与法国罗纳河谷红酒。",
+        "must_order": "脆皮法式传统油封鸭腿 (Confit de Canard) + 普罗旺斯慢炖牛肉",
+        "badges": [
+          "🇫🇷 纯正法式烹饪技法",
+          "🍷 极其实惠的法国红酒",
+          "🕯️ 浪漫烛光法式洋房"
+        ],
+        "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  {
+    "cityId": "luangprabang",
+    "cityName": "🇱🇦 老挝琅勃拉邦 (Luang Prabang)",
+    "foodSummary": "世界文化遗产慢时光 · 皇室传统老挝盛宴与南康河畔手抓烧烤",
+    "foods": [
+      {
+        "id": "food-lpq-1",
+        "name": "Tamarind 餐厅老挝皇室品鉴盛宴 (Royal Lao Feast)",
+        "category": "👑 琅勃拉邦皇家传统料理殿堂",
+        "price": "人均约 120,000 - 200,000 LAK (约 ¥40 - ¥66)",
+        "address": "Kingkitsarath Rd, Ban Aphay, Luang Prabang 06000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Tamarind+Restaurant+Luang+Prabang",
+        "desc": "琅勃拉邦最著名的传统老挝餐饮学校兼餐厅。专为希望深入了解老挝文化的旅行者打造，涵盖皇室香草炖牛肉、香蕉叶裹蒸河鱼、自制水牛皮酱。",
+        "must_order": "老挝品鉴拼盘大盛宴 (Tasting Platter with Five Dips & Stews)",
+        "badges": [
+          "👑 琅勃拉邦皇室名馔",
+          "🌿 纯天然热带稀有香草",
+          "⭐ 猫途鹰数年第一好评"
+        ],
+        "photo": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-lpq-2",
+        "name": "琅勃拉邦夜市自选烧烤大拼盘 (Night Market BBQ)",
+        "category": "🍢 古城夜市横街露天炭火烧烤",
+        "price": "每串 15,000 - 45,000 LAK (人均约 ¥20 - ¥35)",
+        "address": "Night Market Alley, Sakkarine Rd, Luang Prabang 06000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Night+Market",
+        "desc": "古城夜市小弄堂里数十个长条烧烤摊。香茅烤五花肉串、烤湄公河罗非鱼、芭蕉叶包蒸鱼丸层层排开，现挑后放炭火复热，配一大杯鲜榨百香果芒汁。",
+        "must_order": "炭烤泰老香肠 (Sai Oua) + 蕉叶包蒸鱼肉 (Mok Pa) + 烤大肉串",
+        "badges": [
+          "🍢 几十米长炭烤长龙",
+          "🔥 现挑现烤滋滋冒油",
+          "🍹 鲜榨热带水果冰沙"
+        ],
+        "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-lpq-3",
+        "name": "传统皇室香草牛蹄牛杂炖煲 (Or Lam)",
+        "category": "🍲 老挝北部最具特色的古法黑金炖菜",
+        "price": "约 60,000 - 90,000 LAK (约 ¥20 - ¥30)",
+        "address": "Bamboo Tree Restaurant, Sakkarine Rd, Luang Prabang 06000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Bamboo+Tree+Luang+Prabang",
+        "desc": "琅勃拉邦独有的特色黑浓炖菜。使用当地森林采摘的神奇胡椒藤（Sakhaan，带微麻回甘），加上干牛肉、牛蹄筋、茄子、木耳慢炖出胶，滋味醇厚丰富。",
+        "must_order": "传统古法 Or Lam 香草炖干牛肉煲配紫糯米饭",
+        "badges": [
+          "🪵 独特麻香胡椒藤香料",
+          "🥩 软糯胶原牛蹄牛筋",
+          "🇱🇦 琅勃拉邦独此一家特产"
+        ],
+        "photo": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-lpq-4",
+        "name": "琅勃拉邦香茅酸肉手工香肠 (Sai Oua)",
+        "category": "🌭 充满香茅青柠叶草本风味手工烤肠",
+        "price": "约 40,000 - 70,000 LAK (约 ¥13 - ¥23)",
+        "address": "Phousi Market (普西农贸市场熟食区)",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Phousi+Market+Luang+Prabang",
+        "desc": "手工粗绞土猪前腿肉，拌入大量新鲜香茅草碎、南姜、青柠叶和红葱头灌入肠衣，在炭火上慢火烘烤。肉质紧实多汁，草本香气穿透每一口肉香。",
+        "must_order": "现切刚出炉炭烤老挝香肠配生姜片与紫糯米饭",
+        "badges": [
+          "🌭 纯手工纯肉无淀粉",
+          "🌿 爆汁满口浓郁香茅草",
+          "🍺 绝品下酒好搭档"
+        ],
+        "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-lpq-5",
+        "name": "普西山下老挝传统法棍配自制肉酱",
+        "category": "🥖 古城皇宫正门前排队法棍摊",
+        "price": "约 20,000 - 35,000 LAK (约 ¥7 - ¥12)",
+        "address": "Sisavangvong Rd, Opposite Royal Palace, Luang Prabang 06000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Royal+Palace+Luang+Prabang",
+        "desc": "皇宫正对面清晨就排起长队的长条木推车。老奶奶动作行云流水，手撕酥脆法棍塞入自制猪肉酱、爽口青瓜、炒鸡蛋和老挝辣酱，热气腾腾。",
+        "must_order": "加蛋加肉酱全家福热法棍三明治 + 鲜榨牛油果奶昔",
+        "badges": [
+          "🥖 皇宫对面数十年老摊",
+          "🥑 现打浓厚牛油果奶昔",
+          "💰 几块钱开启丰盛一天"
+        ],
+        "photo": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-lpq-6",
+        "name": "香茅草烤排骨与蕉叶包蒸鱼 (Mok Pa)",
+        "category": "🌿 芭蕉叶包裹清蒸湄公河无刺鱼肉",
+        "price": "约 50,000 - 80,000 LAK (约 ¥16 - ¥26)",
+        "address": "Kualao Restaurant, Sakkarine Rd, Luang Prabang 06000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Kualao+Restaurant+Luang+Prabang",
+        "desc": "将新鲜湄公河鱼肉剁碎，加入莳萝草、柠檬叶、鱼露和椰奶在石臼中捣成鱼蓉，用鲜芭蕉叶包裹成金字塔形上锅清蒸，清香扑鼻，滑嫩无比。",
+        "must_order": "传统芭蕉叶蒸香草鱼蓉 (Mok Pa) + 炭烤香茅肋排",
+        "badges": [
+          "🐟 芭蕉叶清香沁人心脾",
+          "🌿 莳萝草与椰奶绝配",
+          "👶 老少皆宜极其滑嫩"
+        ],
+        "photo": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-lpq-7",
+        "name": "湄公河长尾船水上餐厅酸辣河鱼汤 (Tom Yum Pa)",
+        "category": "⛵ 漂浮水上船坞湄公河鲜汤",
+        "price": "约 60,000 - 90,000 LAK (约 ¥20 - ¥30)",
+        "address": "Mekong River Floating Restaurants, Luang Prabang 06000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Mekong+River+Sunset+Luang+Prabang",
+        "desc": "停泊在湄公河水面上的木船餐厅。采用野生河鱼现杀切段，放入新鲜罗望子、竹笋、小番茄和九层塔熬煮的清酸汤底，酸鲜解暑，鱼肉极其鲜嫩。",
+        "must_order": "罗望子酸笋鲜河鱼汤 + 凉拌芭蕉花丝",
+        "badges": [
+          "⛵ 飘荡在湄公河水面上",
+          "🍲 天然罗望子酸果生津",
+          "🐟 野生河鱼原汁原味"
+        ],
+        "photo": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-lpq-8",
+        "name": "老挝炭火烤竹筒糯米饭 (Khao Lam)",
+        "category": "🎍 新鲜天然青竹筒烤紫糯米",
+        "price": "每竹筒约 15,000 - 25,000 LAK (约 ¥5 - ¥8)",
+        "address": "沿街推车摊贩及夜市入口",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Night+Market",
+        "desc": "砍下当年新鲜的嫩青竹，将浸泡好的老挝紫糯米、新鲜椰奶、红豆和椰肉条灌入竹筒，在炭火灰烬中慢火炙烤数小时。剥开竹皮，米饭外裹着一层白色的竹膜，清香软糯。",
+        "must_order": "炭烤黑紫米椰奶竹筒饭（趁热剥竹皮吃）",
+        "badges": [
+          "🎍 鲜竹内膜天然清香",
+          "🥥 椰奶红豆软糯甜润",
+          "🖐️ 随手携带能量棒"
+        ],
+        "photo": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-lpq-9",
+        "name": "古城早市老挝古法咖啡配现炸油条 (Khao Tom)",
+        "category": "☕ 清晨布施后老挝炭烧咖啡铺",
+        "price": "约 15,000 - 25,000 LAK (约 ¥5 - ¥8)",
+        "address": "Morning Market, Old Town, Luang Prabang 06000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Luang+Prabang+Morning+Market",
+        "desc": "清晨看完僧侣布施后必去的早市拐角。用布袋慢滤出的深焙老挝咖啡，杯底沉淀着厚厚的香浓炼乳，配一根刚出油锅金黄酥脆的古法小油条蘸着吃。",
+        "must_order": "传统厚炼乳热滴漏咖啡 (Cafe Lao) + 现炸小油条一对",
+        "badges": [
+          "🌅 清晨布施后烟火气",
+          "☕ 布袋慢滤传统老咖啡",
+          "🥖 油条蘸炼乳绝妙搭配"
+        ],
+        "photo": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-lpq-10",
+        "name": "Manda de Laos 睡莲池畔法老融合私房菜",
+        "category": "🪷 联合国教科文组织保护睡莲池景观餐厅",
+        "price": "人均约 180,000 - 300,000 LAK (约 ¥60 - ¥100)",
+        "address": "10 Norraphat Rd, Ban That Luang, Luang Prabang 06000",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Manda+de+Laos+Luang+Prabang",
+        "desc": "环绕着三片被联合国教科文组织列为世界遗产保护的巨大天然睡莲池。夜晚水灯点亮，池中睡莲静静绽放，享用精致的老挝香草烤羊排与湄公河鲈鱼。",
+        "must_order": "香茅烤羊排配罗望子蘸汁 + 睡莲池畔特调鸡尾酒",
+        "badges": [
+          "🪷 世界文化遗产睡莲池",
+          "🕯️ 极致浪漫烛光水影",
+          "🏆 琅勃拉邦最高美誉私房菜"
+        ],
+        "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  {
+    "cityId": "xishuangbanna",
+    "cityName": "🇨🇳 中国西双版纳 (Xishuangbanna)",
+    "foodSummary": "热带傣韵饕餮 · 香茅草烤鸡、傣味手抓饭、包烧与星光夜市小吃",
+    "foods": [
+      {
+        "id": "food-bna-1",
+        "name": "曼飞龙烤鸡 (告庄星光夜市总店)",
+        "category": "🍗 傣乡经典皮脆肉嫩炭烤小走地鸡",
+        "price": "每只约 ¥48 - ¥68",
+        "address": "云南省景洪市告庄西双景景法寨 1 栋",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=曼飞龙烤鸡告庄西双景",
+        "desc": "西双版纳最具盛名的傣式烤鸡名店。选用本地半野生茶花小土鸡，用香茅草、野芫荽腌入味，炭火慢烤至金黄焦脆，撕开肉汁横流，蘸特调傣家干辣椒喃咪粉。",
+        "must_order": "金牌香茅草烤鸡整只 + 手撕紫糯米饭团 + 柠檬蘸水",
+        "badges": [
+          "🏆 版纳烤鸡第一招牌",
+          "🍗 酥脆透亮薄鸡皮",
+          "🌶️ 灵魂傣味酸辣喃咪"
+        ],
+        "photo": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bna-2",
+        "name": "傣味包烧澜沧江鱼与包烧鲜脑花",
+        "category": "🌿 芭蕉叶包裹炭火慢煨无油包烧",
+        "price": "每份约 ¥25 - ¥45",
+        "address": "告庄西双景星光夜市滨江美食区",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景星光夜市",
+        "desc": "纯天然无油烟健康烹饪绝技。将澜沧江鲜鱼块或嫩脑花配以大芫荽、小米辣、香柳和香茅草包裹在数层芭蕉叶中，在炭火上煨烤。叶子清香完全渗入软嫩鲜肉。",
+        "must_order": "经典包烧江鱼 + 包烧猪脑花 + 包烧鲜金针菇",
+        "badges": [
+          "🌿 芭蕉叶锁水无油烤",
+          "🐟 澜沧江鲜无腥味",
+          "🌶️ 辛香扑鼻草本风味"
+        ],
+        "photo": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bna-3",
+        "name": "孔雀开屏傣式手抓饭大簸箕盛宴",
+        "category": "🦚 巨大竹簸箕手抓饭仪式感大餐",
+        "price": "双人套餐约 ¥98 - ¥138",
+        "address": "景洪市宣慰大道曼听小寨傣家乐",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳曼听小寨",
+        "desc": "洗净双手亲自手抓体验的震撼大餐。大竹簸箕上铺满新鲜芭蕉叶，中央是孔雀造型或五彩糯米饭，周围环绕香茅草烤排骨、柠檬干巴丝、炸猪皮、烤罗非鱼与新鲜热带果蔬。",
+        "must_order": "豪华双人孔雀手抓饭簸箕大拼盘",
+        "badges": [
+          "🦚 极致视觉孔雀开屏",
+          "🖐️ 传统手抓仪式感",
+          "🍱 十余样傣味一网打尽"
+        ],
+        "photo": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bna-4",
+        "name": "天然菠萝紫米饭",
+        "category": "🍍 原只鲜菠萝蒸热带紫糯米",
+        "price": "每只约 ¥25 - ¥35",
+        "address": "景洪市曼听路傣家风味餐馆",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳曼听公园",
+        "desc": "选用热带完熟香水菠萝掏空果肉，将香糯紫米、菠萝果肉碎、天然葡萄干与冰糖拌匀回填，上笼清蒸。菠萝果香深层浸润紫米，酸甜软糯、解腻开胃。",
+        "must_order": "金牌原只鲜菠萝紫米饭",
+        "badges": [
+          "🍍 香水菠萝天然容器",
+          "🌾 软糯拉丝香紫米",
+          "🍧 纯天然果香无添加"
+        ],
+        "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bna-5",
+        "name": "告庄星光夜市舂鸡脚与老挝冰咖啡",
+        "category": "🌶️ 木臼现舂柠檬无骨凤爪与袋装冰咖啡",
+        "price": "约 ¥20 - ¥35",
+        "address": "告庄星光夜市大金塔脚下夜市档口",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景大金塔",
+        "desc": "星光夜市最火爆的排队王。木石臼中放入煮熟去骨鸡爪、青柠、小米椒、大芫荽和番茄猛力捶舂入味，酸辣脆爽直冲脑门；手拎一袋冰块满满的老挝浓香炼乳咖啡，绝配！",
+        "must_order": "特辣手舂无骨鸡脚 + 现拉袋装老挝冰咖啡",
+        "badges": [
+          "🍋 鲜青柠猛力现舂",
+          "🐔 爽脆去骨嚼劲十足",
+          "🥤 袋装手拎街拍爆款"
+        ],
+        "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bna-6",
+        "name": "傣式柠檬凉拌米线与杂菜汤",
+        "category": "🍜 酸辣清爽傣味凉拌米线",
+        "price": "每碗约 ¥12 - ¥18",
+        "address": "景洪市区江北农贸市场旁老字号",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=景洪江北农贸市场",
+        "desc": "西双版纳炎热午后的救星。爽滑米线拌入鲜榨柠檬汁、糊辣椒油、花生碎与芫荽，配上一碗苦凉解暑的野苦凉菜汤，酸爽提神，瞬间唤醒味蕾。",
+        "must_order": "招牌傣式柠檬凉米线 + 傣家酸笋牛杂汤",
+        "badges": [
+          "🍋 纯天然青柠调酸",
+          "🍜 爽滑筋道红河米线",
+          "💰 十几元地道小吃"
+        ],
+        "photo": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bna-7",
+        "name": "勐海烤五花肉与炭烤猪皮",
+        "category": "🥓 炭烤滋滋冒油五花配酸辣蘸水",
+        "price": "每份约 ¥30 - ¥48",
+        "address": "景洪市滨江路夜市烧烤街",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=景洪滨江大道",
+        "desc": "选用版纳勐海高山土猪肉，肥瘦相间的五花肉切薄片在炭火铁丝网上烤至焦香卷曲，逼出多余油脂。蘸上满满折耳根或小米辣青柠蘸水，裹生菜叶一口闷。",
+        "must_order": "炭烤脆皮五花肉 + 烤膨胀猪皮 + 傣式青椒蘸水",
+        "badges": [
+          "🔥 炭火炙烤焦香四溢",
+          "🥓 肥而不腻外焦里嫩",
+          "🥬 搭配生菜叶爽脆无敌"
+        ],
+        "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bna-8",
+        "name": "傣族酸笋煮澜沧江野生鱼",
+        "category": "🍲 傣乡灵魂老坛酸笋鲜鱼汤",
+        "price": "每份约 ¥45 - ¥68",
+        "address": "景洪市曼景兰风味美食街",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=景洪曼景兰风味美食街",
+        "desc": "傣家人“无酸不欢”的代表作。用山泉水土法发酵的鲜酸笋，气味独特酸爽，与澜沧江肉质细腻的野生鱼同煮，鱼汤酸鲜清亮、开胃生津无比。",
+        "must_order": "老坛酸笋煮江团鱼（微辣）",
+        "badges": [
+          "🎋 土坛发酵天然酸笋",
+          "🐟 澜沧江鲜嫩肥美鱼肉",
+          "🥣 越喝越上头的酸爽靓汤"
+        ],
+        "photo": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bna-9",
+        "name": "正宗泡鲁达 (Paoluda 热带甜品之王)",
+        "category": "🍨 椰香鲜奶酥脆面包干热带甜品",
+        "price": "每碗约 ¥12 - ¥18",
+        "address": "景洪市告庄西双景各甜品店",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=告庄西双景",
+        "desc": "从缅甸传入版纳的风靡甜品。冰镇浓郁椰奶中倒入大颗西米、新鲜椰丝、晶莹黑糯米与彩色果冻，上面铺满香脆特制干面包。浸透椰奶的面包干半脆半软，绝妙口感。",
+        "must_order": "招牌椰奶坚果泡鲁达 (少糖加冰)",
+        "badges": [
+          "🥥 浓郁冰镇香浓椰奶",
+          "🍞 特制香脆特烘面包干",
+          "🍧 版纳夏日必备甜品"
+        ],
+        "photo": "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-bna-10",
+        "name": "景洪热带水果批发市场原产地自由",
+        "category": "🥭 释迦果、无眼菠萝与甜角鲜切狂欢",
+        "price": "人均约 ¥30 - ¥50 吃到撑",
+        "address": "景洪市宣慰大道中段热带水果批发市场",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=景洪宣慰大道",
+        "desc": "西双版纳热带雨林赋予的水果天堂。树上熟大芒果、释迦果（番荔枝）、软糯芭蕉、黄金百香果、红毛丹、甜角比白菜还便宜，现场剥皮现切，果汁四溢。",
+        "must_order": "现开熟透释迦果 + 手剥甜角 + 鲜切芒果蘸辣椒盐",
+        "badges": [
+          "🥭 树上自然熟无催熟",
+          "💰 产地批发价极度自由",
+          "🌶️ 特色水果蘸辣椒面体验"
+        ],
+        "photo": "https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  {
+    "cityId": "dali",
+    "cityName": "🇨🇳 中国云南大理 (Dali)",
+    "foodSummary": "风花雪月慢生活 · 白族酸辣鱼、破酥粑粑、野生菌与烤乳扇",
+    "foods": [
+      {
+        "id": "food-dli-1",
+        "name": "大理白族经典木瓜酸辣洱海鱼",
+        "category": "🐟 苍山大理白族第一非遗硬菜",
+        "price": "每份约 ¥58 - ¥88",
+        "address": "大理市喜洲古镇市上街段家院旁",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=喜洲古镇",
+        "desc": "大理人招待最尊贵客人的压轴菜。不用醋，而用大理特产纯天然晒干酸木瓜调酸，配以红亮的苍山糊辣椒、白族干豆腐与嫩豆腐同鲫鱼慢煨，酸辣浓醇回甘。",
+        "must_order": "古法大理酸木瓜野生鲤鱼煲 + 浸汁豆腐",
+        "badges": [
+          "🍈 天然酸木瓜自然发酵",
+          "🐟 洱海肥美鲜鱼",
+          "🌶️ 白族非遗家传酸辣味"
+        ],
+        "photo": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-dli-2",
+        "name": "喜洲破酥粑粑 (喜洲古镇百年老店)",
+        "category": "🥞 层次分明酥脆掉渣白族名饼",
+        "price": "每个约 ¥10 - ¥15",
+        "address": "大理市喜洲古镇正义门旁四方街",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=喜洲古镇四方街",
+        "desc": "上下两层炭火铁盘慢烤出的白族名小吃。面皮层层刷猪油折叠，烤出上百层金黄酥皮。咸味揉入香葱与肉糜，甜味包裹红糖与重瓣玫瑰花酱，刚出炉香气飘满整条街。",
+        "must_order": "葱油肉糜咸酥粑粑 + 红糖玫瑰甜酥粑粑各一个",
+        "badges": [
+          "🔥 上下炭火铁盘焖烤",
+          "🥞 百层酥皮一碰即落",
+          "🌹 苍山高原重瓣玫瑰馅"
+        ],
+        "photo": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-dli-3",
+        "name": "苍山野生菌土鸡鲜汤火锅",
+        "category": "🍄 云南野生菌王国的至鲜享受",
+        "price": "双人套餐约 ¥150 - ¥220",
+        "address": "大理古城玉洱路中段野生菌一条街",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理古城玉洱路",
+        "desc": "苍山高原森林馈赠的鲜美极致。高汤用农家老土鸡慢炖数小时，倒入松茸、牛肝菌、鸡枞菌、青头菌、竹荪沸腾炖煮 20 分钟。先喝三碗鲜掉眉毛的原汤，再品菌肉鲜脆。",
+        "must_order": "极品鲜野生菌八拼土鸡汤锅 + 自制野生菌干巴蘸水",
+        "badges": [
+          "🍄 苍山采摘纯野生菌群",
+          "🐔 慢炖金黄老母鸡原汤",
+          "🥣 鲜美至极人间难得"
+        ],
+        "photo": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-dli-4",
+        "name": "街头炭烤乳扇与油炸乳饼",
+        "category": "🧀 白族独特的天然鲜奶酪艺术",
+        "price": "每串约 ¥5 - ¥10",
+        "address": "大理古城复兴路与人民路十字街口",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理古城复兴路",
+        "desc": "白族“十八怪，牛奶做成扇子卖”。纯牛奶凝固发酵拉丝风干成半透明薄片，在小炭炉上烤软，刷上大理特产自酿红糖玫瑰花酱卷成一卷，外脆内软，奶香与花香交织。",
+        "must_order": "炭烤玫瑰酱卷乳扇 + 香煎夹火腿乳饼片",
+        "badges": [
+          "🧀 白族古法鲜牛奶酪",
+          "🌹 苍山手制玫瑰花酱",
+          "🔥 炭火微烘奶香浓郁"
+        ],
+        "photo": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-dli-5",
+        "name": "再回首白族传统凉鸡米线 (人民路老店)",
+        "category": "🍜 大理古城三十年老字号排队王",
+        "price": "每碗约 ¥12 - ¥18",
+        "address": "大理古城人民路 198 号",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=再回首凉鸡米线大理古城",
+        "desc": "大理古城最有历史口碑的小吃店。特制筋道细米线煮熟冰镇，铺满手撕土鸡丝，浇入秘制陈年熟醋、蒜水、芝麻酱与油辣椒，酸辣甜麻爽脆，百吃不厌。",
+        "must_order": "招牌手撕凉鸡米线 + 卤鸡爪 + 冰镇自酿米酒",
+        "badges": [
+          "⭐ 大理三十年第一名小吃",
+          "🍗 撕扯入味紧实土鸡肉",
+          "🥣 秘制特调老陈醋酱汁"
+        ],
+        "photo": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-dli-6",
+        "name": "诺邓火腿炒苍山金雀花与树皮炒蛋",
+        "category": "🌸 舌尖上的中国千载盐泥风干火腿",
+        "price": "每道约 ¥35 - ¥58",
+        "address": "大理古城博爱路白族庭院餐馆",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理古城博爱路",
+        "desc": "《舌尖上的中国》一战成名的诺邓千年古村火腿。高原自然风干三年以上，肉质绯红如玉，搭配苍山采摘的新鲜鹅黄野金雀花大火快炒，咸鲜甘甜，春意盎然。",
+        "must_order": "三年诺邓陈年火腿片炒金雀花 + 苍山树皮炒农家蛋",
+        "badges": [
+          "🍖 千年盐井风干老火腿",
+          "🌸 苍山野生食用花卉",
+          "🍳 山野质朴无添加本味"
+        ],
+        "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-dli-7",
+        "name": "大理水性杨花海菜花炒火腿 (海菜花)",
+        "category": "🌊 洱海清澈水质特产天然海菜花",
+        "price": "每份约 ¥28 - ¥38",
+        "address": "大理银桥镇磻溪村洱海生态廊道餐厅",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道",
+        "desc": "只生长在最纯净无污染活水中的珍稀水生花卉“波叶海菜花”。茎叶滑嫩脆爽，加入大蒜、干辣椒与云腿丝清炒，口感滑爽多汁，鲜脆甘甜。",
+        "must_order": "蒜蓉云腿丝清炒水性杨花 (洱海海菜花)",
+        "badges": [
+          "🌊 纯净一类水质生态指示花",
+          "🥬 极其滑嫩鲜爽多汁",
+          "🌱 仅云南高原湖泊独有"
+        ],
+        "photo": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-dli-8",
+        "name": "洱海海菜豆腐汤与白族瓦片烤肉",
+        "category": "🥘 白族瓦片炭火烤肉与清凉海菜汤",
+        "price": "双人套餐约 ¥80 - ¥120",
+        "address": "大理市才村码头村口特色排挡",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理才村码头",
+        "desc": "用传统青瓦片架在炭火炉上当作烤盘。五花肉片在瓦片上滋滋冒油不糊焦，配一锅热腾腾的洱海海菜豆腐浓汤，解油解腻，暖胃舒爽。",
+        "must_order": "瓦片生烤秘制猪五花 + 鲜海菜煮手磨老豆腐汤",
+        "badges": [
+          "🧱 白族民间青瓦烤肉",
+          "🥣 润燥滑爽海菜豆腐汤",
+          "🌊 临海傍晚烟火气十足"
+        ],
+        "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-dli-9",
+        "name": "白族三道茶文化品鉴 (一苦二甜三回味)",
+        "category": "🍵 白族千年迎宾茶礼文化盛宴",
+        "price": "人均约 ¥30 - ¥60",
+        "address": "大理喜洲严家民居大院内",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=喜洲严家大院",
+        "desc": "白族人待客最高规格茶道。头道苦茶（苍山清苦绿茶，寓意创业维艰）；二道甜茶（加入核桃仁、乳扇丝与红糖，寓意苦尽甘来）；三道回味茶（加入蜂蜜、生姜与花椒，寓意回味人生）。",
+        "must_order": "严家大院白族三道茶仪式与歌舞品尝套席",
+        "badges": [
+          "🍵 白族国家级非遗茶艺",
+          "🍯 一苦二甜三回味人生哲理",
+          "🏛️ 百年严家深宅白族大院"
+        ],
+        "photo": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "food-dli-10",
+        "name": "双廊海景庭院白族小炒肉配大理精酿啤酒",
+        "category": "🍺 洱海悬崖露台白族小炒与风花雪月啤酒",
+        "price": "人均约 ¥60 - ¥90",
+        "address": "大理市双廊古镇大建旁村临海客栈庭院",
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理双廊大建旁村",
+        "desc": "面朝苍山雪峰与夕阳落霞的露天临水庭院。白族阿妈自腌老坛酸辣子爆炒新鲜土猪肉，配一瓶冰镇的大理本地“风花雪月”精酿白啤，享受大理慢生活的最高潮。",
+        "must_order": "大理白族自腌酸椒小炒肉 + 冰镇风花雪月精酿麦啤",
+        "badges": [
+          "🏔️ 正面苍山十九峰晚霞",
+          "🍺 大理专属风花雪月精酿",
+          "🌅 15天慢旅居最美收官盛宴"
+        ],
+        "photo": "https://images.unsplash.com/photo-1608270546057-0097f4803d65?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  }
+]

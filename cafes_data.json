@@ -1,0 +1,751 @@
+[
+  {
+    "cityId": "melaka",
+    "cityName": "🇲🇾 马六甲 (Melaka)",
+    "stayDays": "Day 2–3 (12/12–12/13) · 鸡场街慢生活办公",
+    "cafes": [
+      {
+        "id": "cafe-dailyfix",
+        "name": "The Daily Fix Cafe (鸡场街天井老洋房咖啡)",
+        "category": "☕ 历史洋房天井咖啡",
+        "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80",
+        "address": "55, Jalan Hang Jebat, 75200 Melaka, Malaysia",
+        "coords": [
+          2.1958,
+          102.2472
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Daily+Fix+Cafe+Melaka",
+        "desc": "马六甲最负盛名的精品咖啡馆之一，隐藏在鸡场街老字号土产店后进天井。红砖斑驳、绿植垂挂，室内强劲冷气与复古长木桌并存，招牌斑兰松饼与咸焦糖手冲咖啡堪称绝配。",
+        "workcation": "实测 80Mbps 稳定 Wi-Fi，后进木桌区备有多个三孔插座，工作氛围安静舒适。",
+        "badges": [
+          "📶 高速 Wi-Fi",
+          "🔌 电源插座充沛",
+          "❄️ 舒适冷气",
+          "🌿 绿意庭院天井"
+        ]
+      },
+      {
+        "id": "cafe-calanthe",
+        "name": "Calanthe Art Cafe (十三州咖啡馆)",
+        "category": "☕ 南洋十三州风味咖啡",
+        "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80",
+        "address": "11, Jalan Hang Kasturi, 75200 Melaka, Malaysia",
+        "coords": [
+          2.1951,
+          102.2481
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Calanthe+Art+Cafe+Melaka",
+        "desc": "全马六甲独此一家能尝遍马来西亚 13 州特色咖啡豆的艺术咖啡馆。绿意藤蔓垂挂于露天与半露天庭院之间，古朴旧物家具营造出极致的南洋慢节奏。",
+        "workcation": "室内冷气区桌椅平稳，插座充足，采光通透，适合写方案与处理文档。",
+        "badges": [
+          "🇲🇾 十三州特调咖啡",
+          "📶 无线网络畅通",
+          "🎨 艺术复古装潢",
+          "🔌 提供充电插座"
+        ]
+      },
+      {
+        "id": "cafe-coffeejar",
+        "name": "The Coffee Jar (啡嚼 · 鸡场街小巧手冲馆)",
+        "category": "☕ 极简自烘焙手冲精品馆",
+        "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+        "address": "38, Lorong Hang Jebat, 75200 Melaka, Malaysia",
+        "coords": [
+          2.1953,
+          102.2488
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Coffee+Jar+Melaka",
+        "desc": "专注自家烘焙豆的纯粹手冲咖啡小店，保留传统老式卡式录音机与黑胶唱片，空间静谧不嘈杂，单品手冲风味层次极高。",
+        "workcation": "靠墙长木吧台配插座，背景音乐轻柔，适合单人专注编码与查阅资料。",
+        "badges": [
+          "🏆 自家烘焙单品豆",
+          "📻 经典卡带音乐",
+          "🤫 静谧专注氛围",
+          "🔌 吧台配充电座"
+        ]
+      },
+      {
+        "id": "cafe-heeren119",
+        "name": "Heeren 119 Cafe (荷兰街娘惹老宅咖啡)",
+        "category": "🏛️ 百年娘惹大宅庭院咖啡",
+        "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=80",
+        "address": "119, Jalan Tun Tan Cheng Lock, 75200 Melaka, Malaysia",
+        "coords": [
+          2.1946,
+          102.2465
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Heeren+119+Cafe+Melaka",
+        "desc": "坐落于马六甲最有历史底蕴的“百万富翁街”（荷兰街），挑高天井采光极佳，融合法式甜品与马六甲传统椰糖咖啡。",
+        "workcation": "大理石长方桌平整开阔，实测 60Mbps 无线网络，环境优雅静谧。",
+        "badges": [
+          "🏛️ 荷兰街历史老宅",
+          "🥥 特调马六甲椰糖拿铁",
+          "📶 稳定高速Wi-Fi",
+          "🪑 宽敞大理石桌"
+        ]
+      },
+      {
+        "id": "cafe-backlane",
+        "name": "Backlane Coffee (鸡场街后巷现代极简馆)",
+        "category": "🌿 极简明亮现代工业风",
+        "photo": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1200&q=80",
+        "address": "145, Jalan Hang Jebat, 75200 Melaka, Malaysia",
+        "coords": [
+          2.1969,
+          102.2461
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Backlane+Coffee+Melaka",
+        "desc": "隐藏在鸡场街后巷内的现代工业风大空间咖啡馆。明亮的落地窗、强劲的冷气与大间距座位，远离前街喧闹人潮。",
+        "workcation": "超长共享原木工作桌配有多组地面插座，数码游民打卡首选，全天办公无压力。",
+        "badges": [
+          "💻 超长大办公桌",
+          "🔌 充足电源接口",
+          "❄️ 强劲静音空调",
+          "🍰 现烤马卡龙西点"
+        ]
+      }
+    ]
+  },
+  {
+    "cityId": "hatyai",
+    "cityName": "🇹🇭 泰国合艾 (Hat Yai)",
+    "stayDays": "Day 4 (12/14) · 泰铁发车前全天极速办公营地",
+    "cafes": [
+      {
+        "id": "cafe-space",
+        "name": "Space Tea & Coffee (Hat Yai)",
+        "category": "🚀 火车站旁极速办公营地",
+        "photo": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+        "address": "126 Thammanoonvithi Rd, Hat Yai, Songkhla 90110, Thailand",
+        "coords": [
+          7.0034,
+          100.4705
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Space+Tea+and+Coffee+Hat+Yai",
+        "desc": "紧邻合艾火车站（步行 3 分钟），专为自由职业者与换乘旅客打造的高效咖啡工作空间。现代极简明亮工业风，冷气强劲且提供优质泰式手摇茶与单品手冲。",
+        "workcation": "实测 120Mbps 高速光纤专线，长条工作长桌配有多孔国际插座，适合全天高效编码与视频会议。",
+        "badges": [
+          "⚡ 极速百兆光纤",
+          "🚶 距火车站步行3分",
+          "🔌 万国电源接口",
+          "❄️ 强劲静音冷气"
+        ]
+      },
+      {
+        "id": "cafe-alive",
+        "name": "Alive Specialty Coffee (合艾手冲美学馆)",
+        "category": "☕ 泰南精品手冲单品馆",
+        "photo": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1200&q=80",
+        "address": "10/10 Poonnakan Rd, Hat Yai, Songkhla 90110, Thailand",
+        "coords": [
+          7.0089,
+          100.4981
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Alive+Specialty+Coffee+Hat+Yai",
+        "desc": "合艾当地资深咖啡师创立的精品咖啡名店。挑高水泥灰色调空间搭配落地玻璃窗，室内绿植点缀，安静不喧哗，环境格调极佳。",
+        "workcation": "优质稳定网络，客座区备有专用办公小台灯与插座，适合专注深度思考。",
+        "badges": [
+          "🏆 冠军级单品手冲",
+          "🌿 极简挑高美学",
+          "🔌 专属充电区",
+          "🤫 环境安静不嘈杂"
+        ]
+      },
+      {
+        "id": "cafe-thecompany",
+        "name": "The Company Coffee (合艾挑高工业自习馆)",
+        "category": "🏢 现代自由职业者自习共享空间",
+        "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+        "address": "22 Rat Uthit Rd, Hat Yai, Songkhla 90110, Thailand",
+        "coords": [
+          7.0062,
+          100.4651
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Company+Coffee+Hat+Yai",
+        "desc": "极具现代共享办公氛围的工业风两层大咖啡馆。提供多张 8 人共享大长桌，桌下自带独立插座槽与高速双频 Wi-Fi。",
+        "workcation": "专门为笔记本办公设计的桌面高度与人体工学靠椅，是合艾敲代码效率最高的地标之一。",
+        "badges": [
+          "🪑 共享大长桌",
+          "🔌 密集插座槽",
+          "📶 双频企业网络",
+          "☕ 优质冷萃咖啡"
+        ]
+      },
+      {
+        "id": "cafe-doppio",
+        "name": "Doppio Cafe (合艾意式浓缩精品店)",
+        "category": "☕ 意式浓缩与泰式特调小馆",
+        "photo": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80",
+        "address": "151 Nipat Uthit 1 Rd, Hat Yai, Songkhla 90110, Thailand",
+        "coords": [
+          7.0041,
+          100.4688
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Doppio+Cafe+Hat+Yai",
+        "desc": "靠近金荣市场的精品小资咖啡店，以纯正浓郁的意式浓缩拼配和泰南本地罗布斯塔/阿拉比卡深烘豆手冲闻名。",
+        "workcation": "室内安静整洁，靠窗座位采光良好且配有插座，适合处理紧急邮件。",
+        "badges": [
+          "☕ 深度浓缩意式",
+          "📍 靠近金荣市场",
+          "🔌 靠窗插座充足",
+          "🍰 现烤芝士蛋糕"
+        ]
+      },
+      {
+        "id": "cafe-habita",
+        "name": "The Habita Coffee & Library (书香艺术馆)",
+        "category": "📚 艺术书吧与咖啡结合体",
+        "photo": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+        "address": "151 Sangchan Rd, Hat Yai, Songkhla 90110, Thailand",
+        "coords": [
+          7.0078,
+          100.4721
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Habita+Hatyai",
+        "desc": "哈比塔精品酒店一楼自营书吧咖啡厅，整面高耸书墙与柔和阅读灯光，弥漫着木质调与现磨咖啡香气。",
+        "workcation": "超长静音书桌配有充足台灯与插座，环境极度安宁，极其适合写方案与深度创作。",
+        "badges": [
+          "📚 整面艺术书墙",
+          "🤫 静音深度阅读区",
+          "🔌 长桌充电方便",
+          "☕ 精品手冲与茶饮"
+        ]
+      }
+    ]
+  },
+  {
+    "cityId": "bangkok",
+    "cityName": "🇹🇭 泰国曼谷 (Bangkok)",
+    "stayDays": "Day 5–6 (12/15–12/16) · 曼谷连续 2 天高效会友与办公",
+    "cafes": [
+      {
+        "id": "cafe-commons",
+        "name": "The Commons / Roast (Thong Lor)",
+        "category": "🏙️ 半开放式生态社区工作空间",
+        "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+        "address": "335 Thong Lo 17 Alley, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand",
+        "coords": [
+          13.7346,
+          100.5828
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Commons+Thonglor+Bangkok",
+        "desc": "曼谷通罗区最知名的开放式阶梯社区。巨型吊扇自然微风拂面，三楼 Roast 餐厅与各层咖啡馆均配备长条办公木桌，是数码游民与创意团队绝佳聚会办公地。",
+        "workcation": "全区域免费极速 Wi-Fi 覆盖，随处可见可用电源插座，极度开放友好的工作氛围。",
+        "badges": [
+          "🌱 半开放垂直社区",
+          "📶 全楼层极速网络",
+          "🔌 阶梯多处插座",
+          "👥 绝佳会友商务"
+        ]
+      },
+      {
+        "id": "cafe-factory",
+        "name": "Factory Coffee - Bangkok (世界冠军旗舰店)",
+        "category": "🏆 世界咖啡冠军级创意工作空间",
+        "photo": "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1200&q=80",
+        "address": "49 Phaya Thai Rd, Thanon Phaya Thai, Ratchathewi, Bangkok 10400, Thailand",
+        "coords": [
+          13.7548,
+          100.5342
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Factory+Coffee+Bangkok",
+        "desc": "多次荣获世界咖啡大赛冠军的曼谷地标咖啡店。邻近机场快线与 Phaya Thai BTS，工业极简风大挑空设计，招牌 Supreme 特调与现烤可颂人气极高。",
+        "workcation": "配备双频高速企业 Wi-Fi，中央实木长吧台与靠墙座位密集配置电源插座。",
+        "badges": [
+          "🏆 世界大赛冠军店",
+          "⚡ 双频企业级Wi-Fi",
+          "🚆 近机场快线与BTS",
+          "🔌 长桌密集电源"
+        ]
+      },
+      {
+        "id": "cafe-nana",
+        "name": "Nana Coffee Roasters (Ari 绿植庭院旗舰店)",
+        "category": "🌿 独栋热带花园精品咖啡庄园",
+        "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+        "address": "24/2 Ari Samphan 4 Alley, Samsen Nai, Phaya Thai, Bangkok 10400, Thailand",
+        "coords": [
+          13.7741,
+          100.5385
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Nana+Coffee+Roasters+Ari+Bangkok",
+        "desc": "位于曼谷最文青的 Ari 街区，由独栋别墅改造的热带绿植花园咖啡馆。拥有多位全泰烘豆冠军坐镇，两层通透空间采光极佳。",
+        "workcation": "二楼设有专门的办公长桌与极速无线网络，阳光透过绿植洒在桌面上，灵感爆棚。",
+        "badges": [
+          "🌴 独栋绿植大庭院",
+          "🏆 全泰烘焙冠军豆",
+          "📶 极稳双频网络",
+          "🔌 二层办公专用桌"
+        ]
+      },
+      {
+        "id": "cafe-kaizen",
+        "name": "Kaizen Coffee Co. (Ekkamai 现代极简双层馆)",
+        "category": "✨ 现代北欧纯白极简空间",
+        "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80",
+        "address": "888 6-7 Ekkamai Rd, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand",
+        "coords": [
+          13.7291,
+          100.5852
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Kaizen+Coffee+Ekkamai+Bangkok",
+        "desc": "由三位从墨尔本归国的年轻咖啡师创立，纯白钢结构与大面积玻璃幕墙，全天供应澳式白咖啡与健康轻食碗。",
+        "workcation": "二楼为专注办公专区，全木长桌每位均配有电源插座与 USB 接口，冷气充足安静。",
+        "badges": [
+          "🇦🇺 纯正墨尔本风味",
+          "⚡ 专用办公二层区",
+          "🔌 全座位配备插座",
+          "🥗 营养健康轻食"
+        ]
+      },
+      {
+        "id": "cafe-ceresia",
+        "name": "Ceresia Coffee Roasters (Sukhumvit 47 日式匠心馆)",
+        "category": "☕ 日系严谨浅烘手冲馆",
+        "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+        "address": "593/29-41 Sukhumvit 47 Alley, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand",
+        "coords": [
+          13.7285,
+          100.5731
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Ceresia+Coffee+Roasters+Bangkok",
+        "desc": "位于素坤逸 47 巷安静住宅区内，曼谷老牌精品自烘咖啡开山鼻祖之一。原木暖调质朴内饰，单品豆信息严谨标注产区庄园与海拔。",
+        "workcation": "环境不放嘈杂音乐，客流稳定礼貌，适合一对一商务沟通或长时间静心写作。",
+        "badges": [
+          "🪵 原木暖调日系匠心",
+          "📍 靠近BTS Phrom Phong",
+          "🤫 安静商务洽谈",
+          "☕ 严选庄园单品豆"
+        ]
+      }
+    ]
+  },
+  {
+    "cityId": "vientiane",
+    "cityName": "🇱🇦 老挝万象 (Vientiane)",
+    "stayDays": "Day 7 (12/17) · 湄公河畔南普广场办公营地",
+    "cafes": [
+      {
+        "id": "cafe-naked",
+        "name": "Naked Espresso (万象数码游民大本营)",
+        "category": "⚡ 专线光纤游民核心营地",
+        "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80",
+        "address": "Rue Manthatourath, Ban Xiengyeun, Vientiane 01000, Laos",
+        "coords": [
+          17.9625,
+          102.6074
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Naked+Espresso+Vientiane",
+        "desc": "万象公认最适合远程办公的精品咖啡馆。针对老挝偶尔网络波动的痛点，专门安装了独立百兆企业专线光纤，欧美远程工程师与设计师常驻。",
+        "workcation": "实测 100Mbps 极速稳定光纤，多组舒适长条工作桌，冷气极足，插座充沛。",
+        "badges": [
+          "⚡ 独立百兆企业光纤",
+          "🧑‍💻 欧美游民大本营",
+          "🔌 充沛多孔插座",
+          "❄️ 强劲舒适冷气"
+        ]
+      },
+      {
+        "id": "cafe-joma",
+        "name": "Joma Bakery Cafe (Nam Phou 喷泉店)",
+        "category": "🥐 喷泉广场经典法式长桌咖啡",
+        "photo": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80",
+        "address": "Rue Setthathilath, Nam Phou, Vientiane 01000, Laos",
+        "coords": [
+          17.9641,
+          102.6086
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Joma+Bakery+Cafe+Nam+Phou+Vientiane",
+        "desc": "老挝最老牌的高品质西点咖啡连锁。位于南普喷泉广场正中心，二层大空间采光优越，大木桌、法式可颂、帕尼尼与老挝公平贸易咖啡深受好评。",
+        "workcation": "二楼设有专门的长条木制工作大桌，电源接口充足，网络稳定，适合多人协同办公。",
+        "badges": [
+          "📍 南普喷泉广场核心",
+          "🥐 现烤法式烘焙简餐",
+          "🔌 二楼长桌电源充足",
+          "📶 网络顺畅稳定"
+        ]
+      },
+      {
+        "id": "cafe-commongrounds",
+        "name": "Common Grounds Cafe (万象静音工作坊)",
+        "category": "💻 宽大实木工作台与静音会议角",
+        "photo": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1200&q=80",
+        "address": "Chao Anou Rd, Ban Wat Chan, Vientiane 01000, Laos",
+        "coords": [
+          17.9632,
+          102.6041
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Common+Grounds+Cafe+Vientiane",
+        "desc": "位于万象市中心一条安静小巷内，二层专门规划为带隔板的自习与工作区，提供健康的自制三明治、老挝手冲和水果冰沙。",
+        "workcation": "二楼带有专用的独立插座工作岛，禁止大声喧哗，适合专注写代码与处理重要工作。",
+        "badges": [
+          "🤫 静音专注办公区",
+          "🔌 专属充电工作岛",
+          "🥪 优质自制三明治",
+          "📶 百兆稳定网络"
+        ]
+      },
+      {
+        "id": "cafe-banneton",
+        "name": "Le Banneton Cafe French Bakery (法式烘焙馆)",
+        "category": "🥖 老挝国家博物馆旁法式传统",
+        "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80",
+        "address": "Rue Nokeokoummane, Vientiane 01000, Laos",
+        "coords": [
+          17.9655,
+          102.6052
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Le+Banneton+Vientiane",
+        "desc": "万象法式殖民风情代表咖啡馆。全城公认最地道的法棍与杏仁可颂，黄白遮阳蓬下摆放着铁艺小圆桌与室内实木长桌。",
+        "workcation": "室内环境清凉舒适，提供免费 Wi-Fi，早上边吃现出炉法棍边梳理日程极具仪式感。",
+        "badges": [
+          "🥐 现烤法式杏仁可颂",
+          "🏛️ 法式殖民街区风情",
+          "📶 免费Wi-Fi覆盖",
+          "☕ 传统双份浓缩拿铁"
+        ]
+      },
+      {
+        "id": "cafe-kungs",
+        "name": "Kung's Cafe Lao (老挝传统热带小院)",
+        "category": "🍌 传统香蕉薄饼与滴漏咖啡院落",
+        "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80",
+        "address": "Simuang Rd, Ban Dongpalane, Vientiane 01000, Laos",
+        "coords": [
+          17.9582,
+          102.6185
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Kung+Cafe+Lao+Vientiane",
+        "desc": "隐匿在西蒙寺后方民居小巷的热带绿植庭院。老板娘 Kung 亲手烹调著名的香蕉芒果薄饼，搭配浓厚的传统老挝炼乳滴漏咖啡。",
+        "workcation": "院内芒果树下微风习习，配有电源插座与良好网络，体验原汁原味的当地慢生活办公。",
+        "badges": [
+          "🌴 芒果树下绿植庭院",
+          "🥞 招牌香蕉芒果薄饼",
+          "☕ 老挝传统炼乳滴漏",
+          "🔌 户外配电源插座"
+        ]
+      }
+    ]
+  },
+  {
+    "cityId": "luangprabang",
+    "cityName": "🇱🇦 老挝琅勃拉邦 (Luang Prabang)",
+    "stayDays": "Day 8–10 (12/18–12/20) · 世界文化遗产慢生活全天工作站",
+    "cafes": [
+      {
+        "id": "cafe-saffron",
+        "name": "Saffron Coffee (湄公河旗舰店)",
+        "category": "🌊 湄公河高山有机咖啡工作站",
+        "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=80",
+        "address": "Khem Khong, Ban Wat Nong, Luang Prabang 06000, Laos",
+        "coords": [
+          19.8972,
+          102.1418
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Saffron+Coffee+Luang+Prabang",
+        "desc": "琅勃拉邦最著名的社会企业精品咖啡。选用老挝北部少数民族高山有机阿拉比卡豆。临江设有两层观景露台与室内封闭强冷气办公专区，全天环境极佳。",
+        "workcation": "室内冷气区网络极佳，配备带插座实木写字台，江风拂面，全天办公身心极度放松。",
+        "badges": [
+          "☕ 老挝高山有机豆",
+          "🌊 湄公河一线绝景",
+          "❄️ 室内专用冷气区",
+          "🔌 插座配置齐全"
+        ]
+      },
+      {
+        "id": "cafe-viewan",
+        "name": "View An Cafe / The Belle Rive",
+        "category": "🌅 临江惬意落日露台咖啡",
+        "photo": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80",
+        "address": "Baan Vat Sene, Sakkarine Rd, Luang Prabang 06000, Laos",
+        "coords": [
+          19.8961,
+          102.1395
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=The+Belle+Rive+Terrace+Luang+Prabang",
+        "desc": "位于古城洋人街下沉湄公河畔。露天大遮阳伞木桌直面宽阔江面与远山，微风徐徐，点一杯冰拿铁，一边办公一边看长尾木船悠然驶过。",
+        "workcation": "露台各柱位均配有电源插座，Wi-Fi 覆盖全区，傍晚抬头即是金色晚霞。",
+        "badges": [
+          "🌅 湄公河金色夕阳",
+          "🔌 露台带充电接口",
+          "🥐 纯正欧式烘焙",
+          "🌴 极其治愈慢生活"
+        ]
+      },
+      {
+        "id": "cafe-banvatsene",
+        "name": "Le Cafe Ban Vat Sene (古城历史法式小资馆)",
+        "category": "🏛️ 古城主街殖民地风情红木馆",
+        "photo": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80",
+        "address": "Sakkarine Rd, Ban Vat Sene, Luang Prabang 06000, Laos",
+        "coords": [
+          19.8948,
+          102.1382
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Le+Cafe+Ban+Vat+Sene+Luang+Prabang",
+        "desc": "由法式殖民洋房改造，红色砖墙搭配高大吊扇与实木大桌。门口即是清晨托钵布施路线，午后环境极为宁静，点一杯浓缩咖啡可以静坐半天。",
+        "workcation": "木质长桌平稳，配有室内插座，光纤网络测速稳定在 50Mbps，适合安静打字写策划。",
+        "badges": [
+          "🏛️ 法式殖民建筑",
+          "🧘 门前即托钵布施",
+          "🔌 室内实木桌配电",
+          "🍰 现烤巧克力熔岩"
+        ]
+      },
+      {
+        "id": "cafe-zurich",
+        "name": "Zurich Bread Artisan Bakery (南康河畔欧包长桌)",
+        "category": "🥖 南康河畔全麦硬欧艺术烘焙",
+        "photo": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+        "address": "Kingkitsarath Rd, Ban Aphay, Luang Prabang 06000, Laos",
+        "coords": [
+          19.8912,
+          102.1365
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Zurich+Bread+Artisan+Bakery+Luang+Prabang",
+        "desc": "靠近南康河竹桥的德法工匠面包房。每天清晨烘焙酸种酵母面包、苹果派与碱水结，室内宽阔挑高，配备大型多功能会议木桌。",
+        "workcation": "工作长桌配有独立延长线插座板，空调凉爽，许多欧美自由职业者常在此开远程会议。",
+        "badges": [
+          "🥖 纯正酵母酸面包",
+          "🏊 俯瞰南康河竹桥",
+          "🔌 专属会议长桌",
+          "📶 极稳办公光纤"
+        ]
+      },
+      {
+        "id": "cafe-silkroad",
+        "name": "Silk Road Cafe by Ock Pop Tok (湄公河丝织庄园)",
+        "category": "🧶 传统丝织庄园与落日江景露台",
+        "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+        "address": "Ban Saylom, Khem Khong, Luang Prabang 06000, Laos",
+        "coords": [
+          19.8782,
+          102.1215
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=Ock+Pop+Tok+Silk+Road+Cafe+Luang+Prabang",
+        "desc": "坐落于著名的手织纺织手工艺中心内。茅草顶木制露台挑出湄公河上，被繁花与桑树环绕，提供传统老挝香草茶、自酿热带果汁与精品咖啡。",
+        "workcation": "户外露台遮阴极好且江风清凉，设有可用电源插座，环境充满艺术灵感与慢节奏。",
+        "badges": [
+          "🧶 老挝丝织非遗庄园",
+          "🌺 绝美繁花露台",
+          "🌅 避开人流的夕阳",
+          "🔌 露台具备电源"
+        ]
+      }
+    ]
+  },
+  {
+    "cityId": "xishuangbanna",
+    "cityName": "🇨🇳 中国西双版纳 (Xishuangbanna)",
+    "stayDays": "Day 11–12 (12/21–12/22) · 告庄澜沧江畔与热带傣韵办公",
+    "cafes": [
+      {
+        "id": "cafe-gaozhuang",
+        "name": "告庄澜沧江畔·猫卡江景咖啡 (星光夜市店)",
+        "category": "🌴 告庄澜沧江景傣风咖啡",
+        "photo": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省西双版纳景洪市告庄西双景景真寨澜沧江畔",
+        "coords": [
+          22.0085,
+          100.8032
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景猫卡咖啡",
+        "desc": "坐落于告庄澜沧江畔观景长廊，正对大金塔与宽阔水面。白天远离夜市嘈杂，傣式竹藤吊椅与实木长桌兼备，招牌老挝冰咖啡与泡鲁达清爽解暑。",
+        "workcation": "独享千兆无线光纤，长桌电源插座充沛，吹着澜沧江暖风办公效率翻倍。",
+        "badges": [
+          "🌊 直面澜沧江大江景",
+          "⚡ 独享千兆光纤",
+          "🥥 特色老挝冰咖啡",
+          "🔌 插座充足舒适"
+        ]
+      },
+      {
+        "id": "cafe-manting",
+        "name": "景洪曼听御花园旁·野象庭院手冲咖啡",
+        "category": "🐘 傣式庭院云南小粒咖啡手冲馆",
+        "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省西双版纳景洪市曼听路曼听公园正门旁",
+        "coords": [
+          21.9965,
+          100.7981
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=西双版纳曼听公园",
+        "desc": "隐匿于曼听御花园旁传统傣族民居庭院中。百年古榕遮阳，主打云南保山与普洱本地日晒/水洗小粒精品咖啡，果香浓郁，禅意幽静。",
+        "workcation": "庭院木桌设有充足电源与稳定 Wi-Fi，远离景区喧闹，适合全天静心写代码与深度思考。",
+        "badges": [
+          "☕ 云南本地精品小粒豆",
+          "🌿 傣式传统独栋庭院",
+          "🤫 禅意清幽避开喧嚣",
+          "🔌 户外插座完备"
+        ]
+      },
+      {
+        "id": "cafe-wantai",
+        "name": "婉泰老挝冰咖啡 (告庄星光夜市旗舰店)",
+        "category": "☕ 泰式傣风冰咖啡与泡鲁达名店",
+        "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省景洪市告庄西双景景亮寨 5 栋 102 号",
+        "coords": [
+          22.0102,
+          100.8015
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=婉泰告庄西双景",
+        "desc": "西双版纳最火爆的东南亚甜品咖啡名店。特调老挝冰咖啡袋装手拎风靡全城，招牌香芒糯米饭泡鲁达与椰奶冻味道极正。",
+        "workcation": "白天二楼卡座区环境舒适安静，配有电源插座与快速无线网络，避开下午日晒绝佳处。",
+        "badges": [
+          "🥥 招牌香芒泡鲁达",
+          "🛍️ 袋装老挝冰咖啡",
+          "❄️ 二楼空调极清凉",
+          "🔌 卡座配备电源"
+        ]
+      },
+      {
+        "id": "cafe-manfeilong",
+        "name": "曼飞龙白塔旁·傣乡竹楼原生态咖啡",
+        "category": "🎍 传统傣族竹楼吊脚楼咖啡馆",
+        "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省景洪市大曼么村曼飞龙古寨旁",
+        "coords": [
+          21.9854,
+          100.7812
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=景洪大曼么村",
+        "desc": "完全由纯天然金竹与柚木搭建的原生态傣式吊脚楼。凭栏远眺热带芭蕉林与傣家竹林，品尝现场柴火烘炒的云南土著小粒咖啡。",
+        "workcation": "吊脚楼二层凉风习习无需空调，竹桌宽大，配有排插，充满山野田园避世灵感。",
+        "badges": [
+          "🎍 纯竹结构吊脚楼",
+          "🌴 眺望热带芭蕉林",
+          "🪵 柴火烘炒小粒豆",
+          "🧘 原生态避世办公"
+        ]
+      },
+      {
+        "id": "cafe-vinyl",
+        "name": "景洪澜沧江畔·黑胶文艺手冲咖啡馆",
+        "category": "🎵 黑胶唱片复古文艺慢生活馆",
+        "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省景洪市滨江大道江边酒吧街中段",
+        "coords": [
+          22.0018,
+          100.7952
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=景洪滨江大道",
+        "desc": "面向老城区澜沧江风光带的文艺黑胶唱片咖啡馆。店内陈列上千张经典黑胶唱片，全套发烧级胆机音响，手冲单品豆覆盖云南全产区瑰夏与厌氧处理日晒。",
+        "workcation": "大理石吧台配有专用笔记本工作区，极速光纤网络，背景音效高保真，舒适惬意。",
+        "badges": [
+          "🎵 上千张黑胶唱片",
+          "🏆 云南孟连天宇瑰夏",
+          "🔌 吧台专属工作区",
+          "🌅 滨江落日余晖"
+        ]
+      }
+    ]
+  },
+  {
+    "cityId": "dali",
+    "cityName": "🇨🇳 中国云南大理 (Dali)",
+    "stayDays": "Day 13–15 (12/23–12/25) · 苍山洱海慢生活数字游民终点圣地",
+    "cafes": [
+      {
+        "id": "cafe-erhai",
+        "name": "洱海生态廊道·浅山伴海 S 弯海景咖啡馆",
+        "category": "🌊 磻溪 S 弯一线海景游民圣地",
+        "photo": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省大理市银桥镇磻溪村 7 组洱海生态廊道旁",
+        "coords": [
+          25.7532,
+          100.1742
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道",
+        "desc": "紧邻磻溪村 S 弯转角，整面落地全景窗无死角直面洱海碧波与对岸苍山雪景。专为数码游民配备海景长条实木工作台与千兆专线，冬日阳光通透温暖。",
+        "workcation": "千兆独享专线（实测 300Mbps+），每张海景长桌均有地插与护眼台灯，一边看海鸥飞过一边敲代码。",
+        "badges": [
+          "🌊 一线洱海无遮挡",
+          "⚡ 千兆独享光纤专线",
+          "🔌 密集地插与台灯",
+          "🕊️ 窗外海鸥群飞"
+        ]
+      },
+      {
+        "id": "cafe-chuanchang",
+        "name": "大理古城床单厂艺术区·海豚阿德书店咖啡",
+        "category": "🎨 苍山脚下文艺游民精神坐标",
+        "photo": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省大理市大理古城苍坪街 56 号床单厂艺术区内",
+        "coords": [
+          25.6948,
+          100.1612
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理古城床单厂艺术区",
+        "desc": "大理数码游民与文艺青年的精神地标。由旧红砖织造厂改建而成，书店兼咖啡空间开阔静谧，四壁皆书，弥漫着烤面包与手冲咖啡香气。",
+        "workcation": "古朴长木大桌，高网速与充足插座，众多跨国远程工作者在这里写书、编程，游民社区氛围极佳。",
+        "badges": [
+          "📚 艺术书吧深度办公",
+          "🧱 红砖工业复古风",
+          "⚡ 游民社区高网速",
+          "🔌 充足长桌电源"
+        ]
+      },
+      {
+        "id": "cafe-xizhou",
+        "name": "喜洲古镇·甲马咖啡 (麦田全景露台)",
+        "category": "🌾 喜洲麦田微风与非遗甲马工坊",
+        "photo": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省大理市喜洲古镇市上街 69 号",
+        "coords": [
+          25.8562,
+          100.1341
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=喜洲古镇甲马咖啡",
+        "desc": "将大理白族传统非遗“甲马版画”与精品咖啡深度融合。顶楼露台无遮挡直面喜洲百亩麦田与苍山顶峰，金黄或翠绿的麦浪尽收眼底。",
+        "workcation": "二层与顶楼长桌均有防风排插，网络流畅，点一杯云南厌氧日晒咖啡办公极为治愈。",
+        "badges": [
+          "🌾 直面百亩苍山麦田",
+          "🏮 白族非遗甲马艺术",
+          "🔌 露台长桌充电方便",
+          "☕ 云南精品风味豆"
+        ]
+      },
+      {
+        "id": "cafe-caicun",
+        "name": "大理才村湿地·水上森林亲水木屋咖啡",
+        "category": "🌲 洱海水上水杉与晨光咖啡屋",
+        "photo": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省大理市大理镇才村生态廊道水上森林旁",
+        "coords": [
+          25.7182,
+          100.1852
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理才村码头",
+        "desc": "位于才村码头北侧生态湿地，红杉木栈道蜿蜒伸入水面。清晨第一缕日出洒在湖面上，红嘴鸥成群在窗前低飞觅食。",
+        "workcation": "亲水落地玻璃窗前设有长条木吧台，配有多孔插座，清晨 8:30 即可入内一边看日出一边开工。",
+        "badges": [
+          "🌅 洱海第一缕绝美日出",
+          "🌲 临水红杉湿地森林",
+          "🔌 全吧台充电插孔",
+          "☕ 新鲜现磨热拿铁"
+        ]
+      },
+      {
+        "id": "cafe-shuanglang",
+        "name": "双廊古镇·海妖咖啡 (正对苍山十九峰)",
+        "category": "🏔️ 艺术小镇全景观海平台咖啡",
+        "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+        "address": "云南省大理市双廊镇大建旁村环海路 108 号",
+        "coords": [
+          25.9125,
+          100.1982
+        ],
+        "gmap": "https://www.google.com/maps/search/?api=1&query=大理双廊大建旁村",
+        "desc": "双廊海边老牌文艺咖啡馆。亲水露台正对着苍山十九峰的壮丽倒影，冬日午后阳光温暖，提供精选意式咖啡、果酒与现做提拉米苏。",
+        "workcation": "户外露台实木卡座带有遮阳伞与户外防水插座，吹着洱海微风编程，体验大理式神仙旅居。",
+        "badges": [
+          "🏔️ 正对苍山十九峰倒影",
+          "☀️ 冬日暖阳绝美光影",
+          "🔌 露台防水插座",
+          "🍰 招牌手作提拉米苏"
+        ]
+      }
+    ]
+  }
+]
