@@ -1362,7 +1362,175 @@
       }
     }
 
-</style>
+
+    /* Hotel Grouping & Filter Styles */
+    .hotel-city-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    .hotel-city-nav::-webkit-scrollbar {
+      height: 6px;
+    }
+    .hotel-city-nav::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    .hotel-city-filter {
+      padding: 8px 16px;
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: 20px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #475569;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      flex-shrink: 0;
+    }
+    .hotel-city-filter:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+      color: #0f172a;
+    }
+    .hotel-city-filter.active {
+      background: #059669;
+      border-color: #059669;
+      color: #ffffff;
+      box-shadow: 0 3px 8px rgba(5, 150, 105, 0.25);
+    }
+    
+    .hotel-city-group {
+      margin-bottom: 36px;
+      transition: all 0.3s ease;
+    }
+    .hotel-city-group.hidden {
+      display: none;
+    }
+    .hotel-group-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #059669;
+      padding: 12px 18px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+    .hotel-group-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .group-city-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .group-city-tag {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #059669;
+      background: #ecfdf5;
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid #a7f3d0;
+    }
+    .group-stay-badge {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #475569;
+      background: #ffffff;
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+    .card-thumb-score {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #fbbf24;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+    .workcation-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: #166534;
+      margin: 10px 0 12px;
+      line-height: 1.45;
+    }
+    .workcation-icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .hotel-action-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .btn-hotel-gmap {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #2563eb;
+      text-decoration: none;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn-hotel-gmap:hover {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+    }
+    .btn-hotel-detail {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #059669;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-hotel-detail:hover {
+      background: #059669;
+      color: #ffffff;
+      border-color: #059669;
+    }
+
+  </style>
   <!-- Leaflet Interactive Maps -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -2631,225 +2799,1295 @@
 
             <!-- TAB 2: 精选住宿酒店推荐 -->
     <div id="tab-hotels" class="tab-panel">
-      <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-radius:12px; padding:14px 20px; margin-bottom:20px; font-size:0.92rem; color:#065f46; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
-        <div>
-          <span style="font-size:1.05rem; font-weight:700;">🏷️ 500元档高性价比严选方案已生效</span>
-          <p style="margin:2px 0 0; font-size:0.85rem; color:#047857;">每晚预算锁定在 <strong>¥350 - ¥550</strong> 之间，全线精选具备<strong>高速专线 Wi-Fi、大办公桌、优异卫生与舒适度假体验</strong>的品质好房，9晚总预算直降超60%！点击任意卡片即可查看实景图与 Google Maps 导航。</p>
+      <!-- 500元档住宿总览导言 -->
+      <div style="background: linear-gradient(135deg, #ecfdf5 0%, #e0f2fe 100%); border: 1px solid #a7f3d0; border-radius: 14px; padding: 18px 22px; margin-bottom: 22px; box-shadow: 0 3px 10px rgba(16, 185, 129, 0.08);">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:10px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:1.4rem;">🏨</span>
+            <div>
+              <div style="font-size:1.15rem; font-weight:800; color:#065f46;">全线 7 大站点 · 35 家精选住宿分类推荐</div>
+              <div style="font-size:0.85rem; color:#047857; margin-top:2px;">按城市地点聚合分组 · 每地严选 5 种不同住宿风格 · 黄金均价锁定在每晚 <strong>¥350 - ¥550</strong> 档位</div>
+            </div>
+          </div>
+          <div style="background:white; border:1px solid #10b981; padding:6px 14px; border-radius:20px; font-weight:700; color:#047857; font-size:0.85rem; display:flex; align-items:center; gap:6px;">
+            <span>✨ 9 晚住宿总预算仅约 ¥3,800 - ¥4,800</span>
+          </div>
         </div>
-        <span style="font-weight:700; background:white; padding:6px 12px; border-radius:8px; border:1px solid #a7f3d0;">每晚约 500 元档 🏨</span>
+        <p style="margin:0; font-size:0.88rem; color:#334155; line-height:1.55;">
+          全行程覆盖 <strong>马六甲、泰国合艾、曼谷、老挝万象、琅勃拉邦、西双版纳、云南大理</strong> 7 大关键停靠点。针对数码游民与夫妻兼顾度假的需求，每个城市均提供 <strong>现代商务综合体、精品美学设计、观景露台泳池、夜市商圈步行、极致超值实惠</strong> 5 大类别，配备高速 Wi-Fi 与宽大书桌，点击卡片即可在 Google Maps 导航或查看高清实景。
+        </p>
+      </div>
+
+      <!-- 城市快速筛选导航栏 -->
+      <div class="hotel-city-nav">
+        <button class="hotel-city-filter active" onclick="filterHotelCity('all', this)">🌐 全部城市 (35家)</button>
+    <button class="hotel-city-filter" onclick="filterHotelCity('melaka', this)">🇲🇾 马六甲 (5家)</button>
+    <button class="hotel-city-filter" onclick="filterHotelCity('hatyai', this)">🇹🇭 泰国合艾 (5家)</button>
+    <button class="hotel-city-filter" onclick="filterHotelCity('bangkok', this)">🇹🇭 泰国曼谷 (5家)</button>
+    <button class="hotel-city-filter" onclick="filterHotelCity('vientiane', this)">🇱🇦 老挝万象 (5家)</button>
+    <button class="hotel-city-filter" onclick="filterHotelCity('luangprabang', this)">🇱🇦 老挝琅勃拉邦 (5家)</button>
+    <button class="hotel-city-filter" onclick="filterHotelCity('xishuangbanna', this)">🇨🇳 中国西双版纳 (5家)</button>
+    <button class="hotel-city-filter" onclick="filterHotelCity('dali', this)">🇨🇳 中国云南大理 (5家)</button>
+      </div>
+
+      <!-- 按城市分组的酒店网格容器 -->
+      <div id="hotel-groups-container">
+        
+    <div class="hotel-city-group" id="group-melaka" data-city="melaka">
+      <div class="hotel-group-header">
+        <div class="hotel-group-title">
+          <span class="group-city-name">🇲🇾 马六甲 (Melaka)</span>
+          <span class="group-city-tag">5 种风格精选</span>
+        </div>
+        <div class="group-stay-badge">📅 Day 1–2 (12/11-12/12) · 宿 1 晚</div>
       </div>
       <div class="cafe-grid">
-        <div class="hotel-card" onclick="openVenueModal('hotel-hatten')">
+    
+        <div class="hotel-card" onclick="openVenueModal('hotel-melaka-hatten')">
           <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
-            <span class="card-thumb-badge">🏨 市中心品质四星·实惠首选</span>
-            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+            <span class="card-thumb-badge">🏢 现代商务与综合体型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
           </div>
           <div class="card-content-wrap">
             <div>
-              <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 12/11 - 12/13 · 共2晚</div>
+              <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 现代商务与综合体型</div>
               <div class="hotel-name">马六甲惠胜酒店 (Hatten Hotel Melaka)</div>
-              <div class="hotel-price-badge">💰 房费参考：约 ¥380 - ¥520 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 250 - 340 MYR)</span></div>
-              <div class="hotel-desc">马六甲市中心性价比最高的现代四星级酒店。房间面积宽敞（约 33㎡），配备独立宽大办公书桌、人体工学椅与高速商务 Wi-Fi。楼下直通商场，步行 10 分钟即达红屋与鸡场街，顶楼配有开阔天际线泳池与健身房。</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥420 - ¥520 / 晚</strong></div>
+              <div class="hotel-desc">马六甲地标级四星级商务度假酒店，直通商场，客房空间大，配宽敞办公书桌与人体工学椅，顶楼无边际泳池可俯瞰马六甲海峡。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配备独立实木写字台与万国插座，实测 100Mbps 稳定网络，视频会议流畅无卡顿。</span>
+              </div>
             </div>
             <div>
               <div class="cafe-badges">
-                <span class="cafe-badge">💰 均价500高性价比</span><span class="cafe-badge">📶 高速稳定 Wi-Fi</span><span class="cafe-badge">🪑 独立办公书桌</span><span class="cafe-badge">🏊 高空观景泳池</span>
+                <span class="cafe-badge">⚡ 极速 Wi-Fi</span><span class="cafe-badge">🖥️ 宽阔大书桌</span><span class="cafe-badge">🏊 无边际海景泳池</span><span class="cafe-badge">🛍️ 直通商圈超市</span>
               </div>
-              <div class="card-open-hint">
-                <span>📍 查看精确位置与 Google Maps 导航</span>
-                <span>👉 点击展开</span>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Hatten+Hotel+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
               </div>
             </div>
           </div>
         </div>
-        <div class="hotel-card" onclick="openVenueModal('hotel-ibis-melaka')">
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-melaka-ibis')">
           <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80');">
-            <span class="card-thumb-badge">🏨 国际品牌连锁·超值备选</span>
-            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+            <span class="card-thumb-badge">💰 国际连锁超值性价比型</span>
+            <span class="card-thumb-score">⭐ 4.5 / 5.0</span>
           </div>
           <div class="card-content-wrap">
             <div>
-              <div class="hotel-city">🇲🇾 马六甲备选 (Melaka) · 马六甲超值连锁备选</div>
+              <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 国际连锁超值性价比型</div>
               <div class="hotel-name">马六甲宜必思酒店 (Ibis Melaka)</div>
-              <div class="hotel-price-badge">💰 房费参考：约 ¥320 - ¥450 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 210 - 295 MYR)</span></div>
-              <div class="hotel-desc">法国雅高集团（Accor）旗下的标准化高性价比酒店，步行至红屋仅 8 分钟。房间采光明亮干净，全木地板卫生无死角，配有长条工作桌，网络稳定性在马六甲同价位位居前列。</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥320 - ¥400 / 晚</strong></div>
+              <div class="hotel-desc">雅高集团旗下品质酒店，步行 10 分钟到荷兰红屋与鸡场街。客房隔音优良，Sweet Bed 特色床垫睡眠极佳，性价比极高。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>房间配有专用办公转角台与多孔 USB 接口，大堂休息区提供长条共享工作桌与插座。</span>
+              </div>
             </div>
             <div>
               <div class="cafe-badges">
-                <span class="cafe-badge">⭐ 雅高国际连锁</span><span class="cafe-badge">📶 极稳专线网络</span><span class="cafe-badge">🚶 步行8分到古城</span><span class="cafe-badge">💰 约300多极实惠</span>
+                <span class="cafe-badge">🌐 雅高品质保证</span><span class="cafe-badge">🚶 步行10分到红屋</span><span class="cafe-badge">📶 稳定高速网络</span><span class="cafe-badge">💰 300元档超值</span>
               </div>
-              <div class="card-open-hint">
-                <span>📍 查看精确位置与 Google Maps 导航</span>
-                <span>👉 点击展开</span>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Ibis+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
               </div>
             </div>
           </div>
         </div>
-        <div class="hotel-card" onclick="openVenueModal('hotel-aloft-bkk')">
-          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80');">
-            <span class="card-thumb-badge">🏨 万豪旗下潮流商旅·高性价比首选</span>
-            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
-          </div>
-          <div class="card-content-wrap">
-            <div>
-              <div class="hotel-city">🇹🇭 曼谷 (Bangkok) · 12/15 - 12/16 · 1晚曼谷会友</div>
-              <div class="hotel-name">曼谷素坤逸11巷雅乐轩酒店 (Aloft Bangkok Sukhumvit 11)</div>
-              <div class="hotel-price-badge">💰 房费参考：约 ¥480 - ¥580 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 2,400 - 2,900 THB)</span></div>
-              <div class="hotel-desc">万豪旅享家（Marriott）旗下专为年轻移动办公人群打造的科技潮牌酒店！全景落地大窗，配备人体工学办公转椅、宽阔办公桌面与超高速千兆 Wi-Fi。楼下即是素坤逸网红美食街，步行 5 分钟到 BTS Nana 站，去通罗或暹罗商圈会友极其方便。</div>
-            </div>
-            <div>
-              <div class="cafe-badges">
-                <span class="cafe-badge">🏨 万豪品质保证</span><span class="cafe-badge">⚡ 千兆极速 Wi-Fi</span><span class="cafe-badge">🚇 近 BTS Nana 站</span><span class="cafe-badge">🪑 人体工学写字台</span>
-              </div>
-              <div class="card-open-hint">
-                <span>📍 查看精确位置与 Google Maps 导航</span>
-                <span>👉 点击展开</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hotel-card" onclick="openVenueModal('hotel-holidayinn-bkk')">
-          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
-            <span class="card-thumb-badge">🏨 洲际商务标杆·超值备选</span>
-            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
-          </div>
-          <div class="card-content-wrap">
-            <div>
-              <div class="hotel-city">🇹🇭 曼谷备选 (Bangkok) · 曼谷市中心商务备选</div>
-              <div class="hotel-name">曼谷沙吞智选假日酒店 (Holiday Inn Express Bangkok Sathorn)</div>
-              <div class="hotel-price-badge">💰 房费参考：约 ¥420 - ¥530 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 2,100 - 2,650 THB)</span></div>
-              <div class="hotel-desc">洲际酒店集团（IHG）旗下的商务常胜将军，坐落于沙吞金融区，步行 2 分钟即达 BTS Chong Nonsi 站。房间高效精干，附赠每日免费丰盛早餐（Express Start Breakfast），公共工作区环境一流，出差办公体验极佳。</div>
-            </div>
-            <div>
-              <div class="cafe-badges">
-                <span class="cafe-badge">⭐ IHG 洲际品质</span><span class="cafe-badge">🥐 免费双人早餐</span><span class="cafe-badge">🚇 BTS站步行2分</span><span class="cafe-badge">💼 专属商务办公区</span>
-              </div>
-              <div class="card-open-hint">
-                <span>📍 查看精确位置与 Google Maps 导航</span>
-                <span>👉 点击展开</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hotel-card" onclick="openVenueModal('hotel-ibis-vientiane')">
-          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80');">
-            <span class="card-thumb-badge">🏨 法国雅高连锁·万象最稳之选</span>
-            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
-          </div>
-          <div class="card-content-wrap">
-            <div>
-              <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 12/17 - 12/18 · 1晚中转休整</div>
-              <div class="hotel-name">宜必思万象南普酒店 (Ibis Vientiane Nam Phu)</div>
-              <div class="hotel-price-badge">💰 房费参考：约 ¥380 - ¥480 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 55 - 70 USD)</span></div>
-              <div class="hotel-desc">老挝万象市中心南普喷泉广场旁的核心国际连锁酒店。针对老挝本地独立客栈 Wi-Fi 经常偶发断网的问题，宜必思接入雅高跨国企业专线网络，网速稳定可靠。大床舒适柔软，步行可至湄公河夜市与凯旋门，是 500 元价位段最让人安心的避险首选。</div>
-            </div>
-            <div>
-              <div class="cafe-badges">
-                <span class="cafe-badge">📍 南普喷泉广场核心</span><span class="cafe-badge">⚡ 雅高企业专线网</span><span class="cafe-badge">💰 400元档超高性价比</span><span class="cafe-badge">🚶 步行至湄公河夜市</span>
-              </div>
-              <div class="card-open-hint">
-                <span>📍 查看精确位置与 Google Maps 导航</span>
-                <span>👉 点击展开</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hotel-card" onclick="openVenueModal('hotel-mydream-lp')">
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-melaka-rosa')">
           <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80');">
-            <span class="card-thumb-badge">🏨 南康河畔生态花园度假村</span>
-            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+            <span class="card-thumb-badge">🌿 工业复古风情设计型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
           </div>
           <div class="card-content-wrap">
             <div>
-              <div class="hotel-city">🇱🇦 琅勃拉邦 (Luang Prabang) · 12/18 - 12/21 · 共3晚舒适慢度假</div>
-              <div class="hotel-name">琅勃拉邦梦之精品度假村 (My Dream Boutique Resort)</div>
-              <div class="hotel-price-badge">💰 房费参考：约 ¥430 - ¥560 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 62 - 80 USD)</span></div>
-              <div class="hotel-desc">坐落在南康河畔的绝美热带花园生态度假村，欧美远程工作者与自由行旅客评分高达 9.2！全柚木传统高脚建筑，每间客房都有独立木质观景阳台与工作大桌。花园内拥有蔚蓝泳池与河畔休闲平台，赠送极丰盛的自选现做双人早餐，并提供免费自行车与古城免费接驳突突车。</div>
+              <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 工业复古风情设计型</div>
+              <div class="hotel-name">马六甲罗莎精品酒店 (Rosa Malacca)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥380 - ¥480 / 晚</strong></div>
+              <div class="hotel-desc">极具设计感的红砖工业复古风精品酒店，绿植庭院与欧式天井交织，环境静谧文艺，深受国际数码游民与设计师喜爱。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>每间房设有独立定制原木书桌，客房中央天井咖啡馆办公氛围极佳，适合深度写作与编程。</span>
+              </div>
             </div>
             <div>
               <div class="cafe-badges">
-                <span class="cafe-badge">🌊 南康河畔热带花园</span><span class="cafe-badge">🥐 丰盛现做自选早餐</span><span class="cafe-badge">🚲 免费自行车+接驳车</span><span class="cafe-badge">🏊 户外热带泳池</span>
+                <span class="cafe-badge">🌿 工业复古美学</span><span class="cafe-badge">📸 绝美天井采光</span><span class="cafe-badge">☕ 优质自营咖啡厅</span><span class="cafe-badge">🤫 静音隔音极佳</span>
               </div>
-              <div class="card-open-hint">
-                <span>📍 查看精确位置与 Google Maps 导航</span>
-                <span>👉 点击展开</span>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Rosa+Malacca" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
               </div>
             </div>
           </div>
         </div>
-        <div class="hotel-card" onclick="openVenueModal('hotel-mekongsunset-lp')">
-          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80');">
-            <span class="card-thumb-badge">🏨 湄公河落日景观洋房·超值备选</span>
-            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-melaka-pines')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏊 宽敞河景露台泳池型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
           </div>
           <div class="card-content-wrap">
             <div>
-              <div class="hotel-city">🇱🇦 琅勃拉邦备选 (Luang Prabang) · 湄公河沿岸超值备选</div>
-              <div class="hotel-name">湄公河日落景观别墅酒店 (Mekong Sunset View Hotel)</div>
-              <div class="hotel-price-badge">💰 房费参考：约 ¥380 - ¥500 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(约 55 - 72 USD)</span></div>
-              <div class="hotel-desc">坐落于湄公河一线景观步道上，经典老挝法式洋楼。推开窗即可俯瞰壮丽的湄公河金色夕阳与对岸青翠山脉。地理位置绝佳，出弄堂步行 3 分钟即达香通寺与洋人街，带阳台与免费高速无线网络。</div>
+              <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 宽敞河景露台泳池型</div>
+              <div class="hotel-name">马六甲松船酒店 (The Pines Melaka)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥390 - ¥490 / 晚</strong></div>
+              <div class="hotel-desc">沿马六甲河而建，拥有全市同价位中最大的客房面积（40㎡+），配有观景落地窗与小厨房设施，顶楼配咸水无边泳池。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>超长写字台搭配护眼台灯，室内空间开阔不压抑，适合长时间办公。</span>
+              </div>
             </div>
             <div>
               <div class="cafe-badges">
-                <span class="cafe-badge">🌅 湄公河一线落日</span><span class="cafe-badge">📍 紧邻香通寺</span><span class="cafe-badge">🥐 免费美味早餐</span><span class="cafe-badge">💰 400元档江景超值</span>
+                <span class="cafe-badge">📐 40平米大空间</span><span class="cafe-badge">🌊 俯瞰马六甲河</span><span class="cafe-badge">🍳 配备简易水槽</span><span class="cafe-badge">🏊 咸水观景泳池</span>
               </div>
-              <div class="card-open-hint">
-                <span>📍 查看精确位置与 Google Maps 导航</span>
-                <span>👉 点击展开</span>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Pines+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
               </div>
             </div>
           </div>
         </div>
-        <div class="hotel-card" onclick="openVenueModal('hotel-gaozhuang-mianyue')">
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-melaka-babahouse')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏮 鸡场街南洋娘惹风情型</span>
+            <span class="card-thumb-score">⭐ 4.8 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 鸡场街南洋娘惹风情型</div>
+              <div class="hotel-name">马六甲峇峇大厦酒店 (The Baba House Melaka)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥450 - ¥550 / 晚</strong></div>
+              <div class="hotel-desc">坐落于鸡场街核心历史保护区内的百年传统娘惹老宅，雕梁画栋、琉璃天井，出门步行 1 分钟直达周末夜市与咖啡馆。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房内配有复古木质办公桌与现代高速 Wi-Fi，在南洋历史宅院中体验数字游民生活。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏛️ 百年娘惹宅邸</span><span class="cafe-badge">🚶 步入鸡场街夜市</span><span class="cafe-badge">🍵 传统天井茶吧</span><span class="cafe-badge">🌿 浓郁南洋风韵</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Baba+House+Melaka" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="hotel-city-group" id="group-hatyai" data-city="hatyai">
+      <div class="hotel-group-header">
+        <div class="hotel-group-title">
+          <span class="group-city-name">🇹🇭 泰国合艾 (Hat Yai)</span>
+          <span class="group-city-tag">5 种风格精选</span>
+        </div>
+        <div class="group-stay-badge">📅 Day 3 (12/13) · 泰铁CNR卧铺发车前休息/过境精选</div>
+      </div>
+      <div class="cafe-grid">
+    
+        <div class="hotel-card" onclick="openVenueModal('hotel-hatyai-centara')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏢 核心商圈经典四星型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国合艾 (Hat Yai) · 核心商圈经典四星型</div>
+              <div class="hotel-name">合艾盛泰乐酒店 (Centara Hotel Hat Yai)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥380 - ¥480 / 晚</strong></div>
+              <div class="hotel-desc">合艾市中心 Central 百货上盖四星级酒店，步行 5 分钟直达合艾火车站。设施完备，配大型健身房与室外泳池。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>配有标准商务写字桌与人体工学椅，大堂提供安静的商务洽谈办公区。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🛍️ 楼下即Central商场</span><span class="cafe-badge">🚆 步行5分到火车站</span><span class="cafe-badge">🏊 室外泳池</span><span class="cafe-badge">💼 专业商务中心</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Centara+Hotel+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-hatyai-monotel')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🌿 现代极简美学精品型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国合艾 (Hat Yai) · 现代极简美学精品型</div>
+              <div class="hotel-name">合艾莫诺精品酒店 (Monotel Hat Yai)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥300 - ¥380 / 晚</strong></div>
+              <div class="hotel-desc">极简日式水泥灰设计风精品美宿，客房采光极佳，床品舒适度拉满，配有超快 Wi-Fi，深受年轻自由职业者喜爱。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配备专属木质电脑桌，插座布局科学，网速实测 80Mbps+。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">✨ 极简美学设计</span><span class="cafe-badge">📶 极速光纤网络</span><span class="cafe-badge">☕ 楼下精品咖啡</span><span class="cafe-badge">💰 300元高颜值</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Monotel+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-hatyai-redplanet')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">💰 极简超值便捷型</span>
+            <span class="card-thumb-score">⭐ 4.4 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国合艾 (Hat Yai) · 极简超值便捷型</div>
+              <div class="hotel-name">合艾红星球酒店 (Red Planet Hat Yai)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥220 - ¥280 / 晚</strong></div>
+              <div class="hotel-desc">距离合艾火车站仅 400 米，以极致便捷与高性价比著称。配备强劲冷气与超舒适床垫，是换乘过境洗漱休整绝佳选择。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>大堂配有专门的 Apple iMac 电脑工作台，客房内带壁挂折叠桌。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🚆 距火车站仅400米</span><span class="cafe-badge">⚡ 苹果电脑工作站</span><span class="cafe-badge">🚿 强劲热水卫浴</span><span class="cafe-badge">💰 200元档超值</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Red+Planet+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-hatyai-newseason')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏮 金荣市集夜市商圈型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国合艾 (Hat Yai) · 金荣市集夜市商圈型</div>
+              <div class="hotel-name">合艾新季方舟酒店 (New Season Square Hotel)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥350 - ¥450 / 晚</strong></div>
+              <div class="hotel-desc">位于合艾繁华市中心，紧邻金荣市场与李花园夜市。房间宽大安静，隔音优良，周边汇集清姐肉骨茶与早茶点心老店。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配备稳固厚实木桌，网络稳定，适合白天静心完成紧急工作。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🍲 紧挨金荣早茶街</span><span class="cafe-badge">🚪 隔音密封优良</span><span class="cafe-badge">🪑 宽敞独立桌椅</span><span class="cafe-badge">🚶 步行至夜市</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=New+Season+Square+Hotel+Hat+Yai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-hatyai-habita')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">☕ 文艺咖啡书香设计型</span>
+            <span class="card-thumb-score">⭐ 4.8 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国合艾 (Hat Yai) · 文艺咖啡书香设计型</div>
+              <div class="hotel-name">合艾哈比塔精品酒店 (The Habita Hatyai)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥360 - ¥460 / 晚</strong></div>
+              <div class="hotel-desc">将书吧与现代工业风完美结合的精品酒店。一层即是高品质自营独立咖啡厅，整面书墙与自然采光营造出极致静心氛围。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>酒店一楼咖啡厅设有多处配有电源插座的实木长桌，被称为合艾最适合带电脑办公的住宿地。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">📚 艺术书吧大堂</span><span class="cafe-badge">☕ 优质精品咖啡</span><span class="cafe-badge">🌿 静谧宜居街区</span><span class="cafe-badge">💻 绝佳办公氛围</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Habita+Hatyai" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="hotel-city-group" id="group-bangkok" data-city="bangkok">
+      <div class="hotel-group-header">
+        <div class="hotel-group-title">
+          <span class="group-city-name">🇹🇭 泰国曼谷 (Bangkok)</span>
+          <span class="group-city-tag">5 种风格精选</span>
+        </div>
+        <div class="group-stay-badge">📅 Day 4–5 (12/14-12/15) · 宿 1 晚 · 连续2天全天办公</div>
+      </div>
+      <div class="cafe-grid">
+    
+        <div class="hotel-card" onclick="openVenueModal('hotel-bkk-holidayinn')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏢 洲际旗下高性价比商务型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国曼谷 (Bangkok) · 洲际旗下高性价比商务型</div>
+              <div class="hotel-name">曼谷沙吞智选假日酒店 (Holiday Inn Express Sathorn)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥450 - ¥550 / 晚</strong></div>
+              <div class="hotel-desc">洲际集团旗下标准商务品质酒店。步行 2 分钟即达 Chong Nonsi BTS 轻轨站，配备强劲 Wi-Fi、人体工学椅与优质免费热早餐。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配备专业办公桌、多国通用转换插座与静音空调，极适合全天专注远程工作。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🚆 步行2分到BTS轻轨</span><span class="cafe-badge">🍳 免费丰盛热早餐</span><span class="cafe-badge">⚡ 千兆级无线网络</span><span class="cafe-badge">💼 人体工学转椅</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+Bangkok+Sathorn" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-bkk-aloft')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🎵 万豪旗下潮牌都市型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国曼谷 (Bangkok) · 万豪旗下潮牌都市型</div>
+              <div class="hotel-name">曼谷素坤逸 11 巷雅乐轩酒店 (Aloft Bangkok Sukhumvit 11)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥480 - ¥580 / 晚</strong></div>
+              <div class="hotel-desc">万豪旅享家旗下时尚潮牌酒店。位于素坤逸 11 巷繁华核心，顶楼配有高空无边泳池与 W XYZ 酒吧，科技感十足。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>提供即插即用工作台（Plug & Play），客房与大堂公共空间充满活力，适合创意与代码工作。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏊 高空无边泳池</span><span class="cafe-badge">🍸 W XYZ潮牌酒吧</span><span class="cafe-badge">🏙️ 素坤逸核心地段</span><span class="cafe-badge">🛏️ 万豪标准床品</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Aloft+Bangkok+Sukhumvit+11" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-bkk-ibisstyles')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">💰 现代活力超值实惠型</span>
+            <span class="card-thumb-score">⭐ 4.5 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国曼谷 (Bangkok) · 现代活力超值实惠型</div>
+              <div class="hotel-name">曼谷素坤逸 50 巷宜必思尚品酒店 (Ibis Styles Sukhumvit 50)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥320 - ¥400 / 晚</strong></div>
+              <div class="hotel-desc">雅高集团尚品系列，现代流行艺术装修，提供免费接驳车往返 On Nut BTS 轻轨站。周边生活配套极其便利，性价比极高。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房设计科学紧凑，办公桌旁配备多个电源接口，无线网络测速超 100Mbps。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🚐 免费BTS接驳车</span><span class="cafe-badge">🎨 活力艺术风格</span><span class="cafe-badge">☕ 24小时前台服务</span><span class="cafe-badge">💰 300元档超值</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Ibis+Styles+Bangkok+Sukhumvit+50" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-bkk-quarterari')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏊 高空景观天际泳池型</span>
+            <span class="card-thumb-score">⭐ 4.8 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国曼谷 (Bangkok) · 高空景观天际泳池型</div>
+              <div class="hotel-name">阿里夸特酒店 (The Quarter Ari by UHG)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥460 - ¥560 / 晚</strong></div>
+              <div class="hotel-desc">坐落于曼谷最文艺小资的 Ari 街区，靠近曼谷阿皮瓦中央火车站（打车10分钟）。33层天际无边泳池与星空健身房，视野极佳。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配备落地玻璃景观办公桌，下楼即是咖啡馆与特色餐厅，换乘火车极其从容。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏊 33层天际泳池</span><span class="cafe-badge">☕ 周边满布独立咖啡</span><span class="cafe-badge">🚆 靠近阿皮瓦中央站</span><span class="cafe-badge">🏙️ 绝美城市全景</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Quarter+Ari+by+UHG" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-bkk-chatrium')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🌿 热带泻湖套房度假型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇹🇭 泰国曼谷 (Bangkok) · 热带泻湖套房度假型</div>
+              <div class="hotel-name">曼谷沙吞察殿酒店 (Chatrium Residence Sathon)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥480 - ¥580 / 晚</strong></div>
+              <div class="hotel-desc">五星级度假村标准的大套房公寓（面积达 55㎡），被巨大的热带绿植与巨型泻湖泳池环绕，远离喧嚣，如同城市绿洲。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>配有独立客厅大餐桌与书桌，阳台微风习习，两人同时办公互不干扰。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">📐 55平米超大套房</span><span class="cafe-badge">🌴 热带泻湖巨型泳池</span><span class="cafe-badge">🍳 独立厨房与阳台</span><span class="cafe-badge">🧘 极高静音私密</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Chatrium+Residence+Sathon+Bangkok" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="hotel-city-group" id="group-vientiane" data-city="vientiane">
+      <div class="hotel-group-header">
+        <div class="hotel-group-title">
+          <span class="group-city-name">🇱🇦 老挝万象 (Vientiane)</span>
+          <span class="group-city-tag">5 种风格精选</span>
+        </div>
+        <div class="group-stay-badge">📅 Day 6–7 (12/16-12/17) · 宿 1 晚 · 湄公河畔慢生活</div>
+      </div>
+      <div class="cafe-grid">
+    
+        <div class="hotel-card" onclick="openVenueModal('hotel-vte-ibis')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏢 国际连锁信赖商务型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 国际连锁信赖商务型</div>
+              <div class="hotel-name">宜必思万象南普酒店 (Ibis Vientiane Nam Phu)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥380 - ¥460 / 晚</strong></div>
+              <div class="hotel-desc">雅高集团在万象的核心力作。坐落于市中心南普喷泉广场，步行 3 分钟到湄公河日落夜市。欧美游客聚集，网络与卫生标准一流。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配备标准工作台与护眼阅读灯，大堂咖啡区宽敞明亮，适合全天高效协作。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌐 雅高标准品质</span><span class="cafe-badge">📍 南普广场核心区</span><span class="cafe-badge">🚶 3分到湄公河夜市</span><span class="cafe-badge">⚡ 全天极速无线网</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Ibis+Vientiane+Nam+Phu" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-vte-salana')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🌿 老挝传统柚木艺术型</span>
+            <span class="card-thumb-score">⭐ 4.8 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 老挝传统柚木艺术型</div>
+              <div class="hotel-name">万象萨拉那精品酒店 (Salana Boutique Hotel)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥460 - ¥560 / 晚</strong></div>
+              <div class="hotel-desc">以老挝传统高级柚木打造的奢雅精品酒店，充满浓郁的佛教文化与艺术沉淀。服务细腻周到，提供精致老挝与西式早餐。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配有实木质感大写字台，顶楼 Living Room 书吧拥有极佳视野与安静办公桌。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🪵 纯正老挝柚木</span><span class="cafe-badge">☕ 顶楼天空书吧</span><span class="cafe-badge">🥐 极佳口碑早餐</span><span class="cafe-badge">🧘 禅意静心环境</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Salana+Boutique+Hotel+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-vte-spark')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏊 现代轻奢泳池度假型</span>
+            <span class="card-thumb-score">⭐ 4.5 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 现代轻奢泳池度假型</div>
+              <div class="hotel-name">万象 S 公园设计酒店 (S Park Design Hotel)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥360 - ¥450 / 晚</strong></div>
+              <div class="hotel-desc">万象罕见的现代轻奢设计风酒店，拥有开阔的中庭泳池与现代精酿啤酒餐吧。客房面积开阔，避开市区拥挤。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房内配有现代极简长书桌，采光充足，办公环境极其安静放松。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏊 优美中庭泳池</span><span class="cafe-badge">🎨 现代轻奢空间</span><span class="cafe-badge">🍻 精酿啤酒吧</span><span class="cafe-badge">🅿️ 便捷接送车服务</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=S+Park+Design+Hotel+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-vte-namphu')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">💰 法式殖民超值实惠型</span>
+            <span class="card-thumb-score">⭐ 4.4 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 法式殖民超值实惠型</div>
+              <div class="hotel-name">万象南普精品酒店 (Namphu Boutique Hotel)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥290 - ¥360 / 晚</strong></div>
+              <div class="hotel-desc">法式回廊式建筑风格，环绕着静谧的露天庭院小水池。步行到老挝国家博物馆仅需 5 分钟，性价比非常高。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>庭院周边设有多张遮阳木桌，客房内带独立书桌，网络稳定通畅。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏛️ 法式拱门回廊</span><span class="cafe-badge">🌿 绿意水池庭院</span><span class="cafe-badge">💰 300元档超值</span><span class="cafe-badge">📍 出门即餐饮街</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Namphu+Boutique+Hotel+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-vte-latsavong')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏢 高空现代奢华商务型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 高空现代奢华商务型</div>
+              <div class="hotel-name">万象拉萨翁旺达酒店 (Wanda Vista / Latsavong Plaza)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥480 - ¥580 / 晚</strong></div>
+              <div class="hotel-desc">万象城市新地标建筑，距离万象中老铁路客运主干道便捷。国际五星级标准硬件设施，高空无敌全景与高速网络专线。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>行政级商务写字台与静音办公环境，是处理严谨商务与视频汇报的首选。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏙️ 万象高空新地标</span><span class="cafe-badge">⚡ 专线光纤网络</span><span class="cafe-badge">🏋️ 大型健身中心</span><span class="cafe-badge">🚆 方便接驳火车站</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Latsavong+Plaza+Vientiane" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="hotel-city-group" id="group-luangprabang" data-city="luangprabang">
+      <div class="hotel-group-header">
+        <div class="hotel-group-title">
+          <span class="group-city-name">🇱🇦 老挝琅勃拉邦 (Luang Prabang)</span>
+          <span class="group-city-tag">5 种风格精选</span>
+        </div>
+        <div class="group-stay-badge">📅 Day 7–10 (12/17-12/20) · 宿 3 晚 · 世界文化遗产慢生活</div>
+      </div>
+      <div class="cafe-grid">
+    
+        <div class="hotel-card" onclick="openVenueModal('hotel-lpq-dream')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🌿 南康河畔热带花园型</span>
+            <span class="card-thumb-score">⭐ 4.8 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝琅勃拉邦 (Luang Prabang) · 南康河畔热带花园型</div>
+              <div class="hotel-name">琅勃拉邦梦之精品度假村 (The Dream Boutique Resort)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥420 - ¥520 / 晚</strong></div>
+              <div class="hotel-desc">位于南康河畔的热带花园秘境。环抱室外泳池与郁郁葱葱的荷花池，提供免费自行车租借与古城定时免费穿梭小巴。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配备独立实木大书桌与舒适阳台长椅，鸟语花香，网速稳定，是深度专注办公的最佳场所。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌴 南康河畔花园</span><span class="cafe-badge">🏊 花园清凉泳池</span><span class="cafe-badge">🚲 免费自行车漫游</span><span class="cafe-badge">🤫 极致鸟语花香</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Dream+Boutique+Resort+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-lpq-mekongsunset')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🌅 一线湄公河金色落日型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝琅勃拉邦 (Luang Prabang) · 一线湄公河金色落日型</div>
+              <div class="hotel-name">湄公河日落景观洋楼酒店 (Mekong Sunset View Hotel)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥380 - ¥480 / 晚</strong></div>
+              <div class="hotel-desc">经典法式殖民洋楼，坐落于湄公河一线景观步道上。推开阳台即可直面湄公河金色夕阳，步行 3 分钟即达香通寺与洋人街。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>阳台观景木桌配备插座，傍晚一边喝老挝咖啡看落日一边收尾工作，浪漫惬意。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌅 湄公河一线绝景</span><span class="cafe-badge">📍 紧邻香通寺</span><span class="cafe-badge">🥐 阳台观景早餐</span><span class="cafe-badge">💰 400元档超值</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Mekong+Sunset+View+Hotel+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-lpq-villasanti')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏛️ 昔日皇室宅邸风韵型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝琅勃拉邦 (Luang Prabang) · 昔日皇室宅邸风韵型</div>
+              <div class="hotel-name">三蒂别墅度假酒店 (Villa Santi Hotel)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥460 - ¥560 / 晚</strong></div>
+              <div class="hotel-desc">由老挝 19 世纪皇室王妃旧居改建而成，保留了极为华丽的柚木回廊与精美木雕，漫步其中如同穿越百年历史时光。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>古色古香的柚木书桌与安静的庭院环境，客房宽敞，隔音上乘。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">👑 百年皇室故居</span><span class="cafe-badge">🪵 精湛老挝木雕</span><span class="cafe-badge">📍 位于洋人街核心</span><span class="cafe-badge">🍵 皇家法式庭院</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Villa+Santi+Hotel+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-lpq-chitdara')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏮 古城核心布施路线型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝琅勃拉邦 (Luang Prabang) · 古城核心布施路线型</div>
+              <div class="hotel-name">奇达拉传统客栈 (Villa Chitdara)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥350 - ¥440 / 晚</strong></div>
+              <div class="hotel-desc">清晨僧侣布施路线必经之地的庭院客栈。步行 2 分钟到达夜市与普西山，闹中取静，拥有美丽的热带小花圃。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>一楼庭院配有多张遮阳办公桌椅，房间采光通风良好，Wi-Fi 全面覆盖。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🧘 门前即清晨布施</span><span class="cafe-badge">🚶 2分到古城夜市</span><span class="cafe-badge">🌺 鸟语花香庭院</span><span class="cafe-badge">💰 实惠口碑好评</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Villa+Chitdara+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-lpq-namkhan')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">💰 临河亲水高性价比型</span>
+            <span class="card-thumb-score">⭐ 4.5 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇱🇦 老挝琅勃拉邦 (Luang Prabang) · 临河亲水高性价比型</div>
+              <div class="hotel-name">南康河滨精品客栈 (Riverside Guesthouse Luang Prabang)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥260 - ¥350 / 晚</strong></div>
+              <div class="hotel-desc">紧邻南康河竹桥的特色木屋民宿。老板热情好客，提供免费老挝黑咖啡，价格亲民公道，是长住旅居者的宝藏之选。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>亲水露台设有开阔桌椅，凉风习习，听着轻柔水声办公格外解压。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌊 直面南康河竹桥</span><span class="cafe-badge">☕ 免费老挝黑咖啡</span><span class="cafe-badge">💰 200元档超值</span><span class="cafe-badge">🤝 中英文贴心服务</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Riverside+Guesthouse+Luang+Prabang" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="hotel-city-group" id="group-xishuangbanna" data-city="xishuangbanna">
+      <div class="hotel-group-header">
+        <div class="hotel-group-title">
+          <span class="group-city-name">🇨🇳 中国西双版纳 (Xishuangbanna)</span>
+          <span class="group-city-tag">5 种风格精选</span>
+        </div>
+        <div class="group-stay-badge">📅 Day 10–13 (12/20-12/23) · 宿 3 晚 · 告庄星光夜市与热带傣韵</div>
+      </div>
+      <div class="cafe-grid">
+    
+        <div class="hotel-card" onclick="openVenueModal('hotel-banna-mianyue')">
           <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80');">
-            <span class="card-thumb-badge">🏨 告庄星光夜市原木美宿·实惠首选</span>
-            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+            <span class="card-thumb-badge">🌿 傣式原木风江景美宿</span>
+            <span class="card-thumb-score">⭐ 4.8 / 5.0</span>
           </div>
           <div class="card-content-wrap">
             <div>
-              <div class="hotel-city">🇨🇳 西双版纳 (Xishuangbanna) · 12/21 - 12/23 · 共2晚</div>
-              <div class="hotel-name">西双版纳告庄西双景漫悦江景客栈 (星光夜市店)</div>
-              <div class="hotel-price-badge">💰 房费参考：约 ¥380 - ¥520 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(旺季约 ¥550 - ¥680)</span></div>
-              <div class="hotel-desc">位于告庄西双景核心区域，步行 3 分钟直达星光夜市与大金塔！由资深设计师打造的现代傣式原木风美宿。全屋配备智能家居、独立千兆 Wi-Fi、宽敞茶台与舒适办公木桌。告别大酒店昂贵的房费，享受极高品质的原生态热带旅居体验。</div>
+              <div class="hotel-city">🇨🇳 中国西双版纳 (Xishuangbanna) · 傣式原木风江景美宿</div>
+              <div class="hotel-name">告庄西双景漫悦江景客栈 (星光夜市店)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥380 - ¥480 / 晚</strong></div>
+              <div class="hotel-desc">位于告庄西双景核心区域，步行 3 分钟直达星光夜市与大金塔。全屋配备智能家居、独立千兆 Wi-Fi、实木茶台与办公长桌。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>千兆光纤独享网络（实测 300Mbps+），加厚实木茶台兼书桌，配舒适靠椅与多孔快充插座。</span>
+              </div>
             </div>
             <div>
               <div class="cafe-badges">
-                <span class="cafe-badge">🚶 步行3分到星光夜市</span><span class="cafe-badge">⚡ 全屋千兆光纤</span><span class="cafe-badge">🌴 傣式原木质感</span><span class="cafe-badge">🍵 独立功夫茶台办公</span>
+                <span class="cafe-badge">🚶 步行3分到星光夜市</span><span class="cafe-badge">⚡ 全屋独享千兆专线</span><span class="cafe-badge">🍵 独立功夫茶台</span><span class="cafe-badge">🌴 原生态热带美宿</span>
               </div>
-              <div class="card-open-hint">
-                <span>📍 查看精确位置与 Google Maps 导航</span>
-                <span>👉 点击展开</span>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=西双版纳告庄西双景景法寨" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
               </div>
             </div>
           </div>
         </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-banna-jinglan')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏢 傣泰皇家宫廷地标型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 中国西双版纳 (Xishuangbanna) · 傣泰皇家宫廷地标型</div>
+              <div class="hotel-name">告庄景兰大酒店 (Jinglan Hotel)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥480 - ¥580 / 晚</strong></div>
+              <div class="hotel-desc">告庄西双景核心地标五星标准酒店，气派挑高傣式金顶大堂。直面大金塔与澜沧江，配套有大型会议厅与商务中心。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配备大型标准化写字台与静音办公环境，适合重要远程商务联络与汇报。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏛️ 告庄地标金顶大厦</span><span class="cafe-badge">🏊 观景天际泳池</span><span class="cafe-badge">🍽️ 丰富中西式自助早</span><span class="cafe-badge">💼 五星级商务配套</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=告庄景兰大酒店" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-banna-nanni')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏊 屋顶无边泳池江景型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 中国西双版纳 (Xishuangbanna) · 屋顶无边泳池江景型</div>
+              <div class="hotel-name">喃呢温泉江景度假美宿 (告庄店)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥420 - ¥520 / 晚</strong></div>
+              <div class="hotel-desc">以屋顶高空无边际悬崖泳池著称，正对澜沧江与孔雀江景。客房配备私人泡池与全景落地窗，度假感拉满。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房落地窗前配有大理石长工作台，泡上一杯普洱茶边看江景边码字，惬意舒适。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏊 高空无边澜沧江泳池</span><span class="cafe-badge">♨️ 客房私人观景泡池</span><span class="cafe-badge">🌅 绝美热带日落</span><span class="cafe-badge">📸 顶级出片打卡点</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=告庄西双景景真寨" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-banna-putai')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏮 告庄夜市核心便捷型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 中国西双版纳 (Xishuangbanna) · 告庄夜市核心便捷型</div>
+              <div class="hotel-name">西双版纳璞泰江景度假客栈</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥350 - ¥440 / 晚</strong></div>
+              <div class="hotel-desc">位于景亮寨安静巷内，步行至星光夜市仅 5 分钟，避开了主街吵闹的人潮。双层中空静音玻璃，隔音非常优秀。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配备舒适实木办公桌椅与独立高速光纤路由器，延迟极低，办公顺畅。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🤫 闹中取静绝佳隔音</span><span class="cafe-badge">🚶 5分到星光夜市</span><span class="cafe-badge">🎬 高清极米巨幕投影</span><span class="cafe-badge">💰 300元档超值</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=告庄西双景景亮寨" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-banna-yueman')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">💰 极简超值数码游民型</span>
+            <span class="card-thumb-score">⭐ 4.5 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 中国西双版纳 (Xishuangbanna) · 极简超值数码游民型</div>
+              <div class="hotel-name">景洪悦曼智选轻奢客栈 (市区水果街店)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥260 - ¥350 / 晚</strong></div>
+              <div class="hotel-desc">位于景洪市区中心，靠近热带水果批发市场。房间干净明亮，没有景区溢价，极受常驻西双版纳的数字游民群体好评。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>长条型实木写字台与人体工学转椅，网速稳定快速，性价比在版纳首屈一指。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🥭 紧挨热带水果市场</span><span class="cafe-badge">💰 200元档无溢价</span><span class="cafe-badge">⚡ 极速双频Wi-Fi</span><span class="cafe-badge">🛵 方便租借小电驴</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=景洪宣慰大道" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="hotel-city-group" id="group-dali" data-city="dali">
+      <div class="hotel-group-header">
+        <div class="hotel-group-title">
+          <span class="group-city-name">🇨🇳 中国云南大理 (Dali)</span>
+          <span class="group-city-tag">5 种风格精选</span>
+        </div>
+        <div class="group-stay-badge">📅 Day 13–15 (12/23-12/25) · 宿 3 晚 · 苍山洱海慢生活终点胜地</div>
+      </div>
+      <div class="cafe-grid">
+    
         <div class="hotel-card" onclick="openVenueModal('hotel-dali-qianshan')">
           <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');">
-            <span class="card-thumb-badge">🏨 洱海生态廊道S弯海景客栈·数字游民圣地</span>
-            <span class="card-thumb-hint">🔍 点开看地图与实景</span>
+            <span class="card-thumb-badge">🌊 磻溪S弯一线海景游民圣地</span>
+            <span class="card-thumb-score">⭐ 4.9 / 5.0</span>
           </div>
           <div class="card-content-wrap">
             <div>
-              <div class="hotel-city">🇨🇳 云南大理 (Dali) · 12/23 - 12/26 · 共3晚终点慢生活</div>
+              <div class="hotel-city">🇨🇳 中国云南大理 (Dali) · 磻溪S弯一线海景游民圣地</div>
               <div class="hotel-name">大理洱海生态廊道·浅山伴海客栈 (磻溪 S 弯店)</div>
-              <div class="hotel-price-badge">💰 房费参考：约 ¥420 - ¥560 / 晚 <span style="font-size:0.75rem; color:#059669; font-weight:normal;">(一线全景海景大床房)</span></div>
-              <div class="hotel-desc">紧挨大理洱海生态廊道最经典的磻溪村 S 弯转角，超大通透落地全景窗直面碧波万顷的洱海与远处苍山雪景！专为远程办公游民配备独享千兆光纤专线，全景落地窗前设有专属实木海景办公长桌。冬日暖阳洒在桌面上，下楼即可免费骑行看海鸥，浪漫与高效兼得。</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥420 - ¥520 / 晚</strong></div>
+              <div class="hotel-desc">紧挨洱海生态廊道最经典的磻溪村 S 弯转角，超大通透落地全景窗直面碧波万顷的洱海与苍山雪景！专为远程办公游民配备独享千兆光纤专线与全景海景木桌。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>千兆独享光纤实测 400Mbps+，定制海景落地窗长木桌，配备护眼照明与人体工学坐垫。</span>
+              </div>
             </div>
             <div>
               <div class="cafe-badges">
-                <span class="cafe-badge">🌊 直面洱海无遮挡</span><span class="cafe-badge">⚡ 千兆光纤独享网</span><span class="cafe-badge">☀️ 冬日暖阳绝景</span><span class="cafe-badge">🚲 免费骑行生态廊道</span>
+                <span class="cafe-badge">🌊 直面洱海碧波无遮挡</span><span class="cafe-badge">⚡ 千兆独享光纤专线</span><span class="cafe-badge">☀️ 冬日暖阳绝美光影</span><span class="cafe-badge">🚲 免费骑行生态廊道</span>
               </div>
-              <div class="card-open-hint">
-                <span>📍 查看精确位置与 Google Maps 导航</span>
-                <span>👉 点击展开</span>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=大理磻溪村S弯生态廊道" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
               </div>
             </div>
           </div>
         </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-dali-manwu')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🌿 知名建筑设计先锋型</span>
+            <span class="card-thumb-score">⭐ 4.8 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 中国云南大理 (Dali) · 知名建筑设计先锋型</div>
+              <div class="hotel-name">大理慢屋·极目海景度假客栈 (特惠观海房)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥480 - ¥580 / 晚</strong></div>
+              <div class="hotel-desc">斩获多项国际建筑大奖的先锋设计美宿。极简清水混凝土与洱海水天一色完美交融，拥有极品无边水景露台与阳光书吧。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配有定制胡桃木大办公桌，公区拥有充足自然采光的阅读办公长台，灵感充沛。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏆 国际建筑大奖力作</span><span class="cafe-badge">🌊 极简清水混凝土美学</span><span class="cafe-badge">📚 阳光水景书吧</span><span class="cafe-badge">🌅 苍山晚霞最佳观景点</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=大理慢屋极目海景度假客栈" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-dali-qichi')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏛️ 古城南门白族传统庭院型</span>
+            <span class="card-thumb-score">⭐ 4.7 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 中国云南大理 (Dali) · 古城南门白族传统庭院型</div>
+              <div class="hotel-name">大理古城栖迟精品客栈 (南门文献楼店)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥360 - ¥460 / 晚</strong></div>
+              <div class="hotel-desc">传统白族“三坊一照壁”四合院结构，步行 5 分钟到古城南门与人民路民谣酒馆。古榕遮阴、青瓦白墙，环境极其幽静祥和。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>客房配有白族手工实木桌椅，院内茶室备有全套茶具与高速 Wi-Fi，体验在地隐居办公。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏮 白族传统三坊一照壁</span><span class="cafe-badge">🚶 5分到大理古城南门</span><span class="cafe-badge">🍵 庭院古榕与功夫茶</span><span class="cafe-badge">🤫 避开人流静谧安详</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=大理古城文献路" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-dali-xixiang')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">🏊 临水亲海生态廊道型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 中国云南大理 (Dali) · 临水亲海生态廊道型</div>
+              <div class="hotel-name">大理才村码头夕想海景客栈</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥350 - ¥440 / 晚</strong></div>
+              <div class="hotel-desc">靠近才村码头与湿地公园，出门即是水上森林与生态廊道。清晨在房内即可观看壮观的洱海红日初升，海鸥成群盘旋。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>亲水观景木桌配备充足插座，水草丰美、浪声轻缓，办公治愈感拉满。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🌅 洱海第一缕日出</span><span class="cafe-badge">🌲 临近才村水上森林</span><span class="cafe-badge">🚲 租车骑行极方便</span><span class="cafe-badge">💰 300元档一线海景</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=大理才村码头" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card" onclick="openVenueModal('hotel-dali-wusuowei')">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');">
+            <span class="card-thumb-badge">💰 双廊苍山全景超值型</span>
+            <span class="card-thumb-score">⭐ 4.6 / 5.0</span>
+          </div>
+          <div class="card-content-wrap">
+            <div>
+              <div class="hotel-city">🇨🇳 中国云南大理 (Dali) · 双廊苍山全景超值型</div>
+              <div class="hotel-name">大理双廊无所为海景客栈 (经济观海房)</div>
+              <div class="hotel-price-badge">💰 参考价格：<strong>约 ¥320 - ¥420 / 晚</strong></div>
+              <div class="hotel-desc">位于艺术气息浓厚的双廊古镇，正对苍山十九峰之雄伟全貌。客房露台视野开阔，价格亲民，是长住数字游民的高分口碑之选。</div>
+              
+              <div class="workcation-box">
+                <span class="workcation-icon">💻</span>
+                <span class="workcation-text"><strong>远程办公配置：</strong>露台实木长桌搭配暖阳与海风，办公兼顾身心疗愈，极具性价比。</span>
+              </div>
+            </div>
+            <div>
+              <div class="cafe-badges">
+                <span class="cafe-badge">🏔️ 正对苍山十九峰</span><span class="cafe-badge">🎨 双廊艺术小镇</span><span class="cafe-badge">☀️ 晒太阳发呆胜地</span><span class="cafe-badge">💰 超高性价比海景</span>
+              </div>
+              <div class="hotel-action-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=大理双廊大建旁村" target="_blank" rel="noopener noreferrer" class="btn-hotel-gmap" onclick="event.stopPropagation();">
+                  📍 Google Maps ↗
+                </a>
+                <span class="btn-hotel-detail">
+                  🔍 房型与实景 ↗
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
       </div>
     </div>
 
-                <!-- TAB 3: 车站位置与接驳指南 -->
     <div id="tab-stations" class="tab-panel">
       <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:14px 20px; margin-bottom:20px; font-size:0.92rem; color:#1e40af; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
         <div>
@@ -4117,10 +5355,1532 @@
     // ==========================================
     // 场地数据库与弹窗交互逻辑
     // ==========================================
-    const VENUES_DB = {"cafe-dailyfix": {"id": "cafe-dailyfix", "type": "cafe", "typeLabel": "☕ 历史洋房天井咖啡", "name": "The Daily Fix Cafe", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "Day 2 (12/12) 推荐办公地", "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80", "address": "55, Jalan Hang Jebat, 75200 Melaka, Malaysia", "lat": 2.1958, "lng": 102.2472, "mapsQuery": "The Daily Fix Cafe, Jalan Hang Jebat, Melaka", "desc": "马六甲最负盛名的精品咖啡馆之一，巧妙隐藏在鸡场街一家老字号土产店的后进天井。红砖斑驳、绿植垂挂，室内强劲冷气与复古长木桌并存，招牌斑兰松饼（Pandan Pancake）与咸焦糖手冲咖啡堪称绝配。", "badges": ["📶 高速 Wi-Fi", "🔌 电源插座充沛", "❄️ 舒适冷气", "🌿 绿意庭院天井"], "amenities": {"wifi": "实测 60Mbps 稳定无线网络，网页及通讯畅快", "desk": "靠墙及后厅设有多张木质长桌，高度适宜打字", "power": "靠墙卡座下方多处配有电源插座", "quiet": "上午 9:00 - 11:30 最为清幽，午后游人增多但后区依然舒适"}, "tips": "建议早上 9:00 开门即到，选择内庭天井旁的自然光长桌，开启元气满满的办公日。"}, "cafe-calanthe": {"id": "cafe-calanthe", "type": "cafe", "typeLabel": "☕ 13州传统咖啡艺术馆", "name": "Calanthe Art Cafe (十三州咖啡)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "Day 3 (12/13) 推荐办公地", "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80", "address": "11, Jalan Hang Kasturi, 75200 Melaka, Malaysia", "lat": 2.1963, "lng": 102.2468, "mapsQuery": "Calanthe Art Cafe, Jalan Hang Kasturi, Melaka", "desc": "全马唯一一家集齐马来西亚全十三州不同特色风味咖啡的艺术老店。店内挂满当地艺术家的手绘与古董摆设，空间开阔通风，白天客流适中，浓郁的南洋老时光氛围非常激发创意。", "badges": ["📶 稳定网络", "☕ 13州特色风味咖啡", "🪑 宽敞艺术长桌", "📍 靠近鸡场街"], "amenities": {"wifi": "覆盖良好的免费无线网络", "desk": "多张宽阔大木桌，适合放笔记本电脑与书本文档", "power": "部分长桌靠近墙壁插座，入座时可咨询店员", "quiet": "店内播放轻柔背景爵士音乐，适合深度代码编写与写作"}, "tips": "推荐尝试马六甲本地白咖啡与砂拉越黑咖啡，搭配一份马来娘惹叻沙充当午餐。"}, "cafe-space": {"id": "cafe-space", "type": "cafe", "typeLabel": "☕ 极客工业风自习工作站", "name": "Space Tea & Coffee (Hat Yai)", "city": "🇹🇭 合艾 (Hat Yai)", "dateStay": "Day 4 (12/14) 跨境首站工作营地", "photo": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80", "address": "Near Hat Yai Junction Railway Station, Hat Yai, Songkhla 90110, Thailand", "lat": 7.0036, "lng": 100.4682, "mapsQuery": "Space Tea & Coffee, Hat Yai, Thailand", "desc": "极简工业极客风的高品质咖啡馆，距离合艾火车站步行仅需 3 分钟！特别为移动办公与数字游民设计，室内冷气强劲且安静，配有专属长条吧台、千兆 Wi-Fi 与每个座位独立的电源接口。", "badges": ["🚶 火车站步行3分", "⚡ 极速千兆网络", "🔌 每座独立插座", "🤫 极度安静"], "amenities": {"wifi": "泰国顶级电信商 AIS 千兆光纤，测速下行超 300Mbps", "desk": "标准人体工学办公长桌，配备舒适软垫座椅", "power": "桌面集成多孔电源插座及 USB 快速充电口", "quiet": "全天保持极佳自习室级安静度，工作专注度拉满"}, "tips": "大巴清晨入境泰国后可在此全天工作至 17:00，随后从容步行至火车站搭乘 32 次夕发朝至卧铺列车。"}, "cafe-alive": {"id": "cafe-alive", "type": "cafe", "typeLabel": "☕ 冠军精品手冲早午餐", "name": "Alive Specialty Coffee", "city": "🇹🇭 合艾 (Hat Yai)", "dateStay": "合艾精品手冲备选地", "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80", "address": "10/10 Soi 5 Supasarnrangsan Rd, Hat Yai, Songkhla 90110, Thailand", "lat": 7.0094, "lng": 100.4795, "mapsQuery": "Alive Specialty Coffee, Hat Yai, Thailand", "desc": "合艾本地顶尖水准的精品咖啡馆，挑高空间与全玻璃通透采光，店内烘焙单品咖啡豆种类丰富，提供世界级品质手冲。冷气舒适，早午餐丰盛，深受年轻远程工作者喜爱。", "badges": ["☕ 冠军级单品手冲", "📶 商务级 Wi-Fi", "🥪 丰盛早午餐", "❄️ 恒温冷气"], "amenities": {"wifi": "100Mbps 稳定无线覆盖", "desk": "高脚吧台与多张宽敞方桌", "power": "卡座区域配备电源插口", "quiet": "早晨时段最适宜集中办公，氛围积极活跃"}, "tips": "手冲埃塞俄比亚与 Dirty 是招牌，搭配自制松饼能提供整天的能量。"}, "cafe-commons": {"id": "cafe-commons", "type": "cafe", "typeLabel": "☕ 亚洲顶级开放文创社区", "name": "The Commons / Roast (Thong Lor)", "city": "🇹🇭 曼谷 (Bangkok)", "dateStay": "Day 5-6 (12/15-16) 曼谷会友办公地", "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80", "address": "335 Thong Lo 17 Alley, Klongton Nuea, Watthana, Bangkok 10110, Thailand", "lat": 13.7345, "lng": 100.5826, "mapsQuery": "theCOMMONS Thonglor, Bangkok", "desc": "亚洲闻名的开放式阶梯式社区文创地标！绿色植物与露天阶梯巧妙结合，顶层 Roast 咖啡餐厅提供极高水准的精品咖啡与全日早午餐。半开放阶梯与室内空调区域任君选择，是曼谷数字游民与创意社群的大本营。", "badges": ["🌟 亚洲顶尖文创地标", "📶 极速商用光纤", "🥑 国际精致早午餐", "🚇 近 BTS 通罗站"], "amenities": {"wifi": "高速光纤无限制免费接入，漫游整个 Commons 建筑群", "desk": "木质长桌、露台沙发与 Roast 宽绰餐桌随意切换", "power": "Roast 室内卡座及公共办公长桌均有充足电源插孔", "quiet": "室内安静舒适，户外台阶适合休闲交流与会友"}, "tips": "白天在此办公，傍晚正好与曼谷当地好友在楼下或通罗酒吧街共进晚餐。"}, "cafe-saffron": {"id": "cafe-saffron", "type": "cafe", "typeLabel": "☕ 湄公河旗舰冷气工作站", "name": "Saffron Coffee 湄公河旗舰店", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "Day 9 (12/19) 深度全天办公地", "photo": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80", "address": "Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8953, "lng": 102.1384, "mapsQuery": "Saffron Coffee, Khem Khong, Luang Prabang", "desc": "“临江露台 + 室内强冷气大厅”双区域豪华配置！作为老挝高山公平贸易咖啡的典范，店内精选北部高原阿拉比卡豆。室内长实木桌配备充足插座，户外露台可饱览湄公河水色与缓缓驶过的渡船。", "badges": ["🌊 直面湄公河壮阔江景", "❄️ 独立强冷气大厅", "🔌 长桌多孔插座", "☕ 老挝顶级公平贸易豆"], "amenities": {"wifi": "琅勃拉邦最稳定的商业无线网络之一，测速 50Mbps+", "desk": "室内长条厚实原木工作台，适合长时间笔记本作业", "power": "长桌下方配有多组多功能插座", "quiet": "室内冷气区工作氛围极好，多为外国远程工作者，安静互不打扰"}, "tips": "推荐点一杯老挝冰拿铁（Lao Iced Latte）与青柠派，上午在室内专注冲刺，下午移步户外露台看日落。"}, "cafe-viewan": {"id": "cafe-viewan", "type": "cafe", "typeLabel": "☕ 阳光玻璃屋法式烘焙", "name": "View An Cafe / The Belle Rive", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "Day 10 (12/20) 临江惬意办公地", "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80", "address": "Khem Khong, Luang Prabang 06000, Laos", "lat": 19.8962, "lng": 102.1402, "mapsQuery": "View An Cafe, Luang Prabang", "desc": "紧靠湄公河边的精致阳光玻璃屋咖啡馆，配有宽敞的遮阳伞观景露台。由法国烘焙师指导的手工法式可颂酥脆芳香，咖啡醇厚，服务极其体贴，是琅勃拉邦公认最惬意的沿河工作点之一。", "badges": ["🥐 法式手工正宗烘焙", "📶 高速稳定 Wi-Fi", "🌅 绝美湄公河落日", "📍 沿河主街便利位置"], "amenities": {"wifi": "全店高速 Wi-Fi 覆盖，视频沟通流畅", "desk": "露台遮阳伞木桌及室内空调小桌", "power": "室内靠墙位置有便捷插座", "quiet": "波光粼粼的江面与轻柔微风，环境优雅惬意"}, "tips": "下午四点半阳光斜照时最为迷人，点上一壶老挝有机花草茶，边办公边欣赏金色湄公河。"}, "cafe-gaozhuang": {"id": "cafe-gaozhuang", "type": "cafe", "typeLabel": "☕ 傣式热带滨江小粒咖啡", "name": "告庄澜沧江畔傣风咖啡馆群", "city": "🇨🇳 西双版纳 (Xishuangbanna)", "dateStay": "Day 12 (12/22) 傣乡热带办公地", "photo": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=1200&q=80", "address": "云南省西双版纳景洪市告庄西双景滨江酒吧街及赶摆街", "lat": 22.0138, "lng": 100.8042, "mapsQuery": "告庄西双景, 景洪市", "desc": "告庄澜沧江沿江步道上的特色傣风竹楼咖啡馆群。融合傣泰吊脚竹编建筑美学与云南高山普洱小粒咖啡，白天江风吹拂，绿竹成荫，夜晚灯火辉煌，充满南亚热带异域情调。", "badges": ["🌴 傣泰热带竹楼美学", "📶 5G 极速千兆覆盖", "🚶 步行即达星光夜市", "☕ 甄选云南小粒咖啡"], "amenities": {"wifi": "中国移动/电信 5G 双千兆无缝覆盖，延迟低至 15ms", "desk": "实木大茶桌与竹编卡座，空间宽大舒适", "power": "桌面大多嵌入安全电源孔", "quiet": "白天江边极度安详静谧，适合深度工作，傍晚无缝衔接夜市"}, "tips": "推荐品尝特色的“冰滴云南小粒咖啡”与“手作鲜椰乳咖啡”，风味独特难忘。"}, "cafe-erhai": {"id": "cafe-erhai", "type": "cafe", "typeLabel": "☕ 洱海S弯一线海景圣殿", "name": "洱海生态廊道 S弯海景咖啡馆", "city": "🇨🇳 云南大理 (Dali)", "dateStay": "Day 14-15 (12/24-25) 苍山洱海慢生活", "photo": "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理白族自治州大理市银桥镇磻溪村 S弯生态廊道", "lat": 25.7675, "lng": 100.1658, "mapsQuery": "大理磻溪村S弯生态廊道", "desc": "全中国数字游民与自由职业者的终极圣殿！纯白简约现代建筑坐落于洱海生态廊道最经典的 S 弯转角，超大通透全景落地玻璃直面碧蓝无垠的洱海，远处苍山雪峰巍峨挺立。冬日阳光温暖洒下，品着云南特产玫瑰拿铁，敲击键盘成为极致的享受。", "badges": ["🌊 洱海一线无敌海景", "📶 千兆光纤入户", "☀️ 冬日暖阳绝景", "🚲 廊道骑行直达"], "amenities": {"wifi": "千兆光纤网络专线，网速飞快，无论写代码还是音视频协同均行云流水", "desk": "直面海景的无遮挡全景木质长吧台，配有插座与舒服坐垫", "power": "吧台下每隔 1 米均设有独立五孔电源插座", "quiet": "机动车完全禁行，耳畔唯有清脆海鸥鸣叫与舒缓海浪声"}, "tips": "冬天的洱海有成群的西伯利亚红嘴鸥飞过，下午阳光最为通透，是整个行程最治愈的办公高光时刻！"}, "hotel-hatten": {"id": "hotel-hatten", "type": "hotel", "typeLabel": "🏨 市中心品质四星·实惠首选", "name": "马六甲惠胜酒店 (Hatten Hotel Melaka)", "city": "🇲🇾 马六甲 (Melaka)", "dateStay": "12/11 - 12/13 · 共2晚", "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80", "address": "Hatten Square, Jalan Merdeka, Bandar Hilir, 75000 Melaka, Malaysia", "lat": 2.1894, "lng": 102.2536, "mapsQuery": "Hatten Hotel Melaka, Jalan Merdeka, Melaka", "desc": "马六甲市中心性价比最高的现代四星级酒店。房间面积宽敞（约 33㎡），配备独立宽大办公书桌、人体工学椅与高速商务 Wi-Fi。楼下直通商场，步行 10 分钟即达红屋与鸡场街，顶楼配有开阔天际线泳池与健身房。", "priceRange": "约 ¥380 - ¥520 / 晚", "currencyNote": "约 250 - 340 MYR", "priceDetail": "豪华大床房 · 宽敞工作桌与高速商务网", "badges": ["💰 均价500高性价比", "📶 高速稳定 Wi-Fi", "🪑 独立办公书桌", "🏊 高空观景泳池"], "amenities": {"wifi": "实测 100Mbps 稳定商务光纤，视频会议流畅无卡顿", "desk": "标准商务写字台配护眼台灯及舒适转椅", "power": "桌面提供通用多功能电源插孔与 USB 充电口", "quiet": "高楼层客房隔音优良，不受街区车流打扰"}, "tips": "性价比极高，周边 Grab 叫车秒接单，周五周六晚步行或打车 5 分钟即达鸡场街夜市。"}, "hotel-ibis-melaka": {"id": "hotel-ibis-melaka", "type": "hotel", "typeLabel": "🏨 国际品牌连锁·超值备选", "name": "马六甲宜必思酒店 (Ibis Melaka)", "city": "🇲🇾 马六甲备选 (Melaka)", "dateStay": "马六甲超值连锁备选", "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80", "address": "249 Jalan Bendahara, 75100 Melaka, Malaysia", "lat": 2.1995, "lng": 102.252, "mapsQuery": "Ibis Melaka, Jalan Bendahara, Melaka", "desc": "法国雅高集团（Accor）旗下的标准化高性价比酒店，步行至红屋仅 8 分钟。房间采光明亮干净，全木地板卫生无死角，配有长条工作桌，网络稳定性在马六甲同价位位居前列。", "priceRange": "约 ¥320 - ¥450 / 晚", "currencyNote": "约 210 - 295 MYR", "priceDetail": "标准双人客房 · 国际连锁卫生标准保障", "badges": ["⭐ 雅高国际连锁", "📶 极稳专线网络", "🚶 步行8分到古城", "💰 约300多极实惠"], "amenities": {"wifi": "雅高专线 Wi-Fi，测速稳定在 80Mbps+", "desk": "整面长条办公台面，方便摆放双电脑协同办公", "power": "床头与书桌均有便捷插座", "quiet": "位于古城边缘静巷，夜晚极其安静安眠"}, "tips": "酒店前台服务规范，提供行李免费寄存，预算友好且绝不踩雷。"}, "hotel-aloft-bkk": {"id": "hotel-aloft-bkk", "type": "hotel", "typeLabel": "🏨 万豪旗下潮流商旅·高性价比首选", "name": "曼谷素坤逸11巷雅乐轩酒店 (Aloft Bangkok Sukhumvit 11)", "city": "🇹🇭 曼谷 (Bangkok)", "dateStay": "12/15 - 12/16 · 1晚曼谷会友", "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80", "address": "35 Sukhumvit 11 Alley, Klongtoey Nua, Watthana, Bangkok 10110, Thailand", "lat": 13.746, "lng": 100.5567, "mapsQuery": "Aloft Bangkok Sukhumvit 11, Bangkok", "desc": "万豪旅享家（Marriott）旗下专为年轻移动办公人群打造的科技潮牌酒店！全景落地大窗，配备人体工学办公转椅、宽阔办公桌面与超高速千兆 Wi-Fi。楼下即是素坤逸网红美食街，步行 5 分钟到 BTS Nana 站，去通罗或暹罗商圈会友极其方便。", "priceRange": "约 ¥480 - ¥580 / 晚", "currencyNote": "约 2,400 - 2,900 THB", "priceDetail": "时尚乐窝大床房 · 万豪品质客房与高空泳池", "badges": ["🏨 万豪品质保证", "⚡ 千兆极速 Wi-Fi", "🚇 近 BTS Nana 站", "🪑 人体工学写字台"], "amenities": {"wifi": "万豪企业级高速网络，上行下行超 150Mbps", "desk": "独立人体工学写字台配护眼工作照明", "power": "桌面集成多媒体拓展坞、USB 与国际多功能插孔", "quiet": "双层隔音玻璃，房间内静谧专注"}, "tips": "酒店顶层配有露天微风泳池与 WXYZ 酒吧，白天高速办公，傍晚正好与曼谷朋友小聚。"}, "hotel-holidayinn-bkk": {"id": "hotel-holidayinn-bkk", "type": "hotel", "typeLabel": "🏨 洲际商务标杆·超值备选", "name": "曼谷沙吞智选假日酒店 (Holiday Inn Express Bangkok Sathorn)", "city": "🇹🇭 曼谷备选 (Bangkok)", "dateStay": "曼谷市中心商务备选", "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80", "address": "51 Soi Phiphat, Silom, Bang Rak, Bangkok 10500, Thailand", "lat": 13.7235, "lng": 100.5312, "mapsQuery": "Holiday Inn Express Bangkok Sathorn, Bangkok", "desc": "洲际酒店集团（IHG）旗下的商务常胜将军，坐落于沙吞金融区，步行 2 分钟即达 BTS Chong Nonsi 站。房间高效精干，附赠每日免费丰盛早餐（Express Start Breakfast），公共工作区环境一流，出差办公体验极佳。", "priceRange": "约 ¥420 - ¥530 / 晚", "currencyNote": "约 2,100 - 2,650 THB", "priceDetail": "标准双人房 · 赠每日双人营养热早餐", "badges": ["⭐ IHG 洲际品质", "🥐 免费双人早餐", "🚇 BTS站步行2分", "💼 专属商务办公区"], "amenities": {"wifi": "全馆覆盖高速免费无线网络", "desk": "客房内配有舒适紧凑型办公台", "power": "插座充足且配备 USB 快充口", "quiet": "金融街区静巷，夜晚非常安静"}, "tips": "赠送的现做热早餐非常方便，早晨吃饱后直接开工，省心高效。"}, "hotel-ibis-vientiane": {"id": "hotel-ibis-vientiane", "type": "hotel", "typeLabel": "🏨 法国雅高连锁·万象最稳之选", "name": "宜必思万象南普酒店 (Ibis Vientiane Nam Phu)", "city": "🇱🇦 老挝万象 (Vientiane)", "dateStay": "12/17 - 12/18 · 1晚中转休整", "photo": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80", "address": "Namphu Square, Setthathirath Road, Vientiane, Laos", "lat": 17.9625, "lng": 102.6075, "mapsQuery": "Ibis Vientiane Nam Phu, Vientiane", "desc": "老挝万象市中心南普喷泉广场旁的核心国际连锁酒店。针对老挝本地独立客栈 Wi-Fi 经常偶发断网的问题，宜必思接入雅高跨国企业专线网络，网速稳定可靠。大床舒适柔软，步行可至湄公河夜市与凯旋门，是 500 元价位段最让人安心的避险首选。", "priceRange": "约 ¥380 - ¥480 / 晚", "currencyNote": "约 55 - 70 USD", "priceDetail": "标准客房 · 国际连锁专线网络保障", "badges": ["📍 南普喷泉广场核心", "⚡ 雅高企业专线网", "💰 400元档超高性价比", "🚶 步行至湄公河夜市"], "amenities": {"wifi": "万象同价位最稳专线 Wi-Fi，跨国远程会议绝无掉线烦恼", "desk": "标准木质办公写字桌配舒适座椅", "power": "客房备有通用国际电源插孔", "quiet": "法式隔音标准，远离老挝摩托车轰鸣声"}, "tips": "酒店下楼即是多座法式烘焙咖啡馆与老挝本土餐厅，换汇打车极便利。"}, "hotel-mydream-lp": {"id": "hotel-mydream-lp", "type": "hotel", "typeLabel": "🏨 南康河畔生态花园度假村", "name": "琅勃拉邦梦之精品度假村 (My Dream Boutique Resort)", "city": "🇱🇦 琅勃拉邦 (Luang Prabang)", "dateStay": "12/18 - 12/21 · 共3晚舒适慢度假", "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80", "address": "Ban Meun-Na, Nam Khan River, Luang Prabang 06000, Laos", "lat": 19.889, "lng": 102.145, "mapsQuery": "My Dream Boutique Resort, Luang Prabang", "desc": "坐落在南康河畔的绝美热带花园生态度假村，欧美远程工作者与自由行旅客评分高达 9.2！全柚木传统高脚建筑，每间客房都有独立木质观景阳台与工作大桌。花园内拥有蔚蓝泳池与河畔休闲平台，赠送极丰盛的自选现做双人早餐，并提供免费自行车与古城免费接驳突突车。", "priceRange": "约 ¥430 - ¥560 / 晚", "currencyNote": "约 62 - 80 USD", "priceDetail": "经典河景/园景阳台房 · 赠现做丰盛双早与免费接驳", "badges": ["🌊 南康河畔热带花园", "🥐 丰盛现做自选早餐", "🚲 免费自行车+接驳车", "🏊 户外热带泳池"], "amenities": {"wifi": "度假村全覆盖高速光纤 Wi-Fi，阳台与泳池边信号良好", "desk": "独立阳台配备宽绰实木大桌，在绿荫鸟语中敲键盘极享受", "power": "床头与桌面插座完备", "quiet": "避开古城主路嘈杂，全天伴着河水声与鸟鸣，极致安宁"}, "tips": "相比主街动辄一两千的奢华酒店，这里品质完全不输，500元档住进热带仙境，住3晚极为划算！"}, "hotel-mekongsunset-lp": {"id": "hotel-mekongsunset-lp", "type": "hotel", "typeLabel": "🏨 湄公河落日景观洋房·超值备选", "name": "湄公河日落景观别墅酒店 (Mekong Sunset View Hotel)", "city": "🇱🇦 琅勃拉邦备选 (Luang Prabang)", "dateStay": "湄公河沿岸超值备选", "photo": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80", "address": "Khem Khong, Ban Khily, Luang Prabang 06000, Laos", "lat": 19.897, "lng": 102.1415, "mapsQuery": "Mekong Sunset View Hotel, Luang Prabang", "desc": "坐落于湄公河一线景观步道上，经典老挝法式洋楼。推开窗即可俯瞰壮丽的湄公河金色夕阳与对岸青翠山脉。地理位置绝佳，出弄堂步行 3 分钟即达香通寺与洋人街，带阳台与免费高速无线网络。", "priceRange": "约 ¥380 - ¥500 / 晚", "currencyNote": "约 55 - 72 USD", "priceDetail": "湄公河景大床房 · 含景观阳台与免费早餐", "badges": ["🌅 湄公河一线落日", "📍 紧邻香通寺", "🥐 免费美味早餐", "💰 400元档江景超值"], "amenities": {"wifi": "高速无线网络，视频播放与通话顺畅", "desk": "阳台观景木桌与室内书桌", "power": "通用电源接口", "quiet": "临江次街，夜晚江风徐徐，环境安详"}, "tips": "下午 5 点在自己阳台点一杯老挝咖啡看日落，浪漫惬意，性价比拉满。"}, "hotel-gaozhuang-mianyue": {"id": "hotel-gaozhuang-mianyue", "type": "hotel", "typeLabel": "🏨 告庄星光夜市原木美宿·实惠首选", "name": "西双版纳告庄西双景漫悦江景客栈 (星光夜市店)", "city": "🇨🇳 西双版纳 (Xishuangbanna)", "dateStay": "12/21 - 12/23 · 共2晚", "photo": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80", "address": "云南省西双版纳景洪市告庄西双景景法寨1栋", "lat": 22.0135, "lng": 100.8035, "mapsQuery": "西双版纳告庄西双景景法寨", "desc": "位于告庄西双景核心区域，步行 3 分钟直达星光夜市与大金塔！由资深设计师打造的现代傣式原木风美宿。全屋配备智能家居、独立千兆 Wi-Fi、宽敞茶台与舒适办公木桌。告别大酒店昂贵的房费，享受极高品质的原生态热带旅居体验。", "priceRange": "约 ¥380 - ¥520 / 晚", "currencyNote": "旺季约 ¥550 - ¥680", "priceDetail": "傣韵江景/园景大床房 · 含星光夜市接送与管家服务", "badges": ["🚶 步行3分到星光夜市", "⚡ 全屋千兆光纤", "🌴 傣式原木质感", "🍵 独立功夫茶台办公"], "amenities": {"wifi": "千兆光纤独享网络，测速 300Mbps+，超低延迟极适合联机远程协作", "desk": "加厚实木茶台兼宽绰书桌，配有舒适软垫靠椅", "power": "桌面嵌入式五孔安全排插与多孔 USB 快充口", "quiet": "位于寨内安静巷道，避开主街道人流，隔音优良"}, "tips": "客栈管家提供免费接站或行李搬运服务，楼下即是傣式手作咖啡馆与特色小吃。"}, "hotel-dali-qianshan": {"id": "hotel-dali-qianshan", "type": "hotel", "typeLabel": "🏨 洱海生态廊道S弯海景客栈·数字游民圣地", "name": "大理洱海生态廊道·浅山伴海客栈 (磻溪 S 弯店)", "city": "🇨🇳 云南大理 (Dali)", "dateStay": "12/23 - 12/26 · 共3晚终点慢生活", "photo": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80", "address": "云南省大理白族自治州大理市银桥镇磻溪村 7 组生态廊道旁", "lat": 25.768, "lng": 100.1655, "mapsQuery": "大理磻溪村S弯生态廊道", "desc": "紧挨大理洱海生态廊道最经典的磻溪村 S 弯转角，超大通透落地全景窗直面碧波万顷的洱海与远处苍山雪景！专为远程办公游民配备独享千兆光纤专线，全景落地窗前设有专属实木海景办公长桌。冬日暖阳洒在桌面上，下楼即可免费骑行看海鸥，浪漫与高效兼得。", "priceRange": "约 ¥420 - ¥560 / 晚", "currencyNote": "一线全景海景大床房", "priceDetail": "直面洱海全景落地窗景观房 · 含双人自制早餐与咖啡", "badges": ["🌊 直面洱海无遮挡", "⚡ 千兆光纤独享网", "☀️ 冬日暖阳绝景", "🚲 免费骑行生态廊道"], "amenities": {"wifi": "千兆独享光纤入户，实测 400Mbps+ 极速，音视频与代码上传秒级完成", "desk": "定制海景落地窗长木桌，配备护眼照明与人体工学坐垫", "power": "桌面配备多组隐藏式安全插座，笔记本与拓展坞轻松取电", "quiet": "生态廊道全线机动车禁行，唯有轻柔波浪声与海鸥啼鸣，心旷神怡"}, "tips": "淡季（12月）约 400 多元即可包揽无遮挡一线洱海绝景，性价比远超古城两千元宿集！"}};
+    const VENUES_DB = {
+  "cafe-dailyfix": {
+    "id": "cafe-dailyfix",
+    "type": "cafe",
+    "typeLabel": "☕ 历史洋房天井咖啡",
+    "name": "The Daily Fix Cafe",
+    "city": "🇲🇾 马六甲 (Melaka)",
+    "dateStay": "Day 2 (12/12) 推荐办公地",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80",
+    "address": "55, Jalan Hang Jebat, 75200 Melaka, Malaysia",
+    "lat": 2.1958,
+    "lng": 102.2472,
+    "mapsQuery": "The Daily Fix Cafe, Jalan Hang Jebat, Melaka",
+    "desc": "马六甲最负盛名的精品咖啡馆之一，巧妙隐藏在鸡场街一家老字号土产店的后进天井。红砖斑驳、绿植垂挂，室内强劲冷气与复古长木桌并存，招牌斑兰松饼（Pandan Pancake）与咸焦糖手冲咖啡堪称绝配。",
+    "badges": [
+      "📶 高速 Wi-Fi",
+      "🔌 电源插座充沛",
+      "❄️ 舒适冷气",
+      "🌿 绿意庭院天井"
+    ],
+    "amenities": {
+      "wifi": "实测 60Mbps 稳定无线网络，网页及通讯畅快",
+      "desk": "靠墙及后厅设有多张木质长桌，高度适宜打字",
+      "power": "靠墙卡座下方多处配有电源插座",
+      "quiet": "上午 9:00 - 11:30 最为清幽，午后游人增多但后区依然舒适"
+    },
+    "tips": "建议早上 9:00 开门即到，选择内庭天井旁的自然光长桌，开启元气满满的办公日。"
+  },
+  "cafe-calanthe": {
+    "id": "cafe-calanthe",
+    "type": "cafe",
+    "typeLabel": "☕ 13州传统咖啡艺术馆",
+    "name": "Calanthe Art Cafe (十三州咖啡)",
+    "city": "🇲🇾 马六甲 (Melaka)",
+    "dateStay": "Day 3 (12/13) 推荐办公地",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80",
+    "address": "11, Jalan Hang Kasturi, 75200 Melaka, Malaysia",
+    "lat": 2.1963,
+    "lng": 102.2468,
+    "mapsQuery": "Calanthe Art Cafe, Jalan Hang Kasturi, Melaka",
+    "desc": "全马唯一一家集齐马来西亚全十三州不同特色风味咖啡的艺术老店。店内挂满当地艺术家的手绘与古董摆设，空间开阔通风，白天客流适中，浓郁的南洋老时光氛围非常激发创意。",
+    "badges": [
+      "📶 稳定网络",
+      "☕ 13州特色风味咖啡",
+      "🪑 宽敞艺术长桌",
+      "📍 靠近鸡场街"
+    ],
+    "amenities": {
+      "wifi": "覆盖良好的免费无线网络",
+      "desk": "多张宽阔大木桌，适合放笔记本电脑与书本文档",
+      "power": "部分长桌靠近墙壁插座，入座时可咨询店员",
+      "quiet": "店内播放轻柔背景爵士音乐，适合深度代码编写与写作"
+    },
+    "tips": "推荐尝试马六甲本地白咖啡与砂拉越黑咖啡，搭配一份马来娘惹叻沙充当午餐。"
+  },
+  "cafe-space": {
+    "id": "cafe-space",
+    "type": "cafe",
+    "typeLabel": "☕ 极客工业风自习工作站",
+    "name": "Space Tea & Coffee (Hat Yai)",
+    "city": "🇹🇭 合艾 (Hat Yai)",
+    "dateStay": "Day 4 (12/14) 跨境首站工作营地",
+    "photo": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    "address": "Near Hat Yai Junction Railway Station, Hat Yai, Songkhla 90110, Thailand",
+    "lat": 7.0036,
+    "lng": 100.4682,
+    "mapsQuery": "Space Tea & Coffee, Hat Yai, Thailand",
+    "desc": "极简工业极客风的高品质咖啡馆，距离合艾火车站步行仅需 3 分钟！特别为移动办公与数字游民设计，室内冷气强劲且安静，配有专属长条吧台、千兆 Wi-Fi 与每个座位独立的电源接口。",
+    "badges": [
+      "🚶 火车站步行3分",
+      "⚡ 极速千兆网络",
+      "🔌 每座独立插座",
+      "🤫 极度安静"
+    ],
+    "amenities": {
+      "wifi": "泰国顶级电信商 AIS 千兆光纤，测速下行超 300Mbps",
+      "desk": "标准人体工学办公长桌，配备舒适软垫座椅",
+      "power": "桌面集成多孔电源插座及 USB 快速充电口",
+      "quiet": "全天保持极佳自习室级安静度，工作专注度拉满"
+    },
+    "tips": "大巴清晨入境泰国后可在此全天工作至 17:00，随后从容步行至火车站搭乘 32 次夕发朝至卧铺列车。"
+  },
+  "cafe-alive": {
+    "id": "cafe-alive",
+    "type": "cafe",
+    "typeLabel": "☕ 冠军精品手冲早午餐",
+    "name": "Alive Specialty Coffee",
+    "city": "🇹🇭 合艾 (Hat Yai)",
+    "dateStay": "合艾精品手冲备选地",
+    "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+    "address": "10/10 Soi 5 Supasarnrangsan Rd, Hat Yai, Songkhla 90110, Thailand",
+    "lat": 7.0094,
+    "lng": 100.4795,
+    "mapsQuery": "Alive Specialty Coffee, Hat Yai, Thailand",
+    "desc": "合艾本地顶尖水准的精品咖啡馆，挑高空间与全玻璃通透采光，店内烘焙单品咖啡豆种类丰富，提供世界级品质手冲。冷气舒适，早午餐丰盛，深受年轻远程工作者喜爱。",
+    "badges": [
+      "☕ 冠军级单品手冲",
+      "📶 商务级 Wi-Fi",
+      "🥪 丰盛早午餐",
+      "❄️ 恒温冷气"
+    ],
+    "amenities": {
+      "wifi": "100Mbps 稳定无线覆盖",
+      "desk": "高脚吧台与多张宽敞方桌",
+      "power": "卡座区域配备电源插口",
+      "quiet": "早晨时段最适宜集中办公，氛围积极活跃"
+    },
+    "tips": "手冲埃塞俄比亚与 Dirty 是招牌，搭配自制松饼能提供整天的能量。"
+  },
+  "cafe-commons": {
+    "id": "cafe-commons",
+    "type": "cafe",
+    "typeLabel": "☕ 亚洲顶级开放文创社区",
+    "name": "The Commons / Roast (Thong Lor)",
+    "city": "🇹🇭 曼谷 (Bangkok)",
+    "dateStay": "Day 5-6 (12/15-16) 曼谷会友办公地",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+    "address": "335 Thong Lo 17 Alley, Klongton Nuea, Watthana, Bangkok 10110, Thailand",
+    "lat": 13.7345,
+    "lng": 100.5826,
+    "mapsQuery": "theCOMMONS Thonglor, Bangkok",
+    "desc": "亚洲闻名的开放式阶梯式社区文创地标！绿色植物与露天阶梯巧妙结合，顶层 Roast 咖啡餐厅提供极高水准的精品咖啡与全日早午餐。半开放阶梯与室内空调区域任君选择，是曼谷数字游民与创意社群的大本营。",
+    "badges": [
+      "🌟 亚洲顶尖文创地标",
+      "📶 极速商用光纤",
+      "🥑 国际精致早午餐",
+      "🚇 近 BTS 通罗站"
+    ],
+    "amenities": {
+      "wifi": "高速光纤无限制免费接入，漫游整个 Commons 建筑群",
+      "desk": "木质长桌、露台沙发与 Roast 宽绰餐桌随意切换",
+      "power": "Roast 室内卡座及公共办公长桌均有充足电源插孔",
+      "quiet": "室内安静舒适，户外台阶适合休闲交流与会友"
+    },
+    "tips": "白天在此办公，傍晚正好与曼谷当地好友在楼下或通罗酒吧街共进晚餐。"
+  },
+  "cafe-saffron": {
+    "id": "cafe-saffron",
+    "type": "cafe",
+    "typeLabel": "☕ 湄公河旗舰冷气工作站",
+    "name": "Saffron Coffee 湄公河旗舰店",
+    "city": "🇱🇦 琅勃拉邦 (Luang Prabang)",
+    "dateStay": "Day 9 (12/19) 深度全天办公地",
+    "photo": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80",
+    "address": "Khem Khong, Luang Prabang 06000, Laos",
+    "lat": 19.8953,
+    "lng": 102.1384,
+    "mapsQuery": "Saffron Coffee, Khem Khong, Luang Prabang",
+    "desc": "“临江露台 + 室内强冷气大厅”双区域豪华配置！作为老挝高山公平贸易咖啡的典范，店内精选北部高原阿拉比卡豆。室内长实木桌配备充足插座，户外露台可饱览湄公河水色与缓缓驶过的渡船。",
+    "badges": [
+      "🌊 直面湄公河壮阔江景",
+      "❄️ 独立强冷气大厅",
+      "🔌 长桌多孔插座",
+      "☕ 老挝顶级公平贸易豆"
+    ],
+    "amenities": {
+      "wifi": "琅勃拉邦最稳定的商业无线网络之一，测速 50Mbps+",
+      "desk": "室内长条厚实原木工作台，适合长时间笔记本作业",
+      "power": "长桌下方配有多组多功能插座",
+      "quiet": "室内冷气区工作氛围极好，多为外国远程工作者，安静互不打扰"
+    },
+    "tips": "推荐点一杯老挝冰拿铁（Lao Iced Latte）与青柠派，上午在室内专注冲刺，下午移步户外露台看日落。"
+  },
+  "cafe-viewan": {
+    "id": "cafe-viewan",
+    "type": "cafe",
+    "typeLabel": "☕ 阳光玻璃屋法式烘焙",
+    "name": "View An Cafe / The Belle Rive",
+    "city": "🇱🇦 琅勃拉邦 (Luang Prabang)",
+    "dateStay": "Day 10 (12/20) 临江惬意办公地",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80",
+    "address": "Khem Khong, Luang Prabang 06000, Laos",
+    "lat": 19.8962,
+    "lng": 102.1402,
+    "mapsQuery": "View An Cafe, Luang Prabang",
+    "desc": "紧靠湄公河边的精致阳光玻璃屋咖啡馆，配有宽敞的遮阳伞观景露台。由法国烘焙师指导的手工法式可颂酥脆芳香，咖啡醇厚，服务极其体贴，是琅勃拉邦公认最惬意的沿河工作点之一。",
+    "badges": [
+      "🥐 法式手工正宗烘焙",
+      "📶 高速稳定 Wi-Fi",
+      "🌅 绝美湄公河落日",
+      "📍 沿河主街便利位置"
+    ],
+    "amenities": {
+      "wifi": "全店高速 Wi-Fi 覆盖，视频沟通流畅",
+      "desk": "露台遮阳伞木桌及室内空调小桌",
+      "power": "室内靠墙位置有便捷插座",
+      "quiet": "波光粼粼的江面与轻柔微风，环境优雅惬意"
+    },
+    "tips": "下午四点半阳光斜照时最为迷人，点上一壶老挝有机花草茶，边办公边欣赏金色湄公河。"
+  },
+  "cafe-gaozhuang": {
+    "id": "cafe-gaozhuang",
+    "type": "cafe",
+    "typeLabel": "☕ 傣式热带滨江小粒咖啡",
+    "name": "告庄澜沧江畔傣风咖啡馆群",
+    "city": "🇨🇳 西双版纳 (Xishuangbanna)",
+    "dateStay": "Day 12 (12/22) 傣乡热带办公地",
+    "photo": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=1200&q=80",
+    "address": "云南省西双版纳景洪市告庄西双景滨江酒吧街及赶摆街",
+    "lat": 22.0138,
+    "lng": 100.8042,
+    "mapsQuery": "告庄西双景, 景洪市",
+    "desc": "告庄澜沧江沿江步道上的特色傣风竹楼咖啡馆群。融合傣泰吊脚竹编建筑美学与云南高山普洱小粒咖啡，白天江风吹拂，绿竹成荫，夜晚灯火辉煌，充满南亚热带异域情调。",
+    "badges": [
+      "🌴 傣泰热带竹楼美学",
+      "📶 5G 极速千兆覆盖",
+      "🚶 步行即达星光夜市",
+      "☕ 甄选云南小粒咖啡"
+    ],
+    "amenities": {
+      "wifi": "中国移动/电信 5G 双千兆无缝覆盖，延迟低至 15ms",
+      "desk": "实木大茶桌与竹编卡座，空间宽大舒适",
+      "power": "桌面大多嵌入安全电源孔",
+      "quiet": "白天江边极度安详静谧，适合深度工作，傍晚无缝衔接夜市"
+    },
+    "tips": "推荐品尝特色的“冰滴云南小粒咖啡”与“手作鲜椰乳咖啡”，风味独特难忘。"
+  },
+  "cafe-erhai": {
+    "id": "cafe-erhai",
+    "type": "cafe",
+    "typeLabel": "☕ 洱海S弯一线海景圣殿",
+    "name": "洱海生态廊道 S弯海景咖啡馆",
+    "city": "🇨🇳 云南大理 (Dali)",
+    "dateStay": "Day 14-15 (12/24-25) 苍山洱海慢生活",
+    "photo": "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80",
+    "address": "云南省大理白族自治州大理市银桥镇磻溪村 S弯生态廊道",
+    "lat": 25.7675,
+    "lng": 100.1658,
+    "mapsQuery": "大理磻溪村S弯生态廊道",
+    "desc": "全中国数字游民与自由职业者的终极圣殿！纯白简约现代建筑坐落于洱海生态廊道最经典的 S 弯转角，超大通透全景落地玻璃直面碧蓝无垠的洱海，远处苍山雪峰巍峨挺立。冬日阳光温暖洒下，品着云南特产玫瑰拿铁，敲击键盘成为极致的享受。",
+    "badges": [
+      "🌊 洱海一线无敌海景",
+      "📶 千兆光纤入户",
+      "☀️ 冬日暖阳绝景",
+      "🚲 廊道骑行直达"
+    ],
+    "amenities": {
+      "wifi": "千兆光纤网络专线，网速飞快，无论写代码还是音视频协同均行云流水",
+      "desk": "直面海景的无遮挡全景木质长吧台，配有插座与舒服坐垫",
+      "power": "吧台下每隔 1 米均设有独立五孔电源插座",
+      "quiet": "机动车完全禁行，耳畔唯有清脆海鸥鸣叫与舒缓海浪声"
+    },
+    "tips": "冬天的洱海有成群的西伯利亚红嘴鸥飞过，下午阳光最为通透，是整个行程最治愈的办公高光时刻！"
+  },
+  "hotel-hatten": {
+    "id": "hotel-hatten",
+    "type": "hotel",
+    "typeLabel": "🏨 市中心品质四星·实惠首选",
+    "name": "马六甲惠胜酒店 (Hatten Hotel Melaka)",
+    "city": "🇲🇾 马六甲 (Melaka)",
+    "dateStay": "12/11 - 12/13 · 共2晚",
+    "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "address": "Hatten Square, Jalan Merdeka, Bandar Hilir, 75000 Melaka, Malaysia",
+    "lat": 2.1894,
+    "lng": 102.2536,
+    "mapsQuery": "Hatten Hotel Melaka, Jalan Merdeka, Melaka",
+    "desc": "马六甲市中心性价比最高的现代四星级酒店。房间面积宽敞（约 33㎡），配备独立宽大办公书桌、人体工学椅与高速商务 Wi-Fi。楼下直通商场，步行 10 分钟即达红屋与鸡场街，顶楼配有开阔天际线泳池与健身房。",
+    "priceRange": "约 ¥380 - ¥520 / 晚",
+    "currencyNote": "约 250 - 340 MYR",
+    "priceDetail": "豪华大床房 · 宽敞工作桌与高速商务网",
+    "badges": [
+      "💰 均价500高性价比",
+      "📶 高速稳定 Wi-Fi",
+      "🪑 独立办公书桌",
+      "🏊 高空观景泳池"
+    ],
+    "amenities": {
+      "wifi": "实测 100Mbps 稳定商务光纤，视频会议流畅无卡顿",
+      "desk": "标准商务写字台配护眼台灯及舒适转椅",
+      "power": "桌面提供通用多功能电源插孔与 USB 充电口",
+      "quiet": "高楼层客房隔音优良，不受街区车流打扰"
+    },
+    "tips": "性价比极高，周边 Grab 叫车秒接单，周五周六晚步行或打车 5 分钟即达鸡场街夜市。"
+  },
+  "hotel-ibis-melaka": {
+    "id": "hotel-ibis-melaka",
+    "type": "hotel",
+    "typeLabel": "🏨 国际品牌连锁·超值备选",
+    "name": "马六甲宜必思酒店 (Ibis Melaka)",
+    "city": "🇲🇾 马六甲备选 (Melaka)",
+    "dateStay": "马六甲超值连锁备选",
+    "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "address": "249 Jalan Bendahara, 75100 Melaka, Malaysia",
+    "lat": 2.1995,
+    "lng": 102.252,
+    "mapsQuery": "Ibis Melaka, Jalan Bendahara, Melaka",
+    "desc": "法国雅高集团（Accor）旗下的标准化高性价比酒店，步行至红屋仅 8 分钟。房间采光明亮干净，全木地板卫生无死角，配有长条工作桌，网络稳定性在马六甲同价位位居前列。",
+    "priceRange": "约 ¥320 - ¥450 / 晚",
+    "currencyNote": "约 210 - 295 MYR",
+    "priceDetail": "标准双人客房 · 国际连锁卫生标准保障",
+    "badges": [
+      "⭐ 雅高国际连锁",
+      "📶 极稳专线网络",
+      "🚶 步行8分到古城",
+      "💰 约300多极实惠"
+    ],
+    "amenities": {
+      "wifi": "雅高专线 Wi-Fi，测速稳定在 80Mbps+",
+      "desk": "整面长条办公台面，方便摆放双电脑协同办公",
+      "power": "床头与书桌均有便捷插座",
+      "quiet": "位于古城边缘静巷，夜晚极其安静安眠"
+    },
+    "tips": "酒店前台服务规范，提供行李免费寄存，预算友好且绝不踩雷。"
+  },
+  "hotel-aloft-bkk": {
+    "id": "hotel-aloft-bkk",
+    "type": "hotel",
+    "typeLabel": "🏨 万豪旗下潮流商旅·高性价比首选",
+    "name": "曼谷素坤逸11巷雅乐轩酒店 (Aloft Bangkok Sukhumvit 11)",
+    "city": "🇹🇭 曼谷 (Bangkok)",
+    "dateStay": "12/15 - 12/16 · 1晚曼谷会友",
+    "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "address": "35 Sukhumvit 11 Alley, Klongtoey Nua, Watthana, Bangkok 10110, Thailand",
+    "lat": 13.746,
+    "lng": 100.5567,
+    "mapsQuery": "Aloft Bangkok Sukhumvit 11, Bangkok",
+    "desc": "万豪旅享家（Marriott）旗下专为年轻移动办公人群打造的科技潮牌酒店！全景落地大窗，配备人体工学办公转椅、宽阔办公桌面与超高速千兆 Wi-Fi。楼下即是素坤逸网红美食街，步行 5 分钟到 BTS Nana 站，去通罗或暹罗商圈会友极其方便。",
+    "priceRange": "约 ¥480 - ¥580 / 晚",
+    "currencyNote": "约 2,400 - 2,900 THB",
+    "priceDetail": "时尚乐窝大床房 · 万豪品质客房与高空泳池",
+    "badges": [
+      "🏨 万豪品质保证",
+      "⚡ 千兆极速 Wi-Fi",
+      "🚇 近 BTS Nana 站",
+      "🪑 人体工学写字台"
+    ],
+    "amenities": {
+      "wifi": "万豪企业级高速网络，上行下行超 150Mbps",
+      "desk": "独立人体工学写字台配护眼工作照明",
+      "power": "桌面集成多媒体拓展坞、USB 与国际多功能插孔",
+      "quiet": "双层隔音玻璃，房间内静谧专注"
+    },
+    "tips": "酒店顶层配有露天微风泳池与 WXYZ 酒吧，白天高速办公，傍晚正好与曼谷朋友小聚。"
+  },
+  "hotel-holidayinn-bkk": {
+    "id": "hotel-holidayinn-bkk",
+    "type": "hotel",
+    "typeLabel": "🏨 洲际商务标杆·超值备选",
+    "name": "曼谷沙吞智选假日酒店 (Holiday Inn Express Bangkok Sathorn)",
+    "city": "🇹🇭 曼谷备选 (Bangkok)",
+    "dateStay": "曼谷市中心商务备选",
+    "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "address": "51 Soi Phiphat, Silom, Bang Rak, Bangkok 10500, Thailand",
+    "lat": 13.7235,
+    "lng": 100.5312,
+    "mapsQuery": "Holiday Inn Express Bangkok Sathorn, Bangkok",
+    "desc": "洲际酒店集团（IHG）旗下的商务常胜将军，坐落于沙吞金融区，步行 2 分钟即达 BTS Chong Nonsi 站。房间高效精干，附赠每日免费丰盛早餐（Express Start Breakfast），公共工作区环境一流，出差办公体验极佳。",
+    "priceRange": "约 ¥420 - ¥530 / 晚",
+    "currencyNote": "约 2,100 - 2,650 THB",
+    "priceDetail": "标准双人房 · 赠每日双人营养热早餐",
+    "badges": [
+      "⭐ IHG 洲际品质",
+      "🥐 免费双人早餐",
+      "🚇 BTS站步行2分",
+      "💼 专属商务办公区"
+    ],
+    "amenities": {
+      "wifi": "全馆覆盖高速免费无线网络",
+      "desk": "客房内配有舒适紧凑型办公台",
+      "power": "插座充足且配备 USB 快充口",
+      "quiet": "金融街区静巷，夜晚非常安静"
+    },
+    "tips": "赠送的现做热早餐非常方便，早晨吃饱后直接开工，省心高效。"
+  },
+  "hotel-ibis-vientiane": {
+    "id": "hotel-ibis-vientiane",
+    "type": "hotel",
+    "typeLabel": "🏨 法国雅高连锁·万象最稳之选",
+    "name": "宜必思万象南普酒店 (Ibis Vientiane Nam Phu)",
+    "city": "🇱🇦 老挝万象 (Vientiane)",
+    "dateStay": "12/17 - 12/18 · 1晚中转休整",
+    "photo": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80",
+    "address": "Namphu Square, Setthathirath Road, Vientiane, Laos",
+    "lat": 17.9625,
+    "lng": 102.6075,
+    "mapsQuery": "Ibis Vientiane Nam Phu, Vientiane",
+    "desc": "老挝万象市中心南普喷泉广场旁的核心国际连锁酒店。针对老挝本地独立客栈 Wi-Fi 经常偶发断网的问题，宜必思接入雅高跨国企业专线网络，网速稳定可靠。大床舒适柔软，步行可至湄公河夜市与凯旋门，是 500 元价位段最让人安心的避险首选。",
+    "priceRange": "约 ¥380 - ¥480 / 晚",
+    "currencyNote": "约 55 - 70 USD",
+    "priceDetail": "标准客房 · 国际连锁专线网络保障",
+    "badges": [
+      "📍 南普喷泉广场核心",
+      "⚡ 雅高企业专线网",
+      "💰 400元档超高性价比",
+      "🚶 步行至湄公河夜市"
+    ],
+    "amenities": {
+      "wifi": "万象同价位最稳专线 Wi-Fi，跨国远程会议绝无掉线烦恼",
+      "desk": "标准木质办公写字桌配舒适座椅",
+      "power": "客房备有通用国际电源插孔",
+      "quiet": "法式隔音标准，远离老挝摩托车轰鸣声"
+    },
+    "tips": "酒店下楼即是多座法式烘焙咖啡馆与老挝本土餐厅，换汇打车极便利。"
+  },
+  "hotel-mydream-lp": {
+    "id": "hotel-mydream-lp",
+    "type": "hotel",
+    "typeLabel": "🏨 南康河畔生态花园度假村",
+    "name": "琅勃拉邦梦之精品度假村 (My Dream Boutique Resort)",
+    "city": "🇱🇦 琅勃拉邦 (Luang Prabang)",
+    "dateStay": "12/18 - 12/21 · 共3晚舒适慢度假",
+    "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+    "address": "Ban Meun-Na, Nam Khan River, Luang Prabang 06000, Laos",
+    "lat": 19.889,
+    "lng": 102.145,
+    "mapsQuery": "My Dream Boutique Resort, Luang Prabang",
+    "desc": "坐落在南康河畔的绝美热带花园生态度假村，欧美远程工作者与自由行旅客评分高达 9.2！全柚木传统高脚建筑，每间客房都有独立木质观景阳台与工作大桌。花园内拥有蔚蓝泳池与河畔休闲平台，赠送极丰盛的自选现做双人早餐，并提供免费自行车与古城免费接驳突突车。",
+    "priceRange": "约 ¥430 - ¥560 / 晚",
+    "currencyNote": "约 62 - 80 USD",
+    "priceDetail": "经典河景/园景阳台房 · 赠现做丰盛双早与免费接驳",
+    "badges": [
+      "🌊 南康河畔热带花园",
+      "🥐 丰盛现做自选早餐",
+      "🚲 免费自行车+接驳车",
+      "🏊 户外热带泳池"
+    ],
+    "amenities": {
+      "wifi": "度假村全覆盖高速光纤 Wi-Fi，阳台与泳池边信号良好",
+      "desk": "独立阳台配备宽绰实木大桌，在绿荫鸟语中敲键盘极享受",
+      "power": "床头与桌面插座完备",
+      "quiet": "避开古城主路嘈杂，全天伴着河水声与鸟鸣，极致安宁"
+    },
+    "tips": "相比主街动辄一两千的奢华酒店，这里品质完全不输，500元档住进热带仙境，住3晚极为划算！"
+  },
+  "hotel-mekongsunset-lp": {
+    "id": "hotel-mekongsunset-lp",
+    "type": "hotel",
+    "typeLabel": "🏨 湄公河落日景观洋房·超值备选",
+    "name": "湄公河日落景观别墅酒店 (Mekong Sunset View Hotel)",
+    "city": "🇱🇦 琅勃拉邦备选 (Luang Prabang)",
+    "dateStay": "湄公河沿岸超值备选",
+    "photo": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+    "address": "Khem Khong, Ban Khily, Luang Prabang 06000, Laos",
+    "lat": 19.897,
+    "lng": 102.1415,
+    "mapsQuery": "Mekong Sunset View Hotel, Luang Prabang",
+    "desc": "坐落于湄公河一线景观步道上，经典老挝法式洋楼。推开窗即可俯瞰壮丽的湄公河金色夕阳与对岸青翠山脉。地理位置绝佳，出弄堂步行 3 分钟即达香通寺与洋人街，带阳台与免费高速无线网络。",
+    "priceRange": "约 ¥380 - ¥500 / 晚",
+    "currencyNote": "约 55 - 72 USD",
+    "priceDetail": "湄公河景大床房 · 含景观阳台与免费早餐",
+    "badges": [
+      "🌅 湄公河一线落日",
+      "📍 紧邻香通寺",
+      "🥐 免费美味早餐",
+      "💰 400元档江景超值"
+    ],
+    "amenities": {
+      "wifi": "高速无线网络，视频播放与通话顺畅",
+      "desk": "阳台观景木桌与室内书桌",
+      "power": "通用电源接口",
+      "quiet": "临江次街，夜晚江风徐徐，环境安详"
+    },
+    "tips": "下午 5 点在自己阳台点一杯老挝咖啡看日落，浪漫惬意，性价比拉满。"
+  },
+  "hotel-gaozhuang-mianyue": {
+    "id": "hotel-gaozhuang-mianyue",
+    "type": "hotel",
+    "typeLabel": "🏨 告庄星光夜市原木美宿·实惠首选",
+    "name": "西双版纳告庄西双景漫悦江景客栈 (星光夜市店)",
+    "city": "🇨🇳 西双版纳 (Xishuangbanna)",
+    "dateStay": "12/21 - 12/23 · 共2晚",
+    "photo": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    "address": "云南省西双版纳景洪市告庄西双景景法寨1栋",
+    "lat": 22.0135,
+    "lng": 100.8035,
+    "mapsQuery": "西双版纳告庄西双景景法寨",
+    "desc": "位于告庄西双景核心区域，步行 3 分钟直达星光夜市与大金塔！由资深设计师打造的现代傣式原木风美宿。全屋配备智能家居、独立千兆 Wi-Fi、宽敞茶台与舒适办公木桌。告别大酒店昂贵的房费，享受极高品质的原生态热带旅居体验。",
+    "priceRange": "约 ¥380 - ¥520 / 晚",
+    "currencyNote": "旺季约 ¥550 - ¥680",
+    "priceDetail": "傣韵江景/园景大床房 · 含星光夜市接送与管家服务",
+    "badges": [
+      "🚶 步行3分到星光夜市",
+      "⚡ 全屋千兆光纤",
+      "🌴 傣式原木质感",
+      "🍵 独立功夫茶台办公"
+    ],
+    "amenities": {
+      "wifi": "千兆光纤独享网络，测速 300Mbps+，超低延迟极适合联机远程协作",
+      "desk": "加厚实木茶台兼宽绰书桌，配有舒适软垫靠椅",
+      "power": "桌面嵌入式五孔安全排插与多孔 USB 快充口",
+      "quiet": "位于寨内安静巷道，避开主街道人流，隔音优良"
+    },
+    "tips": "客栈管家提供免费接站或行李搬运服务，楼下即是傣式手作咖啡馆与特色小吃。"
+  },
+  "hotel-dali-qianshan": {
+    "id": "hotel-dali-qianshan",
+    "type": "hotel",
+    "typeLabel": "🌊 磻溪S弯一线海景游民圣地",
+    "name": "大理洱海生态廊道·浅山伴海客栈 (磻溪 S 弯店)",
+    "city": "🇨🇳 中国云南大理 (Dali)",
+    "dateStay": "Day 13–15 (12/23-12/25) · 宿 3 晚 · 苍山洱海慢生活终点胜地",
+    "photo": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "address": "大理市银桥镇磻溪村 7 组生态廊道旁",
+    "lat": 25.768,
+    "lng": 100.1655,
+    "mapsQuery": "磻溪 S 弯店",
+    "desc": "紧挨洱海生态廊道最经典的磻溪村 S 弯转角，超大通透落地全景窗直面碧波万顷的洱海与苍山雪景！专为远程办公游民配备独享千兆光纤专线与全景海景木桌。",
+    "badges": [
+      "🌊 直面洱海碧波无遮挡",
+      "⚡ 千兆独享光纤专线",
+      "☀️ 冬日暖阳绝美光影",
+      "🚲 免费骑行生态廊道"
+    ],
+    "priceRange": "约 ¥420 - ¥520 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "千兆独享光纤实测 400Mbps+",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-melaka-hatten": {
+    "id": "hotel-melaka-hatten",
+    "type": "hotel",
+    "typeLabel": "🏢 现代商务与综合体型",
+    "name": "马六甲惠胜酒店 (Hatten Hotel Melaka)",
+    "city": "🇲🇾 马六甲 (Melaka)",
+    "dateStay": "Day 1–2 (12/11-12/12) · 宿 1 晚",
+    "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "address": "Hatten Square, Jalan Merdeka, Bandar Hilir, 75000 Melaka",
+    "lat": 2.1895,
+    "lng": 102.253,
+    "mapsQuery": "Hatten Hotel Melaka",
+    "desc": "马六甲地标级四星级商务度假酒店，直通商场，客房空间大，配宽敞办公书桌与人体工学椅，顶楼无边际泳池可俯瞰马六甲海峡。",
+    "badges": [
+      "⚡ 极速 Wi-Fi",
+      "🖥️ 宽阔大书桌",
+      "🏊 无边际海景泳池",
+      "🛍️ 直通商圈超市"
+    ],
+    "priceRange": "约 ¥420 - ¥520 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配备独立实木写字台与万国插座",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-melaka-ibis": {
+    "id": "hotel-melaka-ibis",
+    "type": "hotel",
+    "typeLabel": "💰 国际连锁超值性价比型",
+    "name": "马六甲宜必思酒店 (Ibis Melaka)",
+    "city": "🇲🇾 马六甲 (Melaka)",
+    "dateStay": "Day 1–2 (12/11-12/12) · 宿 1 晚",
+    "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "address": "249, Jalan Bunga Raya, 75100 Melaka",
+    "lat": 2.2005,
+    "lng": 102.252,
+    "mapsQuery": "Ibis Melaka",
+    "desc": "雅高集团旗下品质酒店，步行 10 分钟到荷兰红屋与鸡场街。客房隔音优良，Sweet Bed 特色床垫睡眠极佳，性价比极高。",
+    "badges": [
+      "🌐 雅高品质保证",
+      "🚶 步行10分到红屋",
+      "📶 稳定高速网络",
+      "💰 300元档超值"
+    ],
+    "priceRange": "约 ¥320 - ¥400 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "房间配有专用办公转角台与多孔 USB 接口",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-melaka-rosa": {
+    "id": "hotel-melaka-rosa",
+    "type": "hotel",
+    "typeLabel": "🌿 工业复古风情设计型",
+    "name": "马六甲罗莎精品酒店 (Rosa Malacca)",
+    "city": "🇲🇾 马六甲 (Melaka)",
+    "dateStay": "Day 1–2 (12/11-12/12) · 宿 1 晚",
+    "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+    "address": "212, Jalan Parameswara, Bandar Hilir, 75000 Melaka",
+    "lat": 2.188,
+    "lng": 102.257,
+    "mapsQuery": "Rosa Malacca",
+    "desc": "极具设计感的红砖工业复古风精品酒店，绿植庭院与欧式天井交织，环境静谧文艺，深受国际数码游民与设计师喜爱。",
+    "badges": [
+      "🌿 工业复古美学",
+      "📸 绝美天井采光",
+      "☕ 优质自营咖啡厅",
+      "🤫 静音隔音极佳"
+    ],
+    "priceRange": "约 ¥380 - ¥480 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "每间房设有独立定制原木书桌",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-melaka-pines": {
+    "id": "hotel-melaka-pines",
+    "type": "hotel",
+    "typeLabel": "🏊 宽敞河景露台泳池型",
+    "name": "马六甲松船酒店 (The Pines Melaka)",
+    "city": "🇲🇾 马六甲 (Melaka)",
+    "dateStay": "Day 1–2 (12/11-12/12) · 宿 1 晚",
+    "photo": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "address": "33, Jalan Tun Sri Lanang, 75100 Melaka",
+    "lat": 2.2045,
+    "lng": 102.2515,
+    "mapsQuery": "The Pines Melaka",
+    "desc": "沿马六甲河而建，拥有全市同价位中最大的客房面积（40㎡+），配有观景落地窗与小厨房设施，顶楼配咸水无边泳池。",
+    "badges": [
+      "📐 40平米大空间",
+      "🌊 俯瞰马六甲河",
+      "🍳 配备简易水槽",
+      "🏊 咸水观景泳池"
+    ],
+    "priceRange": "约 ¥390 - ¥490 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "超长写字台搭配护眼台灯",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-melaka-babahouse": {
+    "id": "hotel-melaka-babahouse",
+    "type": "hotel",
+    "typeLabel": "🏮 鸡场街南洋娘惹风情型",
+    "name": "马六甲峇峇大厦酒店 (The Baba House Melaka)",
+    "city": "🇲🇾 马六甲 (Melaka)",
+    "dateStay": "Day 1–2 (12/11-12/12) · 宿 1 晚",
+    "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "address": "121-127, Jalan Tun Tan Cheng Lock, 75200 Melaka",
+    "lat": 2.196,
+    "lng": 102.2455,
+    "mapsQuery": "The Baba House Melaka",
+    "desc": "坐落于鸡场街核心历史保护区内的百年传统娘惹老宅，雕梁画栋、琉璃天井，出门步行 1 分钟直达周末夜市与咖啡馆。",
+    "badges": [
+      "🏛️ 百年娘惹宅邸",
+      "🚶 步入鸡场街夜市",
+      "🍵 传统天井茶吧",
+      "🌿 浓郁南洋风韵"
+    ],
+    "priceRange": "约 ¥450 - ¥550 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房内配有复古木质办公桌与现代高速 Wi-Fi",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-hatyai-centara": {
+    "id": "hotel-hatyai-centara",
+    "type": "hotel",
+    "typeLabel": "🏢 核心商圈经典四星型",
+    "name": "合艾盛泰乐酒店 (Centara Hotel Hat Yai)",
+    "city": "🇹🇭 泰国合艾 (Hat Yai)",
+    "dateStay": "Day 3 (12/13) · 泰铁CNR卧铺发车前休息/过境精选",
+    "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "address": "3 Sanehanusorn Rd, Hat Yai District, Songkhla 90110",
+    "lat": 7.0045,
+    "lng": 100.4705,
+    "mapsQuery": "Centara Hotel Hat Yai",
+    "desc": "合艾市中心 Central 百货上盖四星级酒店，步行 5 分钟直达合艾火车站。设施完备，配大型健身房与室外泳池。",
+    "badges": [
+      "🛍️ 楼下即Central商场",
+      "🚆 步行5分到火车站",
+      "🏊 室外泳池",
+      "💼 专业商务中心"
+    ],
+    "priceRange": "约 ¥380 - ¥480 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "配有标准商务写字桌与人体工学椅",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-hatyai-monotel": {
+    "id": "hotel-hatyai-monotel",
+    "type": "hotel",
+    "typeLabel": "🌿 现代极简美学精品型",
+    "name": "合艾莫诺精品酒店 (Monotel Hat Yai)",
+    "city": "🇹🇭 泰国合艾 (Hat Yai)",
+    "dateStay": "Day 3 (12/13) · 泰铁CNR卧铺发车前休息/过境精选",
+    "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "address": "55/1 Rat Uthit Rd, Hat Yai, Songkhla 90110",
+    "lat": 7.008,
+    "lng": 100.465,
+    "mapsQuery": "Monotel Hat Yai",
+    "desc": "极简日式水泥灰设计风精品美宿，客房采光极佳，床品舒适度拉满，配有超快 Wi-Fi，深受年轻自由职业者喜爱。",
+    "badges": [
+      "✨ 极简美学设计",
+      "📶 极速光纤网络",
+      "☕ 楼下精品咖啡",
+      "💰 300元高颜值"
+    ],
+    "priceRange": "约 ¥300 - ¥380 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配备专属木质电脑桌",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-hatyai-redplanet": {
+    "id": "hotel-hatyai-redplanet",
+    "type": "hotel",
+    "typeLabel": "💰 极简超值便捷型",
+    "name": "合艾红星球酒店 (Red Planet Hat Yai)",
+    "city": "🇹🇭 泰国合艾 (Hat Yai)",
+    "dateStay": "Day 3 (12/13) · 泰铁CNR卧铺发车前休息/过境精选",
+    "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+    "address": "152-156 Nipat Uthit 2 Rd, Hat Yai, Songkhla 90110",
+    "lat": 7.005,
+    "lng": 100.467,
+    "mapsQuery": "Red Planet Hat Yai",
+    "desc": "距离合艾火车站仅 400 米，以极致便捷与高性价比著称。配备强劲冷气与超舒适床垫，是换乘过境洗漱休整绝佳选择。",
+    "badges": [
+      "🚆 距火车站仅400米",
+      "⚡ 苹果电脑工作站",
+      "🚿 强劲热水卫浴",
+      "💰 200元档超值"
+    ],
+    "priceRange": "约 ¥220 - ¥280 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "大堂配有专门的 Apple iMac 电脑工作台",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-hatyai-newseason": {
+    "id": "hotel-hatyai-newseason",
+    "type": "hotel",
+    "typeLabel": "🏮 金荣市集夜市商圈型",
+    "name": "合艾新季方舟酒店 (New Season Square Hotel)",
+    "city": "🇹🇭 泰国合艾 (Hat Yai)",
+    "dateStay": "Day 3 (12/13) · 泰铁CNR卧铺发车前休息/过境精选",
+    "photo": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "address": "23 Prachathipat Rd, Hat Yai, Songkhla 90110",
+    "lat": 7.006,
+    "lng": 100.4715,
+    "mapsQuery": "New Season Square Hotel",
+    "desc": "位于合艾繁华市中心，紧邻金荣市场与李花园夜市。房间宽大安静，隔音优良，周边汇集清姐肉骨茶与早茶点心老店。",
+    "badges": [
+      "🍲 紧挨金荣早茶街",
+      "🚪 隔音密封优良",
+      "🪑 宽敞独立桌椅",
+      "🚶 步行至夜市"
+    ],
+    "priceRange": "约 ¥350 - ¥450 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配备稳固厚实木桌",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-hatyai-habita": {
+    "id": "hotel-hatyai-habita",
+    "type": "hotel",
+    "typeLabel": "☕ 文艺咖啡书香设计型",
+    "name": "合艾哈比塔精品酒店 (The Habita Hatyai)",
+    "city": "🇹🇭 泰国合艾 (Hat Yai)",
+    "dateStay": "Day 3 (12/13) · 泰铁CNR卧铺发车前休息/过境精选",
+    "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "address": "151 Sangchan Rd, Hat Yai, Songkhla 90110",
+    "lat": 7.0075,
+    "lng": 100.473,
+    "mapsQuery": "The Habita Hatyai",
+    "desc": "将书吧与现代工业风完美结合的精品酒店。一层即是高品质自营独立咖啡厅，整面书墙与自然采光营造出极致静心氛围。",
+    "badges": [
+      "📚 艺术书吧大堂",
+      "☕ 优质精品咖啡",
+      "🌿 静谧宜居街区",
+      "💻 绝佳办公氛围"
+    ],
+    "priceRange": "约 ¥360 - ¥460 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "酒店一楼咖啡厅设有多处配有电源插座的实木长桌",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-bkk-holidayinn": {
+    "id": "hotel-bkk-holidayinn",
+    "type": "hotel",
+    "typeLabel": "🏢 洲际旗下高性价比商务型",
+    "name": "曼谷沙吞智选假日酒店 (Holiday Inn Express Sathorn)",
+    "city": "🇹🇭 泰国曼谷 (Bangkok)",
+    "dateStay": "Day 4–5 (12/14-12/15) · 宿 1 晚 · 连续2天全天办公",
+    "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "address": "51 Soi Phiphat, Silom, Bang Rak, Bangkok 10500",
+    "lat": 13.7225,
+    "lng": 100.5288,
+    "mapsQuery": "Holiday Inn Express Sathorn",
+    "desc": "洲际集团旗下标准商务品质酒店。步行 2 分钟即达 Chong Nonsi BTS 轻轨站，配备强劲 Wi-Fi、人体工学椅与优质免费热早餐。",
+    "badges": [
+      "🚆 步行2分到BTS轻轨",
+      "🍳 免费丰盛热早餐",
+      "⚡ 千兆级无线网络",
+      "💼 人体工学转椅"
+    ],
+    "priceRange": "约 ¥450 - ¥550 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配备专业办公桌、多国通用转换插座与静音空调",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-bkk-aloft": {
+    "id": "hotel-bkk-aloft",
+    "type": "hotel",
+    "typeLabel": "🎵 万豪旗下潮牌都市型",
+    "name": "曼谷素坤逸 11 巷雅乐轩酒店 (Aloft Bangkok Sukhumvit 11)",
+    "city": "🇹🇭 泰国曼谷 (Bangkok)",
+    "dateStay": "Day 4–5 (12/14-12/15) · 宿 1 晚 · 连续2天全天办公",
+    "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "address": "35 Sukhumvit Soi 11, Khlong Toei Nuea, Watthana, Bangkok 10110",
+    "lat": 13.7445,
+    "lng": 100.5565,
+    "mapsQuery": "Aloft Bangkok Sukhumvit 11",
+    "desc": "万豪旅享家旗下时尚潮牌酒店。位于素坤逸 11 巷繁华核心，顶楼配有高空无边泳池与 W XYZ 酒吧，科技感十足。",
+    "badges": [
+      "🏊 高空无边泳池",
+      "🍸 W XYZ潮牌酒吧",
+      "🏙️ 素坤逸核心地段",
+      "🛏️ 万豪标准床品"
+    ],
+    "priceRange": "约 ¥480 - ¥580 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "提供即插即用工作台（Plug & Play）",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-bkk-ibisstyles": {
+    "id": "hotel-bkk-ibisstyles",
+    "type": "hotel",
+    "typeLabel": "💰 现代活力超值实惠型",
+    "name": "曼谷素坤逸 50 巷宜必思尚品酒店 (Ibis Styles Sukhumvit 50)",
+    "city": "🇹🇭 泰国曼谷 (Bangkok)",
+    "dateStay": "Day 4–5 (12/14-12/15) · 宿 1 晚 · 连续2天全天办公",
+    "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+    "address": "2026/11 Sukhumvit 50, Phra Khanong, Khlong Toei, Bangkok 10260",
+    "lat": 13.7085,
+    "lng": 100.596,
+    "mapsQuery": "Ibis Styles Sukhumvit 50",
+    "desc": "雅高集团尚品系列，现代流行艺术装修，提供免费接驳车往返 On Nut BTS 轻轨站。周边生活配套极其便利，性价比极高。",
+    "badges": [
+      "🚐 免费BTS接驳车",
+      "🎨 活力艺术风格",
+      "☕ 24小时前台服务",
+      "💰 300元档超值"
+    ],
+    "priceRange": "约 ¥320 - ¥400 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房设计科学紧凑",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-bkk-quarterari": {
+    "id": "hotel-bkk-quarterari",
+    "type": "hotel",
+    "typeLabel": "🏊 高空景观天际泳池型",
+    "name": "阿里夸特酒店 (The Quarter Ari by UHG)",
+    "city": "🇹🇭 泰国曼谷 (Bangkok)",
+    "dateStay": "Day 4–5 (12/14-12/15) · 宿 1 晚 · 连续2天全天办公",
+    "photo": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "address": "428 Phahonyothin Rd, Samsen Nai, Phaya Thai, Bangkok 10400",
+    "lat": 13.782,
+    "lng": 100.5445,
+    "mapsQuery": "The Quarter Ari by UHG",
+    "desc": "坐落于曼谷最文艺小资的 Ari 街区，靠近曼谷阿皮瓦中央火车站（打车10分钟）。33层天际无边泳池与星空健身房，视野极佳。",
+    "badges": [
+      "🏊 33层天际泳池",
+      "☕ 周边满布独立咖啡",
+      "🚆 靠近阿皮瓦中央站",
+      "🏙️ 绝美城市全景"
+    ],
+    "priceRange": "约 ¥460 - ¥560 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配备落地玻璃景观办公桌",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-bkk-chatrium": {
+    "id": "hotel-bkk-chatrium",
+    "type": "hotel",
+    "typeLabel": "🌿 热带泻湖套房度假型",
+    "name": "曼谷沙吞察殿酒店 (Chatrium Residence Sathon)",
+    "city": "🇹🇭 泰国曼谷 (Bangkok)",
+    "dateStay": "Day 4–5 (12/14-12/15) · 宿 1 晚 · 连续2天全天办公",
+    "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "address": "291 Naradhiwas Rajanagarindra 24, Chong Nonsi, Yan Nawa, Bangkok 10120",
+    "lat": 13.704,
+    "lng": 100.54,
+    "mapsQuery": "Chatrium Residence Sathon",
+    "desc": "五星级度假村标准的大套房公寓（面积达 55㎡），被巨大的热带绿植与巨型泻湖泳池环绕，远离喧嚣，如同城市绿洲。",
+    "badges": [
+      "📐 55平米超大套房",
+      "🌴 热带泻湖巨型泳池",
+      "🍳 独立厨房与阳台",
+      "🧘 极高静音私密"
+    ],
+    "priceRange": "约 ¥480 - ¥580 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "配有独立客厅大餐桌与书桌",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-vte-ibis": {
+    "id": "hotel-vte-ibis",
+    "type": "hotel",
+    "typeLabel": "🏢 国际连锁信赖商务型",
+    "name": "宜必思万象南普酒店 (Ibis Vientiane Nam Phu)",
+    "city": "🇱🇦 老挝万象 (Vientiane)",
+    "dateStay": "Day 6–7 (12/16-12/17) · 宿 1 晚 · 湄公河畔慢生活",
+    "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "address": "Namphu Square, Rue Francois Ngin, Vientiane 01000",
+    "lat": 17.9644,
+    "lng": 102.6075,
+    "mapsQuery": "Ibis Vientiane Nam Phu",
+    "desc": "雅高集团在万象的核心力作。坐落于市中心南普喷泉广场，步行 3 分钟到湄公河日落夜市。欧美游客聚集，网络与卫生标准一流。",
+    "badges": [
+      "🌐 雅高标准品质",
+      "📍 南普广场核心区",
+      "🚶 3分到湄公河夜市",
+      "⚡ 全天极速无线网"
+    ],
+    "priceRange": "约 ¥380 - ¥460 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配备标准工作台与护眼阅读灯",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-vte-salana": {
+    "id": "hotel-vte-salana",
+    "type": "hotel",
+    "typeLabel": "🌿 老挝传统柚木艺术型",
+    "name": "万象萨拉那精品酒店 (Salana Boutique Hotel)",
+    "city": "🇱🇦 老挝万象 (Vientiane)",
+    "dateStay": "Day 6–7 (12/16-12/17) · 宿 1 晚 · 湄公河畔慢生活",
+    "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "address": "Chao Anou Rd, 112 Ban Wat Chan, Vientiane 01000",
+    "lat": 17.9655,
+    "lng": 102.605,
+    "mapsQuery": "Salana Boutique Hotel",
+    "desc": "以老挝传统高级柚木打造的奢雅精品酒店，充满浓郁的佛教文化与艺术沉淀。服务细腻周到，提供精致老挝与西式早餐。",
+    "badges": [
+      "🪵 纯正老挝柚木",
+      "☕ 顶楼天空书吧",
+      "🥐 极佳口碑早餐",
+      "🧘 禅意静心环境"
+    ],
+    "priceRange": "约 ¥460 - ¥560 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配有实木质感大写字台",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-vte-spark": {
+    "id": "hotel-vte-spark",
+    "type": "hotel",
+    "typeLabel": "🏊 现代轻奢泳池度假型",
+    "name": "万象 S 公园设计酒店 (S Park Design Hotel)",
+    "city": "🇱🇦 老挝万象 (Vientiane)",
+    "dateStay": "Day 6–7 (12/16-12/17) · 宿 1 晚 · 湄公河畔慢生活",
+    "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+    "address": "40 Dongnasok Rd, Ban Nakham, Sikhottabong, Vientiane",
+    "lat": 17.972,
+    "lng": 102.585,
+    "mapsQuery": "S Park Design Hotel",
+    "desc": "万象罕见的现代轻奢设计风酒店，拥有开阔的中庭泳池与现代精酿啤酒餐吧。客房面积开阔，避开市区拥挤。",
+    "badges": [
+      "🏊 优美中庭泳池",
+      "🎨 现代轻奢空间",
+      "🍻 精酿啤酒吧",
+      "🅿️ 便捷接送车服务"
+    ],
+    "priceRange": "约 ¥360 - ¥450 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房内配有现代极简长书桌",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-vte-namphu": {
+    "id": "hotel-vte-namphu",
+    "type": "hotel",
+    "typeLabel": "💰 法式殖民超值实惠型",
+    "name": "万象南普精品酒店 (Namphu Boutique Hotel)",
+    "city": "🇱🇦 老挝万象 (Vientiane)",
+    "dateStay": "Day 6–7 (12/16-12/17) · 宿 1 晚 · 湄公河畔慢生活",
+    "photo": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "address": "Rue Pangkham, Namphu Square, Vientiane 01000",
+    "lat": 17.964,
+    "lng": 102.608,
+    "mapsQuery": "Namphu Boutique Hotel",
+    "desc": "法式回廊式建筑风格，环绕着静谧的露天庭院小水池。步行到老挝国家博物馆仅需 5 分钟，性价比非常高。",
+    "badges": [
+      "🏛️ 法式拱门回廊",
+      "🌿 绿意水池庭院",
+      "💰 300元档超值",
+      "📍 出门即餐饮街"
+    ],
+    "priceRange": "约 ¥290 - ¥360 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "庭院周边设有多张遮阳木桌",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-vte-latsavong": {
+    "id": "hotel-vte-latsavong",
+    "type": "hotel",
+    "typeLabel": "🏢 高空现代奢华商务型",
+    "name": "万象拉萨翁旺达酒店 (Wanda Vista / Latsavong Plaza)",
+    "city": "🇱🇦 老挝万象 (Vientiane)",
+    "dateStay": "Day 6–7 (12/16-12/17) · 宿 1 晚 · 湄公河畔慢生活",
+    "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "address": "Phonsinuan Rd, Sisattanak, Vientiane 01000",
+    "lat": 17.978,
+    "lng": 102.638,
+    "mapsQuery": "Wanda Vista / Latsavong Plaza",
+    "desc": "万象城市新地标建筑，距离万象中老铁路客运主干道便捷。国际五星级标准硬件设施，高空无敌全景与高速网络专线。",
+    "badges": [
+      "🏙️ 万象高空新地标",
+      "⚡ 专线光纤网络",
+      "🏋️ 大型健身中心",
+      "🚆 方便接驳火车站"
+    ],
+    "priceRange": "约 ¥480 - ¥580 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "行政级商务写字台与静音办公环境",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-lpq-dream": {
+    "id": "hotel-lpq-dream",
+    "type": "hotel",
+    "typeLabel": "🌿 南康河畔热带花园型",
+    "name": "琅勃拉邦梦之精品度假村 (The Dream Boutique Resort)",
+    "city": "🇱🇦 老挝琅勃拉邦 (Luang Prabang)",
+    "dateStay": "Day 7–10 (12/17-12/20) · 宿 3 晚 · 世界文化遗产慢生活",
+    "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "address": "Ban Wat Gnou, Nam Khan River, Luang Prabang 06000",
+    "lat": 19.882,
+    "lng": 102.1385,
+    "mapsQuery": "The Dream Boutique Resort",
+    "desc": "位于南康河畔的热带花园秘境。环抱室外泳池与郁郁葱葱的荷花池，提供免费自行车租借与古城定时免费穿梭小巴。",
+    "badges": [
+      "🌴 南康河畔花园",
+      "🏊 花园清凉泳池",
+      "🚲 免费自行车漫游",
+      "🤫 极致鸟语花香"
+    ],
+    "priceRange": "约 ¥420 - ¥520 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配备独立实木大书桌与舒适阳台长椅",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-lpq-mekongsunset": {
+    "id": "hotel-lpq-mekongsunset",
+    "type": "hotel",
+    "typeLabel": "🌅 一线湄公河金色落日型",
+    "name": "湄公河日落景观洋楼酒店 (Mekong Sunset View Hotel)",
+    "city": "🇱🇦 老挝琅勃拉邦 (Luang Prabang)",
+    "dateStay": "Day 7–10 (12/17-12/20) · 宿 3 晚 · 世界文化遗产慢生活",
+    "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "address": "Khem Khong, Ban Khily, Luang Prabang 06000",
+    "lat": 19.897,
+    "lng": 102.1415,
+    "mapsQuery": "Mekong Sunset View Hotel",
+    "desc": "经典法式殖民洋楼，坐落于湄公河一线景观步道上。推开阳台即可直面湄公河金色夕阳，步行 3 分钟即达香通寺与洋人街。",
+    "badges": [
+      "🌅 湄公河一线绝景",
+      "📍 紧邻香通寺",
+      "🥐 阳台观景早餐",
+      "💰 400元档超值"
+    ],
+    "priceRange": "约 ¥380 - ¥480 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "阳台观景木桌配备插座",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-lpq-villasanti": {
+    "id": "hotel-lpq-villasanti",
+    "type": "hotel",
+    "typeLabel": "🏛️ 昔日皇室宅邸风韵型",
+    "name": "三蒂别墅度假酒店 (Villa Santi Hotel)",
+    "city": "🇱🇦 老挝琅勃拉邦 (Luang Prabang)",
+    "dateStay": "Day 7–10 (12/17-12/20) · 宿 3 晚 · 世界文化遗产慢生活",
+    "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+    "address": "Old Quarter, Sakkarine Rd, Luang Prabang 06000",
+    "lat": 19.8945,
+    "lng": 102.138,
+    "mapsQuery": "Villa Santi Hotel",
+    "desc": "由老挝 19 世纪皇室王妃旧居改建而成，保留了极为华丽的柚木回廊与精美木雕，漫步其中如同穿越百年历史时光。",
+    "badges": [
+      "👑 百年皇室故居",
+      "🪵 精湛老挝木雕",
+      "📍 位于洋人街核心",
+      "🍵 皇家法式庭院"
+    ],
+    "priceRange": "约 ¥460 - ¥560 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "古色古香的柚木书桌与安静的庭院环境",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-lpq-chitdara": {
+    "id": "hotel-lpq-chitdara",
+    "type": "hotel",
+    "typeLabel": "🏮 古城核心布施路线型",
+    "name": "奇达拉传统客栈 (Villa Chitdara)",
+    "city": "🇱🇦 老挝琅勃拉邦 (Luang Prabang)",
+    "dateStay": "Day 7–10 (12/17-12/20) · 宿 3 晚 · 世界文化遗产慢生活",
+    "photo": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "address": "Ban Vat Nong, Luang Prabang 06000",
+    "lat": 19.8935,
+    "lng": 102.1365,
+    "mapsQuery": "Villa Chitdara",
+    "desc": "清晨僧侣布施路线必经之地的庭院客栈。步行 2 分钟到达夜市与普西山，闹中取静，拥有美丽的热带小花圃。",
+    "badges": [
+      "🧘 门前即清晨布施",
+      "🚶 2分到古城夜市",
+      "🌺 鸟语花香庭院",
+      "💰 实惠口碑好评"
+    ],
+    "priceRange": "约 ¥350 - ¥440 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "一楼庭院配有多张遮阳办公桌椅",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-lpq-namkhan": {
+    "id": "hotel-lpq-namkhan",
+    "type": "hotel",
+    "typeLabel": "💰 临河亲水高性价比型",
+    "name": "南康河滨精品客栈 (Riverside Guesthouse Luang Prabang)",
+    "city": "🇱🇦 老挝琅勃拉邦 (Luang Prabang)",
+    "dateStay": "Day 7–10 (12/17-12/20) · 宿 3 晚 · 世界文化遗产慢生活",
+    "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "address": "Khem Khan Rd, Ban Aphay, Luang Prabang 06000",
+    "lat": 19.888,
+    "lng": 102.137,
+    "mapsQuery": "Riverside Guesthouse Luang Prabang",
+    "desc": "紧邻南康河竹桥的特色木屋民宿。老板热情好客，提供免费老挝黑咖啡，价格亲民公道，是长住旅居者的宝藏之选。",
+    "badges": [
+      "🌊 直面南康河竹桥",
+      "☕ 免费老挝黑咖啡",
+      "💰 200元档超值",
+      "🤝 中英文贴心服务"
+    ],
+    "priceRange": "约 ¥260 - ¥350 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "亲水露台设有开阔桌椅",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-banna-mianyue": {
+    "id": "hotel-banna-mianyue",
+    "type": "hotel",
+    "typeLabel": "🌿 傣式原木风江景美宿",
+    "name": "告庄西双景漫悦江景客栈 (星光夜市店)",
+    "city": "🇨🇳 中国西双版纳 (Xishuangbanna)",
+    "dateStay": "Day 10–13 (12/20-12/23) · 宿 3 晚 · 告庄星光夜市与热带傣韵",
+    "photo": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    "address": "云南省西双版纳景洪市告庄西双景景法寨1栋",
+    "lat": 22.0135,
+    "lng": 100.8035,
+    "mapsQuery": "星光夜市店",
+    "desc": "位于告庄西双景核心区域，步行 3 分钟直达星光夜市与大金塔。全屋配备智能家居、独立千兆 Wi-Fi、实木茶台与办公长桌。",
+    "badges": [
+      "🚶 步行3分到星光夜市",
+      "⚡ 全屋独享千兆专线",
+      "🍵 独立功夫茶台",
+      "🌴 原生态热带美宿"
+    ],
+    "priceRange": "约 ¥380 - ¥480 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "千兆光纤独享网络（实测 300Mbps+）",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-banna-jinglan": {
+    "id": "hotel-banna-jinglan",
+    "type": "hotel",
+    "typeLabel": "🏢 傣泰皇家宫廷地标型",
+    "name": "告庄景兰大酒店 (Jinglan Hotel)",
+    "city": "🇨🇳 中国西双版纳 (Xishuangbanna)",
+    "dateStay": "Day 10–13 (12/20-12/23) · 宿 3 晚 · 告庄星光夜市与热带傣韵",
+    "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "address": "云南省西双版纳景洪市告庄西双景核心区",
+    "lat": 22.0145,
+    "lng": 100.802,
+    "mapsQuery": "Jinglan Hotel",
+    "desc": "告庄西双景核心地标五星标准酒店，气派挑高傣式金顶大堂。直面大金塔与澜沧江，配套有大型会议厅与商务中心。",
+    "badges": [
+      "🏛️ 告庄地标金顶大厦",
+      "🏊 观景天际泳池",
+      "🍽️ 丰富中西式自助早",
+      "💼 五星级商务配套"
+    ],
+    "priceRange": "约 ¥480 - ¥580 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配备大型标准化写字台与静音办公环境",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-banna-nanni": {
+    "id": "hotel-banna-nanni",
+    "type": "hotel",
+    "typeLabel": "🏊 屋顶无边泳池江景型",
+    "name": "喃呢温泉江景度假美宿 (告庄店)",
+    "city": "🇨🇳 中国西双版纳 (Xishuangbanna)",
+    "dateStay": "Day 10–13 (12/20-12/23) · 宿 3 晚 · 告庄星光夜市与热带傣韵",
+    "photo": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "address": "景洪市告庄西双景景真寨",
+    "lat": 22.012,
+    "lng": 100.8045,
+    "mapsQuery": "告庄店",
+    "desc": "以屋顶高空无边际悬崖泳池著称，正对澜沧江与孔雀江景。客房配备私人泡池与全景落地窗，度假感拉满。",
+    "badges": [
+      "🏊 高空无边澜沧江泳池",
+      "♨️ 客房私人观景泡池",
+      "🌅 绝美热带日落",
+      "📸 顶级出片打卡点"
+    ],
+    "priceRange": "约 ¥420 - ¥520 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房落地窗前配有大理石长工作台",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-banna-putai": {
+    "id": "hotel-banna-putai",
+    "type": "hotel",
+    "typeLabel": "🏮 告庄夜市核心便捷型",
+    "name": "西双版纳璞泰江景度假客栈",
+    "city": "🇨🇳 中国西双版纳 (Xishuangbanna)",
+    "dateStay": "Day 10–13 (12/20-12/23) · 宿 3 晚 · 告庄星光夜市与热带傣韵",
+    "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+    "address": "景洪市告庄西双景景亮寨",
+    "lat": 22.015,
+    "lng": 100.801,
+    "mapsQuery": "西双版纳璞泰江景度假客栈",
+    "desc": "位于景亮寨安静巷内，步行至星光夜市仅 5 分钟，避开了主街吵闹的人潮。双层中空静音玻璃，隔音非常优秀。",
+    "badges": [
+      "🤫 闹中取静绝佳隔音",
+      "🚶 5分到星光夜市",
+      "🎬 高清极米巨幕投影",
+      "💰 300元档超值"
+    ],
+    "priceRange": "约 ¥350 - ¥440 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配备舒适实木办公桌椅与独立高速光纤路由器",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-banna-yueman": {
+    "id": "hotel-banna-yueman",
+    "type": "hotel",
+    "typeLabel": "💰 极简超值数码游民型",
+    "name": "景洪悦曼智选轻奢客栈 (市区水果街店)",
+    "city": "🇨🇳 中国西双版纳 (Xishuangbanna)",
+    "dateStay": "Day 10–13 (12/20-12/23) · 宿 3 晚 · 告庄星光夜市与热带傣韵",
+    "photo": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "address": "景洪市宣慰大道中段水果集市旁",
+    "lat": 22.008,
+    "lng": 100.795,
+    "mapsQuery": "市区水果街店",
+    "desc": "位于景洪市区中心，靠近热带水果批发市场。房间干净明亮，没有景区溢价，极受常驻西双版纳的数字游民群体好评。",
+    "badges": [
+      "🥭 紧挨热带水果市场",
+      "💰 200元档无溢价",
+      "⚡ 极速双频Wi-Fi",
+      "🛵 方便租借小电驴"
+    ],
+    "priceRange": "约 ¥260 - ¥350 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "长条型实木写字台与人体工学转椅",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-dali-manwu": {
+    "id": "hotel-dali-manwu",
+    "type": "hotel",
+    "typeLabel": "🌿 知名建筑设计先锋型",
+    "name": "大理慢屋·极目海景度假客栈 (特惠观海房)",
+    "city": "🇨🇳 中国云南大理 (Dali)",
+    "dateStay": "Day 13–15 (12/23-12/25) · 宿 3 晚 · 苍山洱海慢生活终点胜地",
+    "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "address": "大理市海东镇文笔村环海东路",
+    "lat": 25.685,
+    "lng": 100.275,
+    "mapsQuery": "特惠观海房",
+    "desc": "斩获多项国际建筑大奖的先锋设计美宿。极简清水混凝土与洱海水天一色完美交融，拥有极品无边水景露台与阳光书吧。",
+    "badges": [
+      "🏆 国际建筑大奖力作",
+      "🌊 极简清水混凝土美学",
+      "📚 阳光水景书吧",
+      "🌅 苍山晚霞最佳观景点"
+    ],
+    "priceRange": "约 ¥480 - ¥580 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配有定制胡桃木大办公桌",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-dali-qichi": {
+    "id": "hotel-dali-qichi",
+    "type": "hotel",
+    "typeLabel": "🏛️ 古城南门白族传统庭院型",
+    "name": "大理古城栖迟精品客栈 (南门文献楼店)",
+    "city": "🇨🇳 中国云南大理 (Dali)",
+    "dateStay": "Day 13–15 (12/23-12/25) · 宿 3 晚 · 苍山洱海慢生活终点胜地",
+    "photo": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+    "address": "大理古城南门文献路 128 号",
+    "lat": 25.694,
+    "lng": 100.163,
+    "mapsQuery": "南门文献楼店",
+    "desc": "传统白族“三坊一照壁”四合院结构，步行 5 分钟到古城南门与人民路民谣酒馆。古榕遮阴、青瓦白墙，环境极其幽静祥和。",
+    "badges": [
+      "🏮 白族传统三坊一照壁",
+      "🚶 5分到大理古城南门",
+      "🍵 庭院古榕与功夫茶",
+      "🤫 避开人流静谧安详"
+    ],
+    "priceRange": "约 ¥360 - ¥460 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "客房配有白族手工实木桌椅",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-dali-xixiang": {
+    "id": "hotel-dali-xixiang",
+    "type": "hotel",
+    "typeLabel": "🏊 临水亲海生态廊道型",
+    "name": "大理才村码头夕想海景客栈",
+    "city": "🇨🇳 中国云南大理 (Dali)",
+    "dateStay": "Day 13–15 (12/23-12/25) · 宿 3 晚 · 苍山洱海慢生活终点胜地",
+    "photo": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "address": "大理市大理镇才村生态廊道旁",
+    "lat": 25.725,
+    "lng": 100.198,
+    "mapsQuery": "大理才村码头夕想海景客栈",
+    "desc": "靠近才村码头与湿地公园，出门即是水上森林与生态廊道。清晨在房内即可观看壮观的洱海红日初升，海鸥成群盘旋。",
+    "badges": [
+      "🌅 洱海第一缕日出",
+      "🌲 临近才村水上森林",
+      "🚲 租车骑行极方便",
+      "💰 300元档一线海景"
+    ],
+    "priceRange": "约 ¥350 - ¥440 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "亲水观景木桌配备充足插座",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  },
+  "hotel-dali-wusuowei": {
+    "id": "hotel-dali-wusuowei",
+    "type": "hotel",
+    "typeLabel": "💰 双廊苍山全景超值型",
+    "name": "大理双廊无所为海景客栈 (经济观海房)",
+    "city": "🇨🇳 中国云南大理 (Dali)",
+    "dateStay": "Day 13–15 (12/23-12/25) · 宿 3 晚 · 苍山洱海慢生活终点胜地",
+    "photo": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "address": "大理市双廊镇大建旁村环海路",
+    "lat": 25.908,
+    "lng": 100.195,
+    "mapsQuery": "经济观海房",
+    "desc": "位于艺术气息浓厚的双廊古镇，正对苍山十九峰之雄伟全貌。客房露台视野开阔，价格亲民，是长住数字游民的高分口碑之选。",
+    "badges": [
+      "🏔️ 正对苍山十九峰",
+      "🎨 双廊艺术小镇",
+      "☀️ 晒太阳发呆胜地",
+      "💰 超高性价比海景"
+    ],
+    "priceRange": "约 ¥320 - ¥420 / 晚",
+    "currencyNote": "标准双人/大床房预订指导价",
+    "priceDetail": "支持 Booking, Agoda, 携程等在线即时确认预订",
+    "amenities": {
+      "wifi": "露台实木长桌搭配暖阳与海风",
+      "desk": "配备独立书桌与舒适座椅",
+      "noise": "隔音良好，适合远程会议与专注办公",
+      "power": "国际通用插座 / 充沛电源接口"
+    }
+  }
+};
     let leafletMapInstance = null;
     let leafletMarkerInstance = null;
     let currentAddressToCopy = '';
+
+    
+    function filterHotelCity(cityId, btnEl) {
+      const buttons = document.querySelectorAll('.hotel-city-filter');
+      buttons.forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+
+      const groups = document.querySelectorAll('.hotel-city-group');
+      groups.forEach(g => {
+        if (cityId === 'all' || g.getAttribute('data-city') === cityId) {
+          g.classList.remove('hidden');
+        } else {
+          g.classList.add('hidden');
+        }
+      });
+
+      if (cityId !== 'all') {
+        const targetGroup = document.getElementById('group-' + cityId);
+        if (targetGroup) {
+          targetGroup.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
 
     function openVenueModal(venueId) {
       const venue = VENUES_DB[venueId];
