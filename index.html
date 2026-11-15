@@ -15,7 +15,8 @@
       --accent: #f59e0b;
       --accent-light: #fef3c7;
       --flight: #ec4899;
-      --flight-light: #fdf2f8;
+      --hotel: #8b5cf6;
+      --hotel-light: #f5f3ff;
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text: #0f172a;
@@ -29,6 +30,8 @@
       --tag-border-text: #b91c1c;
       --tag-flight: #fce7f3;
       --tag-flight-text: #be185d;
+      --tag-hotel: #ede9fe;
+      --tag-hotel-text: #6d28d9;
       --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
       --radius: 16px;
     }
@@ -113,15 +116,15 @@
     }
     .nav-tab {
       flex: 1;
-      min-width: 140px;
+      min-width: 130px;
       text-align: center;
-      padding: 12px 16px;
+      padding: 12px 14px;
       border-radius: 12px;
       border: none;
       background: transparent;
       color: var(--text-muted);
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       cursor: pointer;
       transition: all 0.2s ease;
       white-space: nowrap;
@@ -248,6 +251,7 @@
     .tag-commute { background: var(--tag-commute); color: var(--tag-commute-text); }
     .tag-border { background: var(--tag-border); color: var(--tag-border-text); }
     .tag-flight { background: var(--tag-flight); color: var(--tag-flight-text); }
+    .tag-hotel { background: var(--tag-hotel); color: var(--tag-hotel-text); }
 
     .day-body {
       display: grid;
@@ -271,7 +275,6 @@
     }
     .work-block h5 { color: #1d4ed8; }
     .commute-block h5 { color: #b45309; }
-    .flight-block h5 { color: #be185d; }
     .detail-item {
       font-size: 0.9rem;
       color: #334155;
@@ -279,6 +282,7 @@
     }
     .detail-item strong { color: #0f172a; }
 
+    /* Tables & Grids */
     .station-table-wrap {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -366,6 +370,38 @@
       font-weight: 500;
     }
 
+    /* Hotel Cards */
+    .hotel-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 22px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 4px solid var(--hotel);
+    }
+    .hotel-city {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--hotel);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .hotel-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .hotel-desc {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+
     footer {
       text-align: center;
       margin-top: 50px;
@@ -393,6 +429,7 @@
 
     <div class="nav-tabs">
       <button class="nav-tab active" onclick="switchTab('itinerary')">📅 每日完整日程 (Day 1-15)</button>
+      <button class="nav-tab" onclick="switchTab('hotels')">🏨 精选住宿酒店推荐</button>
       <button class="nav-tab" onclick="switchTab('stations')">🚉 车站位置与接驳表</button>
       <button class="nav-tab" onclick="switchTab('cafes')">☕ 精选办公咖啡馆</button>
       <button class="nav-tab" onclick="switchTab('borders')">🛂 四国通关口岸指南</button>
@@ -408,12 +445,12 @@
         <p>18:00 经兀兰关卡赴新山，乘大巴 22:00 入住马六甲，正好赶上周末鸡场街大夜市！</p>
       </div>
       <div class="rule-item">
-        <h4>🚆 跨国夜卧与傍晚直达</h4>
-        <p>马六甲直通合艾豪华大巴（避开吉隆坡）、合艾至曼谷夕发朝至卧铺、曼谷直达老挝国际列车。</p>
+        <h4>🏨 办公兼度假酒店精选</h4>
+        <p>沿途精选高网速、带舒适工作桌、环境静谧且位置极佳的精品设计酒店与特色客栈。</p>
       </div>
       <div class="rule-item">
         <h4>🏔️ 终点大理 3 天慢生活</h4>
-        <p>第13天（12/25）下午直达大理，在洱海生态廊道与苍山脚下享受高品质双人数字游民慢生活。</p>
+        <p>第13天（12/23）下午直达大理，在洱海生态廊道与苍山脚下享受高品质双人数字游民慢生活。</p>
       </div>
     </div>
 
@@ -434,7 +471,6 @@
           </div>
         </div>
 
-        <!-- 航班高亮卡片 -->
         <div class="flight-highlight">
           <span class="flight-badge">✈️ 航班已录入</span>
           <div class="flight-text">
@@ -453,7 +489,7 @@
             <div class="detail-item"><strong>18:00 汇合</strong>：两人汇合前往新加坡兀兰关卡 (Woodlands Checkpoint) 出境</div>
             <div class="detail-item"><strong>通关新山</strong>：步行通关新山苏丹依斯干达大厦 (JB CIQ)，打车 10 分钟到拉庆中央车站 (Larkin Sentral)</div>
             <div class="detail-item"><strong>19:30 发车</strong>：乘坐长途空调客车直达马六甲仙特拉车站 (Melaka Sentral, 22:00 抵达)</div>
-            <div class="detail-item"><strong>住宿地点</strong>：打车 15 分钟入住马六甲鸡场街古城民宿（宿马六甲，逛周末夜市！）</div>
+            <div class="detail-item"><strong>推荐住宿</strong>：<strong>The Majestic Malacca</strong> 或 <strong>六门酒店 (Liu Men Melaka)</strong>（宿马六甲，周末夜市！）</div>
           </div>
         </div>
       </div>
@@ -479,7 +515,7 @@
           <div class="section-block commute-block">
             <h5>🌙 周末古城夜市</h5>
             <div class="detail-item"><strong>游览路线</strong>：荷兰红屋、圣保罗山圣手堂俯瞰海峡，晚间沉浸式漫步最热闹的周六鸡场街夜市</div>
-            <div class="detail-item"><strong>住宿地点</strong>：宿马六甲古城民宿</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿马六甲特色精品酒店</div>
           </div>
         </div>
       </div>
@@ -506,7 +542,7 @@
             <h5>🚍 跨国夜班直达客车</h5>
             <div class="detail-item"><strong>上车站</strong>：马六甲仙特拉长途车站 (Melaka Sentral, 20:30 发车)</div>
             <div class="detail-item"><strong>行驶路线</strong>：全程经马来西亚 E2 南北高速直通边境，<strong>完全不进吉隆坡市区</strong></div>
-            <div class="detail-item"><strong>住宿方式</strong>：夜宿跨国豪华 2+1 宽体商务大巴</div>
+            <div class="detail-item"><strong>住宿方式</strong>：夜宿跨国豪华 2+1 宽体商务大巴，省下一晚酒店</div>
           </div>
         </div>
       </div>
@@ -550,6 +586,7 @@
           <div class="day-tags">
             <span class="tag tag-work">曼谷极客办公</span>
             <span class="tag tag-commute">朋友聚会</span>
+            <span class="tag tag-hotel">曼谷精品酒店</span>
           </div>
         </div>
         <div class="day-body">
@@ -560,9 +597,9 @@
             <div class="detail-item"><strong>工作时间</strong>：11:30 - 18:00 极速光纤网络环境深度办公</div>
           </div>
           <div class="section-block commute-block">
-            <h5>🍲 晚间会友与美食</h5>
+            <h5>🍲 晚间会友与住宿</h5>
             <div class="detail-item"><strong>活动安排</strong>：约见曼谷朋友聚餐，探索朱拉隆功大学美食街 Ban Tad Thong 或唐人街</div>
-            <div class="detail-item"><strong>住宿地点</strong>：曼谷市中心精品酒店（宿曼谷）</div>
+            <div class="detail-item"><strong>推荐住宿</strong>：<strong>Sindhorn Midtown Hotel (洲际旗下)</strong> 或 <strong>Adelphi Forty-Nine (通罗区)</strong>（宿曼谷）</div>
           </div>
         </div>
       </div>
@@ -604,6 +641,7 @@
           <div class="day-tags">
             <span class="tag tag-border">免检直达通关</span>
             <span class="tag tag-work">南洋慢调办公</span>
+            <span class="tag tag-hotel">万象五星/精品酒店</span>
           </div>
         </div>
         <div class="day-body">
@@ -615,7 +653,7 @@
           <div class="section-block commute-block">
             <h5>🏛️ 市区历史与夜市</h5>
             <div class="detail-item"><strong>游览景点</strong>：万象凯旋门 (Patuxay)、金碧辉煌大塔銮、西萨格寺古佛群</div>
-            <div class="detail-item"><strong>住宿地点</strong>：品尝老挝啤酒与湄公河夜市烤鱼，宿万象市区</div>
+            <div class="detail-item"><strong>推荐住宿</strong>：<strong>Crowne Plaza Vientiane (皇冠假日)</strong> 或 <strong>Salana Boutique Hotel</strong>（宿万象）</div>
           </div>
         </div>
       </div>
@@ -630,6 +668,7 @@
           <div class="day-tags">
             <span class="tag tag-work">中老铁路澜沧号</span>
             <span class="tag tag-commute">高铁2小时即达</span>
+            <span class="tag tag-hotel">古城法式客栈</span>
           </div>
         </div>
         <div class="day-body">
@@ -642,7 +681,7 @@
             <h5>🚆 傍晚动车北上</h5>
             <div class="detail-item"><strong>上车站</strong>：中老铁路万象站 (16:30 发车)</div>
             <div class="detail-item"><strong>到达站</strong>：中老铁路琅勃拉邦站 (18:30 抵达，专车接送入古城)</div>
-            <div class="detail-item"><strong>住宿地点</strong>：琅勃拉邦世界遗产古城特色法式客栈（宿琅勃拉邦）</div>
+            <div class="detail-item"><strong>推荐住宿</strong>：<strong>Avani+ Luang Prabang</strong> 或 <strong>The Belle Rive Boutique</strong>（宿琅勃拉邦）</div>
           </div>
         </div>
       </div>
@@ -669,7 +708,7 @@
           <div class="section-block commute-block">
             <h5>🌄 傍晚登高俯瞰</h5>
             <div class="detail-item"><strong>活动安排</strong>：下班后登普西山俯瞰古城全景与湄公河壮丽晚霞，逛手工艺夜市</div>
-            <div class="detail-item"><strong>住宿地点</strong>：宿琅勃拉邦古城客栈</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿琅勃拉邦精品客栈</div>
           </div>
         </div>
       </div>
@@ -696,7 +735,7 @@
           <div class="section-block commute-block">
             <h5>🛕 傍晚古寺散步</h5>
             <div class="detail-item"><strong>游览亮点</strong>：步行探访香通寺（生命之树彩色玻璃镶嵌）、皇宫博物馆</div>
-            <div class="detail-item"><strong>住宿地点</strong>：宿琅勃拉邦古城客栈</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿琅勃拉邦精品客栈</div>
           </div>
         </div>
       </div>
@@ -711,6 +750,7 @@
           <div class="day-tags">
             <span class="tag tag-border">D888 一站式通关</span>
             <span class="tag tag-commute">3.5小时入境中国</span>
+            <span class="tag tag-hotel">告庄星光夜市酒店</span>
           </div>
         </div>
         <div class="day-body">
@@ -723,7 +763,8 @@
             <h5>🚆 D888 跨境国际旅客列车</h5>
             <div class="detail-item"><strong>发车时刻</strong>：12:52 琅勃拉邦站准时发车</div>
             <div class="detail-item"><strong>口岸通关</strong>：14:14 抵磨丁站下车办老挝出境 ➔ 经友谊隧道入磨憨口岸大厅刷中国护照闸机秒通关</div>
-            <div class="detail-item"><strong>到达时刻</strong>：<strong>15:47 直接抵达中国西双版纳站</strong>（打车15分钟入住告庄西双景酒店）</div>
+            <div class="detail-item"><strong>到达时刻</strong>：<strong>15:47 直接抵达中国西双版纳站</strong></div>
+            <div class="detail-item"><strong>推荐住宿</strong>：<strong>告庄西双景湄公河景兰大酒店</strong> 或 <strong>悦莲庄·夕岱高空江景酒店</strong>（宿西双版纳）</div>
           </div>
         </div>
       </div>
@@ -749,7 +790,7 @@
           <div class="section-block commute-block">
             <h5>✨ 晚间星光璀璨</h5>
             <div class="detail-item"><strong>活动安排</strong>：漫步亚洲最大露天夜市——告庄西双景星光夜市，品尝傣味香茅草烤鱼与舂鸡脚</div>
-            <div class="detail-item"><strong>住宿地点</strong>：宿西双版纳告庄特色度假酒店</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿西双版纳告庄度假酒店</div>
           </div>
         </div>
       </div>
@@ -764,6 +805,7 @@
           <div class="day-tags">
             <span class="tag tag-commute">直达动车抵大理</span>
             <span class="tag tag-work">终点站就位</span>
+            <span class="tag tag-hotel">大理洱海海景客栈</span>
           </div>
         </div>
         <div class="day-body">
@@ -774,8 +816,8 @@
           </div>
           <div class="section-block commute-block">
             <h5>🏔️ 傍晚抵大理苍山洱海</h5>
-            <div class="detail-item"><strong>到达车站</strong>：大理火车站 (Dali Station, 下关镇) ➔ 乘坐景区直通车直达大理古城南门 / 洱海生态廊道客栈</div>
-            <div class="detail-item"><strong>住宿地点</strong>：大理洱海边海景客栈或大理古城特色院落（宿大理）</div>
+            <div class="detail-item"><strong>到达车站</strong>：大理火车站 (Dali Station) ➔ 乘坐景区直通车直达大理古城南门 / 洱海生态廊道</div>
+            <div class="detail-item"><strong>推荐住宿</strong>：<strong>大理慢屋·极目 (洱海一线海景)</strong> 或 <strong>古城既下山·SUNYATA</strong>（宿大理）</div>
           </div>
         </div>
       </div>
@@ -802,7 +844,7 @@
           <div class="section-block commute-block">
             <h5>🎸 傍晚文艺慢生活</h5>
             <div class="detail-item"><strong>活动安排</strong>：漫步大理古城床单厂艺术区、人民路民谣小酒吧，品尝白族酸辣鱼</div>
-            <div class="detail-item"><strong>住宿地点</strong>：宿大理</div>
+            <div class="detail-item"><strong>住宿地点</strong>：宿大理海景客栈</div>
           </div>
         </div>
       </div>
@@ -835,7 +877,138 @@
 
     </div>
 
-    <!-- TAB 2: 车站位置与接驳指南 -->
+    <!-- TAB 2: 精选住宿酒店推荐 -->
+    <div id="tab-hotels" class="tab-panel">
+      <div class="cafe-grid">
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-city">🇲🇾 马六甲 (Melaka) · 12/11-12/13 (2晚)</div>
+            <div class="hotel-name">六门精品酒店 (Liu Men Melaka)</div>
+            <div class="hotel-desc">位于鸡场街核心区，由数座 1930 年代海峡华人老宅改造而成的奢华精品酒店。闹中取静，拥有精致挑高天井与极佳的静谧书桌办公空间，步行 3 分钟即达鸡场街夜市。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">📍 鸡场街步行3分</span>
+            <span class="cafe-badge">📶 高速光纤 Wi-Fi</span>
+            <span class="cafe-badge">🪑 舒适办公书桌</span>
+            <span class="cafe-badge">🏛️ 娘惹奢华风范</span>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-city">🇲🇾 马六甲备选 (Melaka)</div>
+            <div class="hotel-name">马六甲大华酒店 (The Majestic Malacca)</div>
+            <div class="hotel-desc">杨忠礼集团（YTL）旗下的英殖民传奇老牌豪华五星，紧邻马六甲河。客房配备实木宽大写字台与复古贵妃椅，服务与私密性堪称全马六甲天花板。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🌊 临马六甲河</span>
+            <span class="cafe-badge">🏊 户外热带泳池</span>
+            <span class="cafe-badge">⚡ 商务办公设施齐备</span>
+            <span class="cafe-badge">⭐ 奢华五星</span>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-city">🇹🇭 曼谷 (Bangkok) · 12/15-12/16 (1晚)</div>
+            <div class="hotel-name">辛通中城酒店 (Sindhorn Midtown Vignette Collection)</div>
+            <div class="hotel-desc">洲际酒店集团旗下的高级生活方式酒店，位于 Chit Lom 黄金使馆区。客房全景落地窗采光极佳，网络极速，步行可达轻轨站与各大会友餐厅，顶楼无边泳池尽览曼谷天际线。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🚇 靠近 BTS 轻轨</span>
+            <span class="cafe-badge">🏊 高空天际线泳池</span>
+            <span class="cafe-badge">📶 商务高速网络</span>
+            <span class="cafe-badge">🏙️ 市中心黄金地段</span>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-city">🇱🇦 老挝万象 (Vientiane) · 12/17-12/18 (1晚)</div>
+            <div class="hotel-name">万象皇冠假日酒店 (Crowne Plaza Vientiane)</div>
+            <div class="hotel-desc">老挝首都首屈一指的国际五星级商务酒店，拥有万象最稳定、最高速的网络保障。行政酒廊、商务中心、健身房与多国餐饮设施齐全，办公体验无懈可击。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">⭐ 国际五星标准</span>
+            <span class="cafe-badge">⚡ 万象最稳高速网</span>
+            <span class="cafe-badge">💼 专属行政办公区</span>
+            <span class="cafe-badge">🚗 距凯旋门10分钟</span>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-city">🇱🇦 琅勃拉邦 (Luang Prabang) · 12/18-12/21 (3晚)</div>
+            <div class="hotel-name">安凡尼+ 度假酒店 (Avani+ Luang Prabang)</div>
+            <div class="hotel-desc">坐落于古城绝对核心，前身是法国殖民军官营房，被古老菩提树环绕。每间客房都有法式柚木阳台与独立办公台，出酒店大门就是晨起布施路线与洋人街夜市。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">📍 古城中心步行即达</span>
+            <span class="cafe-badge">🌴 法式庭院泳池</span>
+            <span class="cafe-badge">📶 稳定高速无线</span>
+            <span class="cafe-badge">🧘 宁静慢生活</span>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-city">🇱🇦 琅勃拉邦备选 (Luang Prabang)</div>
+            <div class="hotel-name">美丽河精品酒店 (The Belle Rive Boutique Hotel)</div>
+            <div class="hotel-desc">湄公河一线绝美江景客栈，推开窗就是滔滔江水与缓缓驶过的小木船。客房木质调温馨典雅，阳台看江办公极为治愈，附赠下午茶与湄公河游船巡游。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🌊 湄公河一线江景</span>
+            <span class="cafe-badge">☕ 专属露台慢咖啡</span>
+            <span class="cafe-badge">🥐 精致法式早餐</span>
+            <span class="cafe-badge">🌅 日落绝佳视角</span>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-city">🇨🇳 西双版纳 (Xishuangbanna) · 12/21-12/23 (2晚)</div>
+            <div class="hotel-name">湄公河景兰大酒店 (告庄西双景)</div>
+            <div class="hotel-desc">西双版纳核心地标！紧邻大金塔与澜沧江，楼下就是亚洲最大的星光夜市。酒店集傣泰宫廷风情与现代商务于一体，拥有空中水乐园与极速 5G 网络，吃喝玩乐出差一体化。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🚶 楼下即是星光夜市</span>
+            <span class="cafe-badge">🏰 傣泰宫廷建筑</span>
+            <span class="cafe-badge">📶 5G 极速网络</span>
+            <span class="cafe-badge">🏊 空中水上乐园</span>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-city">🇨🇳 云南大理 (Dali) · 12/23-12/26 (3晚)</div>
+            <div class="hotel-name">大理慢屋·极目 / 喜度客栈 (洱海生态廊道店)</div>
+            <div class="hotel-desc">全国数字游民梦想中的终点站！直面洱海无遮挡一线海景与苍山十九峰。全屋智能家居、千兆光纤入户、超大落地窗海景书桌，下楼就是生态廊道，冬日暖阳下工作宛如仙境。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🌊 洱海一线直面海景</span>
+            <span class="cafe-badge">⚡ 千兆光纤高速网</span>
+            <span class="cafe-badge">☀️ 苍山雪洱海月</span>
+            <span class="cafe-badge">🚲 廊道骑行直达</span>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-city">🇨🇳 云南大理古城备选 (Dali)</div>
+            <div class="hotel-name">既下山·SUNYATA (大理古城店)</div>
+            <div class="hotel-desc">国内知名精品奢华度假品牌，隐于大理古城繁华深处的三进院落。设计大师操刀，极简东方禅意与现代舒适结合，拥有幽静的茶室、书房与阳光中庭，极其适合专注沉淀。</div>
+          </div>
+          <div class="cafe-badges">
+            <span class="cafe-badge">🏯 大理古城核心静巷</span>
+            <span class="cafe-badge">🍵 专属禅意茶室办公</span>
+            <span class="cafe-badge">📶 极速专线 Wi-Fi</span>
+            <span class="cafe-badge">⭐ 高品质奢华宿集</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: 车站位置与接驳指南 -->
     <div id="tab-stations" class="tab-panel">
       <div class="station-table-wrap">
         <table>
@@ -958,7 +1131,7 @@
       </div>
     </div>
 
-    <!-- TAB 3: 精选办公咖啡馆 -->
+    <!-- TAB 4: 精选办公咖啡馆 -->
     <div id="tab-cafes" class="tab-panel">
       <div class="cafe-grid">
         <div class="cafe-card">
@@ -1089,7 +1262,7 @@
       </div>
     </div>
 
-    <!-- TAB 4: 通关指南 -->
+    <!-- TAB 5: 通关指南 -->
     <div id="tab-borders" class="tab-panel">
       <div class="day-card">
         <h3 style="margin-bottom:16px; color:var(--primary-dark);">🛂 四国陆路跨国口岸通关要点速查</h3>
@@ -1121,7 +1294,7 @@
     </div>
 
     <footer>
-      <p>💡 本规划方案遵循 Workcation 远程办公最高效率设计 · 愿您沿途网络畅通、办公高效、尽享东南亚至彩云之南的壮美山川！</p>
+      <p>💡 本规划方案遵循 Workcation 远程办公最高效率设计 · 愿您与太太旅途甜蜜愉快、沿途网络畅通、尽享南洋至彩云之南的壮美山川！</p>
     </footer>
 
   </div>
