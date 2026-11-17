@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coupang Endpoints SSL/TLS & Public Key Pinning Audit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --card-border: #1f293d;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --success: #10b981;
+      --success-bg: rgba(16, 185, 129, 0.12);
+      --danger: #ef4444;
+      --danger-bg: rgba(239, 68, 68, 0.12);
+      --warning: #f59e0b;
+      --warning-bg: rgba(245, 158, 11, 0.12);
+      --code-bg: #0a0f1d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 1.5rem;
+    }
+
+    .badge-bar {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-success { background: var(--success-bg); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-danger { background: var(--danger-bg); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+    .badge-warning { background: var(--warning-bg); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+    .badge-info { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .quick-summary {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    th {
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .domain-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .domain-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .domain-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .variant-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .variant-grid { grid-template-columns: 1fr; }
+    }
+
+    .variant-card {
+      background: #0d1322;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+
+    .variant-card.failed {
+      border-color: rgba(239, 68, 68, 0.4);
+      background: rgba(239, 68, 68, 0.04);
+    }
+
+    .variant-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .cert-item {
+      padding: 0.9rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .cert-item:first-of-type { border-top: none; padding-top: 0; }
+
+    .cert-level {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .cert-subject {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-bottom: 0.25rem;
+    }
+
+    .cert-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .pin-box {
+      background: var(--code-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 0.45rem 0.65rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+    }
+
+    .pin-box code {
+      color: #38bdf8;
+      word-break: break-all;
+    }
+
+    .copy-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #d1d5db;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.72rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      margin-left: 0.5rem;
+    }
+
+    .copy-btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .code-block {
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      overflow-x: auto;
+      margin-top: 0.75rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--card-border);
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge-bar">
+        <span class="badge badge-info">SSL/TLS SPKI Pinning Audit</span>
+        <span class="badge badge-warning">Coupang Infrastructure</span>
+        <span class="badge badge-success">Live Handshake Verified</span>
+      </div>
+      <h1>Coupang Certificate & Public Key Pinning (SPKI) Report</h1>
+      <p class="subtitle">Inspected signature algorithms: <code>RSA+SHA256:RSA-PSS+SHA256</code> vs. <code>ECDSA+SHA256:ECDSA+SHA384</code></p>
+    </header>
+
+    <div class="quick-summary">
+      <table>
+        <thead>
+          <tr>
+            <th>Endpoint Domain</th>
+            <th>Dual-Cert Deployment</th>
+            <th>RSA 2048/3072 Pinning Status</th>
+            <th>ECDSA / P-256 Pinning Status</th>
+            <th>Root CA Authority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>static.coupangcdn.com</strong></td>
+            <td><span class="badge badge-success">YES (Dual Active)</span></td>
+            <td><span class="badge badge-success">Handshake OK</span> (2048-bit)</td>
+            <td><span class="badge badge-success">Handshake OK</span> (prime256v1)</td>
+            <td>DigiCert Global Root G2 / G3</td>
+          </tr>
+          <tr>
+            <td><strong>api.coupangstreaming.com</strong></td>
+            <td><span class="badge badge-danger">NO (RSA Only)</span></td>
+            <td><span class="badge badge-success">Handshake OK</span> (2048-bit)</td>
+            <td><span class="badge badge-danger">Handshake Failed (Alert 40)</span></td>
+            <td>Sectigo / USERTrust RSA</td>
+          </tr>
+          <tr>
+            <td><strong>discover.coupangstreaming.com</strong></td>
+            <td><span class="badge badge-danger">NO (RSA Only)</span></td>
+            <td><span class="badge badge-success">Handshake OK</span> (2048-bit)</td>
+            <td><span class="badge badge-danger">Handshake Failed (Alert 40)</span></td>
+            <td>Sectigo / USERTrust RSA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- static.coupangcdn.com -->
+    <div class="domain-section">
+      <div class="domain-header">
+        <div class="domain-title">🌐 static.coupangcdn.com</div>
+        <span class="badge badge-success">Dual-Cert Support (RSA + ECDSA)</span>
+      </div>
+      <div class="variant-grid">
+        <!-- RSA -->
+        <div class="variant-card">
+          <div class="variant-title">
+            <span>RSA Handshake</span>
+            <span class="badge badge-info">RSA+SHA256</span>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">1. Leaf Certificate (*.coupangcdn.com)</div>
+            <div class="cert-subject">C = KR, ST = Seoul, L = Seoul, O = Coupang Corporation, CN = *.coupangcdn.com</div>
+            <div class="cert-meta">RSA 2048 bit &bull; Valid: Sep 2026 - Apr 2027 &bull; Issuer: DigiCert Global G2</div>
+            <div class="pin-box">
+              <code>sha256/+Z25bV18x/xeQHzvCxyLTz+jYzUPCkfQbdjMdZ3ilK0=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/+Z25bV18x/xeQHzvCxyLTz+jYzUPCkfQbdjMdZ3ilK0=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">2. Intermediate CA</div>
+            <div class="cert-subject">DigiCert Global G2 TLS RSA SHA256 2020 CA1</div>
+            <div class="cert-meta">RSA 2048 bit &bull; Issuer: DigiCert Global Root G2</div>
+            <div class="pin-box">
+              <code>sha256/Wec45nQiFwKvHtuHxSAMGkt19k+uPSw9JlEkxhvYPHk=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/Wec45nQiFwKvHtuHxSAMGkt19k+uPSw9JlEkxhvYPHk=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">3. Root CA</div>
+            <div class="cert-subject">DigiCert Global Root G2</div>
+            <div class="cert-meta">RSA 2048 bit &bull; Self-signed</div>
+            <div class="pin-box">
+              <code>sha256/i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=')">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ECDSA -->
+        <div class="variant-card">
+          <div class="variant-title">
+            <span>ECDSA Handshake</span>
+            <span class="badge badge-info">ECDSA+SHA256</span>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">1. Leaf Certificate (*.coupangcdn.com)</div>
+            <div class="cert-subject">C = KR, ST = Seoul, L = Seoul, O = Coupang Corporation, CN = *.coupangcdn.com</div>
+            <div class="cert-meta">EC prime256v1 (P-256) &bull; Valid: Sep 2026 - Apr 2027 &bull; Issuer: DigiCert Global G3</div>
+            <div class="pin-box">
+              <code>sha256/KmV36vu7R6vPERV3BAynG4eEEaQ9cAFhgXMh+kcMCHI=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/KmV36vu7R6vPERV3BAynG4eEEaQ9cAFhgXMh+kcMCHI=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">2. Intermediate CA</div>
+            <div class="cert-subject">DigiCert Global G3 TLS ECC SHA384 2020 CA1</div>
+            <div class="cert-meta">EC secp384r1 (P-384) &bull; Issuer: DigiCert Global Root G3</div>
+            <div class="pin-box">
+              <code>sha256/qBRjZmOmkSNJL0p70zek7odSIzqs/muR4Jk9xYyCP+E=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/qBRjZmOmkSNJL0p70zek7odSIzqs/muR4Jk9xYyCP+E=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">3. Root CA</div>
+            <div class="cert-subject">DigiCert Global Root G3</div>
+            <div class="cert-meta">EC secp384r1 (P-384) &bull; Self-signed</div>
+            <div class="pin-box">
+              <code>sha256/uUwZgwDOxcBXrQcntwu+kYFpkiVkOaezL0WYEZ3anJc=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/uUwZgwDOxcBXrQcntwu+kYFpkiVkOaezL0WYEZ3anJc=')">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- api.coupangstreaming.com -->
+    <div class="domain-section">
+      <div class="domain-header">
+        <div class="domain-title">🌐 api.coupangstreaming.com</div>
+        <span class="badge badge-warning">RSA Only (No ECDSA Deployment)</span>
+      </div>
+      <div class="variant-grid">
+        <!-- RSA -->
+        <div class="variant-card">
+          <div class="variant-title">
+            <span>RSA Handshake</span>
+            <span class="badge badge-info">RSA+SHA256</span>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">1. Leaf Certificate (*.coupangstreaming.com)</div>
+            <div class="cert-subject">C = KR, ST = Seoul, O = Coupang Corp., CN = *.coupangstreaming.com</div>
+            <div class="cert-meta">RSA 2048 bit &bull; Valid: Nov 2026 - May 2027 &bull; Issuer: Sectigo OV R36</div>
+            <div class="pin-box">
+              <code>sha256/CzZ+zUcSiQQeESTfSlO0m1tG9+4aD1NZ/J7pwVMWzkU=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/CzZ+zUcSiQQeESTfSlO0m1tG9+4aD1NZ/J7pwVMWzkU=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">2. Intermediate CA 1</div>
+            <div class="cert-subject">Sectigo Public Server Authentication CA OV R36</div>
+            <div class="cert-meta">RSA 3072 bit &bull; Issuer: Sectigo Public Server Root R46</div>
+            <div class="pin-box">
+              <code>sha256/KqkYYX5LYAYP7XGemqzbtPPIA8x7BS/BbOIcAXf3j2k=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/KqkYYX5LYAYP7XGemqzbtPPIA8x7BS/BbOIcAXf3j2k=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">3. Intermediate CA 2 (Cross-signed)</div>
+            <div class="cert-subject">Sectigo Public Server Authentication Root R46</div>
+            <div class="cert-meta">RSA 4096 bit &bull; Issuer: USERTrust RSA Certification Authority</div>
+            <div class="pin-box">
+              <code>sha256/Douxi77vs4G+Ib/BogbTFymEYq0QSFXwSgVCaZcI09Q=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/Douxi77vs4G+Ib/BogbTFymEYq0QSFXwSgVCaZcI09Q=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">4. Root CA</div>
+            <div class="cert-subject">USERTrust RSA Certification Authority</div>
+            <div class="cert-meta">RSA 4096 bit &bull; Self-signed</div>
+            <div class="pin-box">
+              <code>sha256/x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4=')">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ECDSA -->
+        <div class="variant-card failed">
+          <div class="variant-title">
+            <span>ECDSA Handshake</span>
+            <span class="badge badge-danger">Failed</span>
+          </div>
+          <div style="padding: 1rem 0;">
+            <p style="color: #f87171; font-weight: 600; margin-bottom: 0.5rem;">⚠️ SSL Alert 40 (handshake_failure)</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">The server terminated the TLS connection. The server does not host an ECDSA certificate or support ECDSA signature algorithms in its TLS cipher suites for this domain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- discover.coupangstreaming.com -->
+    <div class="domain-section">
+      <div class="domain-header">
+        <div class="domain-title">🌐 discover.coupangstreaming.com</div>
+        <span class="badge badge-warning">RSA Only (No ECDSA Deployment)</span>
+      </div>
+      <div class="variant-grid">
+        <!-- RSA -->
+        <div class="variant-card">
+          <div class="variant-title">
+            <span>RSA Handshake</span>
+            <span class="badge badge-info">RSA+SHA256</span>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">1. Leaf Certificate (*.coupangstreaming.com)</div>
+            <div class="cert-subject">C = KR, ST = Seoul, O = Coupang Corp., CN = *.coupangstreaming.com</div>
+            <div class="cert-meta">RSA 2048 bit &bull; Valid: Nov 2026 - May 2027 &bull; Issuer: Sectigo OV R36</div>
+            <div class="pin-box">
+              <code>sha256/CzZ+zUcSiQQeESTfSlO0m1tG9+4aD1NZ/J7pwVMWzkU=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/CzZ+zUcSiQQeESTfSlO0m1tG9+4aD1NZ/J7pwVMWzkU=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">2. Intermediate CA 1</div>
+            <div class="cert-subject">Sectigo Public Server Authentication CA OV R36</div>
+            <div class="cert-meta">RSA 3072 bit &bull; Issuer: Sectigo Public Server Root R46</div>
+            <div class="pin-box">
+              <code>sha256/KqkYYX5LYAYP7XGemqzbtPPIA8x7BS/BbOIcAXf3j2k=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/KqkYYX5LYAYP7XGemqzbtPPIA8x7BS/BbOIcAXf3j2k=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">3. Intermediate CA 2 (Cross-signed)</div>
+            <div class="cert-subject">Sectigo Public Server Authentication Root R46</div>
+            <div class="cert-meta">RSA 4096 bit &bull; Issuer: USERTrust RSA Certification Authority</div>
+            <div class="pin-box">
+              <code>sha256/Douxi77vs4G+Ib/BogbTFymEYq0QSFXwSgVCaZcI09Q=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/Douxi77vs4G+Ib/BogbTFymEYq0QSFXwSgVCaZcI09Q=')">Copy</button>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-level">4. Root CA</div>
+            <div class="cert-subject">USERTrust RSA Certification Authority</div>
+            <div class="cert-meta">RSA 4096 bit &bull; Self-signed</div>
+            <div class="pin-box">
+              <code>sha256/x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4=</code>
+              <button class="copy-btn" onclick="copyPin(this, 'sha256/x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4=')">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ECDSA -->
+        <div class="variant-card failed">
+          <div class="variant-title">
+            <span>ECDSA Handshake</span>
+            <span class="badge badge-danger">Failed</span>
+          </div>
+          <div style="padding: 1rem 0;">
+            <p style="color: #f87171; font-weight: 600; margin-bottom: 0.5rem;">⚠️ SSL Alert 40 (handshake_failure)</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">The server terminated the TLS connection. The server does not host an ECDSA certificate or support ECDSA signature algorithms in its TLS cipher suites for this domain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Implementation Snippet -->
+    <div class="domain-section">
+      <div class="domain-header">
+        <div class="domain-title">📱 Example Android Network Security Config</div>
+        <span class="badge badge-info">network_security_config.xml</span>
+      </div>
+      <div class="code-block">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;network-security-config&gt;
+    &lt;domain-config&gt;
+        &lt;domain includeSubdomains="true"&gt;coupangcdn.com&lt;/domain&gt;
+        &lt;pin-set expiration="2027-04-13"&gt;
+            &lt;!-- static.coupangcdn.com RSA Leaf --&gt;
+            &lt;pin digest="SHA-256"&gt;+Z25bV18x/xeQHzvCxyLTz+jYzUPCkfQbdjMdZ3ilK0=&lt;/pin&gt;
+            &lt;!-- static.coupangcdn.com ECDSA Leaf --&gt;
+            &lt;pin digest="SHA-256"&gt;KmV36vu7R6vPERV3BAynG4eEEaQ9cAFhgXMh+kcMCHI=&lt;/pin&gt;
+            &lt;!-- DigiCert Global G2 (Backup) --&gt;
+            &lt;pin digest="SHA-256"&gt;Wec45nQiFwKvHtuHxSAMGkt19k+uPSw9JlEkxhvYPHk=&lt;/pin&gt;
+        &lt;/pin-set&gt;
+    &lt;/domain-config&gt;
+    &lt;domain-config&gt;
+        &lt;domain includeSubdomains="true"&gt;coupangstreaming.com&lt;/domain&gt;
+        &lt;pin-set expiration="2027-05-29"&gt;
+            &lt;!-- coupangstreaming.com RSA Leaf --&gt;
+            &lt;pin digest="SHA-256"&gt;CzZ+zUcSiQQeESTfSlO0m1tG9+4aD1NZ/J7pwVMWzkU=&lt;/pin&gt;
+            &lt;!-- Sectigo OV R36 Intermediate (Backup) --&gt;
+            &lt;pin digest="SHA-256"&gt;KqkYYX5LYAYP7XGemqzbtPPIA8x7BS/BbOIcAXf3j2k=&lt;/pin&gt;
+        &lt;/pin-set&gt;
+    &lt;/domain-config&gt;
+&lt;/network-security-config&gt;</div>
+    </div>
+
+    <footer>
+      Generated via Automated TLS Protocol Inspection &bull; Antigravity Agent
+    </footer>
+  </div>
+
+  <script>
+    function copyPin(btn, text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Copied!';
+        setTimeout(() => { btn.innerText = orig; }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
